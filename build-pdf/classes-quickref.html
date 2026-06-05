@@ -1,0 +1,743 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><style>
+@page { size: A4 landscape; margin: 8mm; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 7.8pt; line-height: 1.3; color: #1a1a1a; margin: 0; column-count: 2; column-gap: 7mm; }
+h1 { column-span: all; font-size: 15pt; margin: 0 0 4pt 0; padding-bottom: 3pt; border-bottom: 2pt solid #1a1a1a; letter-spacing: .5pt; }
+h2 { font-size: 10pt; color: #7a2e2e; margin: 7pt 0 2pt 0; border-bottom: .5pt solid #ddd; padding-bottom: 1pt; break-after: avoid; break-inside: avoid; }
+h3 { font-size: 8.4pt; color: #2a2a2a; margin: 5pt 0 1pt 0; break-after: avoid; }
+p { margin: 2pt 0; }
+table { border-collapse: collapse; width: 100%; font-size: 7pt; margin: 2pt 0 4pt 0; break-inside: avoid; }
+th, td { border: .4pt solid #bbb; padding: 1.4pt 3pt; text-align: left; vertical-align: top; }
+th { background: #ececec; font-weight: 700; color: #7a2e2e; }
+ul { margin: 2pt 0; padding-left: 12pt; }
+li { margin: 0.4pt 0; }
+code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 7pt; background: #eee; padding: 0 2pt; border-radius: 2pt; }
+strong { color: #000; }
+em { color: #555; }
+blockquote { margin: 2pt 0; padding: 1pt 6pt; border-left: 2pt solid #ccc; color: #555; font-size: 7pt; }
+blockquote p { margin: 0; }
+hr { border: none; border-top: .5pt solid #ccc; margin: 5pt 0; }
+a { color: #1a1a1a; text-decoration: none; }
+</style></head><body><h1>19 — Classes (the component system)</h1>
+<blockquote>
+<p>This chapter defines every class, superseding the old four. Each of the <strong>48 classes</strong> is generated from the same component vocabulary used everywhere else in the book — weapon types (<a href="17-weapons.md">17-weapons.md</a>), armor tiers (<a href="18-armor.md">18-armor.md</a>), and schools of magic (<a href="10-spell-list.md">10-spell-list.md</a>). Character creation (<a href="02-character-creation.md">02-character-creation.md</a>) points here for the roster.</p>
+</blockquote>
+<hr>
+<h2>How classes are generated</h2>
+<p>A class is a <strong>legal combination of components</strong>. Pick a template, fill its slots, and you have a class — that&#39;s the whole generator. Everything below is the rules that decide which combinations are legal and balanced.</p>
+<h3>The components</h3>
+<ul>
+<li><strong>Weapon types:</strong> Light · Medium · Heavy · Ranged</li>
+<li><strong>Armor tiers:</strong> Light · Heavy · None</li>
+<li><strong>Schools of magic:</strong> Destruction · Conjuration · Alteration · Illusion · Restoration</li>
+</ul>
+<h3>The legal templates</h3>
+<p><strong>Fighting classes</strong> <em>(no magic):</em></p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Slots</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Armored</strong></td>
+<td>2 weapon types + 1 armor tier (light or heavy)</td>
+</tr>
+<tr>
+<td><strong>Naked weapon-master</strong></td>
+<td>3 weapon types + no armor</td>
+</tr>
+</tbody></table>
+<p><strong>Magic classes</strong> <em>(cast from a pool; light or no armor only — heavy blocks casting):</em></p>
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Slots</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Half-caster</strong></td>
+<td>1 school + 1 weapon type + light armor</td>
+</tr>
+<tr>
+<td><strong>Spellsword</strong></td>
+<td>2 schools + 1 martial weapon (medium/heavy) + no armor</td>
+</tr>
+<tr>
+<td><strong>Caster</strong></td>
+<td>2 schools + light armor</td>
+</tr>
+<tr>
+<td><strong>Full caster</strong></td>
+<td>3 schools + no armor</td>
+</tr>
+</tbody></table>
+<h3>The build economy (the balance spine)</h3>
+<blockquote>
+<p><strong>Every class is exactly 3 perks.</strong> A pick is <em>1 weapon type</em> or <em>1 school</em>; an armor tier carries a perk too.</p>
+</blockquote>
+<ul>
+<li>Baseline = <strong>2 picks + an armor tier</strong> = 3 perks.</li>
+<li><strong>Going naked (no armor) buys a 3rd pick</strong> but drops you to the lowest HP <em>and</em> Armor — the glass-cannon bargain.</li>
+<li>Each component grants one <strong>perk</strong> (the 11 below); your class also has <strong>1 unique override</strong> you may swap in for any one of them (it <em>replaces</em>, never adds — so the total is always 3).</li>
+<li>A class is legal <strong>iff it lands on 3 perks</strong> under this economy. That makes balance checkable by counting.</li>
+<li><strong>No class ever exceeds 3 perks.</strong> So you can&#39;t have 2 schools <em>and</em> a weapon <em>and</em> armor (that&#39;s 4): a 2-school gish goes <strong>naked</strong> (the <strong>Spellsword</strong> — its weapon and spells share one stat, so being lightly built is fine), and an <em>armored</em> gish takes only <strong>1 school</strong> (the <strong>Half-caster</strong>). The armored 2-school war-mage simply doesn&#39;t exist — by design.</li>
+</ul>
+<h3>HP &amp; primary ability</h3>
+<ul>
+<li><strong>HP rides the armor tier:</strong> Heavy <code>10 + Might</code> · Light <code>8 + Might</code> · None <code>6 + Might</code>. Per-level gain <code>1d6 + Might</code> (1s/2s count as 3).</li>
+<li><strong>Your class grants <code>+1</code> to its primary ability.</strong> Primary is set <strong>by feel</strong>: Might for medium/heavy weapons, Agility for light/ranged builds; Mind or Spirit (the <strong>pool</strong>) for casters. It is <em>not</em> a separate combination axis.</li>
+<li><strong>Your primary powers everything.</strong> Every weapon attack, weapon damage, and spell attack uses your one primary ability (<a href="06-attack-and-defense.md">06-attack-and-defense.md</a>). A Mind-Battlemage&#39;s blade <em>and</em> its fire both run off Mind; a Might-Knight&#39;s everything runs off Might. One stat, whole character — which is what lets a gish wield a real weapon without splitting its ability investment.</li>
+</ul>
+<h3>The weight rules (what heavy gear costs)</h3>
+<p><strong>① Heavy weapons are two-handed.</strong> No shield, no off-hand. Medium and light are one-handed.</p>
+<p><strong>② No ranged weapons in heavy armor.</strong> Heavy armor is the melee line — you cannot use bows, crossbows, or thrown weapons while wearing it. Archers and skirmishers live in light or no armor. <em>(This is why every heavy-armor class is a Might melee build — and why there&#39;s no tanky-archer.)</em></p>
+<p><strong>③ Set to Strike — heavy gear plants you.</strong> On a turn where you <strong>move and attack</strong>:</p>
+<ul>
+<li>wielding a <strong>heavy weapon</strong> <em>or</em> wearing <strong>heavy armor</strong> → that <strong>attack is at disadvantage</strong>;</li>
+<li>wielding a heavy weapon <em>and</em> wearing heavy armor → you <strong>can&#39;t do both: take your move <em>or</em> your attack this turn, not both.</strong></li>
+</ul>
+<p>Stand your ground (use no movement) and you strike normally. <em>(Disadvantage is binary — <a href="01-core-mechanic.md">01-core-mechanic.md</a> — so the &quot;both heavy&quot; case escalates to denial rather than stacking dice.)</em> This gives heavy gear a real cost without a speed stat: <strong>heavy = the immovable melee anchor; light/none = mobile.</strong> It also synergizes with the perks — heavy armor&#39;s <strong>Bulwark</strong> and heavy weapons reward planting; light armor&#39;s <strong>Slip Away</strong> rewards moving.</p>
+<h3>Spellcasting access</h3>
+<p>A magic class casts from one <strong>pool</strong> (<code>level + Mind</code> <em>or</em> <code>level + Spirit</code>), knows 2 cantrips + the spells-known table (<a href="09-magic.md">09-magic.md</a>), drawn from its accessible <strong>schools</strong> (<a href="10-spell-list.md">10-spell-list.md</a>). Cast freely in light or no armor; <strong>heavy armor blocks casting</strong> (so no magic class wears it). Casters are trained in casting (spell attack = <code>d20 + pool + training</code>).</p>
+<hr>
+<h2>The 11 component perks</h2>
+<p>Each component grants one signature perk, shared by anyone who takes it.</p>
+<h3>Weapon perks</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Perk</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Light</strong></td>
+<td><strong>Sneak Strike</strong></td>
+<td>Once per turn, when you attack with advantage or an ally is adjacent to your target, deal <strong>+1d6</strong> on a hit.</td>
+</tr>
+<tr>
+<td><strong>Medium</strong></td>
+<td><strong>Riposte</strong></td>
+<td>Once per round, when a creature <strong>misses you</strong> in melee, immediately make one weapon attack against it.</td>
+</tr>
+<tr>
+<td><strong>Heavy</strong></td>
+<td><strong>Cleave</strong></td>
+<td>When your attack drops a creature to 0 HP, make another attack against a different target in reach, same action.</td>
+</tr>
+<tr>
+<td><strong>Ranged</strong></td>
+<td><strong>Deadeye</strong></td>
+<td>Your ranged attacks ignore half-cover. Once per turn, if your target is at <strong>Far</strong> range, deal <strong>+1d6</strong> on a hit.</td>
+</tr>
+</tbody></table>
+<h3>Armor perks</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Perk</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Light armor</strong></td>
+<td><strong>Slip Away</strong></td>
+<td>When an adjacent enemy takes an action that isn&#39;t attacking you, move up to <strong>half your Speed</strong> without provoking.</td>
+</tr>
+<tr>
+<td><strong>Heavy armor</strong></td>
+<td><strong>Bulwark</strong></td>
+<td>Allies adjacent to you have <strong>+1 Armor</strong>. <em>(A flat bonus to a static defense — permitted; the &quot;no stacking +1&quot; rule governs d20 rolls.)</em></td>
+</tr>
+</tbody></table>
+<h3>School perks</h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Perk</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Destruction</strong></td>
+<td><strong>Devastation</strong></td>
+<td>Once per turn, reroll 1s and 2s on a Destruction spell&#39;s damage dice.</td>
+</tr>
+<tr>
+<td><strong>Conjuration</strong></td>
+<td><strong>Master Summoner</strong></td>
+<td>Your summons get <strong>+1 to attack</strong> and last <strong>2 extra rounds</strong> (see Summoning, <a href="10-spell-list.md">10-spell-list.md</a>).</td>
+</tr>
+<tr>
+<td><strong>Alteration</strong></td>
+<td><strong>Arcane Ward</strong></td>
+<td>While you have <strong>1+ mana</strong>, you gain <strong>+2 Armor</strong>.</td>
+</tr>
+<tr>
+<td><strong>Illusion</strong></td>
+<td><strong>Beguiling</strong></td>
+<td>Creatures roll at <strong>disadvantage</strong> to resist or break free of your Illusion effects.</td>
+</tr>
+<tr>
+<td><strong>Restoration</strong></td>
+<td><strong>Divine Touch</strong></td>
+<td>As your action, touch a creature to heal <strong><code>1d6 + pool</code></strong>. Usable <strong><code>1 + pool</code></strong> times per rest.</td>
+</tr>
+</tbody></table>
+<h2>The override perk</h2>
+<blockquote>
+<p>Each class ships with <strong>one unique signature perk</strong>, which you may <strong>swap in for any one of your 3 component perks.</strong> It replaces, never adds — total stays 3. It&#39;s tuned to ≈ a component perk in power (unique, not stronger), and it&#39;s the one thing only your class does. Optional: keep all 3 component perks if you prefer.</p>
+</blockquote>
+<hr>
+<h2>How the original four map</h2>
+<table>
+<thead>
+<tr>
+<th>Old class</th>
+<th>New class (#)</th>
+<th>Components</th>
+<th>Component perks</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Warrior</strong></td>
+<td><strong>Knight</strong> (#9)</td>
+<td>Medium + Heavy · Heavy armor · Might</td>
+<td>Riposte · Cleave · Bulwark</td>
+</tr>
+<tr>
+<td><strong>Scout</strong></td>
+<td><strong>Ranger</strong> (#3)</td>
+<td>Light + Ranged · Light armor · Agility</td>
+<td>Sneak Strike · Deadeye · Slip Away</td>
+</tr>
+<tr>
+<td><strong>Mage</strong></td>
+<td><strong>Mage</strong> (#34)</td>
+<td>Conjuration + Illusion · Light armor · Mind</td>
+<td>Master Summoner · Beguiling · Slip Away</td>
+</tr>
+<tr>
+<td><strong>Priest</strong></td>
+<td><strong>Priest</strong> (#37)</td>
+<td>Alteration + Restoration · Light armor · Spirit</td>
+<td>Arcane Ward · Divine Touch · Slip Away</td>
+</tr>
+</tbody></table>
+<h2>Building a character (revised step 2 of <a href="02-character-creation.md">02-character-creation.md</a>)</h2>
+<ol>
+<li>Assign abilities <code>+3 / +2 / +1 / +0</code>.</li>
+<li><strong>Pick a class</strong> → <code>+1</code> to its primary, weapon/armor/school training, HP tier, mana (if any), 3 component perks + 1 override.</li>
+<li>Ancestry (<code>+1</code> + trait). 4. Background (+1 training). 5. Three trainings (4 if Human). 6. Defenses, equipment, spells.</li>
+</ol>
+<hr>
+<h2>The 48-class roster</h2>
+<h3>⚔️ Fighting — armored <em>(2 weapons + 1 armor)</em></h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Class</th>
+<th>Weapons</th>
+<th>Primary</th>
+<th>Armor</th>
+<th>HP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Duelist</td>
+<td>Light + Medium</td>
+<td>Might</td>
+<td>Light</td>
+<td>Mid</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Reaver</td>
+<td>Light + Heavy</td>
+<td>Might</td>
+<td>Light</td>
+<td>Mid</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ranger</td>
+<td>Light + Ranged</td>
+<td>Agility</td>
+<td>Light</td>
+<td>Mid</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Berserker</td>
+<td>Medium + Heavy</td>
+<td>Might</td>
+<td>Light</td>
+<td>Mid</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Skirmisher</td>
+<td>Medium + Ranged</td>
+<td>Might</td>
+<td>Light</td>
+<td>Mid</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Outrider</td>
+<td>Heavy + Ranged</td>
+<td>Might</td>
+<td>Light</td>
+<td>Mid</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Sentinel</td>
+<td>Light + Medium</td>
+<td>Might</td>
+<td>Heavy</td>
+<td>High</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Vanguard</td>
+<td>Light + Heavy</td>
+<td>Might</td>
+<td>Heavy</td>
+<td>High</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Knight</td>
+<td>Medium + Heavy</td>
+<td>Might</td>
+<td>Heavy</td>
+<td>High</td>
+</tr>
+</tbody></table>
+<p><em>(Heavy-armor classes carry no ranged weapon, per weight rule ②.)</em></p>
+<h3>🗡️ Fighting — naked weapon-master <em>(3 weapons, no armor)</em> — HP Low</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Class</th>
+<th>Weapons</th>
+<th>Primary</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10</td>
+<td>Gladiator</td>
+<td>Light + Medium + Heavy</td>
+<td>Might</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Blademaster</td>
+<td>Light + Medium + Ranged</td>
+<td>Might</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Marauder</td>
+<td>Light + Heavy + Ranged</td>
+<td>Might</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Weaponmaster</td>
+<td>Medium + Heavy + Ranged</td>
+<td>Might</td>
+</tr>
+</tbody></table>
+<h3>🪄 Half-caster <em>(1 school + light weapon + light armor)</em> — HP Mid</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Class</th>
+<th>School</th>
+<th>Pool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>14</td>
+<td>Spellblade</td>
+<td>Destruction</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Adept</td>
+<td>Conjuration</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Warden</td>
+<td>Alteration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>17</td>
+<td>Trickster</td>
+<td>Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>18</td>
+<td>Acolyte</td>
+<td>Restoration</td>
+<td>Spirit</td>
+</tr>
+</tbody></table>
+<h3>🔮 Spellsword <em>(2 schools + martial weapon, no armor)</em> — HP Low</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Class</th>
+<th>Schools</th>
+<th>Pool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>19</td>
+<td>Death Knight</td>
+<td>Conjuration + Destruction</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Battlemage</td>
+<td>Alteration + Destruction</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>21</td>
+<td>Hexblade</td>
+<td>Destruction + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>22</td>
+<td>Paladin</td>
+<td>Destruction + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Spellforged</td>
+<td>Alteration + Conjuration</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>24</td>
+<td>Witch-blade</td>
+<td>Conjuration + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Wraith Knight</td>
+<td>Conjuration + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>26</td>
+<td>Mindblade</td>
+<td>Alteration + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>27</td>
+<td>Cleric-Knight</td>
+<td>Alteration + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>28</td>
+<td>Sword-Bard</td>
+<td>Illusion + Restoration</td>
+<td>Spirit</td>
+</tr>
+</tbody></table>
+<h3>✨ Caster <em>(2 schools + light armor)</em> — HP Mid</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Class</th>
+<th>Schools</th>
+<th>Pool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>29</td>
+<td>Warlock</td>
+<td>Conjuration + Destruction</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Sorcerer</td>
+<td>Alteration + Destruction</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Mentalist</td>
+<td>Destruction + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>32</td>
+<td>Templar</td>
+<td>Destruction + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>33</td>
+<td>Artificer</td>
+<td>Alteration + Conjuration</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>34</td>
+<td>Mage</td>
+<td>Conjuration + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>35</td>
+<td>Shaman</td>
+<td>Conjuration + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>36</td>
+<td>Enchanter</td>
+<td>Alteration + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>37</td>
+<td>Priest</td>
+<td>Alteration + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>38</td>
+<td>Bard</td>
+<td>Illusion + Restoration</td>
+<td>Spirit</td>
+</tr>
+</tbody></table>
+<h3>🌌 Full caster <em>(3 schools, no armor)</em> — HP Low</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Class</th>
+<th>Schools</th>
+<th>Pool</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>39</td>
+<td>Elementalist</td>
+<td>Alteration + Conjuration + Destruction</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>40</td>
+<td>Archmage</td>
+<td>Conjuration + Destruction + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>41</td>
+<td>Necromancer</td>
+<td>Conjuration + Destruction + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>42</td>
+<td>Spellmystic</td>
+<td>Alteration + Destruction + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>43</td>
+<td>Oracle</td>
+<td>Alteration + Destruction + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>44</td>
+<td>Witch</td>
+<td>Destruction + Illusion + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Mystic</td>
+<td>Alteration + Conjuration + Illusion</td>
+<td>Mind</td>
+</tr>
+<tr>
+<td>46</td>
+<td>Druid</td>
+<td>Alteration + Conjuration + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>47</td>
+<td>Spiritualist</td>
+<td>Conjuration + Illusion + Restoration</td>
+<td>Spirit</td>
+</tr>
+<tr>
+<td>48</td>
+<td>Seer</td>
+<td>Alteration + Illusion + Restoration</td>
+<td>Spirit</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Class signatures — descriptions &amp; overrides</h2>
+<p>Each class&#39;s one-line identity and its unique <strong>override perk</strong> (swaps in for one component perk). 🌶️ = flagged for playtest.</p>
+<h3>Fighting — armored</h3>
+<ul>
+<li><strong>1 · Duelist</strong> — <em>A nimble blade-dancer who turns a foe&#39;s commitment into an opening.</em>
+↳ <strong>En Garde:</strong> mark a creature you hit in melee; while marked it has disadvantage attacking anyone but you, and you have advantage on Riposte against it.</li>
+<li><strong>2 · Reaver</strong> — <em>A savage raider who fights harder as the wounds pile up.</em>
+↳ <strong>Bloodlust:</strong> while below half HP, your melee attacks deal +1d6 and you&#39;re immune to Frightened.</li>
+<li><strong>3 · Ranger</strong> — <em>A wilderness hunter who marks prey and never loses it.</em>
+↳ <strong>Hunter&#39;s Mark:</strong> mark a creature (free, 1/turn); your attacks against it ignore cover and deal +1d6. Re-marks on a kill.</li>
+<li><strong>4 · Berserker</strong> — <em>A reckless warrior who trades skin for slaughter.</em>
+↳ <strong>Rage</strong> (free, 1/rest, 1 min): melee attacks +1d6 and advantage on Might, but attacks against you have advantage.</li>
+<li><strong>5 · Skirmisher</strong> — <em>A mobile soldier who strikes and slips away.</em>
+↳ <strong>Hit and Run:</strong> after you attack, move up to half your Speed without provoking.</li>
+<li><strong>6 · Outrider</strong> — <em>A roving heavy hitter who softens foes at range, then closes.</em>
+↳ <strong>Overwhelm:</strong> when you hit with a ranged attack, your next melee attack vs. that target has advantage (and vice-versa).</li>
+<li><strong>7 · Sentinel</strong> — <em>An immovable guardian who punishes anyone who ignores them.</em>
+↳ <strong>Guardian&#39;s Wrath:</strong> when an enemy in reach attacks an ally (not you), immediately make a melee attack against it.</li>
+<li><strong>8 · Vanguard</strong> — <em>The first through the breach, an armored spearhead.</em>
+↳ <strong>Breach:</strong> as your action, charge your full Speed in a line and attack; on a hit, knock the target Prone. <em>(Note: as a double-heavy build, this is its move-or-attack turn.)</em></li>
+<li><strong>9 · Knight</strong> — <em>A disciplined heavy fighter, the wall the line forms around.</em> <em>(the old Warrior)</em>
+↳ <strong>Second Wind:</strong> once per rest, as part of any action, regain <code>1d6 + level</code> HP.</li>
+</ul>
+<h3>Fighting — naked weapon-master</h3>
+<ul>
+<li><strong>10 · Gladiator</strong> — <em>A crowd-pleasing arena fighter who feeds on the kill.</em>
+↳ <strong>Adrenaline:</strong> each time you drop a creature to 0 HP, your next attack this round deals +1d6.</li>
+<li><strong>11 · Blademaster</strong> — <em>A peerless weapon artist who answers steel with steel.</em>
+↳ <strong>Deflect:</strong> once per round, when hit, reduce the damage by <code>1d8 + primary</code>.</li>
+<li><strong>12 · Marauder</strong> — <em>A brutal pillager who finishes the wounded without mercy.</em>
+↳ <strong>Pillage:</strong> your attacks against creatures below half HP deal +1d8.</li>
+<li><strong>13 · Weaponmaster</strong> — <em>A master of every armament — devastating, but exposed.</em>
+↳ <strong>Stance:</strong> at the start of your turn, choose +1d6 damage <strong>or</strong> +2 Armor until your next turn.</li>
+</ul>
+<h3>Half-caster</h3>
+<ul>
+<li><strong>14 · Spellblade</strong> — <em>A warrior-mage who sheathes fire in steel.</em>
+↳ <strong>Spellstrike:</strong> on a weapon hit, spend 1 mana to add <code>1d8</code> Destruction damage (your element).</li>
+<li><strong>15 · Adept</strong> — <em>A novice summoner backed by a conjured ally.</em>
+↳ <strong>Bonded Blade</strong> (1/rest, no mana): conjure a spectral weapon that fights on your turn for the encounter (your spell attack, <code>1d8</code>).</li>
+<li><strong>16 · Warden</strong> — <em>A protector who hardens flesh against harm.</em>
+↳ <strong>Stoneflesh:</strong> as your action, grant yourself or a touched ally +3 Armor (ongoing, 1 min).</li>
+<li><strong>17 · Trickster</strong> — <em>A deceiver who strikes from a fold in perception.</em>
+↳ <strong>Vanishing Act:</strong> once per round after you attack, briefly vanish — attacks against you have disadvantage and your next attack has advantage.</li>
+<li><strong>18 · Acolyte</strong> — <em>A field medic who mends as they fight.</em>
+↳ <strong>Battle Prayer:</strong> once per rest, every ally in Near regains <code>1d6 + pool</code> HP.</li>
+</ul>
+<h3>Spellsword <em>(naked, 2 schools + a martial weapon)</em></h3>
+<ul>
+<li><strong>19 · Death Knight</strong> — <em>A grim warrior wreathed in necrotic power and raised servants.</em>
+↳ <strong>Soul Reap:</strong> when you drop a creature with a weapon attack, regain <code>1d6</code> mana (max your pool).</li>
+<li><strong>20 · Battlemage</strong> — <em>An armored-in-magic blaster who fights in the thick of it.</em>
+↳ <strong>Runic Weapon:</strong> your weapon attacks deal <strong>+1d6</strong> of a chosen element (fire/frost/shock). An at-will rider — no extra action.</li>
+<li><strong>21 · Hexblade</strong> — <em>A cursed blade that unmakes mind and body together.</em>
+↳ <strong>Hex:</strong> mark a creature (free, 1/turn); your spells and attacks vs. it deal +1d6 and it has disadvantage on its first attack each round.</li>
+<li><strong>22 · Paladin</strong> — <em>A holy warrior of smiting wrath and mending light.</em>
+↳ <strong>Divine Smite:</strong> on a weapon hit, spend 1–3 mana to deal <code>1d8</code> radiant per mana.</li>
+<li><strong>23 · Spellforged</strong> — <em>An artificer-warrior clad in conjured arms and wards.</em>
+↳ <strong>Arsenal</strong> (1/rest): conjure a bound weapon (<code>1d10</code>, your spell attack) and +2 Armor for the encounter.</li>
+<li><strong>24 · Witch-blade</strong> — <em>A fey-touched duelist flanked by phantasms.</em>
+↳ <strong>Phantom Double</strong> (1/rest): an illusory twin grants you disadvantage-to-be-hit until first struck, and once grants you advantage.</li>
+<li><strong>25 · Wraith Knight</strong> — <em>A deathless sentinel who siphons life to endure.</em>
+↳ <strong>Lifedrain:</strong> on a weapon hit, spend 1 mana to heal yourself <code>1d6</code>.</li>
+<li><strong>26 · Mindblade</strong> — <em>A psionic warrior whose blade is an extension of will.</em>
+↳ <strong>Psychic Lash:</strong> once per turn, your weapon attack targets <strong>Mind</strong> (psychic); on a hit the target has disadvantage on its next attack.</li>
+<li><strong>27 · Cleric-Knight</strong> — <em>A consecrated guardian who shields and heals in armor of faith.</em>
+↳ <strong>Aegis:</strong> once per round, when an ally in Near is hit, reduce that damage by <code>1d6 + pool</code>.</li>
+<li><strong>28 · Sword-Bard</strong> — <em>A blade-singer who bolsters allies and beguiles foes.</em>
+↳ <strong>Battle Hymn:</strong> as your action, allies in Near get advantage and enemies in Near disadvantage on their next attack.</li>
+</ul>
+<h3>Caster</h3>
+<ul>
+<li><strong>29 · Warlock</strong> — <em>A pact-caster who hurls eldritch fire and calls servitors.</em>
+↳ <strong>Eldritch Blast:</strong> signature cantrip — <code>1d10</code> force at Far, 0 mana; <code>1d12</code> while you have no mana left.</li>
+<li><strong>30 · Sorcerer</strong> — <em>A wild innate caster who bends and amplifies their magic.</em>
+↳ <strong>Overcharge:</strong> once per turn, spend 1 extra mana on a damage spell to maximize one of its dice.</li>
+<li><strong>31 · Mentalist</strong> — <em>A mind-burning caster who shatters thought and body.</em>
+↳ <strong>Mind Spike</strong> (1/rest): a creature in Near rolls Mind vs. your spell attack or is Stunned 1 round + takes <code>2d6</code> psychic.</li>
+<li><strong>32 · Templar</strong> — <em>A militant healer who scourges foes and saves allies.</em>
+↳ <strong>Radiant Surge:</strong> when you cast a Destruction spell, heal an ally in Near <code>1d6</code>.</li>
+<li><strong>33 · Artificer</strong> — <em>A maker who conjures tools, turrets, and constructs.</em>
+↳ <strong>Turret</strong> (1/rest): conjure a construct (acts on your turn, ranged <code>1d8</code>, 13 HP) for the encounter.</li>
+<li><strong>34 · Mage</strong> — <em>The classic arcanist: summons, glamours, and clever control.</em> <em>(the old Mage)</em>
+↳ <strong>Arcane Recovery:</strong> once per rest, regain <code>1d4 + level</code> mana.</li>
+<li><strong>35 · Shaman</strong> — <em>A spirit-speaker who calls ancestral aid and mends the tribe.</em>
+↳ <strong>Ancestral Spirit</strong> (1/rest): summon a guardian (acts on your turn, melee <code>1d8</code>, or heals an adjacent ally <code>1d6</code>).</li>
+<li><strong>36 · Enchanter</strong> — <em>A subtle manipulator of minds and matter.</em>
+↳ <strong>Dominate</strong> (1/rest): a creature you&#39;ve Charmed obeys one command — move + one action — on its turn.</li>
+<li><strong>37 · Priest</strong> — <em>A devoted healer and warder of the faithful.</em> <em>(the old Priest)</em>
+↳ <strong>Intercession:</strong> once per rest, when an ally in Near would drop to 0 HP, they drop to 1 instead and you heal them <code>1d6 + pool</code>.</li>
+<li><strong>38 · Bard</strong> — <em>A charismatic performer who inspires allies and bewitches foes.</em>
+↳ <strong>Inspiration</strong> (free, <code>1+pool</code>/rest): give an ally advantage on their next roll of any kind.</li>
+</ul>
+<h3>Full caster</h3>
+<ul>
+<li><strong>39 · Elementalist</strong> — <em>A master of raw elements — fire, frost, and stone.</em>
+↳ <strong>Attunement:</strong> each turn choose fire (+1d6), frost (halve target Speed), or stone (+2 Armor to you) on your Destruction spells.</li>
+<li><strong>40 · Archmage</strong> — <em>The pinnacle arcanist — devastating and endlessly versatile.</em>
+↳ <strong>Spell Mastery:</strong> choose one Lesser spell you know; once per rest, cast it without paying mana.</li>
+<li><strong>41 · Necromancer</strong> — <em>A death-mage who raises the fallen and drains the living.</em>
+↳ <strong>Raise Dead</strong> (1/rest): raise a slain creature in Near as a thrall (acts on your turn, <code>1d8</code>) for the encounter.</li>
+<li><strong>42 · Spellmystic</strong> — <em>A reality-warper blending force, fire, and falsehood.</em>
+↳ <strong>Warp:</strong> once per round, as a free action, teleport up to Near range.</li>
+<li><strong>43 · Oracle</strong> — <em>A seer channeling divine foresight, wrath, and healing.</em>
+↳ <strong>Foresight:</strong> once per round, force any creature in sight to reroll a d20; you pick which result stands.</li>
+<li><strong>44 · Witch</strong> — <em>A hedge-sorceress of curses, hexes, and old remedies.</em>
+↳ <strong>Curse:</strong> mark a creature (free, 1/turn); it has disadvantage on defenses vs. your spells, which deal +1d6 against it.</li>
+<li><strong>45 · Mystic</strong> — <em>An enigmatic caster of wards, phantoms, and bound spirits.</em>
+↳ <strong>Astral Step</strong> (1/rest): become incorporeal until your next turn — move through anything, can&#39;t be grappled, attacks vs. you have disadvantage.</li>
+<li><strong>46 · Druid</strong> — <em>A keeper of the wilds who shapes nature and calls beasts.</em>
+↳ <strong>Wild Shape</strong> (1/rest): become a beast (GM&#39;s equivalent pick) up to 10 min; revert at your HP when it drops. 🌶️</li>
+<li><strong>47 · Spiritualist</strong> — <em>A medium who walks with spirits and mends through them.</em>
+↳ <strong>Possession</strong> (1/rest): a willing ally in Near immediately takes a full extra turn, guided by a spirit. 🌶️</li>
+<li><strong>48 · Seer</strong> — <em>A prophet who sees the strands of fate and reweaves them.</em>
+↳ <strong>Ward of Fate:</strong> once per round, when an ally in Near is hit, you may cause the attack to miss instead.</li>
+</ul>
+<hr>
+<h2>What this system doesn&#39;t have</h2>
+<ul>
+<li>Subclasses or multiclassing (the combinations replace both).</li>
+<li>A separate martial resource pool (at-will weapons are the martial engine).</li>
+<li>A speed stat for armor (weight rule ③ handles it via tempo, not Speed).</li>
+<li>Per-class bespoke rules beyond 3 perks + 1 override.</li>
+<li>More than 3 perks on any character, ever (the balance invariant).</li>
+</ul>
+</body></html>

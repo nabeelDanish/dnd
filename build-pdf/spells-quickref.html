@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><style>
+@page { size: A4 landscape; margin: 8mm; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 7.8pt; line-height: 1.3; color: #1a1a1a; margin: 0; column-count: 2; column-gap: 7mm; }
+h1 { column-span: all; font-size: 15pt; margin: 0 0 4pt 0; padding-bottom: 3pt; border-bottom: 2pt solid #1a1a1a; letter-spacing: .5pt; }
+h2 { font-size: 10pt; color: #7a2e2e; margin: 7pt 0 2pt 0; border-bottom: .5pt solid #ddd; padding-bottom: 1pt; break-after: avoid; break-inside: avoid; }
+h3 { font-size: 8.4pt; color: #2a2a2a; margin: 5pt 0 1pt 0; break-after: avoid; }
+p { margin: 2pt 0; }
+table { border-collapse: collapse; width: 100%; font-size: 7pt; margin: 2pt 0 4pt 0; break-inside: avoid; }
+th, td { border: .4pt solid #bbb; padding: 1.4pt 3pt; text-align: left; vertical-align: top; }
+th { background: #ececec; font-weight: 700; color: #7a2e2e; }
+ul { margin: 2pt 0; padding-left: 12pt; }
+li { margin: 0.4pt 0; }
+code { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 7pt; background: #eee; padding: 0 2pt; border-radius: 2pt; }
+strong { color: #000; }
+em { color: #555; }
+blockquote { margin: 2pt 0; padding: 1pt 6pt; border-left: 2pt solid #ccc; color: #555; font-size: 7pt; }
+blockquote p { margin: 0; }
+hr { border: none; border-top: .5pt solid #ccc; margin: 5pt 0; }
+a { color: #1a1a1a; text-decoration: none; }
+</style></head><body><h1>10 — Spell Catalog</h1>
+<p>Every spell in the game lives here, organized by <strong>school</strong>. Spells are tagged by school only — your class (<a href="19-classes.md">19-classes.md</a>) decides which schools you can access, and your <strong>pool</strong> (Mind or Spirit) fuels and aims them.</p>
+<h2>How a spell works</h2>
+<blockquote>
+<p><strong>Name</strong> <em>(Tier · School · ongoing/ritual/reaction if any)</em>
+<em>Range — Target — Cost</em>
+Effect.</p>
+</blockquote>
+<ul>
+<li><strong>Cast from your pool.</strong> A caster&#39;s mana is <strong><code>level + Mind</code></strong> <em>or</em> <strong><code>level + Spirit</code></strong> (set by class). Every spell you can access is cast from that one pool; your <strong>spell attack = <code>d20 + pool + training</code></strong> vs. the named defense.</li>
+<li><strong>School access</strong> comes from your class. <strong>Universal</strong> spells (utility/meta) can be learned by any caster regardless of schools.</li>
+<li><strong>Tiers &amp; cost:</strong> Cantrip 0 · Lesser 1 · Greater 3 · Master 5 mana. <strong>Ranges:</strong> Close (adjacent) · Near (6 squares) · Far (line of sight).</li>
+<li><strong>No saves</strong> — the caster always rolls (see <a href="06-attack-and-defense.md">06-attack-and-defense.md</a>). <strong>One ongoing spell at a time</strong> (see <a href="09-magic.md">09-magic.md</a>) — this single rule is what stops a caster from stacking a summon, a buff, and a control effect at once.</li>
+</ul>
+<h2>⚙️ Summoning rules (read once)</h2>
+<p>Several Conjuration spells (and class overrides) summon a creature or animate a weapon. Summons are <strong>tethered</strong>, not free extra turns:</p>
+<ul>
+<li>A summon appears in an unoccupied space within <strong>Near</strong>, allied to you.</li>
+<li>It <strong>acts immediately after your turn</strong> each round — no separate initiative slot. Directing it is free (part of your turn).</li>
+<li>It uses the <strong>stat block in the spell</strong> and lasts the spell&#39;s duration or until it drops to 0 HP.</li>
+<li><strong>A summon counts as your one ongoing spell.</strong> You can have only one active at a time. If you go Downed, it vanishes.</li>
+<li>A <strong>bound weapon</strong> is <em>not</em> a creature — it&#39;s a spectral weapon you wield and attack with normally (no tether, doesn&#39;t use your ongoing-spell slot).</li>
+</ul>
+<p>The Conjuration perk <strong>Master Summoner</strong> (+1 to a summon&#39;s attacks, +2 rounds duration) and the summoner class overrides hook into these rules.</p>
+<hr>
+<h1>🔥 Destruction <em>(damage)</em></h1>
+<h3>Cantrips</h3>
+<ul>
+<li><strong>Spark</strong> — <em>Near · one creature · 0</em> — attack vs <strong>Armor</strong>; <code>1d6</code> fire. Flammables ignite.</li>
+<li><strong>Frost Touch</strong> — <em>Close · one creature · 0</em> — attack vs <strong>Armor</strong>; <code>1d4</code> cold, target&#39;s Speed halved until end of its next turn.</li>
+<li><strong>Shock</strong> — <em>Far · one creature · 0</em> — attack vs <strong>Armor</strong>; <code>1d6</code> lightning. No cover bonus vs metal armor.</li>
+<li><strong>Sacred Flame</strong> — <em>Near · one creature · 0</em> — attack vs <strong>Spirit</strong>; <code>1d8</code> radiant; target glows (negates Hide/Invisible) until end of its next turn.</li>
+</ul>
+<h3>Lesser (1)</h3>
+<ul>
+<li><strong>Magic Missile</strong> — <em>Far · up to 3 creatures · 1</em> — no roll; three <code>1d4+1</code> force darts, split as you like.</li>
+<li><strong>Burning Hands</strong> — <em>Close · 3-square cone · 1</em> — attack vs <strong>Armor</strong> each; <code>2d6</code> fire.</li>
+<li><strong>Thunderwave</strong> — <em>Close · 3-square cube · 1</em> — attack vs <strong>Armor</strong> each; <code>2d8</code> thunder, pushed 2 squares.</li>
+<li><strong>Ice Spike</strong> — <em>Far · one creature · 1</em> — attack vs <strong>Armor</strong>; <code>2d8</code> cold and Speed halved 1 round.</li>
+</ul>
+<h3>Greater (3)</h3>
+<ul>
+<li><strong>Fireball</strong> — <em>Far · 3-square radius · 3</em> — attack vs <strong>Armor</strong> each; <code>6d6</code> fire (half on miss).</li>
+<li><strong>Lightning Bolt</strong> — <em>Far · 10-square line · 3</em> — attack vs <strong>Armor</strong> each; <code>6d6</code> lightning (half on miss); hits allies in line.</li>
+<li><strong>Cone of Cold</strong> — <em>Close · 5-square cone · 3</em> — attack vs <strong>Armor</strong> each; <code>6d6</code> cold (half on miss); Speed halved 1 round.</li>
+</ul>
+<h3>Master (5)</h3>
+<ul>
+<li><strong>Disintegrate</strong> — <em>Far · one creature/object · 5</em> — attack vs <strong>Armor</strong>; <code>10d10</code> force; if it drops to 0, reduced to dust (no easy revive).</li>
+<li><strong>Fire Storm</strong> — <em>Far · 5-square radius · 5</em> — attack vs <strong>Armor</strong> each; <code>8d6</code> fire (half on miss). Everything flammable burns.</li>
+</ul>
+<hr>
+<h1>✨ Restoration <em>(heal · ward · bless · undeath)</em></h1>
+<h3>Cantrips</h3>
+<ul>
+<li><strong>Guidance</strong> — <em>Close · willing creature · 0</em> — its next ability check within 1 min has <strong>advantage</strong>.</li>
+<li><strong>Resistance</strong> <em>(ongoing)</em> — <em>Close · willing creature · 0</em> — <strong>advantage</strong> on its Spirit defense until your next turn.</li>
+<li><strong>Spare the Dying</strong> — <em>Close · a downed creature · 0</em> — no roll; the creature is <strong>stabilized</strong> (still 0 HP, no longer dying).</li>
+</ul>
+<h3>Lesser (1)</h3>
+<ul>
+<li><strong>Cure Wounds</strong> — <em>Close · touch · 1</em> — heal <code>2d8 + pool</code>. No effect on undead/constructs.</li>
+<li><strong>Healing Word</strong> — <em>Far · one creature · 1</em> — heal <code>1d6 + pool</code>; can wake a downed ally.</li>
+<li><strong>Bless</strong> <em>(ongoing)</em> — <em>Near · up to 3 willing · 1</em> — each has <strong>advantage</strong> on its next attack.</li>
+<li><strong>Sanctuary</strong> <em>(ongoing)</em> — <em>Close · one willing · 1</em> — attackers must beat your spell attack vs. their Spirit to target it (1 min, ends if it attacks).</li>
+<li><strong>Cleanse</strong> — <em>Close · touch · 1</em> — end one condition (Poisoned, Burning, Frightened, Charmed, Blinded…).</li>
+</ul>
+<h3>Greater (3)</h3>
+<ul>
+<li><strong>Mass Healing Word</strong> — <em>Far · up to 4 in Near of each other · 3</em> — each heals <code>2d6 + pool</code>; wakes the downed.</li>
+<li><strong>Spirit Guardians</strong> <em>(ongoing)</em> — <em>Self, radius Close · 3</em> — enemies ending their turn within 1 square take <code>3d8</code> radiant (half if they spend a reaction to roll Spirit and beat your attack).</li>
+<li><strong>Revivify</strong> — <em>Close · a creature dead ≤1 min · 3</em> — returns at 1 HP; body must be intact.</li>
+</ul>
+<h3>Master (5)</h3>
+<ul>
+<li><strong>Heal</strong> — <em>Near · one creature · 5</em> — restore all HP; end all conditions except Exhausted.</li>
+<li><strong>Resurrection</strong> — <em>Close · dead ≤1 week · 5</em> — returns at full HP; costs the caster <strong>1 permanent Spirit</strong> until next level.</li>
+</ul>
+<hr>
+<h1>🪄 Alteration <em>(physical manipulation · wards · buffs)</em></h1>
+<h3>Cantrips</h3>
+<ul>
+<li><strong>Mage Hand</strong> <em>(ritual)</em> — <em>Near · a spectral hand · 0</em> — lift 10 lb, open unlocked doors, pour, push. 1 min (10 if ritual).</li>
+<li><strong>Detect Life</strong> <em>(ritual)</em> — <em>Self, radius Near · 0</em> — sense living and undead creatures (not exact position) for 1 round (1 min if ritual).</li>
+</ul>
+<h3>Lesser (1)</h3>
+<ul>
+<li><strong>Shield</strong> <em>(reaction)</em> — <em>Self · 1</em> — when hit vs Armor, add <strong>+5 Armor</strong> until your next turn; can turn a hit into a miss.</li>
+<li><strong>Mage Armor</strong> <em>(ongoing)</em> — <em>Touch · 1</em> — target gains <strong>+3 Armor</strong> for 1 hour (only while in light or no armor).</li>
+<li><strong>Slow</strong> <em>(ongoing)</em> — <em>Near · one creature · 1</em> — attack vs <strong>Armor</strong>; Speed halved and its attacks at disadvantage (3 rounds).</li>
+<li><strong>Enhance</strong> <em>(ongoing)</em> — <em>Touch · willing · 1</em> — <strong>advantage</strong> on Might &amp; Agility checks and +1 Speed (1 min).</li>
+</ul>
+<h3>Greater (3)</h3>
+<ul>
+<li><strong>Fly</strong> <em>(ongoing)</em> — <em>Close · willing · 3</em> — flying Speed 8 for 5 min; falls if it ends aloft.</li>
+<li><strong>Telekinesis</strong> <em>(ongoing)</em> — <em>Far · one creature/object · 3</em> — move it up to Near each round (attack vs <strong>Armor</strong> to fling a creature: <code>4d6</code> + prone).</li>
+<li><strong>Haste</strong> <em>(ongoing)</em> — <em>Near · willing · 3</em> — +1 Speed step, <strong>advantage</strong> on attacks and Agility (1 min). <em>(No extra action — kept in budget.)</em></li>
+</ul>
+<h3>Master (5)</h3>
+<ul>
+<li><strong>Wall of Force</strong> <em>(ongoing)</em> — <em>Near · wall 10×4 · 5</em> — impassable, shapeable, 10 min; immune to Dispel Magic.</li>
+<li><strong>Polymorph</strong> <em>(ongoing)</em> — <em>Near · one creature · 5</em> — attack vs <strong>Mind</strong> (or auto if willing); becomes a beast (GM&#39;s pick) up to 10 min; reverts at prior HP when the beast form drops.</li>
+</ul>
+<hr>
+<h1>🌀 Illusion <em>(mind · fear · stealth · charm)</em></h1>
+<h3>Cantrips</h3>
+<ul>
+<li><strong>Daze</strong> — <em>Near · one creature · 0</em> — attack vs <strong>Mind</strong>; its attacks &amp; checks at disadvantage until end of its next turn.</li>
+<li><strong>Sleight Hex</strong> — <em>Near · one creature · 0</em> — attack vs <strong>Mind</strong>; the next attack against it (by anyone) has <strong>advantage</strong>.</li>
+<li><strong>Minor Illusion</strong> — <em>Near · 0</em> — create a sound or palm-to-body-sized image for 1 min; a creature that studies it may roll Mind vs. your attack to disbelieve.</li>
+</ul>
+<h3>Lesser (1)</h3>
+<ul>
+<li><strong>Sleep</strong> — <em>Near · up to 2 creatures · 1</em> — attack vs <strong>Mind</strong> each; falls asleep (Downed, not dying; wakes on damage/shake/1 min). 30+ HP immune.</li>
+<li><strong>Charm Person</strong> <em>(ongoing)</em> — <em>Near · one humanoid · 1</em> — attack vs <strong>Mind</strong>; <strong>Charmed</strong> 1 hour or until you/allies attack it.</li>
+<li><strong>Fear</strong> — <em>Near · one creature · 1</em> — attack vs <strong>Mind</strong>; <strong>Frightened</strong> of you (3 rounds).</li>
+<li><strong>Disguise Self</strong> <em>(ongoing)</em> — <em>Self · 1</em> — appear as another person of similar size for 1 hour; touch reveals the illusion.</li>
+</ul>
+<h3>Greater (3)</h3>
+<ul>
+<li><strong>Hold Person</strong> <em>(ongoing)</em> — <em>Near · one humanoid · 3</em> — attack vs <strong>Mind</strong>; <strong>Stunned</strong> 3 rounds; may reroll Spirit vs. your attack each turn to break free.</li>
+<li><strong>Invisibility</strong> <em>(ongoing)</em> — <em>Close · willing · 3</em> — attacks against it have disadvantage, its attacks advantage; ends when it attacks/casts or after 10 min.</li>
+<li><strong>Terror</strong> — <em>Near · all enemies in a 3-square radius · 3</em> — attack vs <strong>Mind</strong> each; <strong>Frightened</strong> 2 rounds.</li>
+</ul>
+<h3>Master (5)</h3>
+<ul>
+<li><strong>Dominate Mind</strong> <em>(ongoing)</em> — <em>Near · one creature · 5</em> — attack vs <strong>Mind</strong>; you control its actions (one move + action on its turn) up to 1 min; it may reroll Mind vs. your attack each time it takes damage.</li>
+</ul>
+<hr>
+<h1>👹 Conjuration <em>(summon · bind · teleport · banish)</em></h1>
+<h3>Cantrips</h3>
+<ul>
+<li><strong>Bound Blade</strong> <em>(ongoing)</em> — <em>Self · 0</em> — conjure a spectral weapon (<code>1d8</code>, uses your spell attack) for 1 min. A bound weapon, not a creature.</li>
+<li><strong>Spectral Shield</strong> <em>(ongoing)</em> — <em>Self · 0</em> — +1 Armor until your next turn.</li>
+</ul>
+<h3>Lesser (1)</h3>
+<ul>
+<li><strong>Summon Beast</strong> <em>(ongoing)</em> — <em>Near · 1</em> — summon a beast (HP 10, Armor 13, attack <code>+pool → 1d6+2</code>, Speed 8) for the encounter. <em>(Tethered — see Summoning rules.)</em></li>
+<li><strong>Web</strong> <em>(ongoing)</em> — <em>Near · 3-square radius · 1</em> — attack vs <strong>Armor</strong> each; <strong>Restrained</strong> (Might vs. your attack to tear free); difficult terrain; burns for <code>2d6</code>.</li>
+<li><strong>Misty Step</strong> — <em>Self · 1</em> — teleport to an unoccupied space you can see within Near.</li>
+<li><strong>Bound Weapon</strong> <em>(ongoing)</em> — <em>Self · 1</em> — a stronger spectral weapon (<code>1d10</code>, your spell attack) for 10 min.</li>
+</ul>
+<h3>Greater (3)</h3>
+<ul>
+<li><strong>Summon Elemental</strong> <em>(ongoing)</em> — <em>Near · 3</em> — summon an elemental (HP 25, Armor 14, attack <code>+pool → 2d6</code>, Speed 6, resists its element) for the encounter. <em>(Tethered.)</em></li>
+<li><strong>Spiritual Weapon</strong> <em>(ongoing)</em> — <em>Near · 3</em> — a floating weapon attacks <code>+pool → 1d8</code> force on your turn each round, for 1 min. <em>(Tethered; you may move it Near each round.)</em></li>
+<li><strong>Banishment</strong> <em>(ongoing)</em> — <em>Near · one creature · 3</em> — attack vs <strong>Spirit</strong>; vanishes 1 min (outsiders may not return).</li>
+<li><strong>Dimension Door</strong> — <em>Far · self + one willing adjacent · 3</em> — teleport both to a point within Far.</li>
+</ul>
+<h3>Master (5)</h3>
+<ul>
+<li><strong>Summon Greater Spirit</strong> <em>(ongoing)</em> — <em>Near · 5</em> — summon a mighty ally (HP 45, Armor 15, two attacks <code>+pool → 2d8</code>, Speed 8) for the encounter. <em>(Tethered.)</em></li>
+<li><strong>Banish</strong> — <em>Near · one creature · 5</em> — attack vs <strong>Spirit</strong>; non-natives banished <strong>permanently</strong>; natives as Banishment.</li>
+</ul>
+<hr>
+<h1>🜂 Universal <em>(utility / meta — any caster may learn)</em></h1>
+<ul>
+<li><strong>Light</strong> <em>(Cantrip)</em> — <em>Close · object · 0</em> — bright light, 6-square radius, 1 hour.</li>
+<li><strong>Mend</strong> <em>(Cantrip · ritual)</em> — <em>Close · object · 0</em> — repair one break/tear no larger than a sword.</li>
+<li><strong>Detect Magic</strong> <em>(Lesser · ritual)</em> — <em>Self, radius Near · 1 (0 ritual)</em> — sense presence/rough location of active magic for 10 min.</li>
+<li><strong>Comprehend Languages</strong> <em>(Lesser · ritual)</em> — <em>Self · 1 (0 ritual)</em> — understand any language for 1 hour (understand only).</li>
+<li><strong>Counterspell</strong> <em>(Greater · reaction)</em> — <em>Near · 3</em> — when a creature casts, roll <code>d20 + pool + training</code> vs. <code>10 + 5×tier</code>; on a hit the spell fizzles.</li>
+<li><strong>Dispel Magic</strong> <em>(Greater)</em> — <em>Near · 3</em> — roll vs. <code>10 + 5×tier</code> to end an ongoing magic effect.</li>
+</ul>
+<hr>
+<h2>Designer&#39;s notes</h2>
+<ul>
+<li><strong>~65 spells across 5 schools + Universal.</strong> Each school spans all four tiers, so any 2- or 3-school class has real choices at every tier.</li>
+<li><strong>Conjuration is a full pillar</strong> — summons (tethered, one at a time = no action-economy bloat), bound weapons (for the gish classes), teleports, and the banish line.</li>
+<li><strong>Alteration is the &quot;manipulate the physical&quot; school</strong> — flesh/ward (Mage Armor, Shield), telekinesis, Slow, Haste, Fly. Its <strong>Arcane Ward</strong> class perk lives here.</li>
+<li><strong>Save-or-suck stays disciplined.</strong> Hard lockdown is rare: Sleep, Hold Person, Dominate Mind, Polymorph, Banish — spread across schools and tiers, each on a different defense, most with a recurring escape roll.</li>
+<li><strong>Healing still costs mana</strong> — no free healing cantrip, preserving the resource economy.</li>
+<li><strong>Pools, not lists.</strong> A Spirit-Paladin and a Mind-Sorcerer both cast Fireball; it&#39;s the same Destruction spell from different pools. Class school-access is the only gate.</li>
+</ul>
+<blockquote>
+<p>The list should never grow so large a new player can&#39;t read it in one sitting. <strong>The total spell list fits in a player&#39;s head, not in an index.</strong></p>
+</blockquote>
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Weapons</title><style>
+@page { size: A4 landscape; margin: 7mm; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 8.4pt; line-height: 1.28; color: #1a1a1a;
+}
+.head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  border-bottom: 2pt solid #1a1a1a; padding-bottom: 3pt; margin-bottom: 5pt;
+}
+.head h1 { font-size: 17pt; margin: 0; letter-spacing: 1.5pt; text-transform: uppercase; }
+.head .sub { font-size: 8pt; color: #666; font-style: italic; }
+.cols { column-count: 2; column-gap: 6mm; }
+.card { break-inside: avoid; margin: 0 0 5pt 0; padding: 4pt 6pt;
+  border: 0.6pt solid #bbb; border-radius: 3pt; background: #fafafa; }
+.card h2 { font-size: 8.6pt; margin: 0 0 3pt 0; text-transform: uppercase;
+  letter-spacing: 0.6pt; color: #7a2e2e; border-bottom: 0.5pt solid #ddd; padding-bottom: 2pt; }
+table { border-collapse: collapse; width: 100%; font-size: 7.9pt; margin: 1pt 0; }
+th, td { border: 0.5pt solid #aaa; padding: 1.6pt 4pt; text-align: left; vertical-align: top; }
+th { background: #ececec; font-weight: 700; }
+tr:nth-child(even) td { background: #f3f3f3; }
+.formula { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 8pt;
+  background: #efe9df; padding: 2pt 5pt; border-radius: 2pt; display: block; margin: 2pt 0; }
+ul { margin: 2pt 0; padding-left: 13pt; }
+li { margin: 0.5pt 0; }
+strong { color: #000; }
+.tag { font-family: "SF Mono", Menlo, monospace; font-size: 7.6pt;
+  background: #e7e7e7; padding: 0 3pt; border-radius: 2pt; }
+.note { font-size: 7.4pt; color: #555; font-style: italic; margin-top: 2pt; }
+</style></head><body>
+<div class="head"><h1>Weapons</h1><div class="sub">Quick reference · A4 landscape · v1</div></div>
+<div class="cols">
+<div class="card">
+  <h2>The roll</h2>
+  <span class="formula">Attack = d20 + ability + training (if trained)  vs. ARMOR</span>
+  <span class="formula">Damage = weapon die + material + ability</span>
+  <ul>
+    <li><strong>Training → the hit.</strong> <strong>Material → the damage.</strong> Neither crosses over.</li>
+    <li><strong>Crit (nat 20):</strong> double the dice; flat mods (material + ability) added once.</li>
+    <li><strong>Fumble (nat 1):</strong> miss + a complication (drop weapon, hit ally for ½, prone, expose flank…).</li>
+    <li>Min damage on a hit is <span class="tag">1</span>.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Weapon classes</h2>
+  <table>
+    <tr><th>Class</th><th>Die</th><th>Ability</th><th>Hands</th><th>Range</th></tr>
+    <tr><td>Light melee</td><td>1d6 (1d4 dagger)</td><td>Agility <em>or</em> Might</td><td>one</td><td>Close</td></tr>
+    <tr><td>Medium melee</td><td>1d8</td><td>Might</td><td>one</td><td>Close</td></tr>
+    <tr><td>Heavy melee</td><td>1d10</td><td>Might</td><td><strong>two</strong></td><td>Close</td></tr>
+    <tr><td>Ranged</td><td>1d4–1d10</td><td>Agility</td><td>1–2</td><td>Near/Far</td></tr>
+  </table>
+  <div class="note">Light melee: pick Agility or Might at creation, then fixed. Polearms/spears reach 2 squares.</div>
+</div>
+
+<div class="card">
+  <h2>Examples by class</h2>
+  <ul>
+    <li><strong>Light (1d6 / 1d4):</strong> dagger (throw Near, conceal), shortsword, hand axe (throw), light mace/club, rapier (Agility-only).</li>
+    <li><strong>Medium (1d8, Might):</strong> longsword, battleaxe, warhammer, mace, spear (throw; reach 2 = polearm).</li>
+    <li><strong>Heavy (1d10, Might, 2-handed):</strong> greatsword, greataxe, maul, polearm / halberd / glaive (reach 2).</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Ranged weapons (Agility)</h2>
+  <table>
+    <tr><th>Weapon</th><th>Die</th><th>Range</th><th>Notes</th></tr>
+    <tr><td>Shortbow</td><td>1d6</td><td>Near</td><td></td></tr>
+    <tr><td>Longbow</td><td>1d8</td><td>Far</td><td></td></tr>
+    <tr><td>Light crossbow</td><td>1d6</td><td>Far</td><td>reload uses move</td></tr>
+    <tr><td>Heavy crossbow</td><td>1d10</td><td>Far</td><td>2-handed, reload</td></tr>
+    <tr><td>Hand crossbow</td><td>1d4</td><td>Near</td><td>one-handed</td></tr>
+    <tr><td>Sling</td><td>1d4</td><td>Near</td><td>anyone</td></tr>
+    <tr><td>Thrown (dagger/axe/spear)</td><td>1d6/1d6/1d8</td><td>Near</td><td></td></tr>
+  </table>
+  <div class="note">Beyond range: disadvantage; double range: can't attack. Ammo not tracked.</div>
+</div>
+
+<div class="card">
+  <h2>Material ladder — metal / stone <span style="font-weight:400;text-transform:none;">(adds to DAMAGE)</span></h2>
+  <table>
+    <tr><th>Gr</th><th>Material</th><th>Power tier</th><th>+Dmg</th><th>Price*</th></tr>
+    <tr><td>1</td><td>Iron</td><td>Apprentice 1–3</td><td>+0</td><td>10g</td></tr>
+    <tr><td>2</td><td>Steel</td><td>Apprentice 1–3</td><td>+1</td><td>30g</td></tr>
+    <tr><td>3</td><td>Dwarven</td><td>Veteran 4–7</td><td>+2</td><td>150g</td></tr>
+    <tr><td>4</td><td>Orcish</td><td>Veteran 4–7</td><td>+3</td><td>400g</td></tr>
+    <tr><td>5</td><td>Ebony</td><td>Master 8–10</td><td>+4</td><td>1,200g</td></tr>
+    <tr><td>6</td><td>Daedric</td><td>Master 8–10</td><td>+5</td><td>3,500g</td></tr>
+  </table>
+  <div class="note">*Two-handed ≈ 1.5× · daggers/slings ≈ ½. Same ladder also governs HEAVY ARMOR (see Armor sheet).</div>
+</div>
+
+<div class="card">
+  <h2>Remember</h2>
+  <ul>
+    <li><strong>Material never touches the attack roll</strong> — damage only. Keeps accuracy bounded (ceiling d20+9).</li>
+    <li>Material grade is <strong>mundane masterwork, not magic.</strong> The material <em>is</em> the quality tier (no separate "masterwork").</li>
+    <li>Materials track the party's <strong>power tier</strong> (loot + purse). A higher grade handed early = a deliberate treasure spike.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>Worked examples</h2>
+  <ul>
+    <li>App Warrior, Might +4, <strong>Iron</strong> longsword (trained): atk <span class="tag">+6</span> → dmg 1d8 +0 +4 (avg 8.5).</li>
+    <li>Vet Warrior, Might +5, <strong>Dwarven</strong> greatsword: atk <span class="tag">+8</span> → dmg 1d10 +2 +5 (avg 12.5).</li>
+    <li>Master Warrior, <strong>Daedric</strong> greatsword: dmg 1d10 +5 +5 (avg 15.5).</li>
+    <li>Vet Scout, Agi +5, <strong>Dwarven</strong> longbow: dmg 1d8 +2 +5 (avg 11.5), +1d6 Sneak when it applies.</li>
+  </ul>
+</div>
+</div></body></html>

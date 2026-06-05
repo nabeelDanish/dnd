@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Character Sheet</title>
+<style>
+@page { size: A4; margin: 11mm 11mm 12mm 11mm; }
+
+:root {
+  --ink: #2b2620;
+  --muted: #6b6256;
+  --accent: #7a2e2e;
+  --rule: #cdbfa6;
+  --paper: #fffdf8;
+  --panel: #f6f0e3;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: var(--ink); background: var(--paper);
+  font-size: 9.5pt; line-height: 1.3; margin: 0;
+}
+
+/* One continuous 2-column flow; pages break naturally as columns fill. */
+.cols { column-count: 2; column-gap: 8mm; column-fill: auto; }
+
+/* Title block (page 1 only) */
+.doc-head { text-align: center; margin-bottom: 4pt; }
+.doc-head h1 {
+  font-size: 26pt; color: var(--accent); margin: 0; letter-spacing: 1px;
+  font-variant: small-caps; border: none;
+}
+.doc-head p { color: var(--muted); font-style: italic; font-size: 9.5pt;
+  margin: 3pt auto; max-width: 150mm; line-height: 1.3; }
+.doc-head hr { border: none; border-top: 1.5px solid var(--rule); margin: 6pt 0 0 0; }
+
+/* Section headers */
+h2 {
+  font-size: 12pt; color: var(--accent);
+  border-bottom: 1.5px solid var(--rule); padding-bottom: 2pt;
+  margin: 7pt 0 3pt 0; font-variant: small-caps; letter-spacing: .4px;
+  break-after: avoid; break-inside: avoid;
+}
+.cols h2:first-child { margin-top: 0; }
+
+h3 {
+  font-size: 9.5pt; color: var(--ink); margin: 5pt 0 2pt 0;
+  break-after: avoid; break-inside: avoid;
+}
+h3::before { content: "❯ "; color: var(--accent); }
+
+p { margin: 2pt 0; }
+strong { color: var(--accent); }
+em { color: var(--muted); }
+
+/* Instructional blockquotes — quiet helper text */
+blockquote {
+  margin: 2pt 0; padding: 1pt 7pt; border-left: 2px solid var(--rule);
+  color: var(--muted); font-style: italic; font-size: 7.6pt; line-height: 1.25;
+  break-inside: avoid;
+}
+blockquote p { margin: 0; }
+
+/* Fill-in / write-on blocks — roomy lines for handwriting */
+pre {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+  padding: 4pt 7pt; margin: 2pt 0 4pt 0; overflow: visible; break-inside: avoid;
+}
+pre code {
+  font-family: "SF Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  font-size: 8.4pt; line-height: 1.75; white-space: pre-wrap; color: var(--ink);
+}
+
+/* Inline code (e.g. +3 / +2) */
+:not(pre) > code {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 2px;
+  padding: 0 3px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 9pt;
+}
+
+/* Tables (attacks, spells, journal, level-up) — give writable height */
+table { border-collapse: collapse; width: 100%; margin: 2pt 0 4pt 0;
+  font-size: 8.2pt; break-inside: avoid; }
+th, td { border: 1px solid var(--rule); padding: 3pt 5pt; text-align: left;
+  vertical-align: top; }
+th { background: var(--panel); color: var(--accent); font-weight: 700; }
+td { height: 13pt; }
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 6pt 0; }
+
+/* Footer note at the very end */
+.cols > p:last-of-type {
+  text-align: center; font-style: italic;
+  color: var(--muted); font-size: 8pt; margin-top: 6pt;
+}
+</style>
+</head>
+<body>
+<header class="doc-head"><h1>Character Sheet</h1>
+<p>A fill-in template. The first half is mechanical (what the dice need). The second half is <strong>who they are when the dice aren't rolling</strong> — the part that makes the character feel real at the table.</p>
+<p>Fill what you can. Leave the rest blank until play surprises you with the answer.</p>
+<hr /></header><div class="cols"><h2>I. The basics</h2>
+<pre><code>NAME ____________________________________________
+
+CLASS ____________________   LEVEL ___
+
+ANCESTRY ________________   BACKGROUND _____________________________
+
+PRONOUNS ___________   AGE ___   PLAYER ____________________________
+</code></pre>
+<hr />
+<h2>II. Abilities</h2>
+<p>Range <code>−1</code> to <code>+5</code>. Distribute <code>+3 / +2 / +1 / +0</code> at creation, plus class <code>+1</code>, plus ancestry <code>+1</code>.</p>
+<pre><code>MIGHT     [ ___ ]    physical force, toughness, heavy weapons
+AGILITY   [ ___ ]    speed, finesse, light/ranged weapons
+MIND      [ ___ ]    reasoning, perception, arcane magic
+SPIRIT    [ ___ ]    will, presence, divine magic
+</code></pre>
+<hr />
+<h2>III. Vitals</h2>
+<pre><code>HP        [ ____ / ____ ]   current / max
+
+MANA      [ ____ / ____ ]   (casters only)
+
+ARMOR defense    [ ____ ]   10 + Agility (or Might if heavy) + armor bonus
+MIND defense     [ ____ ]   10 + Mind
+SPIRIT defense   [ ____ ]   10 + Spirit
+
+SPEED            [ ____ ]   squares per turn (usually 6)
+
+TRAINING BONUS   [ +2 ]     +2 at lvl 1–3, +3 at 4–7, +4 at 8–10
+</code></pre>
+<h3>Conditions (currently)</h3>
+<p><em>Cross out when cleared.</em></p>
+<pre><code>[ ] Blinded     [ ] Burning      [ ] Charmed
+[ ] Frightened  [ ] Grappled     [ ] Poisoned
+[ ] Prone       [ ] Restrained   [ ] Stunned
+[ ] Exhausted
+</code></pre>
+<hr />
+<h2>IV. Trainings</h2>
+<p>You have <strong>3</strong> at creation (4 if Human ancestry). When a roll touches one of these, add your training bonus.</p>
+<pre><code>1. ___________________________
+2. ___________________________
+3. ___________________________
+4. ___________________________   (Human only)
+</code></pre>
+<hr />
+<h2>V. Class features</h2>
+<pre><code>1. _______________________   _____________________________________________
+
+2. _______________________   _____________________________________________
+
+3. _______________________   _____________________________________________
+   (gained at level 3)
+
+4. _______________________   _____________________________________________
+   (gained at level 5)
+</code></pre>
+<h2>VI. Ancestry trait</h2>
+<pre><code>TRAIT: ______________________________________________________________
+
+EFFECT: _____________________________________________________________
+</code></pre>
+<hr />
+<h2>VII. Attacks</h2>
+<pre><code>WEAPON                ATTACK     DAMAGE         NOTES
+___________________   _______    ___________    ____________________________
+
+___________________   _______    ___________    ____________________________
+
+___________________   _______    ___________    ____________________________
+</code></pre>
+<p><em>Attack = d20 + ability + training (if trained). Crit on natural 20 doubles the damage dice.</em></p>
+<hr />
+<h2>VIII. Spells</h2>
+<h3>Cantrips (free, at-will)</h3>
+<pre><code>1. ___________________________   ______________________________________________
+
+2. ___________________________   ______________________________________________
+</code></pre>
+<h3>Spells known</h3>
+<pre><code>TIER   COST   NAME                       EFFECT
+___    ___    _______________________    _______________________________________
+
+___    ___    _______________________    _______________________________________
+
+___    ___    _______________________    _______________________________________
+
+___    ___    _______________________    _______________________________________
+
+___    ___    _______________________    _______________________________________
+
+___    ___    _______________________    _______________________________________
+</code></pre>
+<p><em>One ongoing spell at a time. Cantrips don't count as ongoing.</em></p>
+<hr />
+<h2>IX. Gear</h2>
+<h3>Worn</h3>
+<pre><code>ARMOR: ___________________________   BONUS: _____   
+
+SHIELD: __________________________   BONUS: _____
+</code></pre>
+<h3>Wielded</h3>
+<pre><code>PRIMARY WEAPON: ____________________________________
+
+SECONDARY: _________________________________________
+</code></pre>
+<h3>Carried</h3>
+<pre><code>[ ] _______________________________
+[ ] _______________________________
+[ ] _______________________________
+[ ] _______________________________
+[ ] _______________________________
+[ ] _______________________________
+[ ] _______________________________
+[ ] _______________________________
+</code></pre>
+<h3>Magic items</h3>
+<pre><code>ITEM:    _________________________________________
+EFFECT:  _________________________________________
+
+ITEM:    _________________________________________
+EFFECT:  _________________________________________
+</code></pre>
+<h3>Coin</h3>
+<pre><code>GOLD ______   SILVER ______   COPPER ______
+</code></pre>
+<hr />
+<h2>X. Who they are (the part that isn't math)</h2>
+<p>This half makes the character matter. Fill in what feels right. Leave the rest empty — your character has secrets even <em>you</em> don't know yet.</p>
+<h3>At a glance</h3>
+<blockquote>
+<p><em>One sentence: what someone sees when your character walks into a tavern.</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+
+___________________________________________________________________________
+</code></pre>
+<h3>Voice and manner</h3>
+<blockquote>
+<p><em>How they sound. How they carry themselves. Is their voice low or high, fast or slow? Do they make eye contact? Do they fidget?</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+
+___________________________________________________________________________
+</code></pre>
+<h3>One weird thing</h3>
+<blockquote>
+<p><em>A mannerism, a tic, a habit. Polishes the same coin. Counts to three before drinking. Smiles when nervous.</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+</code></pre>
+<h3>Loves · Fears · Hides</h3>
+<pre><code>LOVES:  ______________________________________________________________
+
+FEARS:  ______________________________________________________________
+
+HIDES:  ______________________________________________________________
+        (something the rest of the party doesn't know yet)
+</code></pre>
+<h3>Faith, code, or loyalty</h3>
+<blockquote>
+<p><em>What does your character swear by? Could be a god, a person, an oath, a creed, a debt, a memory.</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+
+___________________________________________________________________________
+</code></pre>
+<h3>Three lines of backstory</h3>
+<blockquote>
+<p><em>Don't write a novel. Three sentences total. Where they're from, what they did, why they're here.</em></p>
+</blockquote>
+<pre><code>1. ___________________________________________________________________
+
+2. ___________________________________________________________________
+
+3. ___________________________________________________________________
+</code></pre>
+<h3>A scar or mark with a story</h3>
+<blockquote>
+<p><em>Physical or metaphorical. The one thing they won't talk about, except sometimes, when drunk, very late, to the right person.</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+
+___________________________________________________________________________
+</code></pre>
+<h3>A keepsake</h3>
+<blockquote>
+<p><em>Mechanically: nothing. Sentimentally: everything. A letter. A ring. A child's toy. A pressed flower.</em></p>
+</blockquote>
+<pre><code>WHAT:   ____________________________________________________________
+
+WHY:    ____________________________________________________________
+</code></pre>
+<h3>Tastes</h3>
+<pre><code>FAVORITE FOOD:    ___________________________________________________
+
+FAVORITE DRINK:   ___________________________________________________
+
+FAVORITE SONG OR SAYING:  ___________________________________________
+</code></pre>
+<h3>A line they will not cross</h3>
+<blockquote>
+<p><em>What would your character refuse to do, even at the cost of failure or death? This is the thing other PCs and the GM will eventually test.</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+
+___________________________________________________________________________
+</code></pre>
+<h3>A wish</h3>
+<blockquote>
+<p><em>If the world owed them one thing — and could grant it — what would they ask for?</em></p>
+</blockquote>
+<pre><code>___________________________________________________________________________
+</code></pre>
+<hr />
+<h2>XI. Connections</h2>
+<p>The people who know your character. Some give you allies; some give you debts; some give the GM hooks.</p>
+<h3>A connection from before</h3>
+<blockquote>
+<p><em>Someone who knew your character before this adventure. A mentor, a sibling, a rival, an old flame.</em></p>
+</blockquote>
+<pre><code>NAME:           ____________________________________________
+
+WHAT THEY ARE:  ____________________________________________
+
+WHERE:          ____________________________________________
+
+STATUS:         [ ] alive  [ ] missing  [ ] dead  [ ] complicated
+</code></pre>
+<h3>A debt</h3>
+<blockquote>
+<p><em>Owed by you, or to you. Money, blood, favor, or memory.</em></p>
+</blockquote>
+<pre><code>TO/FROM:    ________________________________________________
+
+WHAT:       ________________________________________________
+
+OPEN?       [ ] yes  [ ] paid  [ ] one day
+</code></pre>
+<h3>A party connection</h3>
+<blockquote>
+<p><em>Pick another player at the table. How do your characters know each other? Discuss with them.</em></p>
+</blockquote>
+<pre><code>WHO:    ____________________________________________________
+
+HOW:    ____________________________________________________
+
+WHAT THEY OWE EACH OTHER:  _________________________________
+</code></pre>
+<hr />
+<h2>XII. Journal</h2>
+<p>Fill in as you play. The character's voice, not yours.</p>
+<h3>Quests</h3>
+<pre><code>- ___________________________________________________________
+
+- ___________________________________________________________
+
+- ___________________________________________________________
+</code></pre>
+<h3>People met</h3>
+<pre><code>NAME                              IMPRESSION
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+</code></pre>
+<h3>Places been</h3>
+<pre><code>- ___________________________________________________________
+
+- ___________________________________________________________
+
+- ___________________________________________________________
+</code></pre>
+<h3>Things learned</h3>
+<pre><code>- ___________________________________________________________
+
+- ___________________________________________________________
+
+- ___________________________________________________________
+</code></pre>
+<h3>A line from this session</h3>
+<blockquote>
+<p><em>Something your character said, or something said to them, that you want to remember.</em></p>
+</blockquote>
+<pre><code>&quot;___________________________________________________________&quot;
+
+       — said by ______________________, in __________________________
+</code></pre>
+<hr />
+<h2>XIII. Level-up tracker</h2>
+<p>Fill this in <em>as</em> you level. A small habit that makes leveling feel like a moment.</p>
+<pre><code>LEVEL   HP GAIN   FEATURE / NOTE
+2       _____     _________________________________________________
+3       _____     _________________________________________________
+4       _____     _________________________________________________  (ability +1)
+5       _____     _________________________________________________  (new spell)
+6       _____     _________________________________________________
+7       _____     _________________________________________________  (ability +1)
+8       _____     _________________________________________________  (new spell)
+9       _____     _________________________________________________
+10      _____     _________________________________________________  (ability +1, capstone)
+</code></pre>
+<hr />
+<h2>XIV. The brief</h2>
+<p>A one-page version of who your character is, for when someone at the table asks <em>"so, who are you again?"</em></p>
+<pre><code>I am __________________________________________________________________________
+
+a ____________________________________________________________________________
+
+who ___________________________________________________________________________
+
+because ______________________________________________________________________
+
+and what I want, more than anything, is __________________________________________
+
+___________________________________________________________________________
+
+but what would stop me is _______________________________________________________
+
+___________________________________________________________________________
+
+.
+</code></pre>
+<hr />
+<p><em>Print double-sided. Keep section X handy. The dice will tell you what your character does. The rest of the sheet tells you who's doing it.</em></p></div>
+</body>
+</html>

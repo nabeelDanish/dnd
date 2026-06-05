@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>D&amp;D Rules</title>
+<style>
+@page {
+  size: A4;
+  margin: 16mm 14mm 18mm 14mm;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: #1a1a1a;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---- Title page ---- */
+.title-page {
+  height: 250mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  page-break-after: always;
+}
+.title-page .title {
+  font-size: 44pt;
+  font-weight: 700;
+  letter-spacing: 3pt;
+  margin: 0;
+  text-transform: uppercase;
+}
+.title-page .subtitle {
+  font-size: 14pt;
+  color: #555;
+  margin-top: 18pt;
+  font-style: italic;
+  max-width: 130mm;
+}
+.title-page .meta {
+  font-size: 10pt;
+  color: #888;
+  margin-top: 70pt;
+  letter-spacing: 1pt;
+  text-transform: uppercase;
+}
+.title-page .rule {
+  width: 60mm;
+  border-top: 1pt solid #999;
+  margin: 24pt 0;
+}
+
+/* ---- TOC ---- */
+.toc { page-break-after: always; }
+.toc-heading {
+  font-size: 24pt;
+  font-weight: 700;
+  border-bottom: 2pt solid #1a1a1a;
+  padding-bottom: 6pt;
+  margin-bottom: 18pt;
+}
+.toc ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12pt;
+}
+.toc li {
+  padding: 8pt 4pt;
+  border-bottom: 0.5pt dotted #aaa;
+}
+
+/* ---- Chapter headings ---- */
+h1 {
+  page-break-before: always;
+  font-size: 22pt;
+  font-weight: 700;
+  border-bottom: 2pt solid #1a1a1a;
+  padding-bottom: 6pt;
+  margin: 0 0 16pt 0;
+  letter-spacing: 0.5pt;
+}
+h2 {
+  font-size: 14.5pt;
+  margin: 18pt 0 8pt 0;
+  font-weight: 700;
+  page-break-after: avoid;
+  border-bottom: 0.5pt solid #ccc;
+  padding-bottom: 3pt;
+}
+h3 {
+  font-size: 12pt;
+  margin: 14pt 0 5pt 0;
+  font-weight: 700;
+  color: #2a2a2a;
+  page-break-after: avoid;
+}
+h4 {
+  font-size: 10.5pt;
+  margin: 10pt 0 4pt 0;
+  font-weight: 700;
+  font-style: italic;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 5pt 0;
+  orphans: 2;
+  widows: 2;
+}
+
+ul, ol {
+  margin: 5pt 0 9pt 0;
+  padding-left: 22pt;
+}
+li { margin-bottom: 2pt; }
+li > p { margin: 2pt 0; }
+li > ul, li > ol { margin: 2pt 0 4pt 0; }
+
+table {
+  border-collapse: collapse;
+  margin: 10pt 0;
+  font-size: 9.5pt;
+  width: 100%;
+  page-break-inside: avoid;
+}
+th, td {
+  border: 0.6pt solid #888;
+  padding: 4pt 6pt;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  background: #ebebeb;
+  font-weight: 700;
+}
+tr:nth-child(even) td { background: #f7f7f7; }
+
+code {
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 9pt;
+  background: #f0f0f0;
+  padding: 0 3pt;
+  border-radius: 2pt;
+}
+pre {
+  background: #f4f4f4;
+  border: 0.5pt solid #ddd;
+  padding: 8pt;
+  border-radius: 3pt;
+  font-size: 9pt;
+  line-height: 1.4;
+  page-break-inside: avoid;
+  white-space: pre-wrap;
+}
+pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 9pt;
+}
+
+blockquote {
+  margin: 10pt 0;
+  padding: 5pt 14pt;
+  border-left: 3pt solid #888;
+  background: #f9f9f9;
+  color: #444;
+}
+blockquote p { margin: 4pt 0; }
+
+strong { font-weight: 700; color: #000; }
+em { font-style: italic; }
+
+hr {
+  border: none;
+  border-top: 0.5pt solid #bbb;
+  margin: 14pt 0;
+  page-break-after: avoid;
+}
+
+/* Links: don't underline (and strip URL printing) for cleaner paper output */
+a { color: #1a1a1a; text-decoration: none; }
+</style>
+</head>
+<body>
+
+<div class="title-page">
+  <div class="title">The Rules</div>
+  <div class="rule"></div>
+  <div class="subtitle">A lean D&amp;D-style tabletop RPG, in sixteen chapters</div>
+  <div class="meta">v1 · for personal use</div>
+</div>
+
+<div class="toc">
+  <div class="toc-heading">Contents</div>
+  <ol>
+      <li>00 — Design Philosophy</li>
+      <li>01 — The Core Mechanic</li>
+      <li>02 — Character Creation</li>
+      <li>03 — Progression</li>
+      <li>04 — Skills and Checks</li>
+      <li>05 — Combat</li>
+      <li>06 — Attack and Defense</li>
+      <li>07 — HP, Damage, and Death</li>
+      <li>08 — Conditions</li>
+      <li>09 — Magic</li>
+      <li>10 — Spell List</li>
+      <li>11 — Equipment</li>
+      <li>12 — Monsters</li>
+      <li>13 — Encounters and Rewards</li>
+      <li>14 — GM Guide</li>
+      <li>15 — Quickstart</li>
+  </ol>
+</div>
+
+<h1>00 — Design Philosophy</h1>
+<p>This is the document every other document in this game answers to. When a later rule feels wrong, check it against this one.</p>
+<h2>What this game is</h2>
+<p>A standalone tabletop RPG in the D&amp;D tradition. Same shape: a party of heroes, a Game Master running the world, d20 rolls, classes, spells, monsters, levels. Different size: roughly <strong>one-third the rules</strong> of D&amp;D 5e, with no loss of the things that make a campaign feel like a campaign.</p>
+<p>It is <strong>not</strong> a one-shot board game and <strong>not</strong> a 5e supplement. Someone who has never played a tabletop RPG should be able to read this rulebook and run a campaign. Someone who knows 5e should be able to read it in under an hour and feel oriented.</p>
+<h2>The three design goals, in order</h2>
+<ol>
+<li><strong>A new player can play their first turn correctly within 10 minutes of sitting down.</strong> Not &quot;understand the rules&quot; — <em>play correctly</em>. This is the test every rule has to pass.</li>
+<li><strong>The game still rewards system mastery.</strong> Character choices matter. Tactics matter. Spell selection matters. We are stripping rules, not stripping depth.</li>
+<li><strong>A GM can run a session with five minutes of prep.</strong> Stat blocks fit on an index card. Encounter math is mental math. Rulings are faster than lookups.</li>
+</ol>
+<p>When these three goals conflict, <strong>goal 1 wins</strong>. A rule that gives veteran players a juicy tactical option but slows down a newcomer&#39;s first turn is a bad rule for this game.</p>
+<h2>What we are cutting, and why</h2>
+<p>These are 5e features (and broader D&amp;D-tradition features) we are explicitly removing. Each cut has a reason; if a later doc wants to add one back, it has to argue against the reason.</p>
+<table>
+<thead>
+<tr>
+<th>Cut</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>The action / bonus action / reaction split</td>
+<td>Three resources for &quot;what you do on your turn&quot; is two too many. One action per turn, with named exceptions.</td>
+</tr>
+<tr>
+<td>Opportunity attacks as a default rule</td>
+<td>Slows every movement decision. Becomes an optional condition.</td>
+</tr>
+<tr>
+<td>Spell slot ladder (1st–9th level slots)</td>
+<td>Replaced with a flatter resource. See <a href="09-magic.md">09-magic.md</a>.</td>
+</tr>
+<tr>
+<td>Concentration as a tracked status</td>
+<td>Replaced with simpler &quot;only one active spell at a time&quot; framing.</td>
+</tr>
+<tr>
+<td>Attunement</td>
+<td>Doesn&#39;t exist. Magic items have their effect or they don&#39;t.</td>
+</tr>
+<tr>
+<td>Encumbrance and carrying capacity</td>
+<td>Doesn&#39;t exist. Carry what&#39;s reasonable; GM calls absurdities.</td>
+</tr>
+<tr>
+<td>Racial subraces (Hill Dwarf vs. Mountain Dwarf, etc.)</td>
+<td>One version of each ancestry.</td>
+</tr>
+<tr>
+<td>Feats as a parallel progression system</td>
+<td>Folded into class features. No feat tax.</td>
+</tr>
+<tr>
+<td>Multiclassing</td>
+<td>Doesn&#39;t exist as a system. Reflavor a class instead.</td>
+</tr>
+<tr>
+<td>Six ability scores with score/modifier distinction</td>
+<td>Collapsed. See <a href="02-character-creation.md">02-character-creation.md</a>.</td>
+</tr>
+<tr>
+<td>Skill list of 18 named skills</td>
+<td>Collapsed into a smaller set tied directly to ability scores.</td>
+</tr>
+<tr>
+<td>Death saving throws as a mini-game</td>
+<td>Replaced with a simpler downed state. See <a href="07-hp-damage-death.md">07-hp-damage-death.md</a>.</td>
+</tr>
+<tr>
+<td>Tracking spell components, material costs</td>
+<td>Doesn&#39;t exist. If a spell needs a thing, the spell says so in its text.</td>
+</tr>
+<tr>
+<td>Short rest vs. long rest distinction</td>
+<td>One rest type. See <a href="03-progression.md">03-progression.md</a>.</td>
+</tr>
+<tr>
+<td>Exhaustion levels 1–6</td>
+<td>Replaced with a single Exhausted condition.</td>
+</tr>
+<tr>
+<td>Hit dice as a separate healing resource</td>
+<td>Healing comes from rests and spells. No third system.</td>
+</tr>
+<tr>
+<td>Counting cantrip damage dice that scale at levels 5/11/17</td>
+<td>Cantrips have one damage line. They get better when you level the class.</td>
+</tr>
+</tbody></table>
+<p>The pattern: <strong>anything that adds a conditional modifier, a separate resource pool, or a sub-mini-game gets cut unless it earns its keep.</strong></p>
+<h2>What we are protecting</h2>
+<p>Cuts are easy; what&#39;s harder is being clear about what we will <em>not</em> compromise. If a simplification threatens these, the simplification loses.</p>
+<ul>
+<li><strong>The d20 moment.</strong> The game&#39;s heartbeat is rolling a d20 against a target number and reacting to what it shows. This stays untouched. No dice pools, no 2d6 curves.</li>
+<li><strong>Class identity.</strong> A fighter, a wizard, a rogue, and a cleric have to <em>feel</em> mechanically different on turn one of level one. Not just reflavored.</li>
+<li><strong>Tactical combat.</strong> Position, choice of target, choice of action — these still matter. We are not narrating combat into oblivion.</li>
+<li><strong>Spells you recognize.</strong> Fireball, Cure Wounds, Shield, Magic Missile, Charm Person — the iconic spells survive, possibly renamed, mechanically simpler.</li>
+<li><strong>Character growth across a campaign.</strong> Level 1 and level 10 characters are clearly different. Leveling is a moment, not a paperwork session.</li>
+<li><strong>GM authority.</strong> The GM rules edge cases on the spot. The book doesn&#39;t try to anticipate everything.</li>
+</ul>
+<h2>Design principles every other doc must follow</h2>
+<p>These are the rules the <em>rules</em> follow. If a later document violates one of these, it&#39;s the document that&#39;s wrong.</p>
+<h3>1. Small numbers, always</h3>
+<p>Bonuses and penalties are usually <code>+1</code>, <code>+2</code>, or <code>+3</code>. We don&#39;t stack five different <code>+1</code>s on a roll. <strong>If you can&#39;t do the math in your head while drunk, it&#39;s too much math.</strong> Target the player who never wants to look at a character sheet mid-turn.</p>
+<h3>2. One rule, not three</h3>
+<p>If a situation has three possible resolutions in 5e (action vs. bonus action vs. reaction; spell save vs. attack roll vs. auto-hit), this game picks one. Variety lives in <em>content</em> (different spells, different monsters), not in <em>meta-rules</em>.</p>
+<h3>3. Symmetry between players and monsters</h3>
+<p>A monster&#39;s attack works the same way as a player&#39;s attack. A monster&#39;s &quot;save&quot; works the same way as a player&#39;s check. There is no separate sub-system for the GM side of the screen. This halves what a new GM has to learn.</p>
+<h3>4. The d20 carries the variance</h3>
+<p>We use the d20 spread on purpose: a <code>1</code> should sometimes ruin a strong character&#39;s plan, and a <code>20</code> should sometimes save a weak one. Don&#39;t paper over that swing with floors, ceilings, or rerolls. RNG is a feature.</p>
+<h3>5. If it doesn&#39;t change the decision, cut it</h3>
+<p>A rule earns its place only if it changes what a player chooses to do. A <code>+1</code> modifier that the player would have applied to whatever they were going to do anyway is fake complexity. Cut it.</p>
+<h3>6. Rulings over rules</h3>
+<p>When the rule is unclear or missing, the GM picks something sensible and the game continues. The rulebook does not need to cover the edge case. The GM does not need to feel guilty about deciding. <strong>A consistent ruling beats a correct one.</strong></p>
+<h3>7. Teachable in 30 seconds</h3>
+<p>For every rule, ask: can a player explain it to a new player in 30 seconds at the table, without looking at the book? If no, the rule is too big. Either shrink it or cut it.</p>
+<h3>8. No bookkeeping the players don&#39;t enjoy</h3>
+<p>Players enjoy tracking HP and spells. They don&#39;t enjoy tracking rations, arrows, torch durations, or encumbrance. We track the first kind. We don&#39;t track the second.</p>
+<h2>The complexity budget</h2>
+<p>Total rulebook target: <strong>roughly 60 pages of actual rules</strong>, plus reference content (spell list, bestiary, equipment).</p>
+<p>Per-doc soft caps:</p>
+<ul>
+<li>Core mechanic, character creation, combat: aim for 4–6 pages each.</li>
+<li>Magic: aim for 8 pages (the most expensive system).</li>
+<li>Everything else: 2–4 pages.</li>
+</ul>
+<p>If a doc blows its budget, that&#39;s a signal we&#39;ve over-designed the system, not a signal the budget was wrong. Cut first.</p>
+<h2>How we&#39;ll know it&#39;s working</h2>
+<p>The game is succeeding if:</p>
+<ul>
+<li>A first-time player makes their character in 15 minutes.</li>
+<li>A first-time GM runs a fight without flipping back to the book.</li>
+<li>A combat round between four players and three monsters takes under 10 minutes.</li>
+<li>&quot;What does my character do?&quot; has an obvious answer almost every turn.</li>
+<li>The book fits in a tab in someone&#39;s browser, not a binder on their desk.</li>
+</ul>
+<p>The game is failing if:</p>
+<ul>
+<li>Players are asking &quot;wait, can I also do X?&quot; every turn.</li>
+<li>The GM is doing arithmetic between every action.</li>
+<li>Anyone says &quot;let me look that up&quot; more than once a fight.</li>
+<li>A new player needs a veteran to translate their character sheet.</li>
+</ul>
+<h2>The contract with the rest of these docs</h2>
+<p>Every other document in this directory is downstream of this one. When you read <a href="05-combat.md">05-combat.md</a> or <a href="09-magic.md">09-magic.md</a>, you should be able to point at any rule and trace it back to a principle here. If you can&#39;t, the rule is suspect — or this doc is missing something and needs updating.</p>
+<p>We will revise this document as we go. It is the spec, not a manifesto.</p>
+<h1>01 — The Core Mechanic</h1>
+<p>This is the only resolution rule in the game. Combat, magic, sneaking, lying, climbing, picking a lock, resisting a curse — all of them are the rule below with different numbers plugged in.</p>
+<h2>The rule</h2>
+<blockquote>
+<p><strong>When you try something that could fail and matters, roll a d20, add one modifier, and compare it to a target number. Meet or beat the number: you succeed. Miss it: you fail.</strong></p>
+</blockquote>
+<p>That is the entire game. Everything that follows is a clarification of one of those four pieces: <em>when you roll</em>, <em>what modifier</em>, <em>what target number</em>, <em>what happens on a 1 or 20</em>.</p>
+<h2>Target numbers</h2>
+<p>The GM tells you what target number you&#39;re rolling against. There are three:</p>
+<table>
+<thead>
+<tr>
+<th>Difficulty</th>
+<th>Target</th>
+<th>Feel</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Easy</strong></td>
+<td>10</td>
+<td>A trained person succeeds most of the time. An untrained person has a real chance.</td>
+</tr>
+<tr>
+<td><strong>Hard</strong></td>
+<td>15</td>
+<td>The right tool for the job; failure is plausible.</td>
+</tr>
+<tr>
+<td><strong>Heroic</strong></td>
+<td>20</td>
+<td>A story-worthy feat. Even an expert can blow it.</td>
+</tr>
+</tbody></table>
+<p>That is the whole scale. The GM may go to <strong>5</strong> for trivial-but-not-automatic, or <strong>25</strong> for legendary, but in practice almost every roll in the game is 10, 15, or 20.</p>
+<p>If the GM is unsure, the answer is <strong>15</strong>. Default to Hard and adjust by feel.</p>
+<h3>When <em>not</em> to roll</h3>
+<p>The GM does not call for a roll when:</p>
+<ul>
+<li>Success is the only outcome that makes sense given the character&#39;s training. <em>(A trained thief opens an ordinary house lock without dice.)</em></li>
+<li>Failure is the only outcome that makes sense. <em>(A barbarian with no magical training cannot decipher the rune by rolling well.)</em></li>
+<li>The roll would not change the story regardless of result.</li>
+</ul>
+<p><strong>Roll only when the outcome is in doubt and the result will matter in the next minute of play.</strong> This is not advice; it is a rule. Calling for unnecessary rolls is the single biggest source of slowdown at the table.</p>
+<h2>Modifiers</h2>
+<p>Two things, at most, get added to your d20.</p>
+<ol>
+<li><strong>Your ability modifier</strong> for whichever ability the task uses. Ability modifiers range from <strong>−1 to +5</strong> across the entire game. (See <a href="02-character-creation.md">02-character-creation.md</a> for the abilities themselves.)</li>
+<li><strong>Your training bonus</strong>, if your character is trained in this kind of task. The training bonus is <strong>+2 at low levels, +3 at mid levels, +4 at high levels</strong>. You either have it or you don&#39;t — no half-training, no expertise tiers.</li>
+</ol>
+<p>That is the entire modifier stack. <strong>A character&#39;s bonus on any roll is somewhere between <code>−1</code> and <code>+9</code> for the whole life of the game.</strong> No situational <code>+1</code>s, no flanking bonus, no bardic inspiration math, no stacked buffs that turn the turn into arithmetic.</p>
+<blockquote>
+<p><strong>Principle:</strong> if a feature would add yet another <code>+1</code>, it instead grants <strong>advantage</strong> (below). Modifiers are reserved for who the character <em>is</em>; advantage is reserved for the situation they&#39;re <em>in</em>.</p>
+</blockquote>
+<h2>The natural 20 and the natural 1</h2>
+<p>These check the d20 itself, before modifiers.</p>
+<ul>
+<li><strong>Natural 20</strong> is the best possible outcome the situation allows. In combat, this is a <strong>critical hit</strong>: roll your damage dice twice and add them together (modifiers added only once). Outside combat, the GM narrates a result better than the player asked for — extra information, an additional benefit, a stroke of luck on top.</li>
+<li><strong>Natural 1</strong> is the worst possible outcome. In combat, you miss <em>and</em> something bad happens — you drop the weapon, expose a flank, hit an ally. Outside combat, you fail <em>and</em> introduce a complication.</li>
+</ul>
+<p>A natural 1 is not &quot;you take the modifier off and check the total against the target.&quot; It is an automatic, dramatic failure. The d20 is allowed to ruin your day. That&#39;s the contract — the game keeps variance interesting by letting it actually matter.</p>
+<h2>Advantage and disadvantage</h2>
+<p>This is the one situational modifier in the game. It replaces every other &quot;circumstance bonus&quot; you might think of.</p>
+<ul>
+<li><strong>Advantage:</strong> roll <strong>two</strong> d20s, use the <strong>higher</strong> one.</li>
+<li><strong>Disadvantage:</strong> roll <strong>two</strong> d20s, use the <strong>lower</strong> one.</li>
+</ul>
+<p>Rules:</p>
+<ul>
+<li>You either have advantage or you don&#39;t. Multiple sources of advantage don&#39;t stack.</li>
+<li>One source of advantage and one source of disadvantage <strong>cancel each other</strong>, and you roll a normal single d20. It doesn&#39;t matter how many of each — any of one cancels any of the other.</li>
+</ul>
+<p>Anywhere in this rulebook, when a rule could have said <code>+2 in this situation</code>, it instead says <code>advantage in this situation</code>. That is the design substitution. You will see it constantly.</p>
+<h2>One roll per action: the active player rolls</h2>
+<p>This game has <strong>no contested rolls</strong> and <strong>no saving throws against attacks.</strong> Whoever is taking the action makes the only roll.</p>
+<ul>
+<li>A fighter swinging a sword: the fighter rolls vs. the target&#39;s <strong>Armor</strong> defense.</li>
+<li>A wizard casting a mind-control spell: the wizard rolls vs. the target&#39;s <strong>Mind</strong> defense.</li>
+<li>A rogue trying to sneak past a guard: the rogue rolls vs. the guard&#39;s <strong>Awareness</strong>.</li>
+<li>A monster biting a player: the monster rolls vs. the player&#39;s Armor defense.</li>
+</ul>
+<p>Defenses are static numbers on the character sheet. They don&#39;t roll; they are rolled <em>against</em>. This is symmetric: a player&#39;s attack and a monster&#39;s attack use the exact same procedure. There is no separate &quot;saving throw&quot; subsystem to learn.</p>
+<p>The exception is at the GM&#39;s discretion: <strong>when neither side is really &quot;acting&quot; and both are equally engaged</strong> (an arm-wrestling match, two scouts trying to spot each other first), the GM may call for both sides to roll and compare totals. This should be rare. Default to one roll.</p>
+<h2>Group rolls</h2>
+<p>When a whole party tries the same thing (sneaking together, climbing the same cliff), they don&#39;t make four separate rolls. Use the <strong>weakest-link</strong> rule:</p>
+<ul>
+<li>Everyone rolls.</li>
+<li>If <strong>half or more</strong> of the party succeeds, the group succeeds. Those who failed are carried/covered by those who succeeded.</li>
+<li>Otherwise the group fails, and the GM picks one of the failed rolls to drive the complication.</li>
+</ul>
+<p>This is faster than tracking each character separately and produces the right dramatic outcomes: a single failure doesn&#39;t doom a competent party, but a party that&#39;s mostly weak at something gets caught.</p>
+<h2>What rolls <em>aren&#39;t</em> for</h2>
+<p>A few things the d20 deliberately does not decide:</p>
+<ul>
+<li><strong>Reading a clue the GM has written into the world.</strong> If there&#39;s a letter under the floorboard and the player says they look under the floorboard, they find the letter. No Perception check.</li>
+<li><strong>Recalling something the character would obviously know.</strong> A wizard knows what a goblin is. A cleric knows the major gods. No roll.</li>
+<li><strong>What the player decides to do.</strong> The d20 resolves attempts, not intentions. A bad roll means the <em>attempt</em> failed, not that the <em>plan</em> was stupid.</li>
+</ul>
+<p>When in doubt: the d20 is for <strong>moments of pressure with real stakes</strong>, not for testing whether the character is allowed to perceive their own surroundings.</p>
+<h2>A worked example</h2>
+<p>The party is sneaking up on a bandit camp at night. The rogue (Stealth-trained, Agility +3) tries to slip into the tent. The bandit lieutenant&#39;s Awareness is 14.</p>
+<ul>
+<li>The GM does <strong>not</strong> ask the bandit to roll. The lieutenant is not acting; the rogue is.</li>
+<li>The rogue rolls <strong>d20 + 3 (Agility) + 2 (training)</strong> vs. <strong>14</strong>.</li>
+<li>They get an 11 on the die. Total: <strong>16</strong>. Beat 14. They&#39;re in the tent.</li>
+</ul>
+<p>Now the rogue tries to memorize the map on the table. The GM says this is <strong>Easy (10)</strong> — the map is right there, no one is watching, there&#39;s just enough light. The rogue rolls <strong>d20 + 3 (Intellect)</strong>, no training in cartography. They get a <strong>2</strong> on the die. Natural 1? No, just a low result. Total <strong>5</strong>. They miss the location of the next ambush.</p>
+<p>If they had rolled a natural <strong>1</strong>: they knock over a lantern and the camp wakes up.
+If they had rolled a natural <strong>20</strong>: they memorize the map <em>and</em> notice a second map hidden under it.</p>
+<p>That&#39;s the whole loop. Roll, modifier, target, narration.</p>
+<h2>Why this is enough</h2>
+<p>A first-time player needs to learn exactly one sentence to play this game competently:</p>
+<blockquote>
+<p>&quot;Roll a d20, add my modifier, beat the number the GM gives me.&quot;</p>
+</blockquote>
+<p>Critical hits, advantage, group rolls, defenses — all of those are elaborations the player can absorb during their first session of play. None of them block the first turn. That&#39;s the design target from <a href="00-design-philosophy.md">00-design-philosophy.md</a>, and this mechanic hits it.</p>
+<p>Everything else in this rulebook — combat, magic, character creation, monsters — is just a list of <em>which ability</em>, <em>which target</em>, and <em>what happens after the roll resolves</em>.</p>
+<h1>02 — Character Creation</h1>
+<p>A character has four abilities, one class, one ancestry, one background, and three trainings. Everything else flows from those choices. Total time to make a character: <strong>15 minutes.</strong></p>
+<h2>The four abilities</h2>
+<p>Every character has four ability scores. Each is a single number, a modifier, ranging from <code>−1</code> to <code>+5</code>. There is no separate &quot;score 8–20&quot; tracked behind the modifier — the modifier <em>is</em> the ability.</p>
+<table>
+<thead>
+<tr>
+<th>Ability</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Might</strong></td>
+<td>Strength, toughness, raw physical force. Hitting hard with heavy weapons. Wrestling, breaking down doors, soaking damage. Drives HP.</td>
+</tr>
+<tr>
+<td><strong>Agility</strong></td>
+<td>Speed, balance, finesse, reflexes. Hitting with light or ranged weapons. Sneaking, dodging, climbing, picking locks. Drives Armor for the unarmored or lightly armored.</td>
+</tr>
+<tr>
+<td><strong>Mind</strong></td>
+<td>Reasoning, memory, perception of detail, arcane study. Spotting traps, recalling lore, reading languages. Drives arcane magic.</td>
+</tr>
+<tr>
+<td><strong>Spirit</strong></td>
+<td>Willpower, presence, intuition, divine connection. Resisting fear or charm, leading, sensing intent. Drives divine magic.</td>
+</tr>
+</tbody></table>
+<p>A roll&#39;s ability is whichever <strong>best fits the action</strong> — the GM picks. A barbarian climbing a wall by force uses Might. A scout climbing the same wall by balance uses Agility. Don&#39;t argue about which it is; pick one and roll.</p>
+<h2>Generating your abilities</h2>
+<p>No dice. <strong>Assign <code>+3</code>, <code>+2</code>, <code>+1</code>, <code>+0</code></strong> to your four abilities, one each. That&#39;s the entire procedure.</p>
+<p>Your class and ancestry will then modify these (see below). You will almost never have a starting ability above <code>+4</code> or below <code>+0</code>.</p>
+<h2>Class</h2>
+<p>Pick one of four classes. There is no multiclassing; pick a class that fits the <em>shape</em> of the character you want, then reflavor freely. A &quot;ranger&quot; is a Scout. A &quot;barbarian&quot; is a Warrior. A &quot;warlock&quot; is a Mage. A &quot;paladin&quot; is a Priest or a Warrior with religious flavor — pick whichever role you want at the table.</p>
+<h3>Warrior</h3>
+<p>The frontline. Tanks hits, deals reliable damage in melee, anchors a fight.</p>
+<ul>
+<li><strong>Suggested primary:</strong> Might</li>
+<li><strong>Class bonus:</strong> <code>+1</code> Might at creation.</li>
+<li><strong>Starting HP:</strong> <code>10 + Might</code></li>
+<li><strong>Trained in:</strong> all weapons, all armor.</li>
+<li><strong>Starting trainings (pick 2):</strong> Athletics, Intimidation, Endurance, Wilderness, Tactics, Crafting.</li>
+<li><strong>Signature feature — Cleave.</strong> When your attack reduces a creature to 0 HP, you may immediately make another attack as part of the same action against a different target within reach.</li>
+<li><strong>Signature feature — Bulwark.</strong> While you wear medium or heavy armor, allies adjacent to you have <code>+1</code> to their Armor defense. (This is the only exception to the &quot;no stacking <code>+1</code>&quot; rule — it&#39;s intrinsic to the class identity.)</li>
+</ul>
+<h3>Scout</h3>
+<p>The skirmisher. Fast, accurate, hits where it hurts, hard to pin down.</p>
+<ul>
+<li><strong>Suggested primary:</strong> Agility</li>
+<li><strong>Class bonus:</strong> <code>+1</code> Agility at creation.</li>
+<li><strong>Starting HP:</strong> <code>8 + Might</code></li>
+<li><strong>Trained in:</strong> light weapons, ranged weapons, light armor.</li>
+<li><strong>Starting trainings (pick 2):</strong> Stealth, Perception, Acrobatics, Wilderness, Sleight of Hand, Lore.</li>
+<li><strong>Signature feature — Sneak Strike.</strong> Once per turn, when you attack with advantage (or when an ally is adjacent to your target), deal an extra <code>1d6</code> damage on a hit.</li>
+<li><strong>Signature feature — Slip Away.</strong> When an enemy adjacent to you takes any action that isn&#39;t attacking you, you may move up to half your speed without provoking anything.</li>
+</ul>
+<h3>Mage</h3>
+<p>The arcanist. Bends reality. Glass cannon — devastating output, fragile body.</p>
+<ul>
+<li><strong>Suggested primary:</strong> Mind</li>
+<li><strong>Class bonus:</strong> <code>+1</code> Mind at creation.</li>
+<li><strong>Starting HP:</strong> <code>6 + Might</code></li>
+<li><strong>Trained in:</strong> light weapons, no armor. (Wearing armor blocks spellcasting.)</li>
+<li><strong>Starting trainings (pick 2):</strong> Arcana, Lore, Investigation, Perception, Insight, Crafting.</li>
+<li><strong>Signature feature — Spellcasting.</strong> You know <code>3</code> spells from the arcane list (see <a href="10-spell-list.md">10-spell-list.md</a>). You have a mana pool of <code>level + Mind</code> per rest. Cantrips are free.</li>
+<li><strong>Signature feature — Arcane Recovery.</strong> Once per fight, when you roll your spell attack die, you may reroll a <code>1</code>.</li>
+</ul>
+<h3>Priest</h3>
+<p>The faithful. Channels divine power to heal allies, banish horrors, or strike with sacred force.</p>
+<ul>
+<li><strong>Suggested primary:</strong> Spirit</li>
+<li><strong>Class bonus:</strong> <code>+1</code> Spirit at creation.</li>
+<li><strong>Starting HP:</strong> <code>8 + Might</code></li>
+<li><strong>Trained in:</strong> medium weapons, light and medium armor.</li>
+<li><strong>Starting trainings (pick 2):</strong> Religion, Medicine, Insight, Persuasion, Lore, Intimidation.</li>
+<li><strong>Signature feature — Spellcasting.</strong> You know <code>3</code> spells from the divine list. You have a mana pool of <code>level + Spirit</code> per rest. Cantrips are free.</li>
+<li><strong>Signature feature — Divine Touch.</strong> As your action, touch a creature: heal them for <code>1d6 + Spirit</code> HP. Free, usable <code>1 + Spirit</code> times per rest.</li>
+</ul>
+<blockquote>
+<p><strong>Note on class symmetry.</strong> All four classes have two signature features at level 1. This is deliberate — it gives every character at least one interesting decision on their first turn.</p>
+</blockquote>
+<h2>Ancestry</h2>
+<p>Pick one. Each grants an ability bump and one mechanical trait. No subraces, no half-versions.</p>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>Ability</th>
+<th>Trait</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Human</strong></td>
+<td><code>+1</code> to any ability of your choice</td>
+<td><strong>Adaptable</strong> — pick a 4th training at character creation.</td>
+</tr>
+<tr>
+<td><strong>Elf</strong></td>
+<td><code>+1</code> Agility</td>
+<td><strong>Keen Senses</strong> — advantage on Perception rolls. You can see clearly in dim light.</td>
+</tr>
+<tr>
+<td><strong>Dwarf</strong></td>
+<td><code>+1</code> Might</td>
+<td><strong>Stone-Hearted</strong> — advantage on Spirit defense against fear and charm. You can see in total darkness up to 30 ft.</td>
+</tr>
+<tr>
+<td><strong>Halfling</strong></td>
+<td><code>+1</code> Agility</td>
+<td><strong>Lucky</strong> — once per rest, reroll any one d20 of yours and take the new result.</td>
+</tr>
+<tr>
+<td><strong>Orc</strong></td>
+<td><code>+1</code> Might</td>
+<td><strong>Savage Reserves</strong> — once per rest, when you drop to 0 HP, you instead drop to <code>1</code> HP.</td>
+</tr>
+<tr>
+<td><strong>Goblin</strong></td>
+<td><code>+1</code> Agility</td>
+<td><strong>Scurry</strong> — your speed is <code>8</code> squares (40 ft) instead of <code>6</code>. You can move through spaces of creatures larger than you.</td>
+</tr>
+</tbody></table>
+<p>This is the whole list. The GM is free to invent new ancestries that follow the same template: one ability <code>+1</code>, one trait of comparable power.</p>
+<h2>Background</h2>
+<p>Pick a short phrase that describes who your character was before they started adventuring. It grants <strong>one additional training</strong> of your choice. The phrase has no mechanical effect beyond that — but the GM will use it to seed hooks, NPCs, and roleplay opportunities for you.</p>
+<p>Examples: <em>Disgraced knight. Tavern brawler. Forest hermit. Temple acolyte. Reformed thief. Tribal hunter. Failed apprentice. Mercenary lieutenant.</em></p>
+<h2>Trainings</h2>
+<p>Trainings are the only &quot;skill&quot; mechanic in the game. Each training is a tag. When you roll for something your training covers, you add your <strong>training bonus</strong> (<code>+2</code> at levels 1–3, <code>+3</code> at levels 4–7, <code>+4</code> at levels 8–10). When you roll for something your training doesn&#39;t cover, you don&#39;t. There are no half-trainings.</p>
+<p>The GM decides whether a training applies. If it&#39;s a stretch, the GM may rule &quot;yes, but with disadvantage&quot; or &quot;no, but with advantage to convince me.&quot;</p>
+<p>The full training list:</p>
+<table>
+<thead>
+<tr>
+<th>Training</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Acrobatics</strong></td>
+<td>Tumbling, balance, jumping, falling well.</td>
+</tr>
+<tr>
+<td><strong>Arcana</strong></td>
+<td>Identifying spells, magical traditions, arcane creatures.</td>
+</tr>
+<tr>
+<td><strong>Athletics</strong></td>
+<td>Climbing, swimming, jumping, grappling, raw physical feats.</td>
+</tr>
+<tr>
+<td><strong>Crafting</strong></td>
+<td>Making, repairing, identifying mundane objects and traps.</td>
+</tr>
+<tr>
+<td><strong>Endurance</strong></td>
+<td>Long marches, holding your breath, resisting environmental damage.</td>
+</tr>
+<tr>
+<td><strong>Insight</strong></td>
+<td>Reading intent, spotting lies, gauging mood.</td>
+</tr>
+<tr>
+<td><strong>Intimidation</strong></td>
+<td>Threatening, demoralizing, breaking will.</td>
+</tr>
+<tr>
+<td><strong>Investigation</strong></td>
+<td>Searching, deducing, piecing together evidence.</td>
+</tr>
+<tr>
+<td><strong>Lore</strong></td>
+<td>History, geography, languages, written knowledge.</td>
+</tr>
+<tr>
+<td><strong>Medicine</strong></td>
+<td>Diagnosing, stabilizing the dying, identifying poisons.</td>
+</tr>
+<tr>
+<td><strong>Perception</strong></td>
+<td>Spotting, hearing, sensing what&#39;s wrong.</td>
+</tr>
+<tr>
+<td><strong>Persuasion</strong></td>
+<td>Convincing, bargaining, charming.</td>
+</tr>
+<tr>
+<td><strong>Religion</strong></td>
+<td>Gods, rites, undead, divine creatures, holy places.</td>
+</tr>
+<tr>
+<td><strong>Sleight of Hand</strong></td>
+<td>Picking pockets, palming, defeating small mechanisms.</td>
+</tr>
+<tr>
+<td><strong>Stealth</strong></td>
+<td>Hiding, moving silently, avoiding notice.</td>
+</tr>
+<tr>
+<td><strong>Tactics</strong></td>
+<td>Reading a battlefield, anticipating enemy moves, command.</td>
+</tr>
+<tr>
+<td><strong>Wilderness</strong></td>
+<td>Tracking, foraging, weather, beasts, navigation.</td>
+</tr>
+</tbody></table>
+<p>You pick <strong>three trainings total</strong> at character creation: two from your class list, one from your background. (A Human ancestry adds a fourth.)</p>
+<h2>Defenses</h2>
+<p>Three defenses, derived from your abilities. They are static numbers attackers roll against.</p>
+<ul>
+<li><strong>Armor</strong> = <code>10 + Agility + armor bonus</code> (or <code>10 + Might + armor bonus</code> if wearing heavy armor)</li>
+<li><strong>Mind</strong> = <code>10 + Mind</code></li>
+<li><strong>Spirit</strong> = <code>10 + Spirit</code></li>
+</ul>
+<p>Armor bonuses come from worn armor; see <a href="11-equipment.md">11-equipment.md</a>. At level 1 most characters will have defenses in the 11–14 range.</p>
+<h2>Step-by-step</h2>
+<ol>
+<li><strong>Assign abilities.</strong> Distribute <code>+3</code>, <code>+2</code>, <code>+1</code>, <code>+0</code> across Might, Agility, Mind, Spirit.</li>
+<li><strong>Pick a class.</strong> Apply its <code>+1</code> bonus and note your starting HP.</li>
+<li><strong>Pick an ancestry.</strong> Apply its <code>+1</code> bonus and note its trait.</li>
+<li><strong>Pick a background.</strong> A phrase.</li>
+<li><strong>Pick three trainings.</strong> Two from your class list, one from anywhere.</li>
+<li><strong>Calculate defenses.</strong> Armor, Mind, Spirit per the formulas above.</li>
+<li><strong>Buy equipment.</strong> Use the starting kits in <a href="11-equipment.md">11-equipment.md</a>, or buy à la carte from a starting purse of <code>50</code> gold.</li>
+<li><strong>Pick spells if a caster.</strong> Three from your class list (<a href="10-spell-list.md">10-spell-list.md</a>).</li>
+<li><strong>Name your character.</strong> Decide one thing they love, one thing they fear, and one thing they&#39;re hiding.</li>
+</ol>
+<h2>Worked example: Brenna the Scout</h2>
+<blockquote>
+<p>A halfling poacher who fled her village after stealing from the lord&#39;s hunting lodge.</p>
+</blockquote>
+<ol>
+<li><strong>Abilities.</strong> <code>+3 Agility</code>, <code>+2 Mind</code>, <code>+1 Might</code>, <code>+0 Spirit</code>.</li>
+<li><strong>Class: Scout.</strong> <code>+1 Agility</code> → final Agility <code>+4</code>. Starting HP: <code>8 + 1 = 9</code>.</li>
+<li><strong>Ancestry: Halfling.</strong> <code>+1 Agility</code> → final Agility <code>+5</code>. Trait: <strong>Lucky</strong> — one reroll per rest.</li>
+<li><strong>Background: Poacher.</strong></li>
+<li><strong>Trainings.</strong> From Scout list: <strong>Stealth</strong>, <strong>Wilderness</strong>. From background: <strong>Sleight of Hand</strong>.</li>
+<li><strong>Defenses.</strong> Armor <code>10 + 5 + 1 (leather) = 16</code>. Mind <code>10 + 2 = 12</code>. Spirit <code>10 + 0 = 10</code>.</li>
+<li><strong>Equipment.</strong> Shortbow, two daggers, leather armor, 20 arrows, climbing rope, 5 gold.</li>
+<li><strong>N/A</strong> — not a caster.</li>
+<li><strong>Name.</strong> <em>Brenna Quickfoot.</em> Loves the open road. Fears being recognized. Hides the lord&#39;s signet ring in her boot.</li>
+</ol>
+<p>Total time: about ten minutes. Brenna is ready to play. Her sheet is one index card.</p>
+<h2>What characters don&#39;t have</h2>
+<p>To save time and rule cuts, characters do not have:</p>
+<ul>
+<li>Alignment.</li>
+<li>A racial language list. (You speak Common and one regional language; if it matters, the GM will tell you.)</li>
+<li>An age, height, or weight stat block. (Fictional only, never mechanical.)</li>
+<li>Encumbrance or carrying capacity. (You carry what&#39;s reasonable. The GM calls absurdity.)</li>
+<li>A list of starting proficiencies separate from trainings. (Trainings <em>are</em> proficiencies.)</li>
+<li>Hit dice. (Healing comes from rests and spells, see <a href="07-hp-damage-death.md">07-hp-damage-death.md</a>.)</li>
+<li>Spell components, somatic/verbal/material distinctions, or material cost tracking.</li>
+</ul>
+<p>If you find yourself reaching for a 5e-style rule that isn&#39;t here, the answer is almost always: &quot;it doesn&#39;t exist, just describe what you&#39;re doing.&quot; That&#39;s not a bug — it&#39;s the design.</p>
+<h1>03 — Progression</h1>
+<p>Characters grow from level 1 to level 10. That&#39;s the whole range — no epic tier, no level 20 capstones. By level 10, the campaign is over or the party has retired as legends.</p>
+<h2>Levels and what you get</h2>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>HP gain</th>
+<th>Training bonus</th>
+<th>Class feature</th>
+<th>Ability bump</th>
+<th>Other</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>(starting)</td>
+<td><code>+2</code></td>
+<td>2 (starting)</td>
+<td>—</td>
+<td>Starting kit</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+2</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+2</code></td>
+<td>1 new feature</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+3</code></td>
+<td>—</td>
+<td><code>+1</code> to any ability</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+3</code></td>
+<td>1 new feature</td>
+<td>—</td>
+<td>Casters: <code>+1</code> known spell</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+3</code></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+3</code></td>
+<td>1 new feature</td>
+<td><code>+1</code> to any ability</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+4</code></td>
+<td>—</td>
+<td>—</td>
+<td>Casters: <code>+1</code> known spell</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+4</code></td>
+<td>1 new feature</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>+1d6 + Might</code></td>
+<td><code>+4</code></td>
+<td>Capstone</td>
+<td><code>+1</code> to any ability</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>The shape: <strong>every level</strong>, you get more HP. <strong>Every two levels</strong>, something else interesting — a feature, a stat bump, or a new spell. You will never look at a level-up and feel nothing changed.</p>
+<p>Roll your HP gain at the table, but if you roll a <code>1</code> or <code>2</code>, treat it as <code>3</code>. No one should ever feel punished for leveling.</p>
+<p>The class features table sits in each class&#39;s section (here, abbreviated). The full feature list belongs in each class&#39;s expanded write-up, which we will draft alongside the campaign.</p>
+<h2>Leveling triggers</h2>
+<p>Use <strong>milestone leveling</strong> by default. The GM decides when the party has done enough — usually after a major scene, a completed dungeon, or a story arc closing.</p>
+<p>A reasonable cadence for a typical campaign:</p>
+<ul>
+<li><strong>Level 2</strong> after the first real session of play.</li>
+<li><strong>Level 3</strong> after the first proper adventure (3–5 sessions).</li>
+<li><strong>Level 4–10</strong> at the rate of about one level per 3–6 sessions.</li>
+</ul>
+<p>Don&#39;t track XP. Don&#39;t make levels feel earned by spreadsheet. They are punctuation in the story.</p>
+<p>The GM may award <strong>half-levels</strong> for major in-between accomplishments: a temporary buff, a one-shot use of a higher-tier ability, an extra training. This keeps players who can&#39;t make a session from falling behind.</p>
+<h2>Resting</h2>
+<p>There is <strong>one rest type</strong> in this game. A rest is roughly 8 hours of safety — sleep, a watch rotation, hot food.</p>
+<p>After a rest, each character:</p>
+<ul>
+<li>Regains <strong>all HP</strong>.</li>
+<li>Regains <strong>all mana</strong>.</li>
+<li>Recovers from any condition that doesn&#39;t have a longer duration written on it.</li>
+<li>Refreshes &quot;once per rest&quot; abilities.</li>
+</ul>
+<p>There is no short rest. There are no hit dice. There is no per-encounter resource. <strong>You are either at the fight or recovering from the fight; nothing in between.</strong></p>
+<p>If the party tries to rest in unsafe terrain (a dungeon hallway, a hostile forest), the GM rolls a chance of being interrupted — usually a <code>2 in 6</code> chance of an encounter during the rest. If interrupted, the rest doesn&#39;t complete; resources don&#39;t refresh.</p>
+<p><strong>Resting between fights mid-dungeon should be hard.</strong> This is the tension the game uses to keep resource management interesting now that we&#39;ve stripped per-encounter recovery. A wizard who blew their mana pool can&#39;t just take a 10-minute break.</p>
+<h2>The training bonus tiers</h2>
+<p>This is the only number that scales mechanically with level outside of HP and spell count.</p>
+<ul>
+<li><strong>Levels 1–3:</strong> training bonus <code>+2</code>. <em>Apprentice tier.</em></li>
+<li><strong>Levels 4–7:</strong> training bonus <code>+3</code>. <em>Veteran tier.</em></li>
+<li><strong>Levels 8–10:</strong> training bonus <code>+4</code>. <em>Master tier.</em></li>
+</ul>
+<p>Monsters use the same tier system. A &quot;Tier 1&quot; monster is built for a level 1–3 party. A &quot;Tier 3&quot; monster is built for a level 8–10 party. The GM picks the tier; the math takes care of itself.</p>
+<h2>What changes about play at each tier</h2>
+<p>These are tone notes, not rules — but they should shape adventure design.</p>
+<ul>
+<li><strong>Apprentice (1–3):</strong> local stakes. A village, a forest, a single dungeon. PCs are dangerous to bandits and goblins. One hit from an ogre can drop them.</li>
+<li><strong>Veteran (4–7):</strong> regional stakes. A duchy, a frontier, a city-state. PCs are known by name in the region. They face elite enemies, monsters, and lesser magic users.</li>
+<li><strong>Master (8–10):</strong> mythic stakes. A continent, a god, a calamity. PCs are legendary. The monsters they fight are individually named threats.</li>
+</ul>
+<h2>Ability bumps</h2>
+<p>At levels 4, 7, and 10, you may raise one ability by <code>+1</code>. Maximum ability is <code>+5</code>. You cannot raise an ability past <code>+5</code> no matter how many bumps remain — pick a different one.</p>
+<p>This caps the absolute math: at level 10, a master in a primary ability rolls <code>d20 + 5 + 4 = d20 + 9</code> against typical targets of 15–20. That is the math ceiling of the entire game.</p>
+<h2>What progression doesn&#39;t do</h2>
+<p>A few 5e-style growth systems that don&#39;t exist here:</p>
+<ul>
+<li><strong>No feats.</strong> Feature unlocks happen via class features, not a parallel feat system.</li>
+<li><strong>No multiclassing.</strong> A class is a commitment.</li>
+<li><strong>No proficiency expansion lists.</strong> You can&#39;t &quot;pick up&quot; trainings outside of leveling — the GM may award one for in-fiction reasons (an old hermit teaches you over the winter), but it&#39;s a story moment, not a default option.</li>
+<li><strong>No magic item attunement slots.</strong> Magic items work when held or worn.</li>
+<li><strong>No XP for monsters killed.</strong> Milestones only.</li>
+<li><strong>No retraining UI.</strong> If you regret a choice, the GM may allow you to swap one trained skill or one spell per level, narrated as a story beat.</li>
+</ul>
+<p>The total list of numbers that change on your sheet between level 1 and level 10:</p>
+<ul>
+<li>HP (every level).</li>
+<li>Training bonus (twice).</li>
+<li>Three ability bumps.</li>
+<li>Spell count if a caster.</li>
+<li>New class features at 3, 5, 7, 9, and the level 10 capstone.</li>
+</ul>
+<p>That&#39;s it. A level 10 character sheet still fits on one index card.</p>
+<h1>04 — Skills and Checks</h1>
+<p>This document is short because the system is short. There is no skill list; there are <strong>trainings</strong> (introduced in <a href="02-character-creation.md">02-character-creation.md</a>) and there is the <strong>core mechanic</strong> (from <a href="01-core-mechanic.md">01-core-mechanic.md</a>). This doc just explains how those two interact at the table.</p>
+<h2>The check, formally</h2>
+<p>When the GM calls for a check:</p>
+<ol>
+<li><strong>The GM names an ability</strong> (Might, Agility, Mind, or Spirit) and a <strong>target number</strong> (10, 15, or 20).</li>
+<li><strong>The player rolls</strong> <code>d20 + ability modifier</code>.</li>
+<li><strong>If the player has a relevant training</strong>, they also add their <strong>training bonus</strong> (<code>+2</code>/<code>+3</code>/<code>+4</code>).</li>
+<li><strong>Compare total to target.</strong> Meet or beat: success. Miss: failure.</li>
+</ol>
+<p>That&#39;s it. A check is one sentence: <em>&quot;Roll Agility, target 15.&quot;</em></p>
+<h2>The GM&#39;s job</h2>
+<p>The GM does three things when calling for a check:</p>
+<h3>1. Decide if a check is needed at all</h3>
+<p>Don&#39;t roll if:</p>
+<ul>
+<li>The character would obviously succeed (a Mage identifying a basic glyph in their own tradition).</li>
+<li>The character would obviously fail (the Warrior with <code>−1</code> Mind translating dead languages).</li>
+<li>The outcome doesn&#39;t change the story.</li>
+</ul>
+<p>This is the most important GM skill. <strong>Most &quot;skill checks&quot; in 5e are unnecessary.</strong> Call rolls only at moments of pressure.</p>
+<h3>2. Pick the ability</h3>
+<p>The action the player describes determines the ability. The GM picks the one that best fits <em>how</em> the character is doing the thing.</p>
+<ul>
+<li><em>&quot;I shove the door open.&quot;</em> → Might.</li>
+<li><em>&quot;I jiggle the lock.&quot;</em> → Agility.</li>
+<li><em>&quot;I look for the keyhole&#39;s hidden mechanism.&quot;</em> → Mind.</li>
+<li><em>&quot;I talk to the door.&quot;</em> → Spirit (and the GM laughs).</li>
+</ul>
+<p>If the player wants to use a different ability than the GM expected, they can argue for it. <em>&quot;I&#39;m strong, so I rip the lock out instead of picking it.&quot;</em> The GM may allow it, possibly with different consequences. <strong>Player creativity should be rewarded, not arbitrated against.</strong></p>
+<h3>3. Pick the target number</h3>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>10 (Easy)</strong></td>
+<td>The kind of thing a competent person does most days. A trained character almost always succeeds.</td>
+</tr>
+<tr>
+<td><strong>15 (Hard)</strong></td>
+<td>Real difficulty. Failure is plausible. The default when uncertain.</td>
+</tr>
+<tr>
+<td><strong>20 (Heroic)</strong></td>
+<td>A story-worthy feat. Even the best can miss.</td>
+</tr>
+</tbody></table>
+<p>Edge cases: <strong>5</strong> for &quot;trivial but the dice could be funny,&quot; <strong>25</strong> for &quot;legendary.&quot; These should be rare. Don&#39;t invent a 12 or a 17 — you&#39;ll just slow play. <strong>The three numbers exist on purpose.</strong></p>
+<h2>When trainings apply</h2>
+<p>A training applies whenever the <strong>fiction</strong> of what the character is doing is recognizably the thing the training names. Concrete tests:</p>
+<ul>
+<li>&quot;I climb a sheer wall.&quot; → <strong>Athletics</strong> (Might/Agility), or <strong>Acrobatics</strong> if a tumble or balance situation, <strong>Wilderness</strong> if it&#39;s a cliffside the character has been raised on.</li>
+<li>&quot;I lie to the guard.&quot; → <strong>Persuasion</strong> (smooth lie), <strong>Insight</strong> doesn&#39;t apply (that reads people, not deceives them), <strong>Performance</strong> isn&#39;t a training in this game so flavor it as Persuasion.</li>
+<li>&quot;I notice the assassin in the crowd.&quot; → <strong>Perception</strong> (raw seeing/hearing) <em>or</em> <strong>Insight</strong> (something feels wrong about him). The player picks if they&#39;re trained in either; the GM picks if neither.</li>
+</ul>
+<p>When a training <em>might</em> apply but is a stretch, the GM has two good options:</p>
+<ul>
+<li><strong>&quot;Yes, but with disadvantage.&quot;</strong> The training helps, but this isn&#39;t its core use.</li>
+<li><strong>&quot;No, but you can use a different one if you can justify it.&quot;</strong> Hand the creative work back to the player.</li>
+</ul>
+<p>Avoid: <em>&quot;That doesn&#39;t count, no bonus.&quot;</em> That&#39;s a flat answer and it kills the moment. <strong>Always say yes-with-a-twist or hand it back.</strong></p>
+<h2>Group checks</h2>
+<p>When the whole party tries the same thing — sneaking, climbing, holding back the avalanche together — use the <strong>weakest-link</strong> rule from <a href="01-core-mechanic.md">01-core-mechanic.md</a>:</p>
+<ul>
+<li>Everyone rolls.</li>
+<li>If half or more succeed, the <strong>group</strong> succeeds.</li>
+<li>Otherwise the group fails, and the GM picks one of the failed rolls to drive the complication.</li>
+</ul>
+<p>This is fast at the table and avoids the &quot;one bad roller dooms the party&quot; problem.</p>
+<h2>Aid and helping</h2>
+<p>When one character helps another — boosting them over a wall, distracting a guard while another sneaks — the helper does <strong>not</strong> roll. Instead:</p>
+<blockquote>
+<p>A character who is in a position to meaningfully help, and who is themselves competent enough to provide that help, <strong>grants advantage</strong> to the character making the roll.</p>
+</blockquote>
+<p>Two helpers do not stack to &quot;super-advantage.&quot; One source of advantage is the cap. Beyond that, the helpers are spectators.</p>
+<p>The GM may rule that a helper isn&#39;t truly competent (the wizard &quot;helping&quot; the rogue pick a lock has no idea how locks work) and refuse the advantage. Be fair but not stingy.</p>
+<h2>Repeated attempts</h2>
+<p>A character who fails a check generally <strong>cannot</strong> simply re-roll until they succeed. The roll represents not a single attempt but the character&#39;s <em>current capacity to succeed at this task right now under this pressure.</em> Trying again requires:</p>
+<ul>
+<li>A change in approach.</li>
+<li>A change in circumstances.</li>
+<li>New information.</li>
+<li>Or more time, if time isn&#39;t pressing.</li>
+</ul>
+<p>If a player insists on retrying the same action the same way, the GM should narrate the failure forward — &quot;you cannot pick this lock with this set of tools tonight&quot; — not invite a new roll.</p>
+<p>The exception: in a calm moment, a character may take a long time on a task with no opposition, and <strong>automatically succeed at Easy and Hard targets</strong> if their modifier could meet the target on a <code>10</code> (a &quot;take 10&quot; rule). They cannot take 10 on Heroic targets.</p>
+<h2>Knowing things</h2>
+<p>A note on lore and recall.</p>
+<p>Don&#39;t roll to &quot;know&quot; something most characters in the world would know. The Warrior knows what a knight looks like. The Priest knows the major gods. The Mage knows that the academy in the capital teaches evocation.</p>
+<p><strong>Roll only when the knowledge would distinguish a trained expert from a layperson.</strong> Recognizing a <em>specific</em> heraldry, identifying <em>what</em> god a cult worships from a specific symbol, recalling the <em>correct</em> incantation to dispel a particular ward — those are Lore/Religion/Arcana rolls.</p>
+<p>A common GM mistake: gating obvious information behind rolls. Don&#39;t do this. If the player describes their character looking at the runes on the door, and recognizing those runes is the whole point of the next scene, <strong>just give them the answer.</strong> The roll is for moments of doubt, not for permission to engage with the world.</p>
+<h2>Failing forward</h2>
+<p>When a check fails, the GM has three options for what failure means:</p>
+<ol>
+<li><strong>You don&#39;t get what you want.</strong> The lock doesn&#39;t open. The lie isn&#39;t believed.</li>
+<li><strong>You get it, but at a cost.</strong> You climb the cliff, but the rope frays — next climber rolls at disadvantage. You convince the guard, but he wants a favor in return.</li>
+<li><strong>Something worse happens.</strong> You drop your tools down the well. The guard recognizes you from a wanted poster.</li>
+</ol>
+<p>Mix these. <strong>A campaign of &quot;you don&#39;t get what you want&quot;</strong> is a campaign of stalled scenes. Failing forward keeps the story moving even when the dice are cold.</p>
+<h2>Worked examples</h2>
+<ul>
+<li><em>&quot;I want to climb the keep wall in the rain.&quot;</em> GM: Might, Hard (15). Trained in Athletics? Add bonus. Rope from the Scout? Advantage.</li>
+<li><em>&quot;I want to convince the captain to let us through.&quot;</em> GM: Spirit, Hard (15). Trained in Persuasion? Yes. Captain knows the party&#39;s reputation? Advantage. Party has no documentation? Disadvantage. Cancels. Roll plain.</li>
+<li><em>&quot;I want to remember what I know about the bone-witch.</em>&quot; GM: nothing rolls — the Mage has Lore and just <em>knows</em> the bone-witch was banished from the academy two centuries ago. <em>&quot;But what does she want now?&quot;</em> That&#39;s a roll: Mind, Hard. Trained in Arcana? Add bonus.</li>
+<li><em>&quot;I want to leap from the chandelier and stab the guard.&quot;</em> GM: this is two things. Agility check to land it (Hard, 15); the stab is a normal attack roll on success. On a natural 1 climbing, you fall and take damage. On a natural 20 on the attack, the guard is dead and the room watches in stunned silence.</li>
+</ul>
+<h2>What this doc deliberately omits</h2>
+<ul>
+<li>A list of &quot;DCs by task type.&quot; (Three numbers; the GM picks.)</li>
+<li>A breakdown of <em>every</em> training and what rolls it covers. (The fiction tells you.)</li>
+<li>Skill challenge mechanics. (Group checks and failing forward cover it.)</li>
+<li>Tool proficiencies. (Folded into trainings — Crafting covers tools.)</li>
+<li>Passive perception/investigation/insight scores. (The GM either tells the players what they notice, or asks them to roll. There is no third middle state.)</li>
+</ul>
+<p>If the rule isn&#39;t here, the answer is <em>the GM picks an ability, picks a target, and you roll.</em> That&#39;s the whole system.</p>
+<h1>05 — Combat</h1>
+<p>Combat is the most rules-dense moment in a tabletop RPG, and it&#39;s where 5e bloats the worst. We collapse the action economy hard.</p>
+<h2>The turn</h2>
+<p>A creature&#39;s turn is two things:</p>
+<ol>
+<li><strong>Move</strong>, up to your <strong>Speed</strong> (default <code>6</code> squares / <code>30</code> feet for most characters).</li>
+<li><strong>Act</strong> — one action.</li>
+</ol>
+<p>That&#39;s it. No bonus action. No reaction by default. You may <strong>split your move</strong> around your action: move 3 squares, attack, move 3 more. You may also skip the move, or skip the action.</p>
+<p>Common actions:</p>
+<ul>
+<li><strong>Attack.</strong> Make one weapon attack against a target in range. (See <a href="06-attack-and-defense.md">06-attack-and-defense.md</a>.)</li>
+<li><strong>Cast a spell.</strong> Choose a known spell, pay its mana cost, resolve. (See <a href="09-magic.md">09-magic.md</a>.)</li>
+<li><strong>Dash.</strong> Move your speed again. (Total this turn: up to twice your speed.)</li>
+<li><strong>Hide.</strong> Roll Agility (Stealth if trained) vs. the highest enemy Mind defense in line of sight. On success, you have advantage on your next attack and enemies have disadvantage attacking you until you reveal yourself.</li>
+<li><strong>Help.</strong> Grant an ally advantage on their next roll, if you&#39;re in a position to plausibly help.</li>
+<li><strong>Disengage.</strong> Move without provoking the optional Opportunity Strike (below).</li>
+<li><strong>Ready.</strong> Choose an action and a trigger (<em>&quot;if the goblin steps into the doorway, I shoot it&quot;</em>). When the trigger happens, the action resolves immediately. You give up your normal turn this round.</li>
+<li><strong>Use an item.</strong> Drink a potion, throw an alchemical flask, draw a magical token.</li>
+<li><strong>Improvise.</strong> Anything else. The GM adjudicates.</li>
+</ul>
+<p>The whole table fits in your head after one fight. <strong>That&#39;s the design target.</strong></p>
+<h2>What an &quot;action&quot; is <em>not</em></h2>
+<p>You do not get a free bonus action, a free reaction, a free quick attack, a free off-hand swing. Two-weapon fighting is one attack with the weapon you choose. Drawing a weapon is free (folded into the same turn as using it). Talking is free.</p>
+<blockquote>
+<p><strong>Principle from <a href="00-design-philosophy.md">00-design-philosophy.md</a>:</strong> <em>One rule, not three.</em> Veterans of 5e will keep asking &quot;can I also...?&quot; The answer is almost always no, and they will adapt within one session.</p>
+</blockquote>
+<h2>Initiative</h2>
+<p>Use <strong>side initiative</strong>. The whole party rolls together against the whole enemy side.</p>
+<ol>
+<li>One representative per side rolls <strong>d20 + their Agility</strong>.</li>
+<li>The higher total goes first.</li>
+<li><strong>Within a side, players choose the order</strong> of their turns each round. (For the enemy side, the GM does the same.)</li>
+<li>The next round, roll again. Initiative is not fixed across rounds.</li>
+</ol>
+<p>Why this works:</p>
+<ul>
+<li>One roll, not seven.</li>
+<li>Lets players coordinate (&quot;I&#39;ll attack first, you finish him&quot;).</li>
+<li>Means the GM doesn&#39;t have to track a turn order list.</li>
+<li>A losing initiative this round can be a winning one the next.</li>
+</ul>
+<p><strong>Ties:</strong> players win ties.</p>
+<p><strong>Surprise:</strong> if one side ambushes the other, the ambushing side automatically goes first this round (no initiative roll). Roll initiative normally from round two.</p>
+<h2>Movement</h2>
+<p>Movement is measured in <strong>squares</strong> (a square is 5 feet of fictional space). A default creature has Speed <code>6</code>. Movement rules:</p>
+<ul>
+<li><strong>Diagonal movement</strong> counts as one square. Don&#39;t count <code>1.5</code>.</li>
+<li><strong>Difficult terrain</strong> (rubble, dense forest, knee-deep water): each square costs 2.</li>
+<li><strong>Climbing</strong> or <strong>swimming</strong>: half speed, unless you have a climb/swim mode.</li>
+<li><strong>Standing up from prone</strong>: costs half your speed.</li>
+<li><strong>Jumping</strong>: you can long-jump a number of squares equal to your Might (minimum 1), and high-jump half that, with a running start. Without a running start, half each. No roll needed unless it&#39;s a stretch — then Athletics check, Hard.</li>
+</ul>
+<p>You can&#39;t end your turn sharing a square with another creature unless it&#39;s friendly and willing. You can pass through allies freely; through enemies only by Disengaging or with class features that allow it.</p>
+<h2>Opportunity Strikes (optional)</h2>
+<p>By default, you can move freely around the battlefield. <strong>Opportunity strikes are off</strong> unless one of the following applies:</p>
+<ul>
+<li>A monster has the <strong>Sentinel</strong> trait. (Bears, dragons, and a few elites do.)</li>
+<li>A spell, effect, or class feature explicitly enables it.</li>
+</ul>
+<p>When opportunity strikes are on for a creature: if an enemy leaves a square adjacent to that creature without Disengaging, the creature may make <strong>one attack</strong> against them as they leave. This does not cost the creature a turn — it&#39;s a free interrupt, used at most once per round.</p>
+<p>Why this is optional by default: the 5e &quot;opportunity attack everywhere&quot; rule makes every movement a math problem. We default-off and let specific creatures bring it on for tactical color.</p>
+<h2>Reactions</h2>
+<p>There is <strong>no general reaction slot</strong>. A character with a feature or spell that says <em>&quot;as a reaction…&quot;</em> can use it according to that feature&#39;s rules. Otherwise, the only off-turn thing a character can do is <em>speak</em>.</p>
+<p>The Mage&#39;s <strong>Shield</strong> spell (see <a href="10-spell-list.md">10-spell-list.md</a>) is the most common example: it specifies it can be cast as a reaction to an incoming attack.</p>
+<p>Off-turn interrupts are deliberately rare. <strong>The action is on the turning player.</strong> A new player should never be confused about whether they &quot;can do something&quot; while another player is acting — the answer is almost always no.</p>
+<h2>Cover</h2>
+<p>Three states only:</p>
+<ul>
+<li><strong>No cover.</strong> Normal attacks.</li>
+<li><strong>Half cover</strong> (low wall, corner of doorway, ally in the way): attacks against the target have <strong>disadvantage</strong>.</li>
+<li><strong>Full cover.</strong> The target cannot be targeted directly. Area effects (a Fireball thrown over the wall) still apply.</li>
+</ul>
+<p>The &quot;+2/+5 cover&quot; math of 5e is replaced by &quot;either it matters or it doesn&#39;t, and when it matters, it&#39;s disadvantage.&quot;</p>
+<h2>Flanking</h2>
+<p>Two allies on opposite sides of an enemy: that enemy is <strong>flanked</strong>. Attacks against a flanked enemy from either flanking ally have <strong>advantage</strong>.</p>
+<p>This is the simplest tactical lever in the game. Most fights will be partly about creating flanks.</p>
+<h2>Range</h2>
+<p>Two states:</p>
+<ul>
+<li><strong>Close</strong> — adjacent, melee range. (1 square, generally.)</li>
+<li><strong>Far</strong> — anywhere else within line of sight.</li>
+</ul>
+<p>Weapons specify whether they reach far. Bows, crossbows, thrown weapons, and spells generally have a far range (with limits given in the spell or weapon entry). Melee weapons don&#39;t.</p>
+<p>Some weapons (longbows, ranged spells) have a maximum range; beyond it, attacks are at disadvantage or impossible. The weapon entry tells you. <strong>There is no &quot;long range&quot; vs. &quot;short range&quot; math.</strong> You&#39;re in range or you&#39;re not, possibly with disadvantage.</p>
+<h2>Surprise and stealth</h2>
+<p>If one or more party members are hidden when combat starts, <strong>they get a free attack at advantage</strong> before initiative is rolled. After that, normal rounds begin.</p>
+<p>If the whole party is hidden and they attack a surprised enemy, <strong>the enemy side skips its first round</strong> entirely.</p>
+<h2>A round in practice</h2>
+<p>Four PCs vs. three goblins. Side init: party rolls 14, goblins roll 17. Goblins go.</p>
+<p><strong>Goblin side, round 1:</strong></p>
+<ul>
+<li><em>Goblin Archer</em> moves behind cover (half cover) and shoots Brenna the Scout: disadvantage from cover, miss.</li>
+<li><em>Goblin Brute</em> charges the Warrior and attacks: hit, 5 damage.</li>
+<li><em>Goblin Sneak</em> tries to flank the Mage: moves around behind, attacks: hit, 4 damage.</li>
+</ul>
+<p><strong>Player side, round 1:</strong></p>
+<ul>
+<li><em>Warrior</em> attacks Goblin Brute, hits, drops it to 0 → Cleave triggers → free attack on Goblin Sneak, hits, kills it. (One action, two dead goblins.)</li>
+<li><em>Scout</em> moves, shoots Goblin Archer, hits with advantage (flanked by Warrior&#39;s positioning), Sneak Strike damage applies.</li>
+<li><em>Mage</em> casts Magic Missile at the Archer, no roll, autohit.</li>
+<li><em>Priest</em> moves to the Warrior, uses Divine Touch to heal <code>1d6 + Spirit</code>.</li>
+</ul>
+<p>Round one took five minutes. <strong>That is the pace we are building for.</strong></p>
+<h2>What combat doesn&#39;t have</h2>
+<ul>
+<li>Action economy with three slots.</li>
+<li>Opportunity attacks as a default rule.</li>
+<li>A &quot;concentration save&quot; mini-game.</li>
+<li>Hit dice spending mid-combat.</li>
+<li>A separate initiative count for each creature.</li>
+<li>Reactions as a slot most creatures have but rarely use.</li>
+<li>Tracking &quot;free actions&quot; vs. &quot;actions on your turn.&quot;</li>
+<li>Movement type math (e.g., &quot;every 5 feet of difficult terrain costs +1 hex of movement&quot;).</li>
+<li>Tracking &quot;rounds since you last used X.&quot;</li>
+</ul>
+<p>If a 5e-trained player asks about any of the above, the answer is <em>that&#39;s not how this game does it.</em> Then continue play.</p>
+<h1>06 — Attack and Defense</h1>
+<p>This is the most-used subsystem in the game. It&#39;s the core mechanic from <a href="01-core-mechanic.md">01-core-mechanic.md</a> with combat-specific labels attached.</p>
+<h2>The attack roll</h2>
+<blockquote>
+<p><strong>Roll d20, add your attack ability modifier and (if trained) your training bonus, compare to the target&#39;s defense. Meet or beat: hit. Miss: miss.</strong></p>
+</blockquote>
+<p>That&#39;s it. Every attack in the game is the same shape.</p>
+<h2>What goes into &quot;attack ability&quot;</h2>
+<p>The ability you add depends on the weapon or spell:</p>
+<table>
+<thead>
+<tr>
+<th>Weapon type</th>
+<th>Ability used</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Heavy melee (greatsword, maul, polearm)</td>
+<td><strong>Might</strong></td>
+</tr>
+<tr>
+<td>Light melee (dagger, shortsword, rapier)</td>
+<td><strong>Agility</strong> <em>or</em> <strong>Might</strong> — choose at character creation, then it&#39;s fixed for the weapon</td>
+</tr>
+<tr>
+<td>Ranged (bow, crossbow, thrown)</td>
+<td><strong>Agility</strong></td>
+</tr>
+<tr>
+<td>Arcane spell attack</td>
+<td><strong>Mind</strong></td>
+</tr>
+<tr>
+<td>Divine spell attack</td>
+<td><strong>Spirit</strong></td>
+</tr>
+</tbody></table>
+<p><strong>Training:</strong> if you have a training that covers this weapon type, add the training bonus. Most characters with weapon trainings get them via their class — Warriors are trained in all weapons; Scouts in light and ranged; Mages in light only; Priests in light and medium.</p>
+<p>There is <strong>no separate &quot;weapon proficiency&quot;</strong> tracked outside of class trainings. If your class trains you in a weapon, you add the bonus. Otherwise you don&#39;t.</p>
+<h2>Defenses</h2>
+<p>Every creature has three defenses. They are static numbers.</p>
+<h3>Armor</h3>
+<p>The number an attacker rolls against for physical hits — sword swings, arrows, claws.</p>
+<p><code>Armor = 10 + Agility + worn armor bonus</code></p>
+<p>If you wear <strong>heavy armor</strong>, Armor uses Might instead of Agility:</p>
+<p><code>Armor = 10 + Might + heavy armor bonus</code></p>
+<p>Medium armor caps the Agility contribution at <code>+2</code>. (Don&#39;t sweat it for new characters; pick light or heavy.)</p>
+<p>Typical level 1 Armor values:</p>
+<ul>
+<li>Unarmored Mage with <code>+1</code> Agility: <strong>11</strong>.</li>
+<li>Leather-armored Scout with <code>+5</code> Agility: <strong>16</strong>.</li>
+<li>Plate-armored Warrior with <code>+3</code> Might: <strong>18</strong>.</li>
+</ul>
+<h3>Mind</h3>
+<p>The number an attacker rolls against for spells and effects that attack the target&#39;s reasoning, memory, or perception — charm, sleep, illusion, mental domination.</p>
+<p><code>Mind defense = 10 + Mind</code></p>
+<h3>Spirit</h3>
+<p>The number an attacker rolls against for spells and effects that attack the target&#39;s will, soul, or vital essence — fear, possession, banishment, death magic, divine wrath.</p>
+<p><code>Spirit defense = 10 + Spirit</code></p>
+<h2>Which defense gets attacked?</h2>
+<p>The weapon, spell, or attack tells you. As a rule:</p>
+<ul>
+<li><strong>Sword, claw, arrow, fist, fall damage:</strong> Armor.</li>
+<li><strong>Charm, sleep, illusion, mental control:</strong> Mind.</li>
+<li><strong>Fear, banishment, soul-burn, holy/unholy wrath:</strong> Spirit.</li>
+<li><strong>Fire, cold, lightning, poison from an area effect</strong> that the target should be able to dodge or shrug off: <strong>Armor</strong> (because the target&#39;s reflexes and toughness are protecting them). Most &quot;elemental&quot; attacks target Armor.</li>
+<li><strong>Fire, cold, lightning, poison that ignores the body</strong> (e.g., a curse that boils blood without a chance to dodge): <strong>Spirit</strong>.</li>
+</ul>
+<p>The spell description tells you. If it doesn&#39;t, default to Armor.</p>
+<h2>Damage</h2>
+<p>After a hit, roll damage:</p>
+<p><code>Damage = weapon die (or spell die) + attack ability modifier</code></p>
+<p>You do <strong>not</strong> add the training bonus to damage. Training affects the <em>hit</em>, not the <em>severity</em>.</p>
+<p>Damage dice for the most common weapons:</p>
+<table>
+<thead>
+<tr>
+<th>Weapon</th>
+<th>Damage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Dagger, club, sling</td>
+<td><code>1d4</code></td>
+</tr>
+<tr>
+<td>Shortsword, mace, hand axe, light crossbow, shortbow</td>
+<td><code>1d6</code></td>
+</tr>
+<tr>
+<td>Longsword, warhammer, longbow, heavy crossbow</td>
+<td><code>1d8</code></td>
+</tr>
+<tr>
+<td>Greatsword, greataxe, polearm, maul</td>
+<td><code>1d10</code></td>
+</tr>
+</tbody></table>
+<p>Spells specify their own damage dice; see <a href="10-spell-list.md">10-spell-list.md</a>.</p>
+<p><strong>Minimum damage on a hit is 1.</strong> A <code>+0</code> mod on a <code>1d4</code> rolling a 1 still does 1 damage. Nothing scary about a hit is wasted.</p>
+<h2>Critical hits</h2>
+<p>A <strong>natural 20</strong> on the attack roll is a critical hit. Roll the damage dice <strong>twice</strong> and add them together; <strong>modifiers are added once</strong>, not twice.</p>
+<p>Example: Scout with Agility <code>+3</code> hits with a shortbow, natural 20. Damage is <code>1d6 + 1d6 + 3</code>. If both d6s roll high, that&#39;s a big hit.</p>
+<p>Critical hits don&#39;t otherwise have effects. No critical confirmation roll. No &quot;spinal injury&quot; tables. Just doubled dice.</p>
+<h2>Critical fumbles</h2>
+<p>A <strong>natural 1</strong> on the attack roll: you miss, and a complication happens. The GM picks something appropriate from this menu:</p>
+<ul>
+<li>You drop your weapon (it&#39;s at your feet; pick it up costs your move next turn).</li>
+<li>You hit an ally next to your target (roll damage at half, against the ally).</li>
+<li>You stumble (you&#39;re prone).</li>
+<li>You expose a flank (the next attack on you this round has advantage).</li>
+<li>You break your bowstring / your crossbow misfires / your spell sputters (you can&#39;t use this weapon/spell again until you spend an action to recover it).</li>
+</ul>
+<p>The GM picks one each time; don&#39;t roll on a table. The complication should fit the fiction. A wizard who fumbles a spell shouldn&#39;t drop their sword; they should miscast.</p>
+<h2>Spell attacks vs. spell effects</h2>
+<p>Spells come in two shapes:</p>
+<ol>
+<li><strong>Spell attack.</strong> A spell that the caster rolls to hit with — <em>Fire Bolt</em>, <em>Eldritch Blast</em>, etc. Use the standard attack procedure: <code>d20 + spell ability + training</code> vs. the target&#39;s defense.</li>
+<li><strong>Spell save.</strong> <em>In this game, there is no save.</em> A spell that in 5e calls for the target to save is rewritten so the <strong>caster rolls to hit</strong> against the relevant defense. <em>Fireball</em> is the caster rolling vs. each target&#39;s Armor (or Spirit, or whatever the spell says). On a hit, full damage; on a miss, half damage (or none, per the spell).</li>
+</ol>
+<p>Same procedure as a melee attack. The only difference is which ability and which defense.</p>
+<h2>Range</h2>
+<ul>
+<li><strong>Melee:</strong> the target must be adjacent (1 square away). Polearms reach 2 squares.</li>
+<li><strong>Ranged weapon:</strong> the weapon entry gives a range. Beyond it, attack is at disadvantage; double that range and you can&#39;t attack at all.</li>
+<li><strong>Spells:</strong> the spell entry gives the range.</li>
+</ul>
+<p>Don&#39;t track range in feet during the fight. Squares are enough. Bows reach across the room; crossbows the same; thrown weapons about 5 squares; daggers thrown about 4.</p>
+<h2>Two-weapon fighting</h2>
+<p>You may attack with either weapon. There is no off-hand attack rule. If you wield two weapons, you describe attacking with both as one action, and the GM decides which die to use (usually the larger of the two). This is a flavor choice, not a mechanical one.</p>
+<p>Defensive duelists who wield two weapons may, with the GM&#39;s permission, treat the off-hand as a buckler — adding <code>+1</code> to Armor while both weapons are drawn. This is a small ruling, not a system.</p>
+<h2>Unarmed attacks</h2>
+<p><code>1d4 + Might</code> damage. Anyone can do this. Some monsters do much more.</p>
+<h2>Improvised weapons</h2>
+<p>Anything you can pick up: <code>1d4</code>, with Might. The chair, the bottle, the chandelier. The GM may rule it does <code>1d6</code> if it&#39;s clearly a big improvised weapon, or <code>1d10</code> if it&#39;s a falling chandelier on someone&#39;s head.</p>
+<h2>Multiple attacks</h2>
+<p>Most characters get <strong>one attack per turn</strong>. Warriors with the <strong>Cleave</strong> feature (see <a href="02-character-creation.md">02-character-creation.md</a>) may make a second attack only when their first reduces a target to 0 HP. There is no &quot;Extra Attack at level 5&quot; feature in this game; multiple attacks are class-feature unlocks, not a default expansion.</p>
+<p>A Mage who casts a spell that includes multiple targets (Magic Missile, Burning Hands) is making <strong>one action that affects multiple creatures</strong>, not multiple attacks. Resolve each target separately if the spell needs an attack roll.</p>
+<h2>Damage types</h2>
+<p>The game uses damage types loosely:</p>
+<ul>
+<li><strong>Physical</strong> (slashing, piercing, bludgeoning — we don&#39;t distinguish).</li>
+<li><strong>Fire, cold, lightning, acid, poison, thunder.</strong></li>
+<li><strong>Necrotic</strong> (death magic, soul-burn).</li>
+<li><strong>Radiant</strong> (holy, sun, healing reversed).</li>
+<li><strong>Psychic</strong> (mental, dream).</li>
+</ul>
+<p>Damage type matters only when a monster, item, or condition cares. Some undead are <em>immune</em> to poison. Some elementals are <em>vulnerable</em> (take double) to specific damage types. The monster&#39;s stat block tells you. If it doesn&#39;t, all damage is just damage.</p>
+<p>We don&#39;t track resistances on every monster. Most fights, every weapon does its full damage. Resistances are flavor for specific encounters.</p>
+<h2>A worked attack</h2>
+<p>The Warrior swings a greatsword at the Orc Captain.</p>
+<ul>
+<li>Warrior: Might <code>+3</code>, trained in all weapons (<code>+2</code> at level 1–3), greatsword <code>1d10</code>.</li>
+<li>Orc Captain Armor: <code>15</code>.</li>
+<li>Roll: <code>d20 + 3 (Might) + 2 (training) = d20 + 5</code> vs. <code>15</code>.</li>
+<li>Result on d20: <code>12</code>. Total <code>17</code>. Hit.</li>
+<li>Damage: <code>1d10 + 3</code>. Roll d10: <code>7</code>. Damage: <code>10</code>.</li>
+<li>The Orc Captain takes <code>10</code>.</li>
+</ul>
+<p>If the d20 had shown <code>20</code>: damage is <code>1d10 + 1d10 + 3</code> (both rolls + mod), critical. Say <code>7 + 9 + 3 = 19</code> damage.</p>
+<p>If the d20 had shown <code>1</code>: complication. GM says: <em>&quot;You overswing; you&#39;re prone.&quot;</em></p>
+<p>Total time at the table: under 10 seconds.</p>
+<h2>What attack/defense doesn&#39;t have</h2>
+<ul>
+<li>Saving throws.</li>
+<li>AC + touch AC + flat-footed AC.</li>
+<li>Damage reduction (replaced by resistance/immunity).</li>
+<li>A separate weapon attack bonus and weapon damage bonus stat.</li>
+<li>Spell save DCs separate from attack bonuses.</li>
+<li>Cleaving, sweeping, called shots, sundering, disarming as separate sub-systems. (Improvise via the d20 + ruling.)</li>
+<li>Critical hit confirmation rolls.</li>
+<li>Variable critical thresholds (no 19–20 crit weapons).</li>
+<li>Power attack, expertise, or other &quot;trade-bonus-for-bonus&quot; knob-twisting.</li>
+</ul>
+<p>When a 5e player asks about any of those: not in this game. Roll the d20.</p>
+<h1>07 — HP, Damage, and Death</h1>
+<p>The shortest doc in the rules. HP is the only health system in the game.</p>
+<h2>HP</h2>
+<p>A character&#39;s hit points represent everything between <em>standing and fighting</em> and <em>down and bleeding</em>. We don&#39;t separate &quot;luck points&quot; from &quot;real wounds.&quot; It&#39;s all HP.</p>
+<p><strong>Starting HP</strong> is set by class:</p>
+<ul>
+<li>Warrior: <code>10 + Might</code></li>
+<li>Scout: <code>8 + Might</code></li>
+<li>Mage: <code>6 + Might</code></li>
+<li>Priest: <code>8 + Might</code></li>
+</ul>
+<p><strong>Per-level HP gain</strong> is <code>1d6 + Might</code>, rolled at the table when you level. A roll of <code>1</code> or <code>2</code> becomes a <code>3</code>. No one feels punished by leveling.</p>
+<p>By level 10, a typical Warrior has roughly <code>10 + 3 + 9 × (4 + 3) ≈ 75</code> HP. A Mage has roughly <code>6 + 1 + 9 × (4 + 1) ≈ 50</code>. Monsters are scaled accordingly.</p>
+<h2>Taking damage</h2>
+<p>When you take damage, subtract it from your current HP. No tracking damage types separately. No accumulating &quot;wound levels.&quot;</p>
+<p>If a damage source applies a <strong>condition</strong> (poisoned, burning, etc.), apply that too. See <a href="08-conditions.md">08-conditions.md</a>.</p>
+<h2>Healing</h2>
+<p>Three ways to heal:</p>
+<ol>
+<li><strong>A rest</strong> (one full rest = full HP and mana). See <a href="03-progression.md">03-progression.md</a>.</li>
+<li><strong>A spell.</strong> Priests&#39; <em>Divine Touch</em> and <em>Cure Wounds</em>; certain other spells. See <a href="10-spell-list.md">10-spell-list.md</a>.</li>
+<li><strong>A potion.</strong> Healing potions restore <code>1d8 + 2</code> HP. Drinking a potion is an action.</li>
+</ol>
+<p>A character at full HP cannot be over-healed. Excess healing is wasted.</p>
+<p><strong>No &quot;natural healing&quot;</strong> between fights without a full rest. If the party wants to recover after a fight, they need a safe place and 8 hours.</p>
+<h2>Going down</h2>
+<p>When a character&#39;s HP reaches <strong>0</strong>, they don&#39;t die immediately. They go down:</p>
+<ul>
+<li>They are <strong>unconscious</strong> and <strong>prone</strong>.</li>
+<li>They can&#39;t take actions, move, or speak.</li>
+<li>They drop whatever they&#39;re holding.</li>
+</ul>
+<p>A downed character will <strong>die</strong> at the end of the next round of combat if not stabilized. Until then, they hover.</p>
+<h2>Stabilizing</h2>
+<p>To stabilize a downed ally, an adjacent ally spends their <strong>action</strong> on one of:</p>
+<ul>
+<li><strong>First aid.</strong> A Medicine training check, Hard (15). On success, the downed character is stable — still unconscious, but not dying. They will wake naturally after 10 minutes or instantly if healed for any amount of HP.</li>
+<li><strong>Healing magic.</strong> Any healing spell or potion: the downed character returns to consciousness at the healed HP value. If the heal would bring them to 0 or below, they remain down.</li>
+</ul>
+<p>A character who is stabilized but still at 0 HP can be picked up and carried. They&#39;re out of the fight, but they&#39;re not dying.</p>
+<h2>Dying and dead</h2>
+<p>A character who reaches the end of the round at 0 HP and has not been stabilized <strong>dies</strong>.</p>
+<p>&quot;End of the round&quot; means: after every creature has taken its turn in the current round. So if you go down on your own turn, your party has the rest of the round to save you. If you go down on an enemy turn, your allies get their turns this round to act.</p>
+<p>This is the <strong>only death rule.</strong> No death saving throws. No &quot;you lose three saves and die.&quot; A downed PC will die unless someone helps them, and they have one round to be helped.</p>
+<p>The grim version of this rule is: <strong>a downed PC who is hit again while down dies instantly.</strong> A monster that wants to make sure stoops and kills. This is the default; a softer table can disable it.</p>
+<h2>Massive damage</h2>
+<p>If a single attack would do damage equal to or greater than the character&#39;s <strong>maximum HP</strong>, they die outright. No saving them. This is for catastrophic single hits — a dragon&#39;s bite at full force, a fall from 200 feet. It&#39;s rare. It&#39;s also fair, because the same rule applies to enemies — and players will exploit it gleefully when they figure out the math.</p>
+<h2>Coming back</h2>
+<p>If a character dies, they are dead. There is no automatic resurrection. Three options exist for bringing the dead back:</p>
+<ol>
+<li><strong>A <em>Resurrection</em> spell</strong> (high-tier, costs 5 mana, see <a href="10-spell-list.md">10-spell-list.md</a>). Returns the character at 1 HP if their body is intact. Costs the caster a permanent point of Spirit until their next level — death magic has a tax.</li>
+<li><strong>A divine bargain.</strong> The GM may rule that a god, demon, or ancestral spirit can be petitioned. There is always a price. This is a story event, not a rule.</li>
+<li><strong>The player makes a new character.</strong> The default option. If the campaign continues, a new character should be ready to introduce in the next session.</li>
+</ol>
+<p><strong>This game treats death as meaningful.</strong> It is rare for it to happen at the apprentice tier (party can usually rally), more common at the veteran tier (monsters bite harder), and a real risk at the master tier (the stakes are mythic).</p>
+<h2>Healing the party between fights</h2>
+<p>Once combat ends, characters with HP above 0 are <em>fine</em> — they aren&#39;t bleeding in the narrative sense, they just have less buffer for the next fight. The Priest&#39;s Divine Touch is the main mid-adventure healing tool; potions are the next. A full rest is the only way to top off without resources.</p>
+<p>A common pattern: the party finishes a fight, the Priest spends a Divine Touch on the worst-wounded Warrior, everyone agrees they have enough HP to push on, and they keep moving.</p>
+<h2>Damage examples</h2>
+<ul>
+<li>The Scout has 12 HP. An orc hits for 5. The Scout is at 7.</li>
+<li>A goblin throws a flask of burning oil; Scout fails to dodge, takes 4 damage and is <strong>burning</strong> (1d6 per turn until put out). Scout is at 3 HP.</li>
+<li>Scout spends an action putting themselves out. They are at 3 HP, no longer burning.</li>
+<li>The orc captain attacks: 6 damage. Scout drops to <strong>−3</strong>. Treat as 0; Scout is down.</li>
+<li>The Warrior is adjacent. Warrior&#39;s turn: uses Divine Touch... wait, the Warrior doesn&#39;t have that. The Priest is across the room. Warrior chooses to drag Scout behind cover (a move) and use their action to apply first aid: Medicine training check, Hard. Roll: 16, success. Scout is stable but still at 0.</li>
+<li>Next round, the Priest moves over, uses Divine Touch: heals <code>1d6 + 3 = 5</code>. Scout wakes up at 5 HP.</li>
+</ul>
+<h2>What this doc doesn&#39;t include</h2>
+<ul>
+<li>Death saving throws.</li>
+<li>Hit dice as a resource.</li>
+<li>Lingering injuries.</li>
+<li>Temporary HP.</li>
+<li>Wound thresholds, bloodied states, or staggered conditions.</li>
+<li>HP recovery during a short rest. (There is no short rest.)</li>
+<li>Concentration on healing.</li>
+<li>A &quot;stabilized but bleeding&quot; timer in seconds.</li>
+<li>A complete table of resurrection costs.</li>
+</ul>
+<p>If a player or GM wants any of those, the question is <em>what dramatic moment does this enable?</em> — and if there&#39;s a good answer, the GM rules it once for this campaign and the rule sticks.</p>
+<h1>08 — Conditions</h1>
+<p>Conditions are the only status effects in the game. There are <strong>ten</strong>. Each is one sentence of mechanical text plus a short clearing rule. <strong>You can have multiple conditions at once</strong>, but each is independent — they don&#39;t combine into new rules.</p>
+<h2>The list</h2>
+<h3>Blinded</h3>
+<p>You cannot see. Your attacks are at <strong>disadvantage</strong>, and attacks against you are at <strong>advantage</strong>. <em>Clears when the cause ends.</em></p>
+<h3>Burning</h3>
+<p>At the start of your turn, take <strong><code>1d6</code> fire damage</strong>. <em>Clears when you spend an action to put yourself out, are submerged in water, or are healed by magic.</em></p>
+<h3>Charmed</h3>
+<p>The source of the charm has <strong>advantage</strong> on social rolls against you, and you cannot willingly attack the source. <em>Clears when the source attacks you, when the charm&#39;s duration ends, or on the GM&#39;s call after a dramatic moment.</em></p>
+<h3>Frightened</h3>
+<p>You cannot move closer to the source of the fear, and your attacks against the source are at <strong>disadvantage</strong>. <em>Clears when the source is out of sight, when the fear&#39;s duration ends, or when an ally helps you steady yourself (action).</em></p>
+<h3>Grappled</h3>
+<p>Your speed is <code>0</code> and you cannot move yourself. <em>Clears when you spend an action to break free (Might check, Hard) or when the grappler releases you.</em></p>
+<h3>Poisoned</h3>
+<p>Your attacks and ability checks are at <strong>disadvantage</strong>. <em>Clears at the start of your turn on a successful Spirit check (Hard, 15), or via magical cure, or when the duration ends.</em></p>
+<h3>Prone</h3>
+<p>You are on the ground. Your attacks are at <strong>disadvantage</strong>. Attacks against you are at <strong>advantage</strong> if the attacker is adjacent, and at <strong>disadvantage</strong> if the attacker is far away (you&#39;re a smaller target). Standing up costs half your speed. <em>Clears when you stand.</em></p>
+<h3>Restrained</h3>
+<p>Your speed is <code>0</code>, your attacks are at <strong>disadvantage</strong>, and attacks against you are at <strong>advantage</strong>. <em>Clears as appropriate to the cause — webs require an action to tear free, ropes need to be cut, ice melts.</em></p>
+<h3>Stunned</h3>
+<p>You skip your turn entirely. No move, no action. Attacks against you are at <strong>advantage</strong>. <em>Clears at the end of your skipped turn unless the source says otherwise.</em></p>
+<h3>Exhausted</h3>
+<p>All your rolls — attacks, checks, defenses — use <strong>disadvantage</strong>, OR enemies have advantage if you&#39;d already have disadvantage on the action. <em>Clears with a full rest.</em></p>
+<h2>How conditions are applied</h2>
+<p>A condition is applied by:</p>
+<ul>
+<li>A successful attack that says so (a spider bite that poisons).</li>
+<li>A successful spell (a hold spell that paralyzes).</li>
+<li>An environmental hazard (a pit of green slime).</li>
+<li>A class feature.</li>
+<li>The GM&#39;s discretion in narrative situations (a character who walks through a noxious cloud is <strong>poisoned</strong> until they breathe clean air).</li>
+</ul>
+<p>A condition is <strong>not</strong> applied randomly — there&#39;s always a fictional cause.</p>
+<h2>How conditions stack (or don&#39;t)</h2>
+<p>You can have <strong>any number of conditions at once</strong>, but <strong>the same condition does not stack</strong>. Being poisoned twice is just being poisoned. The duration is the longer of the two sources.</p>
+<p>When two conditions impose disadvantage on the same roll, you still have disadvantage (not &quot;double disadvantage&quot; — there&#39;s no such thing). Disadvantage is binary.</p>
+<p>Likewise, one source of advantage cancels with one source of disadvantage. (See <a href="01-core-mechanic.md">01-core-mechanic.md</a>.)</p>
+<h2>The Downed state</h2>
+<p>A character at 0 HP is not &quot;conditioned&quot; in the same way — they are <strong>downed</strong>, which is its own state from <a href="07-hp-damage-death.md">07-hp-damage-death.md</a>. For mechanical purposes, treat a downed character as <strong>Prone</strong>, <strong>Stunned</strong>, and <strong>Blinded</strong>. But the rule that matters is the death timer, not the conditions.</p>
+<h2>What conditions don&#39;t include</h2>
+<p>We deliberately do not have:</p>
+<ul>
+<li><strong>Petrified.</strong> If a creature turns to stone, that&#39;s just <em>death</em>. (A high-magic GM can rule it differently for story.)</li>
+<li><strong>Deafened.</strong> No one ever interestingly suffers from this mechanically. If the GM wants it, they impose disadvantage on hearing-based checks and call it a day.</li>
+<li><strong>Incapacitated.</strong> Replaced by <em>Stunned</em> or <em>Downed</em> depending on cause.</li>
+<li><strong>Paralyzed.</strong> Replaced by <em>Stunned</em> + <em>Prone</em>. (Apply both.)</li>
+<li><strong>Unconscious.</strong> Replaced by <em>Downed</em>, or by <em>Sleeping</em> (which is just narrative; combat wakes you).</li>
+<li><strong>Exhaustion levels 1–6.</strong> Just <em>Exhausted</em> — one level, binary.</li>
+<li><strong>Invisible.</strong> Not a tracked condition. The GM gives the hidden creature advantage on attacks and imposes disadvantage on attacks against them; this is handled by <em>Hide</em>, <em>cover</em>, and <em>advantage</em> rules, not as a separate status.</li>
+</ul>
+<p>If a 5e player asks about one of these, point to its replacement.</p>
+<h2>Conditions on monsters</h2>
+<p>Conditions apply to monsters the same way they apply to PCs. A <em>Frightened</em> dragon has disadvantage on attacks against its source of fear. A <em>Poisoned</em> ogre has disadvantage on all rolls. <strong>Symmetry holds.</strong></p>
+<p>This makes player abilities that impose conditions extremely valuable — and it makes the GM cautious about handing out frightening or stunning abilities to monsters in the same encounter that the party will want to use those abilities back. Either side can lock the other down.</p>
+<h2>Tracking conditions at the table</h2>
+<p>A token, a sticky note, or just memory. Don&#39;t write a spreadsheet. The condition is one sentence; the player or GM can keep it in their head, especially because most conditions clear within a round or two.</p>
+<p>A small helpful practice: when you apply a condition, <strong>say what clears it</strong> at the same moment. &quot;<em>You&#39;re poisoned. Roll Spirit at the start of your turn to shake it off.</em>&quot; Now the affected player knows what to do without looking it up.</p>
+<h1>09 — Magic</h1>
+<p>Magic is the biggest source of rule-bloat in D&amp;D. We do not let it bloat here. There are two casting classes (<strong>Mage</strong> and <strong>Priest</strong>), one resource (<strong>mana</strong>), and one casting mechanic that is the same as every other action in the game.</p>
+<h2>The mana pool</h2>
+<p>Casters have a <strong>mana pool</strong>.</p>
+<ul>
+<li><strong>Mage:</strong> <code>level + Mind</code> mana per rest.</li>
+<li><strong>Priest:</strong> <code>level + Spirit</code> mana per rest.</li>
+</ul>
+<p>That&#39;s the only spell resource in the game. There are no 1st-level slots, 2nd-level slots, 3rd-level slots. There is no upcasting. There are no ritual slots. A spell costs N mana; you pay N mana; you cast the spell.</p>
+<p>A typical level 1 Mage with Mind <code>+3</code> has <code>4</code> mana. A level 5 Priest with Spirit <code>+4</code> has <code>9</code>. By level 10, top-tier casters have ~`14` mana — enough for two or three big spells per rest, or a flurry of smaller ones.</p>
+<p>Mana refreshes <strong>only on a full rest</strong>. There is no per-encounter recovery, no draining mana from objects, no scrolls that refund mana.</p>
+<h2>Cantrips</h2>
+<p><strong>Cantrips cost 0 mana</strong> and can be cast as often as the caster wants. They are the caster&#39;s &quot;weapon attack&quot; equivalent — when out of mana, you cast cantrips.</p>
+<p>Cantrips do not scale with character level. A cantrip&#39;s damage is what the spell entry says, period. (This is the cut from <a href="00-design-philosophy.md">00-design-philosophy.md</a>: cantrips don&#39;t have damage tables that grow at levels 5/11/17.)</p>
+<p>Each caster knows <strong>2 cantrips</strong> at character creation, free, on top of their starting spells.</p>
+<h2>Spell tiers</h2>
+<p>Spells come in four tiers by cost:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Cost</th>
+<th>Power</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Cantrip</td>
+<td>0 mana</td>
+<td>At-will utility, light damage, simple effects.</td>
+</tr>
+<tr>
+<td>Lesser</td>
+<td>1 mana</td>
+<td>Reliable combat or utility magic. <em>Shield</em>, <em>Cure Wounds</em>, <em>Sleep</em>.</td>
+</tr>
+<tr>
+<td>Greater</td>
+<td>3 mana</td>
+<td>Big effects. <em>Fireball</em>, <em>Hold Person</em>, <em>Fly</em>.</td>
+</tr>
+<tr>
+<td>Master</td>
+<td>5 mana</td>
+<td>Story-shaping. <em>Resurrection</em>, <em>Disintegrate</em>, <em>Wall of Force</em>.</td>
+</tr>
+</tbody></table>
+<p>A caster at level 1 cannot pay for a Master spell. They can&#39;t even pay for a Greater. They have lesser spells and cantrips, and that&#39;s plenty.</p>
+<p>Tier doesn&#39;t gate what spells you <em>know</em> — only what you can <em>cast</em>. A clever level 4 Priest who somehow learned <em>Resurrection</em> still can&#39;t cast it until they have 5 mana available.</p>
+<h2>Spells known</h2>
+<p>You <strong>know</strong> a small list of spells; you cast from this list.</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Spells known</th>
+<th>New per level</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>3</td>
+<td>(starting)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td>6</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>7</td>
+<td>+1 (a bonus year)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>7</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10</td>
+<td>8</td>
+<td>+1</td>
+</tr>
+</tbody></table>
+<p>Plus your 2 cantrips, picked at level 1 and never gained again. (You can swap one cantrip for another at level 5 and again at level 10.)</p>
+<p>When you pick a new spell at level-up, <strong>it must be a tier you can currently afford</strong>. You cannot pre-learn a Master spell at level 2.</p>
+<p>At any level-up, you may swap <strong>one spell you know for another</strong> of the same or lower tier. Mages reread their grimoires; Priests revise their prayers.</p>
+<h2>Casting a spell</h2>
+<blockquote>
+<p><strong>Choose a spell you know. Pay its mana cost. Roll if the spell needs a roll. Resolve.</strong></p>
+</blockquote>
+<p>That is the entire procedure. The &quot;roll if the spell needs a roll&quot; piece is the only piece with variety — see below.</p>
+<h3>Spell attack rolls</h3>
+<p>Some spells require an attack roll. The caster rolls <code>d20 + casting ability + training</code> (Arcana for Mages; Religion for Priests, if trained) vs. the target&#39;s relevant defense (Armor, Mind, or Spirit). On a hit, the spell does what it says.</p>
+<p>Spell attack rolls follow the same rules as weapon attacks (see <a href="06-attack-and-defense.md">06-attack-and-defense.md</a>): natural 20 is a critical (doubled dice on damage spells), natural 1 is a fumble (the spell sputters — the mana is spent and a complication occurs).</p>
+<h3>Auto-hit spells</h3>
+<p>Some spells don&#39;t roll. <strong>Magic Missile</strong> is the classic — it hits, period, dealing fixed damage. Buffs, summons, and most utility spells are auto-hit: the caster pays mana, the spell happens.</p>
+<h3>Area spells</h3>
+<p>A few spells target an area (Fireball&#39;s blast, Burning Hands&#39; cone). For each creature in the area, the caster rolls a single attack vs. each creature&#39;s relevant defense. <strong>The caster rolls once per target</strong> — yes, this is up to five or six rolls for a big fireball. It&#39;s still faster than 5e&#39;s &quot;everyone roll a save.&quot;</p>
+<blockquote>
+<p><strong>Why the caster rolls instead of the targets:</strong> see <a href="01-core-mechanic.md">01-core-mechanic.md</a>, the active-player-rolls principle. It keeps the active turn moving fast and avoids stopping to ask seven creatures to roll dice.</p>
+</blockquote>
+<h3>Save-or-suck spells</h3>
+<p>Spells like <em>Hold Person</em> or <em>Sleep</em> — in 5e these have a &quot;save&quot; mechanic. Here, the caster rolls <code>d20 + casting ability + training</code> vs. the target&#39;s Mind or Spirit defense. On a hit, the effect applies as written. On a miss, it doesn&#39;t, and the mana is still spent (you paid for the attempt, not the result).</p>
+<h2>Range, targets, components</h2>
+<ul>
+<li><strong>Range</strong> is specified in the spell entry. Most combat spells have a &quot;far&quot; range (anywhere in the current scene).</li>
+<li><strong>Targets</strong> are specified: &quot;one creature,&quot; &quot;all creatures in a 4-square cone,&quot; &quot;a willing creature you touch.&quot;</li>
+<li><strong>Components.</strong> Not tracked. If a spell needs a verbal element, you have to be able to speak; if somatic, you have to have a free hand; if material, it&#39;s assumed you have whatever you need. Exception: a few high-tier spells call for a rare, specific material (a diamond, a holy relic) — and the spell entry tells you that explicitly. Otherwise, no.</li>
+</ul>
+<h2>Concentration</h2>
+<p>Replaced by a simpler rule: <strong>a caster can have at most one ongoing spell active at a time.</strong></p>
+<p>When you cast a new ongoing spell, any previous ongoing spell ends. An &quot;ongoing spell&quot; is one that lasts more than one round and that affects something — <em>Fly</em>, <em>Hold Person</em>, <em>Bless</em>, <em>Sanctuary</em>, etc. The spell entry tells you it&#39;s ongoing. Single-action spells (<em>Fireball</em>, <em>Cure Wounds</em>, <em>Magic Missile</em>) are not ongoing.</p>
+<p>If the caster goes <strong>Downed</strong> (HP 0), all their ongoing spells end immediately.</p>
+<p>If the caster takes damage <strong>while concentrating</strong> — there is no concentration check. The spell continues unless they go down. <strong>This is a deliberate simplification.</strong> No mid-fight save-or-lose-your-spell roll.</p>
+<h2>Dispelling and counterspelling</h2>
+<ul>
+<li>Most ongoing spells can be dispelled by the <strong>Dispel Magic</strong> spell (Greater, 3 mana). Caster rolls vs. the higher of <code>15</code> or <code>10 + target spell&#39;s tier × 5</code> (so dispelling a Master spell is Heroic, target 25).</li>
+<li>The <strong>Counterspell</strong> spell (Greater, 3 mana) can be used as a reaction to another caster&#39;s spell. Caster rolls vs. <code>10 + target spell&#39;s tier × 5</code>. On a hit, the target spell fails. The target keeps their mana — counterspelling is a spell duel, not theft.</li>
+<li>Otherwise, ongoing effects last for their duration.</li>
+</ul>
+<p>These two spells are the only &quot;anti-magic&quot; toolkit in the game. There is no Antimagic Field, no Dispel Evil and Good as a separate thing, no Mage&#39;s Disjunction. If the GM wants a high-magic effect, they invent it for the story.</p>
+<h2>Rituals</h2>
+<p>A few spells (mostly Mage spells of the Lesser tier) can be cast as <strong>rituals</strong> — performed slowly, over 10 minutes, with no mana cost. The spell entry says so.</p>
+<p>Rituals exist to let casters do utility magic without spending mana. They can&#39;t be cast in combat. The classic ritual spells: <em>Detect Magic</em>, <em>Comprehend Languages</em>, <em>Mage Hand</em> (extended duration when ritual-cast), <em>Sanctuary</em>, <em>Identify</em>.</p>
+<p>If a spell doesn&#39;t say &quot;ritual,&quot; it isn&#39;t one.</p>
+<h2>Magic items</h2>
+<p>Magic items are not spells, but the same logic applies: an item does what it says, no attunement, no spell slots used. A wand might allow the holder to cast a specific spell for free; the wand&#39;s text says how often. Most magic items are passive — a flaming sword does extra fire damage; a cloak of fire resistance halves fire damage taken.</p>
+<p>A character can wear/wield as many magic items as physically fit. There is no slot economy.</p>
+<h2>Caster vs. caster</h2>
+<p>When a Mage faces a Priest (or two Mages), it&#39;s the same procedure — they take turns, they cast spells, they roll attacks vs. defenses. The Mage&#39;s Mind defense is usually high; the Priest&#39;s Spirit defense is usually high. They&#39;ll target each other accordingly. Counterspell is the conversation.</p>
+<h2>What magic deliberately doesn&#39;t have</h2>
+<ul>
+<li>Spell slots in nine levels.</li>
+<li>Upcasting.</li>
+<li>Concentration as a tracked status with saves.</li>
+<li>Spell components tracked as resources.</li>
+<li>Schools of magic as a mechanical system. (They&#39;re flavor only.)</li>
+<li>A divine vs. arcane gameplay distinction beyond <em>which spell list</em>. Both classes cast the same way.</li>
+<li>Subclass-specific spell lists.</li>
+<li>Domain spells.</li>
+<li>Bard &quot;spells known&quot; as a separate, smaller list.</li>
+<li>Warlock invocations as a parallel system.</li>
+<li>Sorcerer metamagic.</li>
+<li>Wild magic surge tables.</li>
+<li>Detect Magic as an always-on radar.</li>
+<li>A separate &quot;spell save DC&quot; stat. (The caster rolls; the target&#39;s defense is the static number.)</li>
+</ul>
+<p>If a 5e caster asks about any of these, the answer is <em>not in this game; describe what you want to do and we&#39;ll find it in the spell list.</em></p>
+<h1>10 — Spell List</h1>
+<p>Every spell in the game lives here. The list is short on purpose. The classic spells you&#39;d expect (Fireball, Magic Missile, Cure Wounds, Charm Person) are present. Many 5e spells that overlap mechanically are merged or omitted.</p>
+<p><strong>How to read an entry:</strong></p>
+<blockquote>
+<p><strong>Name</strong> <em>(Tier · List · ongoing/ritual if any)</em>
+<em>Range — Target — Cost</em>
+Effect.</p>
+</blockquote>
+<ul>
+<li><strong>Range:</strong> <em>Close</em> (adjacent), <em>Near</em> (within 6 squares), <em>Far</em> (anywhere in line of sight).</li>
+<li><strong>List:</strong> <em>Arcane</em> (Mage), <em>Divine</em> (Priest), or <em>Both</em>.</li>
+<li><strong>Casting ability:</strong> Mind for Arcane, Spirit for Divine.</li>
+</ul>
+<p>When a spell calls for an attack roll, use <code>d20 + casting ability + training (if Arcana for Mage / Religion for Priest)</code> vs. the named defense.</p>
+<hr>
+<h2>Cantrips (0 mana)</h2>
+<p>Cantrips are at-will. Every caster picks 2 at character creation.</p>
+<h3>Spark <em>(Cantrip · Arcane)</em></h3>
+<p><em>Range Near — One creature — 0 mana</em>
+Spell attack vs. <strong>Armor</strong>. On hit: <code>1d6</code> fire damage. Flammable objects start burning.</p>
+<h3>Frost Touch <em>(Cantrip · Arcane)</em></h3>
+<p><em>Range Close — One creature — 0 mana</em>
+Spell attack vs. <strong>Armor</strong>. On hit: <code>1d4</code> cold damage, target&#39;s speed is halved until the end of their next turn.</p>
+<h3>Mage Hand <em>(Cantrip · Arcane · ritual)</em></h3>
+<p><em>Range Near — One floating hand — 0 mana</em>
+A spectral hand appears within Near range. It can lift up to 10 lbs., open unlocked doors, push small objects, pour a drink. Cannot attack or carry creatures. Lasts 1 minute (or 10 minutes if ritual-cast).</p>
+<h3>Light <em>(Cantrip · Both)</em></h3>
+<p><em>Range Close — One object — 0 mana</em>
+Touched object sheds bright light in a 6-square radius for 1 hour, or until you dismiss it. Only one object at a time.</p>
+<h3>Mend <em>(Cantrip · Both · ritual)</em></h3>
+<p><em>Range Close — One object — 0 mana</em>
+Repairs a single break or tear in an object no larger than a sword. A snapped rope, a cracked vase, a torn cloak. Will not fix magical items, complex mechanisms, or large structures.</p>
+<h3>Daze <em>(Cantrip · Both)</em></h3>
+<p><em>Range Near — One creature — 0 mana</em>
+Spell attack vs. <strong>Mind</strong>. On hit: target is <strong>Stunned</strong> until the end of their next turn. (Yes, a cantrip can stun. The defense is the wall.)</p>
+<h3>Sacred Flame <em>(Cantrip · Divine)</em></h3>
+<p><em>Range Near — One creature — 0 mana</em>
+Spell attack vs. <strong>Spirit</strong>. On hit: <code>1d8</code> radiant damage. The target glows faintly until the end of their next turn (negating their Hide and Invisible benefits).</p>
+<h3>Guidance <em>(Cantrip · Divine)</em></h3>
+<p><em>Range Close — One willing creature — 0 mana</em>
+The next ability check the target makes within 1 minute is made with <strong>advantage</strong>. Cast on your action — the target uses it on their next check. Only one Guidance can be on a target at a time. (This is the bardic-inspiration replacement.)</p>
+<h3>Resistance <em>(Cantrip · Divine · ongoing)</em></h3>
+<p><em>Range Close — One willing creature — 0 mana</em>
+Target gains <strong>advantage</strong> on their Spirit defense until the start of your next turn. Counts as an ongoing spell.</p>
+<h3>Sleight Hex <em>(Cantrip · Arcane)</em></h3>
+<p><em>Range Near — One creature — 0 mana</em>
+Spell attack vs. <strong>Mind</strong>. On hit: until the end of the target&#39;s next turn, attacks against them have <strong>advantage</strong>. Useful for setting up an ally&#39;s strike.</p>
+<hr>
+<h2>Lesser (1 mana)</h2>
+<p>The bread-and-butter spell tier. Every caster will use these constantly.</p>
+<h3>Magic Missile <em>(Lesser · Arcane)</em></h3>
+<p><em>Range Far — Up to three creatures or one creature — 1 mana</em>
+No roll. Three darts of force. Each does <code>1d4 + 1</code> damage. You may target one creature with all three or split them among up to three creatures. Each dart hits automatically.</p>
+<h3>Shield <em>(Lesser · Arcane · reaction)</em></h3>
+<p><em>Range Self — Self — 1 mana</em>
+<strong>Reaction.</strong> When you are hit by an attack against your Armor, add <code>+5</code> to your Armor until the start of your next turn. May retroactively turn a hit into a miss. Cast after the attack roll is announced.</p>
+<h3>Sleep <em>(Lesser · Arcane)</em></h3>
+<p><em>Range Near — Up to two creatures within 2 squares of each other — 1 mana</em>
+Spell attack vs. each target&#39;s <strong>Mind</strong>. On hit: target falls asleep (treat as <strong>Downed</strong> but not dying — they will wake in 1 minute, when shaken (action), or when they take damage). Creatures with <code>30+</code> HP are immune. Undead and constructs are immune.</p>
+<h3>Burning Hands <em>(Lesser · Arcane)</em></h3>
+<p><em>Range Close — All creatures in a 3-square cone — 1 mana</em>
+Spell attack vs. each creature&#39;s <strong>Armor</strong>. On hit: <code>2d6</code> fire damage. Flammable objects in the cone catch fire.</p>
+<h3>Charm Person <em>(Lesser · Arcane)</em></h3>
+<p><em>Range Near — One humanoid — 1 mana · ongoing</em>
+Spell attack vs. <strong>Mind</strong>. On hit: target is <strong>Charmed</strong> by you for 1 hour, or until you or your allies attack them. They believe you are a friend and will not initiate hostilities against your group. Ongoing.</p>
+<h3>Thunderwave <em>(Lesser · Arcane)</em></h3>
+<p><em>Range Close — All creatures in a 3-square cube in front of you — 1 mana</em>
+Spell attack vs. each creature&#39;s <strong>Armor</strong>. On hit: <code>2d8</code> thunder damage and the target is pushed 2 squares directly away from you. Unattended objects are pushed too. Audible 30 squares away.</p>
+<h3>Detect Magic <em>(Lesser · Both · ritual)</em></h3>
+<p><em>Range Self (radius Near) — 1 mana (or 0 as ritual)</em>
+For 10 minutes, you can sense the presence and rough location of any active magic (spells, magical creatures, magic items) within Near range. You don&#39;t learn what the magic does — only that it&#39;s there. Ritual-castable for free.</p>
+<h3>Comprehend Languages <em>(Lesser · Arcane · ritual)</em></h3>
+<p><em>Range Self — Self — 1 mana (or 0 as ritual)</em>
+For 1 hour, you understand any spoken or written language you encounter. You cannot speak unfamiliar languages, only understand them.</p>
+<h3>Cure Wounds <em>(Lesser · Divine)</em></h3>
+<p><em>Range Close — One creature you touch — 1 mana</em>
+Heal <code>2d8 + Spirit</code> HP. No effect on undead or constructs.</p>
+<h3>Healing Word <em>(Lesser · Divine)</em></h3>
+<p><em>Range Far — One creature — 1 mana</em>
+Heal <code>1d6 + Spirit</code> HP. Can be cast on a downed ally to bring them back to consciousness at the healed HP value.</p>
+<h3>Bless <em>(Lesser · Divine · ongoing)</em></h3>
+<p><em>Range Near — Up to three willing creatures — 1 mana</em>
+Until the start of your next turn, the targets have <strong>advantage</strong> on their next attack roll each. Once each target attacks, the bless is consumed for that target. Counts as your ongoing spell.</p>
+<h3>Sanctuary <em>(Lesser · Divine · ongoing)</em></h3>
+<p><em>Range Close — One willing creature — 1 mana · ongoing</em>
+For 1 minute or until the warded creature attacks: any creature attempting to attack the warded creature must first roll vs. your <strong>Spirit attack</strong> (<code>d20 + Spirit + training</code>) vs. their own <strong>Spirit</strong> defense — if you win, they pick a new target or waste the action. Effective against single threats; useless against area effects. Counts as your ongoing spell.</p>
+<hr>
+<h2>Greater (3 mana)</h2>
+<p>Tide-turning spells. A level 4–7 caster has a handful per rest; uses them at decision moments.</p>
+<h3>Fireball <em>(Greater · Arcane)</em></h3>
+<p><em>Range Far — All creatures in a 3-square radius — 3 mana</em>
+Spell attack vs. each creature&#39;s <strong>Armor</strong>. On hit: <code>6d6</code> fire damage. On miss: half damage. Flammable objects in the area catch fire. Audible everywhere in the scene.</p>
+<h3>Lightning Bolt <em>(Greater · Arcane)</em></h3>
+<p><em>Range Far — All creatures in a 10-square line — 3 mana</em>
+Spell attack vs. each creature&#39;s <strong>Armor</strong>. On hit: <code>6d6</code> lightning damage. On miss: half damage. The bolt passes through, hitting everyone in the line — including allies.</p>
+<h3>Hold Person <em>(Greater · Both)</em></h3>
+<p><em>Range Near — One humanoid — 3 mana · ongoing</em>
+Spell attack vs. <strong>Mind</strong>. On hit: target is <strong>Stunned</strong> for 3 rounds, or until they break the spell. The target may try to break free at the start of each of their turns by rolling Spirit vs. your spell attack roll. Counts as your ongoing spell.</p>
+<h3>Web <em>(Greater · Arcane · ongoing)</em></h3>
+<p><em>Range Near — A 3-square radius — 3 mana · ongoing</em>
+Spell attack vs. <strong>Armor</strong> for each creature in the area. On hit: <strong>Restrained</strong> until they spend an action tearing free (Might check vs. your spell attack). Difficult terrain for everyone, even non-restrained. Lasts 10 minutes or until burned (whoosh, 2d6 fire damage to anyone caught in it as it burns). Ongoing.</p>
+<h3>Invisibility <em>(Greater · Arcane · ongoing)</em></h3>
+<p><em>Range Close — One willing creature — 3 mana · ongoing</em>
+Target becomes invisible. Attackers have <strong>disadvantage</strong> against them; they have <strong>advantage</strong> on attacks against creatures that can&#39;t see them. Ends when the target attacks or casts a spell, or after 10 minutes. Counts as your ongoing spell.</p>
+<h3>Fly <em>(Greater · Arcane · ongoing)</em></h3>
+<p><em>Range Close — One willing creature — 3 mana · ongoing</em>
+Target gains a flying speed of 8 squares for 5 minutes. If the spell ends while the target is aloft, they fall. Counts as your ongoing spell.</p>
+<h3>Counterspell <em>(Greater · Arcane · reaction)</em></h3>
+<p><em>Range Near — One spell being cast — 3 mana</em>
+<strong>Reaction.</strong> When you see another creature casting a spell, you may attempt to disrupt it. Roll <code>d20 + Mind + training</code> vs. <code>10 + (5 × the target spell&#39;s tier number)</code> (Lesser = 15, Greater = 20, Master = 25). On a hit, the spell fizzles; the casting creature loses the mana. On a miss, the spell completes normally.</p>
+<h3>Dispel Magic <em>(Greater · Both)</em></h3>
+<p><em>Range Near — One ongoing spell or magic effect — 3 mana</em>
+Roll <code>d20 + casting ability + training</code> vs. <code>10 + (5 × target spell&#39;s tier number)</code>. On hit, the target ongoing effect ends. (No mana refund to its caster.)</p>
+<h3>Mass Healing Word <em>(Greater · Divine)</em></h3>
+<p><em>Range Far — Up to four creatures in Near range of each other — 3 mana</em>
+Each target regains <code>2d6 + Spirit</code> HP. Can wake downed allies.</p>
+<h3>Spirit Guardians <em>(Greater · Divine · ongoing)</em></h3>
+<p><em>Range Self (radius Close) — 3 mana · ongoing</em>
+Spectral guardians fill the 1-square area around you. Each round, any enemy that ends its turn within 1 square of you takes <code>3d8</code> radiant damage (no attack roll — auto-damage). The damage is halved on a successful enemy Spirit defense roll (this is the one place a target gets to roll a save — by spending their reaction at the moment of damage). Counts as your ongoing spell.</p>
+<h3>Banishment <em>(Greater · Divine)</em></h3>
+<p><em>Range Near — One creature — 3 mana · ongoing</em>
+Spell attack vs. <strong>Spirit</strong>. On hit: target vanishes from this plane for up to 1 minute. They reappear in the same spot when the spell ends. Useful against outsiders (a banished demon often doesn&#39;t come back). Counts as your ongoing spell.</p>
+<h3>Revivify <em>(Greater · Divine)</em></h3>
+<p><em>Range Close — One creature that died in the last minute — 3 mana</em>
+The target returns to life with 1 HP. The body must be intact. Cannot revive a creature that died of old age or has been dead more than 1 minute. (For older deaths, see <em>Resurrection</em>, below.)</p>
+<hr>
+<h2>Master (5 mana)</h2>
+<p>The story-shaping tier. A level 8+ caster has access to one or two of these per rest. They define climactic scenes.</p>
+<h3>Disintegrate <em>(Master · Arcane)</em></h3>
+<p><em>Range Far — One creature or object — 5 mana</em>
+Spell attack vs. <strong>Armor</strong>. On hit: <code>10d10</code> force damage. If this reduces the target to 0 HP, they are reduced to dust — no body remains, no easy resurrection. Vs. an object the size of a wagon or smaller: it crumbles to dust outright. Vs. larger structures: a 10-square cube is annihilated.</p>
+<h3>Wall of Force <em>(Master · Arcane · ongoing)</em></h3>
+<p><em>Range Near — A wall up to 10 squares long and 4 high — 5 mana · ongoing</em>
+An invisible, impenetrable wall of force appears, in any shape you wish (curved, straight, dome). Nothing physical passes through it. Lasts 10 minutes. Cannot be dispelled by Dispel Magic. Counts as your ongoing spell.</p>
+<h3>Polymorph <em>(Master · Arcane · ongoing)</em></h3>
+<p><em>Range Near — One creature — 5 mana · ongoing</em>
+Spell attack vs. <strong>Mind</strong> (vs. an unwilling target) or auto (willing). On hit: target becomes a beast of the GM&#39;s choosing for up to 10 minutes — typically of equivalent or weaker stats. Their HP becomes the beast&#39;s HP; when reduced to 0 in beast form, they revert to their true form at their previous HP. Mind is replaced with the beast&#39;s. They cannot cast spells. Counts as your ongoing spell.</p>
+<h3>Heal <em>(Master · Divine)</em></h3>
+<p><em>Range Near — One creature — 5 mana</em>
+Target regains all HP. All conditions on the target end (except Exhausted). No effect on undead or constructs.</p>
+<h3>Banish <em>(Master · Divine)</em></h3>
+<p><em>Range Near — One creature — 5 mana</em>
+Like <em>Banishment</em> (Greater), but: on a successful hit, the target is banished <strong>permanently</strong> if it is not native to this plane (a demon banished by <em>Banish</em> does not return). If it is native, treat as Greater Banishment — 1 minute, then return.</p>
+<h3>Resurrection <em>(Master · Divine)</em></h3>
+<p><em>Range Close — One creature dead no longer than 1 week — 5 mana</em>
+The target returns to life with full HP. Costs the caster <strong><code>1</code> permanent Spirit</strong> until their next level-up — death magic charges a tax. Will not bring back a creature that does not want to return, or that has been dead longer than a week.</p>
+<hr>
+<h2>Designer&#39;s notes on the list</h2>
+<p>A few things to notice if you&#39;re a 5e player skimming this:</p>
+<ul>
+<li><strong>Cure Wounds heals more</strong> (<code>2d8 + Spirit</code> instead of <code>1d8 + mod</code>) because we cut the per-rest healing economy and made every cast count.</li>
+<li><strong>Magic Missile is 1 mana, not 1 slot</strong>, and the damage is comparable. It is a default Mage tool.</li>
+<li><strong>Shield is the only reaction spell most Mages will know.</strong> It is so good it shapes the build.</li>
+<li><strong>Counterspell uses a roll</strong>, not a flat slot-comparison, because the slot system doesn&#39;t exist.</li>
+<li><strong>Fireball does 6d6</strong>, lowered from 5e&#39;s <code>8d6</code>, because the Greater tier needs to be at least <em>trying</em> to balance against the Lesser tier. The damage will be reviewed in playtest.</li>
+<li><strong>The Charm/Hold/Banish lineup is the only &quot;save or suck&quot; the game has</strong>, and we&#39;ve kept it tight: three spells, three different defenses, three different durations.</li>
+<li><strong>No &quot;scaling&quot; cantrips.</strong> A level-10 Spark still does <code>1d6</code>. Cantrips are the floor; spells are how casters scale.</li>
+<li><strong>No subclass-locked spells.</strong> All Arcane spells are available to all Mages; all Divine to all Priests. Shared spells (Detect Magic, Hold Person, Dispel Magic) are on both lists.</li>
+<li><strong>No &quot;ritual tag&quot; parallel system.</strong> Spells that can be ritual-cast say so in their entry; that&#39;s it.</li>
+</ul>
+<p>This list will grow over time, but it should never grow large enough that a new player can&#39;t read it in 10 minutes. <strong>The total list of spells should always fit in a player&#39;s head, not in an index.</strong></p>
+<h1>11 — Equipment</h1>
+<p>The equipment list is short. <strong>A character&#39;s gear shouldn&#39;t be a spreadsheet</strong> — it should be a few items they hold and use. We curate weapons, armor, and goods to the things that meaningfully change play.</p>
+<h2>Weapons</h2>
+<p>Three categories. The only thing that changes between weapons within a category is <strong>flavor</strong> and <strong>range</strong>.</p>
+<h3>Light melee — <code>1d6</code> damage</h3>
+<p>For Scouts, second weapons for anyone, hidden weapons. Use Agility <em>or</em> Might (pick at creation, then it sticks).</p>
+<ul>
+<li><strong>Dagger.</strong> Can also be thrown to Near range. Easily concealed.</li>
+<li><strong>Shortsword.</strong> Standard light blade.</li>
+<li><strong>Hand axe.</strong> Can also be thrown to Near range.</li>
+<li><strong>Mace (light) / Club.</strong> Bludgeoning flavor.</li>
+<li><strong>Rapier.</strong> Agility-only.</li>
+</ul>
+<h3>Medium melee — <code>1d8</code> damage</h3>
+<p>The default fighter weapon. Use Might.</p>
+<ul>
+<li><strong>Longsword.</strong> Standard.</li>
+<li><strong>Battleaxe.</strong> Battleground favorite.</li>
+<li><strong>Warhammer.</strong> Bludgeoning.</li>
+<li><strong>Spear.</strong> Can also be thrown to Near range. Reach: 2 squares (counts as polearm).</li>
+<li><strong>Mace.</strong> Bludgeoning. Trained priests favor this.</li>
+</ul>
+<h3>Heavy melee — <code>1d10</code> damage, two-handed</h3>
+<p>Tank-stopper. Use Might. Requires both hands — no shield, no second weapon.</p>
+<ul>
+<li><strong>Greatsword.</strong></li>
+<li><strong>Greataxe.</strong></li>
+<li><strong>Maul.</strong> Bludgeoning.</li>
+<li><strong>Polearm (halberd / glaive).</strong> Reach: 2 squares.</li>
+</ul>
+<h3>Ranged — <code>1d6</code> or <code>1d8</code></h3>
+<p>Use Agility. The weapon&#39;s entry tells you its range.</p>
+<ul>
+<li><strong>Shortbow.</strong> <code>1d6</code>. Range Near.</li>
+<li><strong>Longbow.</strong> <code>1d8</code>. Range Far.</li>
+<li><strong>Light crossbow.</strong> <code>1d6</code>. Range Far. Slow to reload (your move is consumed if you fire and reload in the same turn).</li>
+<li><strong>Heavy crossbow.</strong> <code>1d10</code>. Range Far. Two-handed. Slow to reload.</li>
+<li><strong>Hand crossbow.</strong> <code>1d4</code>. Range Near. Can be wielded one-handed.</li>
+<li><strong>Sling.</strong> <code>1d4</code>. Range Near. Anyone can use a sling; it&#39;s improvised gear.</li>
+<li><strong>Thrown weapon</strong> (dagger, hand axe, spear): <code>1d6/1d6/1d8</code> respectively. Range Near.</li>
+</ul>
+<h2>Armor</h2>
+<p>Three categories. Light, Medium, Heavy. Wearing armor you&#39;re not trained in costs you <strong>disadvantage</strong> on all Agility and Might rolls and you cannot cast spells.</p>
+<h3>Light armor — <code>+1</code> Armor</h3>
+<p>Doesn&#39;t restrict Agility. Worn under clothes.</p>
+<ul>
+<li><strong>Padded.</strong> Cheap. (5g.)</li>
+<li><strong>Leather.</strong> Standard. (10g.)</li>
+<li><strong>Studded leather.</strong> A little tougher. (45g.)</li>
+</ul>
+<h3>Medium armor — <code>+3</code> Armor, Agility cap <code>+2</code></h3>
+<p>Restricts Agility for armor calculation only (Armor = <code>10 + min(Agility, +2) + 3</code>). Doesn&#39;t affect non-armor Agility rolls. Cannot cast arcane spells in medium armor; can cast divine.</p>
+<ul>
+<li><strong>Chain shirt.</strong> (50g.)</li>
+<li><strong>Scale mail.</strong> (50g.)</li>
+<li><strong>Half plate.</strong> (750g.)</li>
+</ul>
+<h3>Heavy armor — <code>+5</code> Armor, Might-based</h3>
+<p>Uses Might instead of Agility for the Armor calculation: <code>Armor = 10 + Might + 5</code>. Doesn&#39;t affect other rolls. Cannot cast spells (arcane or divine) in heavy armor.</p>
+<ul>
+<li><strong>Chain mail.</strong> (75g.)</li>
+<li><strong>Plate.</strong> (1500g.)</li>
+</ul>
+<h3>Shields — <code>+2</code> Armor, one-handed slot</h3>
+<p>Cannot be used with two-handed weapons. Doesn&#39;t interfere with light or medium armor casting (divine).</p>
+<ul>
+<li><strong>Buckler.</strong> <code>+1</code> Armor. (5g.)</li>
+<li><strong>Shield.</strong> <code>+2</code> Armor. (10g.)</li>
+<li><strong>Tower shield.</strong> <code>+3</code> Armor; counts as both your hands; difficult terrain treats you as if at <code>−2</code> Speed. (50g.)</li>
+</ul>
+<h2>Gear</h2>
+<h3>Adventuring kit (10g, standard starting kit)</h3>
+<p>The &quot;you have whatever&#39;s reasonable&quot; pack. Includes:</p>
+<ul>
+<li>Backpack</li>
+<li>Bedroll</li>
+<li>Tinderbox + 5 torches</li>
+<li>Waterskin (1 day&#39;s water)</li>
+<li>5 days&#39; rations</li>
+<li>50-foot rope</li>
+<li>Whetstone or weapon-care basics</li>
+<li>Small mirror, signal whistle, chalk</li>
+</ul>
+<p>A character with the kit has these things. We don&#39;t track them as individual line items unless something matters (the torch goes out, the waterskin runs dry in the desert). The kit costs <code>10g</code> to replace if lost.</p>
+<h3>Consumables</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Cost</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Healing potion</strong></td>
+<td>50g</td>
+<td>Action to drink. Restore <code>1d8 + 2</code> HP.</td>
+</tr>
+<tr>
+<td><strong>Mana potion</strong></td>
+<td>100g</td>
+<td>Action to drink. Restore <code>1d4</code> mana. Rare.</td>
+</tr>
+<tr>
+<td><strong>Vial of acid</strong></td>
+<td>25g</td>
+<td>Throw at Near range. Spell attack vs. Armor. <code>2d6</code> damage on hit.</td>
+</tr>
+<tr>
+<td><strong>Alchemist&#39;s fire</strong></td>
+<td>25g</td>
+<td>Throw at Near range. Spell attack vs. Armor. <code>1d6</code> fire, then <strong>Burning</strong> condition.</td>
+</tr>
+<tr>
+<td><strong>Antitoxin</strong></td>
+<td>50g</td>
+<td>Drink to remove Poisoned condition immediately.</td>
+</tr>
+<tr>
+<td><strong>Holy water</strong></td>
+<td>25g</td>
+<td>Throw at Near range. <code>2d6</code> radiant damage to undead/fiends; no effect otherwise.</td>
+</tr>
+<tr>
+<td><strong>Smokebomb</strong></td>
+<td>30g</td>
+<td>Throw at Near range. 2-square radius of smoke; full cover within. Lasts 1 round.</td>
+</tr>
+<tr>
+<td><strong>Caltrops bag</strong></td>
+<td>5g</td>
+<td>Action to scatter. 1-square area of difficult terrain; creature entering takes <code>1</code> damage and may be Slowed (<code>−2</code> speed) for the round.</td>
+</tr>
+<tr>
+<td><strong>Oil flask</strong></td>
+<td>5g</td>
+<td>Lamp fuel. If thrown and ignited, alchemist&#39;s fire-equivalent.</td>
+</tr>
+<tr>
+<td><strong>Ration (day)</strong></td>
+<td>1g</td>
+<td>One day&#39;s food for one person.</td>
+</tr>
+</tbody></table>
+<h3>Tools, services, and miscellany</h3>
+<table>
+<thead>
+<tr>
+<th>Item / service</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Thieves&#39; tools (lockpicks, picks, files)</td>
+<td>25g</td>
+</tr>
+<tr>
+<td>Healer&#39;s kit (10 uses, +5 to Medicine checks)</td>
+<td>30g</td>
+</tr>
+<tr>
+<td>Climbing kit (spikes, harness)</td>
+<td>30g</td>
+</tr>
+<tr>
+<td>Disguise kit</td>
+<td>25g</td>
+</tr>
+<tr>
+<td>Forgery kit</td>
+<td>25g</td>
+</tr>
+<tr>
+<td>Crowbar</td>
+<td>2g</td>
+</tr>
+<tr>
+<td>Hammer + 10 iron spikes</td>
+<td>2g</td>
+</tr>
+<tr>
+<td>Lantern + 5 flasks of oil</td>
+<td>10g</td>
+</tr>
+<tr>
+<td>Mage&#39;s spellbook (blank)</td>
+<td>50g</td>
+</tr>
+<tr>
+<td>Holy symbol</td>
+<td>10g</td>
+</tr>
+<tr>
+<td>Manacles</td>
+<td>2g</td>
+</tr>
+<tr>
+<td>Steel mirror</td>
+<td>5g</td>
+</tr>
+<tr>
+<td>Spyglass</td>
+<td>1000g</td>
+</tr>
+<tr>
+<td>Horse</td>
+<td>75g</td>
+</tr>
+<tr>
+<td>Stabling (per night)</td>
+<td>5s</td>
+</tr>
+<tr>
+<td>Inn (per night, common room)</td>
+<td>5s</td>
+</tr>
+<tr>
+<td>Inn (private room)</td>
+<td>2g</td>
+</tr>
+<tr>
+<td>Hireling (per day)</td>
+<td>1g</td>
+</tr>
+</tbody></table>
+<p>We track only currency that matters. Silver and copper exist but most adventurers deal in gold.</p>
+<h2>Starting equipment</h2>
+<p>A new character starts with:</p>
+<ul>
+<li><strong>One starting kit</strong> based on class (below), OR</li>
+<li><strong>50 gold</strong> to spend à la carte.</li>
+</ul>
+<h3>Warrior starting kit</h3>
+<p>Chain mail (or chain shirt + shield), longsword, dagger, shortbow + 20 arrows, adventuring kit, 10g pocket money.</p>
+<h3>Scout starting kit</h3>
+<p>Leather armor, two daggers, longbow + 20 arrows, thieves&#39; tools, adventuring kit, 10g.</p>
+<h3>Mage starting kit</h3>
+<p>Robes (no armor), dagger, spellbook (contains your 3 starting spells + 2 cantrips), adventuring kit, 15g.</p>
+<h3>Priest starting kit</h3>
+<p>Chain shirt, mace, light crossbow + 20 bolts, holy symbol, adventuring kit, 10g.</p>
+<h2>Magic items</h2>
+<p>Magic items are not standardized. Each is a specific thing with its own text. There is no &quot;+1 weapon&quot; template that applies to every weapon; instead, <em>Anduril</em>, the captured elven blade, does what its description says.</p>
+<p>That said, here is a small starter list of useful magic items the GM can hand out without inventing flavor:</p>
+<h3>Common (apprentice tier)</h3>
+<ul>
+<li><strong>Healer&#39;s bracer.</strong> <code>+1</code> to all healing rolls cast by the wearer.</li>
+<li><strong>Cloak of warding.</strong> <code>+1</code> to Spirit defense.</li>
+<li><strong>Boots of the silent step.</strong> Advantage on Stealth rolls when moving alone.</li>
+<li><strong>Quiver of returning.</strong> Once per rest, when you run out of arrows, the quiver fills with 20 new ones.</li>
+<li><strong>Lantern of true sight.</strong> While lit, illusion and invisibility within Near range fail.</li>
+</ul>
+<h3>Uncommon (veteran tier)</h3>
+<ul>
+<li><strong>Ring of protection.</strong> <code>+1</code> to Armor, Mind, and Spirit.</li>
+<li><strong>Flaming sword.</strong> Standard weapon damage <code>+1d6</code> fire on hit.</li>
+<li><strong>Wand of fire bolts.</strong> Cast <em>Spark</em> at will using the wand&#39;s <code>+4</code> attack bonus, regardless of the wielder&#39;s training.</li>
+<li><strong>Boots of striding.</strong> Speed becomes <code>8</code> instead of <code>6</code>.</li>
+<li><strong>Amulet of healing.</strong> Once per rest, when you would drop to 0 HP, you instead drop to <code>1</code> HP.</li>
+</ul>
+<h3>Rare (master tier)</h3>
+<ul>
+<li><strong>Vorpal blade.</strong> On a natural 20 attack roll, if the target has a head, it is severed. (Functional decapitations: living things die. Constructs/oozes/undead-without-heads ignore.)</li>
+<li><strong>Staff of the archmage.</strong> Mage holding the staff increases their mana pool by <code>+3</code> per rest.</li>
+<li><strong>Plate of the unbroken.</strong> <code>+5</code> heavy Armor, plus the wearer cannot be knocked Prone.</li>
+<li><strong>Cloak of dimension door.</strong> Once per rest, teleport up to 10 squares as part of a move.</li>
+<li><strong>Tome of binding.</strong> A blank book. The first creature it captures is bound to its pages (a sub-game; the GM decides).</li>
+</ul>
+<p>The GM should rarely hand out more than 2–3 magic items in a single tier. Each magic item is a story beat — where it came from, who lost it, why it surfaced now.</p>
+<h2>What equipment doesn&#39;t have</h2>
+<ul>
+<li>Encumbrance tables.</li>
+<li>A weight stat on every item.</li>
+<li>A &quot;magic item attunement&quot; slot economy.</li>
+<li>Ammunition tracking. (You have arrows. If the GM thinks you&#39;ve run out, they tell you.)</li>
+<li>Weapon properties as a tagged sub-system (Finesse, Versatile, Two-Handed, Loading, Heavy, Light) — these are folded into the weapon&#39;s category and one-line description.</li>
+<li>A separate &quot;magic weapon&quot; requirement to hit certain creatures. (Magic items have their own effects; some monsters are resistant to non-magical damage and the GM will tell you.)</li>
+<li>Crafted ammunition, special arrows, masterwork tiers.</li>
+<li>A full price list for every conceivable object.</li>
+</ul>
+<p>If a player wants something not on this list, the GM names a price and the answer is yes. <strong>The currency is gold and time, not paperwork.</strong></p>
+<h1>12 — Monsters</h1>
+<p>A monster stat block fits on an index card. <strong>That is the design target.</strong> No two-page stat blocks, no nested ability lists, no nine specialty senses.</p>
+<h2>The stat block</h2>
+<pre><code>NAME · Tier X · Threat Y
+HP A | Armor B | Mind C | Spirit D | Speed E
+Attack: name +F vs. defense → damage
+Special: one or two short abilities
+Notes: tactics, motivation, appearance
+</code></pre>
+<p>That&#39;s it. Eight lines. A new GM can run any monster in this book without preparation.</p>
+<p><strong>Field guide:</strong></p>
+<ul>
+<li><strong>Tier</strong> (1–3) is which player tier this monster is balanced for. Apprentice, Veteran, Master.</li>
+<li><strong>Threat</strong> is the encounter-budget number for this monster (see <a href="13-encounters-and-rewards.md">13-encounters-and-rewards.md</a>).</li>
+<li><strong>HP, Armor, Mind, Spirit</strong> are static values. Monsters don&#39;t roll defenses — they&#39;re rolled against.</li>
+<li><strong>Speed</strong> is squares per turn.</li>
+<li><strong>Attack</strong> has a single +N attack bonus (which encodes ability + training), a target defense, and damage. Some monsters have two attack options.</li>
+<li><strong>Special</strong> is one or two named abilities, each one sentence.</li>
+<li><strong>Notes</strong> is free-text guidance for running the monster.</li>
+</ul>
+<p>Monsters can have <strong>Sentinel</strong> (opportunity strikes are on for this monster). Add it to Notes.</p>
+<h2>Apprentice tier (levels 1–3)</h2>
+<h3>Goblin Skirmisher — Tier 1 · Threat 1</h3>
+<ul>
+<li><strong>HP</strong> 7 · <strong>Armor</strong> 13 · <strong>Mind</strong> 10 · <strong>Spirit</strong> 9 · <strong>Speed</strong> 7</li>
+<li><strong>Attack:</strong> <em>Scimitar</em> <code>+3 vs. Armor → 1d6 + 1</code> (or thrown javelin, Near range)</li>
+<li><strong>Special:</strong> <em>Nimble Escape</em> — disengages without provoking, even from Sentinel monsters.</li>
+<li><strong>Notes:</strong> Cowardly in melee. Will flee at half HP unless commanded. Hunts in packs of 4–8.</li>
+</ul>
+<h3>Goblin Archer — Tier 1 · Threat 1</h3>
+<ul>
+<li><strong>HP</strong> 7 · <strong>Armor</strong> 12 · <strong>Mind</strong> 10 · <strong>Spirit</strong> 9 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Shortbow</em> <code>+4 vs. Armor → 1d6 + 2</code>, Range Far.</li>
+<li><strong>Special:</strong> <em>Take Cover</em> — moves into cover after each attack; attacks against this goblin while in cover have disadvantage.</li>
+<li><strong>Notes:</strong> Stays at the back. Targets casters first.</li>
+</ul>
+<h3>Goblin Boss — Tier 1 · Threat 3</h3>
+<ul>
+<li><strong>HP</strong> 22 · <strong>Armor</strong> 14 · <strong>Mind</strong> 11 · <strong>Spirit</strong> 11 · <strong>Speed</strong> 7</li>
+<li><strong>Attack:</strong> <em>Wicked Blade</em> <code>+4 vs. Armor → 1d8 + 2</code>. <em>Crossbow</em>: <code>+4 vs. Armor → 1d6 + 2</code>, Range Near.</li>
+<li><strong>Special:</strong> <em>Command</em> — once per round, a nearby goblin makes an immediate attack as a free action.</li>
+<li><strong>Notes:</strong> Sentinel. Will sacrifice minions to escape if losing. Has a back exit ready.</li>
+</ul>
+<h3>Wolf — Tier 1 · Threat 2</h3>
+<ul>
+<li><strong>HP</strong> 12 · <strong>Armor</strong> 13 · <strong>Mind</strong> 11 · <strong>Spirit</strong> 10 · <strong>Speed</strong> 10</li>
+<li><strong>Attack:</strong> <em>Bite</em> <code>+4 vs. Armor → 1d8 + 2</code>. On hit, target is Knocked Prone if Tier 1 or smaller.</li>
+<li><strong>Special:</strong> <em>Pack Tactics</em> — has advantage on attacks if an ally is adjacent to the same target.</li>
+<li><strong>Notes:</strong> Pack hunter. Hits and retreats. Smart enough to flank.</li>
+</ul>
+<h3>Bandit — Tier 1 · Threat 1</h3>
+<ul>
+<li><strong>HP</strong> 9 · <strong>Armor</strong> 13 · <strong>Mind</strong> 10 · <strong>Spirit</strong> 11 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Shortsword</em> <code>+3 vs. Armor → 1d6 + 1</code>. <em>Light crossbow</em>: <code>+3 vs. Armor → 1d6 + 1</code>, Range Far.</li>
+<li><strong>Special:</strong> <em>Surrender</em> — when below half HP and outnumbered, will drop weapons and surrender if offered.</li>
+<li><strong>Notes:</strong> Human. Has a name, a back-story, a debt, a family. Use them; PCs will hesitate to kill if you do.</li>
+</ul>
+<h3>Bandit Captain — Tier 1 · Threat 4</h3>
+<ul>
+<li><strong>HP</strong> 30 · <strong>Armor</strong> 15 · <strong>Mind</strong> 12 · <strong>Spirit</strong> 13 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Scimitar</em> <code>+5 vs. Armor → 1d8 + 3</code> twice per turn (this monster has Cleave-like <em>Whirlwind</em>). <em>Dagger</em>: <code>+5 vs. Armor → 1d4 + 3</code>, Range Near (thrown).</li>
+<li><strong>Special:</strong> <em>Whirlwind</em> — on a turn where the captain has not moved, makes two melee attacks instead of one.</li>
+<li><strong>Notes:</strong> A leader. Won&#39;t surrender — has a debt to a worse master.</li>
+</ul>
+<h3>Skeleton — Tier 1 · Threat 1</h3>
+<ul>
+<li><strong>HP</strong> 13 · <strong>Armor</strong> 13 · <strong>Mind</strong> 9 · <strong>Spirit</strong> 9 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Rusted blade</em> <code>+3 vs. Armor → 1d6 + 1</code>. <em>Shortbow</em>: <code>+3 vs. Armor → 1d6 + 1</code>.</li>
+<li><strong>Special:</strong> <em>Immune to poison and the Charmed/Frightened/Poisoned conditions.</em> Vulnerable to bludgeoning damage (takes <code>+1d4</code> from clubs/maces/warhammers).</li>
+<li><strong>Notes:</strong> Has no fear, no fatigue. Will fight to dust.</li>
+</ul>
+<h3>Zombie — Tier 1 · Threat 2</h3>
+<ul>
+<li><strong>HP</strong> 18 · <strong>Armor</strong> 10 · <strong>Mind</strong> 7 · <strong>Spirit</strong> 8 · <strong>Speed</strong> 4</li>
+<li><strong>Attack:</strong> <em>Slam</em> <code>+3 vs. Armor → 1d8 + 1</code>. On hit, target rolls Spirit vs. zombie&#39;s <code>+3</code> attack roll or is <strong>Poisoned</strong> (necrotic flavor) until cleansed or rest.</li>
+<li><strong>Special:</strong> <em>Undead Fortitude</em> — when reduced to 0 HP by a hit that is not radiant or fire, roll d20: on 11+, the zombie has 1 HP instead.</li>
+<li><strong>Notes:</strong> Slow but stubborn. Often comes in waves.</li>
+</ul>
+<h3>Giant Spider — Tier 1 · Threat 3</h3>
+<ul>
+<li><strong>HP</strong> 18 · <strong>Armor</strong> 14 · <strong>Mind</strong> 11 · <strong>Spirit</strong> 11 · <strong>Speed</strong> 6, climb 6</li>
+<li><strong>Attack:</strong> <em>Bite</em> <code>+4 vs. Armor → 1d6 + 2</code>, on hit target rolls Spirit vs. spider&#39;s <code>+4</code> roll or <strong>Poisoned</strong> for 1 minute.</li>
+<li><strong>Special:</strong> <em>Web Shot</em> (recharge 5–6 on a d6): ranged spell-style attack at Near range, <code>+4 vs. Agility → target is Restrained</code> until they spend an action to break free (Might vs. <code>+4</code>).</li>
+<li><strong>Notes:</strong> Climbs walls. Ambushes from above.</li>
+</ul>
+<h3>Orc — Tier 1 · Threat 2</h3>
+<ul>
+<li><strong>HP</strong> 18 · <strong>Armor</strong> 13 · <strong>Mind</strong> 9 · <strong>Spirit</strong> 10 · <strong>Speed</strong> 7</li>
+<li><strong>Attack:</strong> <em>Greataxe</em> <code>+4 vs. Armor → 1d10 + 2</code>.</li>
+<li><strong>Special:</strong> <em>Aggressive</em> — once per turn, the orc may move up to its speed toward a hostile creature it can see, in addition to its normal move.</li>
+<li><strong>Notes:</strong> Berserker. Targets whoever hit it last.</li>
+</ul>
+<h3>Cultist — Tier 1 · Threat 2</h3>
+<ul>
+<li><strong>HP</strong> 11 · <strong>Armor</strong> 12 · <strong>Mind</strong> 13 · <strong>Spirit</strong> 13 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Ritual dagger</em> <code>+3 vs. Armor → 1d4 + 1</code>. <em>Cause Wounds</em> (cantrip, divine): <code>+3 vs. Spirit → 1d6</code> necrotic, Range Near.</li>
+<li><strong>Special:</strong> <em>Fanatic</em> — does not flee. Will fight to 0 HP. If reduced to 0 HP by a fellow cultist&#39;s spell, returns at <code>1</code> HP once per encounter (the dark patron pays).</li>
+<li><strong>Notes:</strong> Dedicated to an evil power. Carries one ritual focus the party may need to destroy.</li>
+</ul>
+<h3>Ogre — Tier 1 · Threat 5</h3>
+<ul>
+<li><strong>HP</strong> 50 · <strong>Armor</strong> 12 · <strong>Mind</strong> 7 · <strong>Spirit</strong> 9 · <strong>Speed</strong> 7</li>
+<li><strong>Attack:</strong> <em>Greatclub</em> <code>+5 vs. Armor → 2d6 + 4</code>. On a natural 20, target is also Prone.</li>
+<li><strong>Special:</strong> Sentinel. <em>Big Reach</em> — its melee attacks reach 2 squares.</li>
+<li><strong>Notes:</strong> The first boss-tier threat the party should fear. Dumb but hits like a truck. One hit can drop a Mage.</li>
+</ul>
+<h2>Veteran tier (levels 4–7)</h2>
+<h3>Hobgoblin Soldier — Tier 2 · Threat 3</h3>
+<ul>
+<li><strong>HP</strong> 28 · <strong>Armor</strong> 16 · <strong>Mind</strong> 11 · <strong>Spirit</strong> 12 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Longsword</em> <code>+6 vs. Armor → 1d8 + 3</code>. <em>Javelin</em>: <code>+6 vs. Armor → 1d6 + 3</code>, Range Near.</li>
+<li><strong>Special:</strong> <em>Martial Discipline</em> — gains <code>+2</code> to attack rolls when an ally is adjacent to the same target (this stacks with flanking but doesn&#39;t double; if both apply, treat as advantage).</li>
+<li><strong>Notes:</strong> Trained military. Holds formation. Hard to flank because they fall back together.</li>
+</ul>
+<h3>Hobgoblin Captain — Tier 2 · Threat 6</h3>
+<ul>
+<li><strong>HP</strong> 65 · <strong>Armor</strong> 17 · <strong>Mind</strong> 13 · <strong>Spirit</strong> 13 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Greatsword</em> <code>+7 vs. Armor → 1d10 + 4</code>, twice per turn.</li>
+<li><strong>Special:</strong> Sentinel. <em>Battle Command</em> — once per turn, an allied hobgoblin within Near range may make a free attack as a reaction to the captain&#39;s order.</li>
+<li><strong>Notes:</strong> A true tactical threat. Will divide and conquer.</li>
+</ul>
+<h3>Brown Bear — Tier 2 · Threat 4</h3>
+<ul>
+<li><strong>HP</strong> 40 · <strong>Armor</strong> 14 · <strong>Mind</strong> 10 · <strong>Spirit</strong> 13 · <strong>Speed</strong> 8</li>
+<li><strong>Attack:</strong> <em>Claw</em> <code>+5 vs. Armor → 1d8 + 4</code>. <em>Bite</em> <code>+5 vs. Armor → 1d10 + 4</code>. Uses one of the two per turn.</li>
+<li><strong>Special:</strong> Sentinel. <em>Crushing Hug</em> — on a hit with claw, target may also be Grappled (target&#39;s choice: take an extra <code>1d6</code> damage or be Grappled).</li>
+<li><strong>Notes:</strong> Territorial. Won&#39;t pursue beyond its area.</li>
+</ul>
+<h3>Owlbear — Tier 2 · Threat 5</h3>
+<ul>
+<li><strong>HP</strong> 55 · <strong>Armor</strong> 14 · <strong>Mind</strong> 10 · <strong>Spirit</strong> 12 · <strong>Speed</strong> 8</li>
+<li><strong>Attack:</strong> <em>Claw</em> <code>+6 vs. Armor → 1d10 + 4</code> (twice per turn).</li>
+<li><strong>Special:</strong> <em>Tear and Bite</em> — on a hit with the second claw, target is Bleeding (<code>1d4</code>/turn) until tended.</li>
+<li><strong>Notes:</strong> Unpredictable. Doesn&#39;t recognize danger to itself; fights to the death.</li>
+</ul>
+<h3>Will-o&#39;-Wisp — Tier 2 · Threat 4</h3>
+<ul>
+<li><strong>HP</strong> 16 · <strong>Armor</strong> 15 · <strong>Mind</strong> 14 · <strong>Spirit</strong> 14 · <strong>Speed</strong> fly 8</li>
+<li><strong>Attack:</strong> <em>Shock</em> <code>+5 vs. Armor → 2d6</code> lightning, Range Near.</li>
+<li><strong>Special:</strong> <em>Invisibility (at will, free action)</em> — when the wisp wishes, it vanishes. Spotted only by Lantern of True Sight or while attacking. <em>Consume Life</em> — if it touches a Downed creature, the creature takes <code>2d6</code> necrotic and the wisp regains all HP.</li>
+<li><strong>Notes:</strong> Cowardly. Leads travelers to their deaths and feeds on the dying. Lures more than fights.</li>
+</ul>
+<h3>Ghoul — Tier 2 · Threat 3</h3>
+<ul>
+<li><strong>HP</strong> 22 · <strong>Armor</strong> 13 · <strong>Mind</strong> 9 · <strong>Spirit</strong> 10 · <strong>Speed</strong> 8</li>
+<li><strong>Attack:</strong> <em>Claw</em> <code>+4 vs. Armor → 1d6 + 2</code>. <em>Bite</em>: <code>+4 vs. Armor → 1d8 + 2</code>, on hit target rolls Spirit vs. <code>+4</code> or is <strong>Stunned</strong> until end of their next turn (ghoul paralysis).</li>
+<li><strong>Special:</strong> <em>Immune to poison and the Charmed/Poisoned conditions.</em></li>
+<li><strong>Notes:</strong> Hunts in packs of 2–4. Targets stunned creatures.</li>
+</ul>
+<h3>Mage Apprentice — Tier 2 · Threat 4</h3>
+<ul>
+<li><strong>HP</strong> 22 · <strong>Armor</strong> 12 · <strong>Mind</strong> 15 · <strong>Spirit</strong> 12 · <strong>Speed</strong> 6</li>
+<li><strong>Mana</strong> 6.</li>
+<li><strong>Attack:</strong> <em>Quarterstaff</em> <code>+2 vs. Armor → 1d6</code>. <em>Spark</em> (cantrip, free): <code>+5 vs. Armor → 1d6</code> fire, Range Near.</li>
+<li><strong>Special:</strong> Knows <em>Magic Missile</em> (1 mana), <em>Burning Hands</em> (1 mana), <em>Shield</em> (1 mana, reaction), <em>Sleep</em> (1 mana).</li>
+<li><strong>Notes:</strong> A Mage trying to keep distance. Burn the apprentice down fast.</li>
+</ul>
+<h3>Knight — Tier 2 · Threat 5</h3>
+<ul>
+<li><strong>HP</strong> 55 · <strong>Armor</strong> 18 · <strong>Mind</strong> 11 · <strong>Spirit</strong> 14 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Longsword</em> <code>+7 vs. Armor → 1d8 + 4</code>, twice per turn. <em>Heavy crossbow</em>: <code>+5 vs. Armor → 1d10 + 2</code>, Range Far.</li>
+<li><strong>Special:</strong> Sentinel. <em>Honor-bound</em> — once per encounter, if an ally adjacent to the knight would be hit, the knight may take the hit instead.</li>
+<li><strong>Notes:</strong> Plate armor. Loyal. Will not flee.</li>
+</ul>
+<h3>Sahuagin Raider — Tier 2 · Threat 3</h3>
+<ul>
+<li><strong>HP</strong> 26 · <strong>Armor</strong> 14 · <strong>Mind</strong> 12 · <strong>Spirit</strong> 12 · <strong>Speed</strong> 5, swim 10</li>
+<li><strong>Attack:</strong> <em>Spear</em> <code>+5 vs. Armor → 1d8 + 3</code>. <em>Bite</em>: <code>+5 vs. Armor → 1d4 + 3</code>.</li>
+<li><strong>Special:</strong> <em>Blood Frenzy</em> — has advantage on attacks vs. creatures below half HP.</li>
+<li><strong>Notes:</strong> Aquatic. Drags victims underwater. Hates surface dwellers.</li>
+</ul>
+<h2>Master tier (levels 8–10)</h2>
+<h3>Vampire Spawn — Tier 3 · Threat 8</h3>
+<ul>
+<li><strong>HP</strong> 80 · <strong>Armor</strong> 16 · <strong>Mind</strong> 13 · <strong>Spirit</strong> 13 · <strong>Speed</strong> 8, climb 6</li>
+<li><strong>Attack:</strong> <em>Claw</em> <code>+8 vs. Armor → 1d10 + 5</code>. <em>Bite</em>: <code>+8 vs. Armor → 1d6 + 5</code> necrotic; on hit, spawn heals for damage dealt.</li>
+<li><strong>Special:</strong> <em>Regeneration</em> — at the start of its turn, the spawn regains <code>10</code> HP unless it took fire or radiant damage in the previous round. <em>Immunities</em>: charm, sleep, poison. <em>Weaknesses</em>: vulnerable to fire and radiant damage (takes double).</li>
+<li><strong>Notes:</strong> Sentinel. Can&#39;t enter a home uninvited. Hates sunlight (in sunlight, takes <code>2d6</code> radiant per turn).</li>
+</ul>
+<h3>Young Dragon (Red) — Tier 3 · Threat 12</h3>
+<ul>
+<li><strong>HP</strong> 180 · <strong>Armor</strong> 18 · <strong>Mind</strong> 15 · <strong>Spirit</strong> 16 · <strong>Speed</strong> 8, fly 16</li>
+<li><strong>Attack:</strong> <em>Bite</em> <code>+10 vs. Armor → 2d10 + 6</code>. <em>Claw</em> <code>+10 vs. Armor → 1d8 + 6</code> (uses one of them per turn; or both as below).</li>
+<li><strong>Special:</strong> Sentinel. <em>Multi-attack</em> — instead of one attack, may make one bite and one claw in the same action. <em>Fire Breath</em> (recharge 5–6 on d6): a 6-square cone, spell attack <code>+10 vs. Armor</code> against each creature in the area, <code>8d6</code> fire damage on hit, half on miss.</li>
+<li><strong>Notes:</strong> A regional boss. Has a hoard. Will negotiate if outmatched, but its pride is its weakness.</li>
+</ul>
+<h3>Lich (Apprentice) — Tier 3 · Threat 15</h3>
+<ul>
+<li><strong>HP</strong> 130 · <strong>Armor</strong> 17 · <strong>Mind</strong> 18 · <strong>Spirit</strong> 18 · <strong>Speed</strong> 6</li>
+<li><strong>Mana</strong> 18.</li>
+<li><strong>Attack:</strong> <em>Cold Touch</em> <code>+10 vs. Armor → 3d6</code> cold + 1d6 necrotic, Range Close.</li>
+<li><strong>Special:</strong> Knows: <em>Magic Missile</em> (1), <em>Fireball</em> (3), <em>Hold Person</em> (3), <em>Counterspell</em> (3), <em>Disintegrate</em> (5), <em>Wall of Force</em> (5). <em>Phylactery</em> — if reduced to 0 HP, body crumbles but lich is not truly destroyed unless phylactery is found and broken. <em>Immune to poison, charm, sleep, frightened.</em></li>
+<li><strong>Notes:</strong> Plans ten moves ahead. Has minions. Will retreat to phylactery and rebuild if killed without finding it.</li>
+</ul>
+<h3>Iron Golem — Tier 3 · Threat 12</h3>
+<ul>
+<li><strong>HP</strong> 200 · <strong>Armor</strong> 20 · <strong>Mind</strong> 5 · <strong>Spirit</strong> 9 · <strong>Speed</strong> 6</li>
+<li><strong>Attack:</strong> <em>Slam</em> <code>+10 vs. Armor → 3d10 + 6</code>. On hit, target Knocked Prone.</li>
+<li><strong>Special:</strong> Sentinel. <em>Magic Resistance</em> — has advantage on all defenses vs. spells, and spells against it have disadvantage to hit. <em>Immune to poison, charm, sleep, frightened, fire (instead, heals 1d10 HP from fire damage).</em></li>
+<li><strong>Notes:</strong> Slow but unstoppable. Often guards a single chamber.</li>
+</ul>
+<h3>Stone Giant — Tier 3 · Threat 9</h3>
+<ul>
+<li><strong>HP</strong> 130 · <strong>Armor</strong> 17 · <strong>Mind</strong> 10 · <strong>Spirit</strong> 12 · <strong>Speed</strong> 8</li>
+<li><strong>Attack:</strong> <em>Greatclub</em> <code>+9 vs. Armor → 3d8 + 6</code>. <em>Boulder</em>: <code>+8 vs. Armor → 4d10 + 6</code>, Range Far.</li>
+<li><strong>Special:</strong> Sentinel. <em>Rock Catching</em> — if hit by a thrown weapon or boulder, may try to catch it; roll <code>d20 + 6</code> vs. attacker&#39;s roll; on success, no damage and giant may throw it back as a free action.</li>
+<li><strong>Notes:</strong> Mountain dweller. Cautious. Throws boulders from range until forced into melee.</li>
+</ul>
+<h2>Building your own monsters</h2>
+<p>If you need a monster not on this list, use the following targets by tier:</p>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>HP</th>
+<th>Armor</th>
+<th>Attack bonus</th>
+<th>Damage per hit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 (apprentice)</td>
+<td>7–25</td>
+<td>12–14</td>
+<td>+3 to +5</td>
+<td>1d6 to 1d10 (+1 to +3)</td>
+</tr>
+<tr>
+<td>2 (veteran)</td>
+<td>25–80</td>
+<td>14–17</td>
+<td>+5 to +8</td>
+<td>1d8 to 2d8 (+3 to +5)</td>
+</tr>
+<tr>
+<td>3 (master)</td>
+<td>80–200</td>
+<td>16–20</td>
+<td>+8 to +12</td>
+<td>2d8 to 4d10 (+5 to +7)</td>
+</tr>
+</tbody></table>
+<p><strong>A monster&#39;s Mind/Spirit defenses are usually close to its Armor minus 1 to 3</strong>, except for elites and casters who have one defense significantly higher.</p>
+<p><strong>A monster&#39;s threat number</strong> is roughly its Tier × 2, plus 1 for elite (named) status, plus 1 for any unusually nasty special, minus 1 for unusually fragile or limited. Six minions, four standard, two elite, one boss is a fine spread for a difficult fight.</p>
+<p>A monster&#39;s name, motivation, and one weird thing matter more than its stat block. <strong>A goblin who is afraid of fire</strong>, played as such, is more memorable than a goblin with three extra abilities.</p>
+<h1>13 — Encounters and Rewards</h1>
+<p>How to build a fight that&#39;s challenging but fair, and what the party gets when they win.</p>
+<h2>The encounter budget</h2>
+<p>Use <strong>threat points</strong> (introduced in <a href="12-monsters.md">12-monsters.md</a>). Each monster has a threat number. To build an encounter:</p>
+<blockquote>
+<p><strong>Budget = party level × number of players.</strong></p>
+</blockquote>
+<p>A 4-player level 3 party has a budget of <strong>12 threat points</strong>.</p>
+<ul>
+<li><strong>Easy fight:</strong> spend 50–75% of budget. Probably no resources used. Practice fight.</li>
+<li><strong>Standard fight:</strong> spend 100% of budget. The party will use some spells / lose some HP, but won&#39;t be in real danger.</li>
+<li><strong>Hard fight:</strong> spend 125–150% of budget. PCs may go down. Resources will be burned. Memorable.</li>
+<li><strong>Boss fight:</strong> spend 200% of budget across one big monster + 2–3 minions, or one truly elite. Plan for the chance someone dies.</li>
+</ul>
+<p>The 100%-of-budget fight is the median. The 50% practice fight teaches the system; the 150% hard fight punctuates the story; the 200% boss closes acts.</p>
+<h2>Encounter shapes</h2>
+<p>A few standard shapes to keep variety:</p>
+<ul>
+<li><strong>Pack hunt.</strong> 4–6 small monsters, no leader. Wolves, goblins, skeletons. Tests positioning and crowd control.</li>
+<li><strong>Elite + minions.</strong> 1 elite (50–70% of budget) + several minions. The classic boss-and-thugs shape.</li>
+<li><strong>Two threats.</strong> 2 mid-tier monsters of different types — one melee, one ranged or caster. Tests target priority.</li>
+<li><strong>Solo.</strong> 1 big monster (the full budget). Tests focus fire and survivability.</li>
+<li><strong>Wave.</strong> Three rounds, monsters arrive in waves. Tests resource management.</li>
+</ul>
+<p>Each session should mix shapes. <strong>Don&#39;t run three pack hunts in a row.</strong></p>
+<h2>Adjusting on the fly</h2>
+<p>Even the best budget estimate misses. If a fight is going too easy or too hard:</p>
+<ul>
+<li><strong>Too easy:</strong> add a reinforcement wave (&quot;more goblins arrive at the door&quot;). Don&#39;t buff the existing monsters mid-fight — players will notice. <strong>New</strong> monsters arriving is fair.</li>
+<li><strong>Too hard:</strong> have wounded monsters flee. Have an environmental shift help the PCs (the support beam cracks, the cave wall collapses on the boss). Reveal that the elite is using an illusion to seem tougher than it is.</li>
+</ul>
+<p>The encounter budget is a guideline, not a promise. <strong>The story matters more than the math.</strong></p>
+<h2>Environmental factors</h2>
+<p>Some terrain and conditions effectively multiply the fight&#39;s difficulty without changing the threat budget:</p>
+<ul>
+<li><strong>Difficult terrain everywhere</strong> (<code>+25%</code> to fight feel).</li>
+<li><strong>No cover</strong> (<code>+25%</code>; favors ranged enemies).</li>
+<li><strong>Heavy cover everywhere</strong> (<code>-25%</code> if enemies don&#39;t use it well; <code>+50%</code> if they do).</li>
+<li><strong>Time pressure</strong> (&quot;the spire collapses in 6 rounds&quot;) (<code>+50%</code>).</li>
+<li><strong>Hostage / objective</strong> (the party must protect or rescue something) (<code>+50%</code>).</li>
+<li><strong>Dim or no light</strong> (PCs with darkvision or Light cantrip fine; otherwise <code>+25%</code>).</li>
+<li><strong>Multiple levels</strong> (a chasm, a balcony, a rooftop) (<code>+25%</code>).</li>
+</ul>
+<p>Stacking these is how a budget-100% fight becomes a memorable, dangerous moment. <strong>Geometry and stakes are free encounter difficulty.</strong></p>
+<h2>Non-combat encounters</h2>
+<p>A &quot;fight&quot; isn&#39;t always a fight. Some encounters use the same threat budget for other resolution shapes:</p>
+<ul>
+<li><strong>Social encounter.</strong> A noble&#39;s court, a smuggler&#39;s bargain, a cult&#39;s recruitment pitch. Resolved with rolls, but driven by player choice and NPC reactions. <em>Budget rule of thumb:</em> 1 named NPC per 4 threat points.</li>
+<li><strong>Skill challenge.</strong> Crossing the freezing river, escaping the burning library, infiltrating the manor. The party rolls 3–5 checks (group checks or individual) against escalating targets; failure brings consequences but rarely outright kills. <em>Budget rule of thumb:</em> each failed check is 1 threat point of damage or condition spread across the party.</li>
+<li><strong>Hazard.</strong> A trap, a magical storm, a haunted hallway. <em>Budget rule of thumb:</em> a single hazard worth 1–3 threat points, resolved with one or two rolls.</li>
+</ul>
+<p>A campaign that is 100% combat will tire the party. <strong>Mix fights with everything else.</strong></p>
+<h2>Resting between fights</h2>
+<p>Per <a href="03-progression.md">03-progression.md</a>, there&#39;s only one rest. This means:</p>
+<ul>
+<li><strong>The party will choose when to spend resources.</strong> A Mage who blows their mana on encounter one is empty for the rest of the day.</li>
+<li><strong>Encounters should sometimes come in chains.</strong> Three fights between rests is meaningful; one fight, one rest, repeat is not.</li>
+<li><strong>The &quot;adventuring day&quot;</strong> is 3–5 fights of varying intensity, plus some non-combat. After that, the party should be reaching for a rest.</li>
+</ul>
+<p>If the party keeps trying to rest after every fight, <strong>the GM should put time pressure on the dungeon</strong>. Reinforcements arrive. The ritual completes. The princess dies. The party learns to push.</p>
+<h2>Rewards</h2>
+<p>Three currencies: gold, items, and information.</p>
+<h3>Gold</h3>
+<p>A rough scale by tier:</p>
+<ul>
+<li><strong>Apprentice tier</strong>: 50–200g per significant encounter, 500–1000g per adventure.</li>
+<li><strong>Veteran tier:</strong> 200–1000g per significant encounter, 1000–5000g per adventure.</li>
+<li><strong>Master tier:</strong> 1000g+ per encounter, 5000g+ per adventure, mythic treasures (jewels, royal tribute) at climaxes.</li>
+</ul>
+<p>Don&#39;t track every coin. Round to convenient numbers. <strong>&quot;You find about 200 gold&#39;s worth of plunder&quot;</strong> is a fine narration.</p>
+<h3>Magic items</h3>
+<p>A reasonable pace:</p>
+<ul>
+<li><strong>Apprentice tier:</strong> 1–2 common magic items per adventure.</li>
+<li><strong>Veteran tier:</strong> 1–2 uncommon per adventure, plus the occasional common.</li>
+<li><strong>Master tier:</strong> 1 rare per adventure, plus occasional uncommons.</li>
+</ul>
+<p>Magic items should mostly be <strong>specific things with specific histories</strong>, not generic <code>+1</code> weapons. A <em>Sword of the Drowned King</em> is a story. A <code>+1 longsword</code> is a number.</p>
+<h3>Information</h3>
+<p>The most underrated reward. A clue, a map, a name, a debt called in, a faction&#39;s secret, the name of a god — these are often more valuable than gold. <strong>Hand them out generously.</strong> Players who solve the next problem because of information they earned feel like heroes.</p>
+<h2>Treasure tables</h2>
+<p>To save GM improv when you need a hoard fast:</p>
+<h3>Apprentice treasure roll (1d6)</h3>
+<ol>
+<li>50g coins</li>
+<li>100g coins + a silver dagger (worth 25g)</li>
+<li>80g coins + a healing potion</li>
+<li>150g coins + thieves&#39; tools</li>
+<li>200g coins</li>
+<li>200g coins + one common magic item (GM picks)</li>
+</ol>
+<h3>Veteran treasure roll (1d6)</h3>
+<ol>
+<li>300g coins + a healing potion + an alchemist&#39;s fire</li>
+<li>500g coins</li>
+<li>400g coins + a common magic item</li>
+<li>600g coins + a mana potion</li>
+<li>800g coins + a piece of jewelry (worth 200g)</li>
+<li>1000g coins + one uncommon magic item (GM picks)</li>
+</ol>
+<h3>Master treasure roll (1d6)</h3>
+<ol>
+<li>1500g coins + a healing potion + a rare gem (worth 500g)</li>
+<li>2000g coins</li>
+<li>2500g coins + an uncommon magic item</li>
+<li>3000g coins + jewelry (worth 1000g)</li>
+<li>4000g coins + a mana potion + an uncommon magic item</li>
+<li>5000g coins + one rare magic item</li>
+</ol>
+<p>Roll on a table when you genuinely don&#39;t care; pick from it when you do.</p>
+<h2>Pacing rewards</h2>
+<p>A common GM mistake: rewards arrive <em>after</em> the fight, so the players don&#39;t feel them in the moment. Try reversing this:</p>
+<ul>
+<li><strong>Reward inside the fight.</strong> The boss is wearing the magic crown the party came for; mid-fight, the Scout could grab it.</li>
+<li><strong>Reward changes the fight.</strong> The treasure chest holds healing potions; the party can reach them at the cost of an action.</li>
+<li><strong>Reward foreshadowed.</strong> The party sees the reward at the start of the encounter, drives toward it.</li>
+</ul>
+<p>The fight is more engaging when the <em>thing they want</em> is visible, not just inferred.</p>
+<h2>What this doc deliberately omits</h2>
+<ul>
+<li>A full XP-by-monster table.</li>
+<li>A &quot;challenge rating&quot; system separate from threat.</li>
+<li>A treasure-by-CR table.</li>
+<li>Magic item rarity tied to gold value.</li>
+<li>Encounter math that requires a calculator.</li>
+<li>A list of every conceivable hazard, trap, or environmental effect.</li>
+</ul>
+<p>If the GM wants a fight that isn&#39;t on a table, they think about <em>what should happen here</em> and pick monsters/hazards/NPCs to make it happen. <strong>The budget is a sanity check, not a recipe.</strong></p>
+<h1>14 — GM Guide</h1>
+<p>How to run this game well. Most of it is advice, not rules.</p>
+<h2>Your three jobs</h2>
+<p>A GM has exactly three jobs at the table:</p>
+<ol>
+<li><strong>Describe the situation.</strong> What the players see, hear, and can plausibly do.</li>
+<li><strong>Adjudicate the dice.</strong> Decide when to call for a roll, what ability, what target. Then narrate the result.</li>
+<li><strong>Play the world.</strong> The monsters, the townsfolk, the wind in the trees. Everything that isn&#39;t a PC.</li>
+</ol>
+<p>Everything else — encounter math, plot, foreshadowing, character arcs — is in service of these three.</p>
+<h2>Before the session</h2>
+<p>You need surprisingly little prep. <strong>Five minutes is genuinely enough</strong> for most sessions, if you have:</p>
+<ul>
+<li><strong>A starting situation.</strong> Where the party is, what just happened, what&#39;s expected next. One paragraph.</li>
+<li><strong>A few NPCs.</strong> Names, one weird thing each, what they want.</li>
+<li><strong>Two or three encounter ideas.</strong> Don&#39;t pre-build them; just know who/what is there. You&#39;ll grab stat blocks from <a href="12-monsters.md">12-monsters.md</a> as needed.</li>
+<li><strong>One inevitability.</strong> Something that <em>will</em> happen if the party doesn&#39;t act. The ritual completes. The duke&#39;s coronation begins. The dragon wakes. This gives you a clock to run.</li>
+</ul>
+<p>You don&#39;t need a map drawn out. You don&#39;t need a planned plot. You don&#39;t need to know what the players will do. <strong>You need a world that&#39;s alive, with a clock ticking somewhere in it.</strong></p>
+<h2>During the session</h2>
+<h3>Calling for rolls</h3>
+<p>The single most common new-GM mistake is <strong>calling for too many rolls</strong>. Re-read <a href="04-skills-and-checks.md">04-skills-and-checks.md</a>. Default to <em>no roll</em> unless:</p>
+<ul>
+<li>The outcome is in doubt.</li>
+<li>The result will matter.</li>
+<li>Both success and failure are interesting.</li>
+</ul>
+<p>If a player describes their character searching a desk, and there&#39;s a letter in the drawer, <strong>they find the letter</strong>. No Perception check. The roll would only stall the scene.</p>
+<h3>Picking the target</h3>
+<p>Three numbers exist on purpose: <strong>10, 15, 20</strong>. Don&#39;t invent 12 or 17. When in doubt, pick 15. The few minutes you&#39;d save with a &quot;more accurate&quot; target you&#39;ll lose explaining it.</p>
+<h3>Narrating the roll</h3>
+<p>A roll has <em>result</em> (yes/no, total) and <em>narration</em> (what that means in the fiction). Always do both.</p>
+<ul>
+<li>Don&#39;t say <em>&quot;You roll 18. You hit. You do 7 damage.&quot;</em></li>
+<li>Say <em>&quot;You roll 18. Your blade slips between the orc&#39;s ribs — he grunts, hand to the wound. 7 damage.&quot;</em></li>
+</ul>
+<p>Same numbers. The second version is the <em>game</em>; the first is a calculator. <strong>Use the dice; describe the dice.</strong></p>
+<h3>Failing forward</h3>
+<p>A failed roll is the GM&#39;s invitation to push the story sideways, not stop it. Re-read <a href="04-skills-and-checks.md">04-skills-and-checks.md</a>&#39;s three failure types. The bad failure is &quot;you don&#39;t open the lock.&quot; The interesting failures are &quot;you open it, but you snap your last pick&quot; or &quot;you open it, and the door creaks loudly.&quot;</p>
+<h3>Pacing fights</h3>
+<p>A fight should resolve in <strong>4–6 rounds</strong>. If a fight is dragging into round 8, something is off:</p>
+<ul>
+<li>The party is being too cautious. Have the monsters do something aggressive.</li>
+<li>The monsters are too durable. Drop their remaining HP to dramatic levels mid-fight; nobody will notice.</li>
+<li>The fight is uninteresting. End it. Have the surviving monsters surrender or flee.</li>
+</ul>
+<p>A 10-round fight is a <em>terrible</em> fight, no matter how well it&#39;s balanced. <strong>The math is for setup, not for grinding.</strong></p>
+<h3>Handling rules questions</h3>
+<p>When a rule is unclear or missing, <strong>rule fast in the player&#39;s favor and move on</strong>. Note the call. After the session, decide if it should be a permanent house rule.</p>
+<blockquote>
+<p>&quot;Can I use my off-hand to grab the falling chandelier while I attack with my main hand?&quot; <em>Sure. Make the attack at disadvantage; if you hit, you also grab the chandelier.</em></p>
+</blockquote>
+<p>That ruling took 4 seconds. A &quot;let me check the book&quot; answer takes 4 minutes. <strong>Time is the most precious resource at the table.</strong></p>
+<h3>When you don&#39;t know</h3>
+<p>Three magic phrases:</p>
+<ul>
+<li><strong>&quot;Let me think.&quot;</strong> Buys you 30 seconds to actually think.</li>
+<li><strong>&quot;What does X look like to you?&quot;</strong> Hands the description back to the player; they help you build the scene.</li>
+<li><strong>&quot;Let&#39;s say yes.&quot;</strong> When in doubt, the player&#39;s clever idea works. The story is more fun when their cleverness pays off.</li>
+</ul>
+<p>A confident <em>yes</em> from a GM who doesn&#39;t know the rule is better than a hedged <em>no</em> from a GM who does.</p>
+<h2>Playing monsters</h2>
+<p>A monster has stats, and a monster has <em>behavior</em>. The stats are in <a href="12-monsters.md">12-monsters.md</a>; the behavior is your job.</p>
+<p><strong>Read the Notes line.</strong> It tells you the monster&#39;s motivation. A goblin runs. A skeleton fights to dust. An ogre breaks down doors. Run them differently.</p>
+<p><strong>Pick targets in character.</strong> A wolf bites whoever just hurt the alpha. An archer shoots the caster. A cultist shields its priest. <em>Don&#39;t always target the lowest-HP player just because it&#39;s &quot;optimal.&quot;</em> Monsters aren&#39;t computers.</p>
+<p><strong>Use environment.</strong> A goblin hides behind a barrel. A bandit takes cover behind a comrade. An ogre swings the bench it&#39;s standing on. The monsters interact with the room.</p>
+<p><strong>Let monsters flee.</strong> Most things in the world don&#39;t want to die. When a monster reaches half HP and is losing, ask: <em>would this creature run?</em> If yes, they try.</p>
+<h2>Playing NPCs</h2>
+<p>NPCs are everyone else. Each one needs three things:</p>
+<ul>
+<li><strong>A want.</strong> What do they push for in any given scene? <em>The innkeeper wants you to pay your tab. The lord wants a peaceful coronation. The cultist wants converts.</em></li>
+<li><strong>One weird thing.</strong> A speech tic, a scar, a habit, a hidden agenda. <em>He keeps polishing the same spoon. She never sits down. He flinches when you mention his brother.</em></li>
+<li><strong>A reaction to the party.</strong> Friendly, neutral, suspicious, hostile. The reaction can shift in scene.</li>
+</ul>
+<p>You don&#39;t need a backstory unless the players ask for one. <strong>Most NPCs are one scene.</strong> Spend your prep on the recurring ones.</p>
+<h2>Playing the world</h2>
+<p>The world doesn&#39;t pause when the party isn&#39;t watching. <strong>NPCs make plans. Time passes. The villain moves.</strong></p>
+<p>Practical version: every session, before play, ask: <em>what&#39;s happened since last session?</em> Even small answers: the merchants have raised prices, a new banner is flying over the keep, a body washed up at the river. These tell the party the world is alive.</p>
+<h2>Telegraphing danger</h2>
+<p>Players should never feel ambushed by the rules. If a fight is going to be lethal, <strong>signal that beforehand</strong>:</p>
+<ul>
+<li><em>The villagers cross themselves when they speak of the cave.</em></li>
+<li><em>The corpses you find on the road were killed with single bites.</em></li>
+<li><em>The boss has a name, and people are afraid of it.</em></li>
+</ul>
+<p>If the party charges in anyway, the death is on them. If the party retreats, they&#39;ve won the moment — they read the situation correctly. <strong>Either outcome is a good story.</strong></p>
+<p>Avoid <em>gotcha</em> deaths: a trap with no warning, a TPK from an unsignaled hazard. Those teach the players to distrust the game.</p>
+<h2>Resource management as drama</h2>
+<p>The rest system from <a href="03-progression.md">03-progression.md</a> gives you a powerful tool: <strong>the dwindling Mage&#39;s mana pool, the warrior&#39;s HP bar, the priest&#39;s healing reserves</strong> are all dramatic clocks. The party feels strong at the start of the day and exhausted at the end.</p>
+<p>Push them. Make the third fight harder than the first. Make the fourth optional but tempting. Make the fifth a desperate gamble. <strong>The arc of an adventuring day is a story arc.</strong></p>
+<p>If the party is always at full resources, you aren&#39;t pushing hard enough. If they&#39;re always near death, you&#39;re pushing too hard.</p>
+<h2>Death in the campaign</h2>
+<p>When a PC dies, give it weight. <strong>Don&#39;t gloss over it; don&#39;t immediately offer a resurrection.</strong> A death is a story moment.</p>
+<ul>
+<li>Pause the action. Let the player narrate their character&#39;s final moment if they want.</li>
+<li>Have the surviving party react. Do they bury the body? Take a memento? Vow revenge?</li>
+<li>Decide whether resurrection is an option in this campaign at all. If it is, make it cost something — the spell is rare, the target&#39;s soul has wandered, a god demands a price.</li>
+</ul>
+<p>A campaign where death is meaningful has stakes. A campaign where revives are routine has none.</p>
+<h2>Player agency</h2>
+<p>The most important word in this guide: <strong>agency</strong>.</p>
+<p>Players make choices. The GM presents situations and adjudicates outcomes. <strong>The GM does not write the players&#39; choices.</strong></p>
+<p>This means:</p>
+<ul>
+<li>Don&#39;t railroad. If the party decides to go around the dungeon instead of through it, let them go around.</li>
+<li>Don&#39;t fudge dice to &quot;protect the plot.&quot; The plot is what happens when the dice land where they land.</li>
+<li>Don&#39;t punish creativity. If the player has a clever idea, lean toward yes.</li>
+<li>Don&#39;t gate scenes on rolls the player doesn&#39;t know about. If the player needs to know the duke is lying, let them know.</li>
+</ul>
+<p>Your job is to make the world surprising, not the players predictable.</p>
+<h2>What to do when it&#39;s going badly</h2>
+<p>A few signals and responses:</p>
+<table>
+<thead>
+<tr>
+<th>Signal</th>
+<th>Response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Players are quiet, looking at their phones.</td>
+<td>Ask them directly what they&#39;d find interesting. Then steer the next scene that way.</td>
+</tr>
+<tr>
+<td>A fight is dragging.</td>
+<td>Cut to the chase. Have the boss reveal its real form, the building collapse, the cavalry arrive.</td>
+</tr>
+<tr>
+<td>The party is stuck on a puzzle.</td>
+<td>Provide a clue via an NPC. Or let an investigation check reveal it. Don&#39;t make them suffer.</td>
+</tr>
+<tr>
+<td>One player is dominating.</td>
+<td>Address it gently between sessions, not in front of the table. Set up scenes that spotlight the others.</td>
+</tr>
+<tr>
+<td>The rules are getting in the way.</td>
+<td>Drop them mid-scene. Make a ruling. Look it up later.</td>
+</tr>
+<tr>
+<td>The story is going off the rails.</td>
+<td>Let it. The rails are an illusion; the story is whatever the table builds.</td>
+</tr>
+</tbody></table>
+<h2>What to do when it&#39;s going great</h2>
+<p>Get out of the way. Describe what happens. Let the players run. <strong>The best sessions are the ones where the GM does the least narrating and the most listening.</strong></p>
+<h2>A quick checklist</h2>
+<p>Before each session:</p>
+<ul>
+<li><input disabled="" type="checkbox"> Where is the party? What just happened?</li>
+<li><input disabled="" type="checkbox"> What NPCs might appear? (Name + one weird thing each.)</li>
+<li><input disabled="" type="checkbox"> What encounter ideas are in scope? (Pick monsters from the bestiary.)</li>
+<li><input disabled="" type="checkbox"> What is <em>moving in the background</em> that the party will discover?</li>
+<li><input disabled="" type="checkbox"> What is one thing I&#39;d love to happen this session?</li>
+</ul>
+<p>After each session:</p>
+<ul>
+<li><input disabled="" type="checkbox"> What did the players do that surprised me?</li>
+<li><input disabled="" type="checkbox"> What did they care about?</li>
+<li><input disabled="" type="checkbox"> What promised to come back next time?</li>
+</ul>
+<p>Two lists, ten minutes. That&#39;s a campaign.</p>
+<h1>15 — Quickstart</h1>
+<p>The whole game, on one page.</p>
+<h2>The roll</h2>
+<p><strong><code>d20 + ability + (training if you have it) vs. target number.</code></strong> Meet or beat the target = success.</p>
+<p>Targets: <strong>10 Easy · 15 Hard · 20 Heroic.</strong> Default = 15.</p>
+<p>Natural 20 = critical (double damage in combat, spectacular result outside it). Natural 1 = critical failure (a real complication).</p>
+<h2>Advantage / disadvantage</h2>
+<p>Roll 2d20, take the <strong>higher</strong> (advantage) or <strong>lower</strong> (disadvantage). One of each cancels. They don&#39;t stack.</p>
+<p>This is the <em>only</em> situational modifier in the game. Any rule that wants to give a &quot;+1&quot; gives advantage instead.</p>
+<h2>Four abilities</h2>
+<ul>
+<li><strong>Might</strong> — physical force, toughness. Drives HP.</li>
+<li><strong>Agility</strong> — speed, finesse, reflexes. Drives Armor for light-armored characters.</li>
+<li><strong>Mind</strong> — reasoning, perception, arcane magic.</li>
+<li><strong>Spirit</strong> — will, presence, divine magic.</li>
+</ul>
+<p>Range: <code>−1</code> to <code>+5</code>.</p>
+<h2>Four classes</h2>
+<ul>
+<li><strong>Warrior</strong> (<code>+1</code> Might) · 10 HP · all weapons + armor · Cleave + Bulwark</li>
+<li><strong>Scout</strong> (<code>+1</code> Agility) · 8 HP · light/ranged + light armor · Sneak Strike + Slip Away</li>
+<li><strong>Mage</strong> (<code>+1</code> Mind) · 6 HP · light weapons, no armor · Spellcasting (mana = level + Mind)</li>
+<li><strong>Priest</strong> (<code>+1</code> Spirit) · 8 HP · medium weapons + light/medium armor · Spellcasting + Divine Touch</li>
+</ul>
+<h2>Trainings</h2>
+<p>Pick three at character creation (two from class list, one from background). Trained = add training bonus (<code>+2</code>/<code>+3</code>/<code>+4</code> by tier).</p>
+<h2>Defenses</h2>
+<ul>
+<li><strong>Armor</strong> = <code>10 + Agility (or Might if heavy) + armor bonus</code></li>
+<li><strong>Mind</strong> = <code>10 + Mind</code></li>
+<li><strong>Spirit</strong> = <code>10 + Spirit</code></li>
+</ul>
+<h2>Combat turn</h2>
+<ol>
+<li><strong>Move</strong> (default 6 squares).</li>
+<li><strong>Act</strong> — one action. Attack, cast a spell, dash, hide, help, ready, disengage, use an item, improvise.</li>
+</ol>
+<p>No bonus action. No reaction by default. Side initiative (one roll per side).</p>
+<h2>Attack</h2>
+<p><code>d20 + ability + training vs. defense.</code> On hit, <code>weapon die + ability</code> damage. Crit on natural 20 = double dice (mod added once).</p>
+<p>Flanking grants advantage. Half cover = disadvantage. Full cover = can&#39;t target.</p>
+<h2>Magic</h2>
+<p>Casters have a mana pool: <code>level + casting ability</code> per rest. Spells cost 1 / 3 / 5 mana (Lesser / Greater / Master). Cantrips are free.</p>
+<p>Cast = pay mana, roll d20 if needed vs. target&#39;s defense (Armor / Mind / Spirit).</p>
+<p>One ongoing spell at a time. No concentration checks.</p>
+<h2>HP and death</h2>
+<p>At 0 HP, you go <strong>Down</strong>: unconscious, prone, dying. You&#39;ll die at the end of the next round if not stabilized (Medicine check, healing spell, or potion).</p>
+<p>A rest = full HP + full mana + clears most conditions.</p>
+<h2>Conditions</h2>
+<p><strong>Blinded, Burning, Charmed, Frightened, Grappled, Poisoned, Prone, Restrained, Stunned, Exhausted.</strong> Each is one rule. They don&#39;t stack with themselves.</p>
+<h2>The GM&#39;s job</h2>
+<ul>
+<li>Describe the situation.</li>
+<li>Call for rolls only when failure is interesting.</li>
+<li>Pick the target (10/15/20).</li>
+<li>Narrate the result.</li>
+<li>Play the monsters and NPCs.</li>
+</ul>
+<p>When in doubt: <strong>say yes</strong>, pick <strong>15</strong>, and <strong>move on</strong>.</p>
+<h2>What&#39;s gone (if you played 5e)</h2>
+<ul>
+<li>No bonus action / reaction slot (unless a feature gives you one).</li>
+<li>No saving throws (the active player rolls; the defender has a static number).</li>
+<li>No spell slots; mana pool instead.</li>
+<li>No concentration checks.</li>
+<li>No multiclassing.</li>
+<li>No feats.</li>
+<li>No skill list of 18 (we have 17 trainings, you pick 3).</li>
+<li>No alignment, encumbrance, attunement, hit dice.</li>
+<li>No level 11+ (we cap at 10).</li>
+</ul>
+<p>If a 5e rule you&#39;re used to isn&#39;t here, <strong>the answer is: just describe what you&#39;re doing.</strong> The d20 will sort it.</p>
+
+
+</body>
+</html>

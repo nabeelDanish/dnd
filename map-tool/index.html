@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D Map</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <div class="title">D&amp;D Map</div>
+      <div id="view-tag" class="view-tag"></div>
+    </header>
+    <main id="main">
+      <div id="canvas-wrap">
+        <canvas id="canvas"></canvas>
+        <div id="hud-tip">Space + drag to pan · Scroll to zoom · Right-click a token for options</div>
+      </div>
+      <aside id="side">
+        <div id="tools"></div>
+        <div id="dice"></div>
+        <div id="log-wrap">
+          <div class="section-title with-action">
+            Roll Log
+            <button id="clear-log" class="link-btn-inline">clear</button>
+          </div>
+          <div id="log"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

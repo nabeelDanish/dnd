@@ -1,0 +1,174 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+@page { size: A4; margin: 11mm 11mm 12mm 11mm; }
+
+:root {
+  --ink: #2b2620;
+  --muted: #6b6256;
+  --accent: #7a2e2e;
+  --rule: #cdbfa6;
+  --paper: #fffdf8;
+  --panel: #f6f0e3;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  color: var(--ink); background: var(--paper);
+  font-size: 9.5pt; line-height: 1.3; margin: 0;
+}
+
+/* Each logical page = its own printed sheet.
+   Use break-BEFORE (Chrome honors this around multicol; break-after is dropped). */
+.sheet-page { break-before: page; page-break-before: always; }
+.sheet-page:first-child { break-before: auto; page-break-before: auto; }
+
+.cols { column-count: 2; column-gap: 8mm; }
+
+/* Title block (page 1 only) */
+.doc-head { text-align: center; margin-bottom: 4pt; }
+.doc-head h1 {
+  font-size: 26pt; color: var(--accent); margin: 0; letter-spacing: 1px;
+  font-variant: small-caps; border: none;
+}
+.doc-head p { color: var(--muted); font-style: italic; font-size: 9.5pt;
+  margin: 3pt auto; max-width: 150mm; line-height: 1.3; }
+.doc-head hr { border: none; border-top: 1.5px solid var(--rule); margin: 6pt 0 0 0; }
+
+/* Section headers */
+h2 {
+  font-size: 12pt; color: var(--accent);
+  border-bottom: 1.5px solid var(--rule); padding-bottom: 2pt;
+  margin: 7pt 0 3pt 0; font-variant: small-caps; letter-spacing: .4px;
+  break-after: avoid; break-inside: avoid;
+}
+.cols h2:first-child { margin-top: 0; }
+
+h3 {
+  font-size: 9.5pt; color: var(--ink); margin: 5pt 0 2pt 0;
+  break-after: avoid; break-inside: avoid;
+}
+h3::before { content: "❯ "; color: var(--accent); }
+
+p { margin: 2pt 0; }
+strong { color: var(--accent); }
+em { color: var(--muted); }
+
+/* Instructional blockquotes — quiet helper text */
+blockquote {
+  margin: 2pt 0; padding: 1pt 7pt; border-left: 2px solid var(--rule);
+  color: var(--muted); font-style: italic; font-size: 7.6pt; line-height: 1.25;
+  break-inside: avoid;
+}
+blockquote p { margin: 0; }
+
+/* Fill-in / write-on blocks — roomy lines for handwriting */
+pre {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 3px;
+  padding: 4pt 7pt; margin: 2pt 0 4pt 0; overflow: visible; break-inside: avoid;
+}
+pre code {
+  font-family: "SF Mono", "DejaVu Sans Mono", Menlo, Consolas, monospace;
+  font-size: 8.4pt; line-height: 1.75; white-space: pre-wrap; color: var(--ink);
+}
+
+/* Inline code (e.g. +3 / +2) */
+:not(pre) > code {
+  background: var(--panel); border: 1px solid var(--rule); border-radius: 2px;
+  padding: 0 3px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 9pt;
+}
+
+/* Tables (attacks, spells, journal, level-up) — give writable height */
+table { border-collapse: collapse; width: 100%; margin: 2pt 0 4pt 0;
+  font-size: 8.2pt; break-inside: avoid; }
+th, td { border: 1px solid var(--rule); padding: 3pt 5pt; text-align: left;
+  vertical-align: top; }
+th { background: var(--panel); color: var(--accent); font-weight: 700; }
+td { height: 13pt; }
+
+hr { border: none; border-top: 1px solid var(--rule); margin: 6pt 0; }
+
+/* Footer note at the very end */
+.sheet-page:last-child > .cols > p:last-of-type {
+  column-span: all; text-align: center; font-style: italic;
+  color: var(--muted); font-size: 8pt; margin-top: 6pt;
+}
+</style></head><body><section class="sheet-page"><div class="cols"><h2>XI. Connections</h2>
+<p>The people who know your character. Some give you allies; some give you debts; some give the GM hooks.</p>
+<h3>A connection from before</h3>
+<blockquote>
+<p><em>Someone who knew your character before this adventure. A mentor, a sibling, a rival, an old flame.</em></p>
+</blockquote>
+<pre><code>NAME:           ____________________________________________
+
+WHAT THEY ARE:  ____________________________________________
+
+WHERE:          ____________________________________________
+
+STATUS:         [ ] alive  [ ] missing  [ ] dead  [ ] complicated
+</code></pre>
+<h3>A debt</h3>
+<blockquote>
+<p><em>Owed by you, or to you. Money, blood, favor, or memory.</em></p>
+</blockquote>
+<pre><code>TO/FROM:    ________________________________________________
+
+WHAT:       ________________________________________________
+
+OPEN?       [ ] yes  [ ] paid  [ ] one day
+</code></pre>
+<h3>A party connection</h3>
+<blockquote>
+<p><em>Pick another player at the table. How do your characters know each other? Discuss with them.</em></p>
+</blockquote>
+<pre><code>WHO:    ____________________________________________________
+
+HOW:    ____________________________________________________
+
+WHAT THEY OWE EACH OTHER:  _________________________________
+</code></pre>
+<hr />
+<h2>XII. Journal</h2>
+<p>Fill in as you play. The character's voice, not yours.</p>
+<h3>Quests</h3>
+<pre><code>- ___________________________________________________________
+
+- ___________________________________________________________
+
+- ___________________________________________________________
+</code></pre>
+<h3>People met</h3>
+<pre><code>NAME                              IMPRESSION
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+
+____________________________      ____________________________________
+</code></pre>
+<h3>Places been</h3>
+<pre><code>- ___________________________________________________________
+
+- ___________________________________________________________
+
+- ___________________________________________________________
+</code></pre>
+<h3>Things learned</h3>
+<pre><code>- ___________________________________________________________
+
+- ___________________________________________________________
+
+- ___________________________________________________________
+</code></pre>
+<h3>A line from this session</h3>
+<blockquote>
+<p><em>Something your character said, or something said to them, that you want to remember.</em></p>
+</blockquote>
+<pre><code>&quot;___________________________________________________________&quot;
+
+       — said by ______________________, in __________________________
+</code></pre>
+<hr /></div></section></body></html>

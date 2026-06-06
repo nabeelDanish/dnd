@@ -41,7 +41,7 @@ A class is a **legal combination of components**. Pick a template, fill its slot
 
 ### HP & primary ability
 - **HP rides the armor tier:** Heavy `10 + Might` · Light `8 + Might` · None `6 + Might`. Per-level gain `1d6 + Might` (1s/2s count as 3).
-- **Your class grants `+1` to its primary ability.** Primary is set **by feel**: Might for medium/heavy weapons, Agility for light/ranged builds; Mind or Spirit (the **pool**) for casters. It is *not* a separate combination axis.
+- **Your class grants `+1` to its primary ability.** Primary is set **by feel**: Might for medium/heavy weapons, Agility for light/ranged builds; Mind, Spirit, or Charisma (the **pool**) for casters. It is *not* a separate combination axis. A caster's pool also reflects the *source* of their magic — Mind for the studied, Spirit for the devoted, Charisma for the innate.
 - **Your primary powers everything.** Every weapon attack, weapon damage, and spell attack uses your one primary ability ([06-attack-and-defense.md](06-attack-and-defense.md)). A Mind-Battlemage's blade *and* its fire both run off Mind; a Might-Knight's everything runs off Might. One stat, whole character — which is what lets a gish wield a real weapon without splitting its ability investment.
 
 ### The weight rules (what heavy gear costs)
@@ -57,7 +57,7 @@ A class is a **legal combination of components**. Pick a template, fill its slot
 Stand your ground (use no movement) and you strike normally. *(Disadvantage is binary — [01-core-mechanic.md](01-core-mechanic.md) — so the "both heavy" case escalates to denial rather than stacking dice.)* This gives heavy gear a real cost without a speed stat: **heavy = the immovable melee anchor; light/none = mobile.** It also synergizes with the perks — heavy armor's **Bulwark** and heavy weapons reward planting; light armor's **Slip Away** rewards moving.
 
 ### Spellcasting access
-A magic class casts from one **pool** (`level + Mind` *or* `level + Spirit`), knows 2 cantrips + the spells-known table ([09-magic.md](09-magic.md)), drawn from its accessible **schools** ([10-spell-list.md](10-spell-list.md)). Cast freely in light or no armor; **heavy armor blocks casting** (so no magic class wears it). Casters are trained in casting (spell attack = `d20 + pool + training`).
+A magic class casts from one **pool** (`level + Mind`, `level + Spirit`, *or* `level + Charisma`), knows 2 cantrips + the spells-known table ([09-magic.md](09-magic.md)), drawn from its accessible **schools** ([10-spell-list.md](10-spell-list.md)). Cast freely in light or no armor; **heavy armor blocks casting** (so no magic class wears it). Casters are trained in casting (spell attack = `d20 + pool + training`).
 
 ---
 
@@ -105,7 +105,7 @@ Each component grants one signature perk, shared by anyone who takes it.
 
 ## Building a character (revised step 2 of [02-character-creation.md](02-character-creation.md))
 
-1. Assign abilities `+3 / +2 / +1 / +0`.
+1. Assign abilities `+3 / +2 / +1 / +1 / +0`.
 2. **Pick a class** → `+1` to its primary, weapon/armor/school training, HP tier, mana (if any), 3 component perks + 1 override.
 3. Ancestry (`+1` + trait). 4. Background (+1 training). 5. Three trainings (4 if Human). 6. Defenses, equipment, spells.
 
@@ -142,36 +142,36 @@ Each component grants one signature perk, shared by anyone who takes it.
 | 14 | Spellblade | Destruction | Mind |
 | 15 | Adept | Conjuration | Mind |
 | 16 | Warden | Alteration | Spirit |
-| 17 | Trickster | Illusion | Mind |
+| 17 | Trickster | Illusion | Charisma |
 | 18 | Acolyte | Restoration | Spirit |
 
 ### 🔮 Spellsword *(2 schools + martial weapon, no armor)* — HP Low
 | # | Class | Schools | Pool |
 |---|---|---|---|
-| 19 | Death Knight | Conjuration + Destruction | Mind |
+| 19 | Death Knight | Conjuration + Destruction | Spirit |
 | 20 | Battlemage | Alteration + Destruction | Mind |
-| 21 | Hexblade | Destruction + Illusion | Mind |
+| 21 | Hexblade | Destruction + Illusion | Charisma |
 | 22 | Paladin | Destruction + Restoration | Spirit |
 | 23 | Spellforged | Alteration + Conjuration | Mind |
-| 24 | Witch-blade | Conjuration + Illusion | Mind |
+| 24 | Witch-blade | Conjuration + Illusion | Charisma |
 | 25 | Wraith Knight | Conjuration + Restoration | Spirit |
 | 26 | Mindblade | Alteration + Illusion | Mind |
 | 27 | Cleric-Knight | Alteration + Restoration | Spirit |
-| 28 | Sword-Bard | Illusion + Restoration | Spirit |
+| 28 | Sword-Bard | Illusion + Restoration | Charisma |
 
 ### ✨ Caster *(2 schools + light armor)* — HP Mid
 | # | Class | Schools | Pool |
 |---|---|---|---|
-| 29 | Warlock | Conjuration + Destruction | Mind |
-| 30 | Sorcerer | Alteration + Destruction | Mind |
+| 29 | Warlock | Conjuration + Destruction | Charisma |
+| 30 | Sorcerer | Alteration + Destruction | Charisma |
 | 31 | Mentalist | Destruction + Illusion | Mind |
 | 32 | Templar | Destruction + Restoration | Spirit |
 | 33 | Artificer | Alteration + Conjuration | Mind |
 | 34 | Mage | Conjuration + Illusion | Mind |
 | 35 | Shaman | Conjuration + Restoration | Spirit |
-| 36 | Enchanter | Alteration + Illusion | Mind |
+| 36 | Enchanter | Alteration + Illusion | Charisma |
 | 37 | Priest | Alteration + Restoration | Spirit |
-| 38 | Bard | Illusion + Restoration | Spirit |
+| 38 | Bard | Illusion + Restoration | Charisma |
 
 ### 🌌 Full caster *(3 schools, no armor)* — HP Low
 | # | Class | Schools | Pool |
@@ -181,8 +181,8 @@ Each component grants one signature perk, shared by anyone who takes it.
 | 41 | Necromancer | Conjuration + Destruction + Restoration | Spirit |
 | 42 | Spellmystic | Alteration + Destruction + Illusion | Mind |
 | 43 | Oracle | Alteration + Destruction + Restoration | Spirit |
-| 44 | Witch | Destruction + Illusion + Restoration | Spirit |
-| 45 | Mystic | Alteration + Conjuration + Illusion | Mind |
+| 44 | Witch | Destruction + Illusion + Restoration | Charisma |
+| 45 | Mystic | Alteration + Conjuration + Illusion | Charisma |
 | 46 | Druid | Alteration + Conjuration + Restoration | Spirit |
 | 47 | Spiritualist | Conjuration + Illusion + Restoration | Spirit |
 | 48 | Seer | Alteration + Illusion + Restoration | Spirit |

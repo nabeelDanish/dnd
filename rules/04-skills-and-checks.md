@@ -6,7 +6,7 @@ This document is short because the system is short. There is no skill list; ther
 
 When the GM calls for a check:
 
-1. **The GM names an ability** (Might, Agility, Mind, or Spirit) and a **target number** (10, 15, or 20).
+1. **The GM names an ability** (Might, Agility, Mind, Spirit, or Charisma) and a **target number** (10, 15, or 20).
 2. **The player rolls** `d20 + ability modifier`.
 3. **If the player has a relevant training**, they also add their **training bonus** (`+2`/`+3`/`+4`).
 4. **Compare total to target.** Meet or beat: success. Miss: failure.
@@ -33,7 +33,10 @@ The action the player describes determines the ability. The GM picks the one tha
 - *"I shove the door open."* → Might.
 - *"I jiggle the lock."* → Agility.
 - *"I look for the keyhole's hidden mechanism."* → Mind.
-- *"I talk to the door."* → Spirit (and the GM laughs).
+- *"I sweet-talk the guard into opening it."* → Charisma.
+- *"I steel myself against the dread seeping under the door."* → Spirit.
+
+> **Social rolls key off Charisma** by default — persuading, deceiving, intimidating, performing. **Spirit** covers willpower against the unnatural (resisting a curse's pull, holding faith); **Mind** covers reasoning and recall. When a social read is really *perception of a lie*, that's Mind or Insight, not Charisma.
 
 If the player wants to use a different ability than the GM expected, they can argue for it. *"I'm strong, so I rip the lock out instead of picking it."* The GM may allow it, possibly with different consequences. **Player creativity should be rewarded, not arbitrated against.**
 
@@ -118,7 +121,7 @@ Mix these. **A campaign of "you don't get what you want"** is a campaign of stal
 ## Worked examples
 
 - *"I want to climb the keep wall in the rain."* GM: Might, Hard (15). Trained in Athletics? Add bonus. Rope from the Scout? Advantage.
-- *"I want to convince the captain to let us through."* GM: Spirit, Hard (15). Trained in Persuasion? Yes. Captain knows the party's reputation? Advantage. Party has no documentation? Disadvantage. Cancels. Roll plain.
+- *"I want to convince the captain to let us through."* GM: Charisma, Hard (15). Trained in Persuasion? Yes. Captain knows the party's reputation? Advantage. Party has no documentation? Disadvantage. Cancels. Roll plain.
 - *"I want to remember what I know about the bone-witch.*" GM: nothing rolls — the Mage has Lore and just *knows* the bone-witch was banished from the academy two centuries ago. *"But what does she want now?"* That's a roll: Mind, Hard. Trained in Arcana? Add bonus.
 - *"I want to leap from the chandelier and stab the guard."* GM: this is two things. Agility check to land it (Hard, 15); the stab is a normal attack roll on success. On a natural 1 climbing, you fall and take damage. On a natural 20 on the attack, the guard is dead and the room watches in stunned silence.
 

@@ -9,7 +9,7 @@ Weapons have two parts: a **class** (what kind of weapon it is — sets the dama
 > **Attack** = `d20 + primary ability + training (if trained in this weapon class)` vs. the target's Armor.
 > **Damage** = `weapon die` + `material bonus` + `primary ability`.
 
-Every weapon uses your class's **one primary ability** (Might/Agility/Mind/Spirit) for attack *and* damage — see [06-attack-and-defense.md](06-attack-and-defense.md). Training affects the **hit**, never the damage. Material affects the **damage**, never the hit.
+Every weapon uses your class's **one primary ability** (Might/Agility/Mind/Spirit/Charisma) for attack *and* damage — see [06-attack-and-defense.md](06-attack-and-defense.md). Training affects the **hit**, never the damage. Material affects the **damage**, never the hit.
 
 ## Weapon classes
 

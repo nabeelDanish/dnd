@@ -20,7 +20,7 @@ blockquote p { margin: 0; }
 hr { border: none; border-top: .5pt solid #ccc; margin: 5pt 0; }
 a { color: #1a1a1a; text-decoration: none; }
 </style></head><body><h1>10 — Spell Catalog</h1>
-<p>Every spell in the game lives here, organized by <strong>school</strong>. Spells are tagged by school only — your class (<a href="19-classes.md">19-classes.md</a>) decides which schools you can access, and your <strong>pool</strong> (Mind or Spirit) fuels and aims them.</p>
+<p>Every spell in the game lives here, organized by <strong>school</strong>. Spells are tagged by school only — your class (<a href="19-classes.md">19-classes.md</a>) decides which schools you can access, and your <strong>pool</strong> (Mind, Spirit, or Charisma) fuels and aims them.</p>
 <h2>How a spell works</h2>
 <blockquote>
 <p><strong>Name</strong> <em>(Tier · School · ongoing/ritual/reaction if any)</em>
@@ -28,7 +28,7 @@ a { color: #1a1a1a; text-decoration: none; }
 Effect.</p>
 </blockquote>
 <ul>
-<li><strong>Cast from your pool.</strong> A caster&#39;s mana is <strong><code>level + Mind</code></strong> <em>or</em> <strong><code>level + Spirit</code></strong> (set by class). Every spell you can access is cast from that one pool; your <strong>spell attack = <code>d20 + pool + training</code></strong> vs. the named defense.</li>
+<li><strong>Cast from your pool.</strong> A caster&#39;s mana is <strong><code>level + Mind</code></strong>, <strong><code>level + Spirit</code></strong>, <em>or</em> <strong><code>level + Charisma</code></strong> (set by class). Every spell you can access is cast from that one pool; your <strong>spell attack = <code>d20 + pool + training</code></strong> vs. the named defense.</li>
 <li><strong>School access</strong> comes from your class. <strong>Universal</strong> spells (utility/meta) can be learned by any caster regardless of schools.</li>
 <li><strong>Tiers &amp; cost:</strong> Cantrip 0 · Lesser 1 · Greater 3 · Master 5 mana. <strong>Ranges:</strong> Close (adjacent) · Near (6 squares) · Far (line of sight).</li>
 <li><strong>No saves</strong> — the caster always rolls (see <a href="06-attack-and-defense.md">06-attack-and-defense.md</a>). <strong>One ongoing spell at a time</strong> (see <a href="09-magic.md">09-magic.md</a>) — this single rule is what stops a caster from stacking a summon, a buff, and a control effect at once.</li>
@@ -133,15 +133,15 @@ Effect.</p>
 <h3>Lesser (1)</h3>
 <ul>
 <li><strong>Sleep</strong> — <em>Near · up to 2 creatures · 1</em> — attack vs <strong>Mind</strong> each; falls asleep (Downed, not dying; wakes on damage/shake/1 min). 30+ HP immune.</li>
-<li><strong>Charm Person</strong> <em>(ongoing)</em> — <em>Near · one humanoid · 1</em> — attack vs <strong>Mind</strong>; <strong>Charmed</strong> 1 hour or until you/allies attack it.</li>
-<li><strong>Fear</strong> — <em>Near · one creature · 1</em> — attack vs <strong>Mind</strong>; <strong>Frightened</strong> of you (3 rounds).</li>
+<li><strong>Charm Person</strong> <em>(ongoing)</em> — <em>Near · one humanoid · 1</em> — attack vs <strong>Charisma</strong>; <strong>Charmed</strong> 1 hour or until you/allies attack it.</li>
+<li><strong>Fear</strong> — <em>Near · one creature · 1</em> — attack vs <strong>Charisma</strong>; <strong>Frightened</strong> of you (3 rounds).</li>
 <li><strong>Disguise Self</strong> <em>(ongoing)</em> — <em>Self · 1</em> — appear as another person of similar size for 1 hour; touch reveals the illusion.</li>
 </ul>
 <h3>Greater (3)</h3>
 <ul>
 <li><strong>Hold Person</strong> <em>(ongoing)</em> — <em>Near · one humanoid · 3</em> — attack vs <strong>Mind</strong>; <strong>Stunned</strong> 3 rounds; may reroll Spirit vs. your attack each turn to break free.</li>
 <li><strong>Invisibility</strong> <em>(ongoing)</em> — <em>Close · willing · 3</em> — attacks against it have disadvantage, its attacks advantage; ends when it attacks/casts or after 10 min.</li>
-<li><strong>Terror</strong> — <em>Near · all enemies in a 3-square radius · 3</em> — attack vs <strong>Mind</strong> each; <strong>Frightened</strong> 2 rounds.</li>
+<li><strong>Terror</strong> — <em>Near · all enemies in a 3-square radius · 3</em> — attack vs <strong>Charisma</strong> each; <strong>Frightened</strong> 2 rounds.</li>
 </ul>
 <h3>Master (5)</h3>
 <ul>
@@ -190,8 +190,9 @@ Effect.</p>
 <li><strong>Conjuration is a full pillar</strong> — summons (tethered, one at a time = no action-economy bloat), bound weapons (for the gish classes), teleports, and the banish line.</li>
 <li><strong>Alteration is the &quot;manipulate the physical&quot; school</strong> — flesh/ward (Mage Armor, Shield), telekinesis, Slow, Haste, Fly. Its <strong>Arcane Ward</strong> class perk lives here.</li>
 <li><strong>Save-or-suck stays disciplined.</strong> Hard lockdown is rare: Sleep, Hold Person, Dominate Mind, Polymorph, Banish — spread across schools and tiers, each on a different defense, most with a recurring escape roll.</li>
+<li><strong>All four defenses see fire.</strong> Damage and elementals hit <strong>Armor</strong>; sleep/illusion/paralysis/domination hit <strong>Mind</strong>; charm and fear (Charm Person, Fear, Terror) hit <strong>Charisma</strong>; banishment and death-magic hit <strong>Spirit</strong>. No defense is dead weight.</li>
 <li><strong>Healing still costs mana</strong> — no free healing cantrip, preserving the resource economy.</li>
-<li><strong>Pools, not lists.</strong> A Spirit-Paladin and a Mind-Sorcerer both cast Fireball; it&#39;s the same Destruction spell from different pools. Class school-access is the only gate.</li>
+<li><strong>Pools, not lists.</strong> A Spirit-Paladin and a Charisma-Sorcerer both cast Fireball; it&#39;s the same Destruction spell from different pools. Class school-access is the only gate.</li>
 </ul>
 <blockquote>
 <p>The list should never grow so large a new player can&#39;t read it in one sitting. <strong>The total spell list fits in a player&#39;s head, not in an index.</strong></p>

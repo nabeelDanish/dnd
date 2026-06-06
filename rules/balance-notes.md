@@ -148,3 +148,31 @@ Two structural holes were found and fixed after the first roster draft:
   - ⚠️ Watch: single-primary removes the old MAD tax, so gish got *better*. Their remaining cost is fewer schools and/or no armor — re-check in play that they don't eclipse pure martials or pure casters.
 
 > The spine: **every class is 3 perks; one primary powers everything; heavy gear trades mobility for protection; nothing ever widens the turn.**
+
+---
+
+# Charisma — the fifth ability (and fourth defense)
+
+A later pass added **Charisma** as a fifth ability and a third caster pool, alongside Mind and Spirit. The goal: a clean home for *innate* magic (sorcery, pact, song) and for social play, without adding any new economy.
+
+## What changed, and why it's balance-neutral
+
+- **Five abilities, array `+3/+2/+1/+1/+0`** (was `+3/+2/+1/+0` over four). One extra `+1` compensates for the extra stat to cover — characters still have a `+0` dump. The **math ceiling is unchanged**: max `+3` at creation → `+5` after bumps, so `d20 + 9` at level 10 stands.
+- **A fourth defense, `10 + Charisma`.** The three caster abilities are now fully symmetric: each is both a *pool* and a *defense*. This is the one place the change adds complexity (a fourth number on every sheet and stat block) — an accepted trade for symmetry.
+- **The three pools are mechanically identical** (`level + pool`). Charisma is not stronger or weaker than Mind/Spirit; it differs only in *which defense the caster naturally has high* and in flavor (studied / devoted / innate). So re-tagging 10 classes to Charisma changed **no class's power** — only its high defense and its dump-stat exposure.
+
+## The defense re-carve (the only real design choice)
+
+For a Charisma *defense* to matter, effects had to target it. The carve:
+
+- **Mind** — hijacks cognition: illusion, sleep, psychic, paralysis (*Hold Person*), domination (*Dominate Mind*).
+- **Charisma** — bends the heart/will: **charm and fear** (*Charm Person*, *Fear*, *Terror* moved here from Mind).
+- **Spirit** — assaults the soul/life: banishment, death-magic, possession, holy wrath.
+
+This keeps each of the four defenses live (see the *All four defenses see fire* note in [10-spell-list.md](10-spell-list.md)). The Dwarf trait (*Stone-Hearted*) was repointed from Spirit→Charisma to match (fear/charm now resisted by Charisma).
+
+## Watch-items
+
+- ⚖️ **Charm/fear concentration on one defense.** Only three spells target Charisma today. That's thin but fine — it makes a high-Charisma caster's *own* Charisma defense quietly valuable, and the future signature/spell expansion (Points 5/magic) can add command/taunt/beguile effects there. Keep new charm/fear/command effects pointed at Charisma so the defense stays meaningful.
+- 🎭 **Social rolls now key off Charisma** by default ([04-skills-and-checks.md](04-skills-and-checks.md)). This gives Charisma-pool casters (Bard, Sorcerer, Warlock…) a natural out-of-combat pillar — the same versatility lever other casters already enjoy, not a new power.
+- 📇 **Stat-block churn.** Every monster now carries a Charisma defense (≈ Spirit, nudged: leaders/fiends/fey up, mindless down). Mindless undead/constructs are still *immune* to charm/fear, so their low number rarely bites.

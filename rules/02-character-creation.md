@@ -1,23 +1,26 @@
 # 02 — Character Creation
 
-A character has four abilities, one class, one ancestry, one background, and three trainings. Everything else flows from those choices. Total time to make a character: **15 minutes.**
+A character has five abilities, one class, one ancestry, one background, and three trainings. Everything else flows from those choices. Total time to make a character: **15 minutes.**
 
-## The four abilities
+## The five abilities
 
-Every character has four ability scores. Each is a single number, a modifier, ranging from `−1` to `+5`. There is no separate "score 8–20" tracked behind the modifier — the modifier *is* the ability.
+Every character has five ability scores. Each is a single number, a modifier, ranging from `−1` to `+5`. There is no separate "score 8–20" tracked behind the modifier — the modifier *is* the ability.
 
 | Ability | What it covers |
 |---|---|
 | **Might** | Strength, toughness, raw physical force. Hitting hard with heavy weapons. Wrestling, breaking down doors, soaking damage. Drives HP. |
 | **Agility** | Speed, balance, finesse, reflexes. Hitting with light or ranged weapons. Sneaking, dodging, climbing, picking locks. Drives Armor for the unarmored or lightly armored. |
-| **Mind** | Reasoning, memory, perception of detail, arcane study. Spotting traps, recalling lore, reading languages. Drives arcane magic. |
-| **Spirit** | Willpower, presence, intuition, divine connection. Resisting fear or charm, leading, sensing intent. Drives divine magic. |
+| **Mind** | Reasoning, memory, study, perception of detail. Spotting traps, recalling lore, reading languages. Drives **studied** (arcane) magic. |
+| **Spirit** | Willpower, faith, intuition, the soul's bond to the unseen. Resisting possession, death-magic, and the sacred-gone-wrong; sensing what's holy. Drives **divine / primal** magic. |
+| **Charisma** | Presence, force of personality, performance. Persuading, leading, deceiving, intimidating. Holding your composure against charm and fear. Drives **innate** magic — sorcery, pact, and song. |
 
-A roll's ability is whichever **best fits the action** — the GM picks. A barbarian climbing a wall by force uses Might. A scout climbing the same wall by balance uses Agility. Don't argue about which it is; pick one and roll.
+> **Mind / Spirit / Charisma — the three caster abilities.** All three fuel magic and each anchors a defense (below). They divide by *source*: Mind is **studied** (you learned it), Spirit is **devoted** (it was granted), Charisma is **innate** (it pours out of you). A class's **pool** is one of these three.
+
+A roll's ability is whichever **best fits the action** — the GM picks. A barbarian climbing a wall by force uses Might. A scout climbing the same wall by balance uses Agility. Talking your way past the guard is Charisma; staring him down is Charisma too. Don't argue about which it is; pick one and roll.
 
 ## Generating your abilities
 
-No dice. **Assign `+3`, `+2`, `+1`, `+0`** to your four abilities, one each. That's the entire procedure.
+No dice. **Assign `+3`, `+2`, `+1`, `+1`, `+0`** to your five abilities, one each. That's the entire procedure. *(Five abilities, so one more `+1` than the old four-ability array — you'll still be bad at something.)*
 
 Your class and ancestry will then modify these (see below). You will almost never have a starting ability above `+4` or below `+0`.
 
@@ -28,7 +31,7 @@ A class is a **combination of components** — weapon types, an armor tier, and 
 Your class gives you:
 
 - **Training** in its weapon types, armor tier, and (casters) spellcasting.
-- A **suggested primary ability** — Might or Agility for fighters, by feel; Mind or Spirit (the **pool**) for casters.
+- A **suggested primary ability** — Might or Agility for fighters, by feel; Mind, Spirit, or Charisma (the **pool**) for casters.
 - An **HP tier**, set by armor:
 
 | Armor tier | Starting HP | Picks |
@@ -38,7 +41,7 @@ Your class gives you:
 | **None** (naked) | `6 + Might` | 3 picks |
 
 - **3 perks** — one from each component — plus **1 unique class override** you may swap in for any one of them. The eleven component perks (Cleave, Sneak Strike, Bulwark, Slip Away, Divine Touch, and the rest) and all 51 override perks live in [19-classes.md](19-classes.md).
-- **Casters:** a mana pool of `level + pool` (Mind *or* Spirit), `2` cantrips + the spells-known table ([09-magic.md](09-magic.md)), drawn from your class's accessible **schools** ([10-spell-list.md](10-spell-list.md)). Cast freely in light or no armor; heavy armor blocks casting.
+- **Casters:** a mana pool of `level + pool` (Mind, Spirit, *or* Charisma), `2` cantrips + the spells-known table ([09-magic.md](09-magic.md)), drawn from your class's accessible **schools** ([10-spell-list.md](10-spell-list.md)). Cast freely in light or no armor; heavy armor blocks casting.
 
 > **The old four** — Warrior, Scout, Mage, Priest — survive exactly, as the **Knight**, **Ranger**, **Mage**, and **Priest** entries of the roster. Nothing is lost; everything is generalized.
 
@@ -52,7 +55,7 @@ Pick one. Each grants an ability bump and one mechanical trait. No subraces, no 
 |---|---|---|
 | **Human** | `+1` to any ability of your choice | **Adaptable** — pick a 4th training at character creation. |
 | **Elf** | `+1` Agility | **Keen Senses** — advantage on Perception rolls. You can see clearly in dim light. |
-| **Dwarf** | `+1` Might | **Stone-Hearted** — advantage on Spirit defense against fear and charm. You can see in total darkness up to 30 ft. |
+| **Dwarf** | `+1` Might | **Stone-Hearted** — advantage on Charisma defense against fear and charm. You can see in total darkness up to 30 ft. |
 | **Halfling** | `+1` Agility | **Lucky** — once per rest, reroll any one d20 of yours and take the new result. |
 | **Orc** | `+1` Might | **Savage Reserves** — once per rest, when you drop to 0 HP, you instead drop to `1` HP. |
 | **Goblin** | `+1` Agility | **Scurry** — your speed is `8` squares (40 ft) instead of `6`. You can move through spaces of creatures larger than you. |
@@ -97,22 +100,23 @@ You pick **three trainings total** at character creation: two from your class li
 
 ## Defenses
 
-Three defenses, derived from your abilities. They are static numbers attackers roll against.
+Four defenses, derived from your abilities. They are static numbers attackers roll against. The three mental defenses are symmetric — each caster ability is both a *pool* and a *defense*.
 
-- **Armor** = `10 + Agility + armor bonus` (or `10 + Might + armor bonus` if wearing heavy armor)
-- **Mind** = `10 + Mind`
-- **Spirit** = `10 + Spirit`
+- **Armor** = `10 + Agility + armor bonus` (or `10 + Might + armor bonus` if wearing heavy armor) — physical hits, most elemental blasts.
+- **Mind** = `10 + Mind` — attacks on the senses and intellect: illusion, sleep, psychic, paralysis, domination.
+- **Spirit** = `10 + Spirit` — attacks on the soul and life-force: banishment, death-magic, possession, holy/unholy wrath.
+- **Charisma** = `10 + Charisma` — attacks on composure and will: charm, fear, command, taunt.
 
-Armor bonuses come from your armor's **material** (light = leather/hide, Agility-based; heavy = metal/stone, Might-based) — see [18-armor.md](18-armor.md). At level 1, Mind and Spirit defenses sit around `9–14`; your Armor depends on what you wear — typically `15–18` for an armored character, `11–13` for an unarmored caster (see [18-armor.md](18-armor.md)).
+Armor bonuses come from your armor's **material** (light = leather/hide, Agility-based; heavy = metal/stone, Might-based) — see [18-armor.md](18-armor.md). At level 1, your Mind / Spirit / Charisma defenses sit around `9–14`; your Armor depends on what you wear — typically `15–18` for an armored character, `11–13` for an unarmored caster (see [18-armor.md](18-armor.md)).
 
 ## Step-by-step
 
-1. **Assign abilities.** Distribute `+3`, `+2`, `+1`, `+0` across Might, Agility, Mind, Spirit.
+1. **Assign abilities.** Distribute `+3`, `+2`, `+1`, `+1`, `+0` across Might, Agility, Mind, Spirit, Charisma.
 2. **Pick a class** ([19-classes.md](19-classes.md)). Apply its `+1` to your **primary ability**; note your HP tier, your 3 perks + override, and (casters) your pool and schools.
 3. **Pick an ancestry.** Apply its `+1` bonus and note its trait.
 4. **Pick a background.** A phrase (grants one training).
 5. **Pick three trainings** from the full list below (a fourth if Human) — two themed to your class, one from your background.
-6. **Calculate defenses.** Armor, Mind, Spirit per the formulas above.
+6. **Calculate defenses.** Armor, Mind, Spirit, Charisma per the formulas above.
 7. **Buy equipment.** Use the starting kits in [11-equipment.md](11-equipment.md), or buy à la carte from a starting purse of `50` gold (materials in [17-weapons.md](17-weapons.md) / [18-armor.md](18-armor.md)).
 8. **Pick spells if a caster.** Cantrips + spells from your accessible **schools** ([10-spell-list.md](10-spell-list.md)).
 9. **Name your character.** Decide one thing they love, one thing they fear, and one thing they're hiding.
@@ -121,12 +125,12 @@ Armor bonuses come from your armor's **material** (light = leather/hide, Agility
 
 > A halfling poacher who fled her village after stealing from the lord's hunting lodge.
 
-1. **Abilities.** `+3 Agility`, `+2 Mind`, `+1 Might`, `+0 Spirit`.
+1. **Abilities.** `+3 Agility`, `+2 Mind`, `+1 Might`, `+1 Charisma`, `+0 Spirit`.
 2. **Class: Ranger** (Light + Ranged weapons · Light armor · primary Agility). `+1 Agility` → `+4`. HP tier (light) `8 + Might 1 = 9`. Perks: **Sneak Strike · Deadeye · Slip Away** — she may swap one for the Ranger override **Hunter's Mark**.
 3. **Ancestry: Halfling.** `+1 Agility` → final Agility `+5`. Trait: **Lucky** — one reroll per rest.
 4. **Background: Poacher.**
 5. **Trainings.** **Stealth**, **Wilderness** (class), **Sleight of Hand** (background).
-6. **Defenses.** Armor `10 + 5 + 2 (Leather, light) = 17`. Mind `10 + 2 = 12`. Spirit `10 + 0 = 10`.
+6. **Defenses.** Armor `10 + 5 + 2 (Leather, light) = 17`. Mind `10 + 2 = 12`. Spirit `10 + 0 = 10`. Charisma `10 + 1 = 11`.
 7. **Equipment.** Iron longbow, two Iron daggers, Leather armor, 20 arrows, climbing rope, 5 gold.
 8. **N/A** — not a caster.
 9. **Name.** *Brenna Quickfoot.* Loves the open road. Fears being recognized. Hides the lord's signet ring in her boot.

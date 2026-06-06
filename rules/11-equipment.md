@@ -94,7 +94,7 @@ That said, here is a small starter list of useful magic items the GM can hand ou
 
 ### Uncommon (veteran tier)
 
-- **Ring of protection.** `+1` to Armor, Mind, and Spirit.
+- **Ring of protection.** `+1` to Armor, Mind, Spirit, and Charisma (all four defenses).
 - **Flaming sword.** Standard weapon damage `+1d6` fire on hit.
 - **Wand of fire bolts.** Cast *Spark* at will using the wand's `+4` attack bonus, regardless of the wielder's training.
 - **Boots of striding.** Speed becomes `8` instead of `6`.

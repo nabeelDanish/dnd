@@ -1,6 +1,6 @@
 # 10 — Spell Catalog
 
-Every spell in the game lives here, organized by **school**. Spells are tagged by school only — your class ([19-classes.md](19-classes.md)) decides which schools you can access, and your **pool** (Mind or Spirit) fuels and aims them.
+Every spell in the game lives here, organized by **school**. Spells are tagged by school only — your class ([19-classes.md](19-classes.md)) decides which schools you can access, and your **pool** (Mind, Spirit, or Charisma) fuels and aims them.
 
 ## How a spell works
 
@@ -8,7 +8,7 @@ Every spell in the game lives here, organized by **school**. Spells are tagged b
 > *Range — Target — Cost*
 > Effect.
 
-- **Cast from your pool.** A caster's mana is **`level + Mind`** *or* **`level + Spirit`** (set by class). Every spell you can access is cast from that one pool; your **spell attack = `d20 + pool + training`** vs. the named defense.
+- **Cast from your pool.** A caster's mana is **`level + Mind`**, **`level + Spirit`**, *or* **`level + Charisma`** (set by class). Every spell you can access is cast from that one pool; your **spell attack = `d20 + pool + training`** vs. the named defense.
 - **School access** comes from your class. **Universal** spells (utility/meta) can be learned by any caster regardless of schools.
 - **Tiers & cost:** Cantrip 0 · Lesser 1 · Greater 3 · Master 5 mana. **Ranges:** Close (adjacent) · Near (6 squares) · Far (line of sight).
 - **No saves** — the caster always rolls (see [06-attack-and-defense.md](06-attack-and-defense.md)). **One ongoing spell at a time** (see [09-magic.md](09-magic.md)) — this single rule is what stops a caster from stacking a summon, a buff, and a control effect at once.
@@ -109,14 +109,14 @@ The Conjuration perk **Master Summoner** (+1 to a summon's attacks, +2 rounds du
 
 ### Lesser (1)
 - **Sleep** — *Near · up to 2 creatures · 1* — attack vs **Mind** each; falls asleep (Downed, not dying; wakes on damage/shake/1 min). 30+ HP immune.
-- **Charm Person** *(ongoing)* — *Near · one humanoid · 1* — attack vs **Mind**; **Charmed** 1 hour or until you/allies attack it.
-- **Fear** — *Near · one creature · 1* — attack vs **Mind**; **Frightened** of you (3 rounds).
+- **Charm Person** *(ongoing)* — *Near · one humanoid · 1* — attack vs **Charisma**; **Charmed** 1 hour or until you/allies attack it.
+- **Fear** — *Near · one creature · 1* — attack vs **Charisma**; **Frightened** of you (3 rounds).
 - **Disguise Self** *(ongoing)* — *Self · 1* — appear as another person of similar size for 1 hour; touch reveals the illusion.
 
 ### Greater (3)
 - **Hold Person** *(ongoing)* — *Near · one humanoid · 3* — attack vs **Mind**; **Stunned** 3 rounds; may reroll Spirit vs. your attack each turn to break free.
 - **Invisibility** *(ongoing)* — *Close · willing · 3* — attacks against it have disadvantage, its attacks advantage; ends when it attacks/casts or after 10 min.
-- **Terror** — *Near · all enemies in a 3-square radius · 3* — attack vs **Mind** each; **Frightened** 2 rounds.
+- **Terror** — *Near · all enemies in a 3-square radius · 3* — attack vs **Charisma** each; **Frightened** 2 rounds.
 
 ### Master (5)
 - **Dominate Mind** *(ongoing)* — *Near · one creature · 5* — attack vs **Mind**; you control its actions (one move + action on its turn) up to 1 min; it may reroll Mind vs. your attack each time it takes damage.
@@ -164,7 +164,8 @@ The Conjuration perk **Master Summoner** (+1 to a summon's attacks, +2 rounds du
 - **Conjuration is a full pillar** — summons (tethered, one at a time = no action-economy bloat), bound weapons (for the gish classes), teleports, and the banish line.
 - **Alteration is the "manipulate the physical" school** — flesh/ward (Mage Armor, Shield), telekinesis, Slow, Haste, Fly. Its **Arcane Ward** class perk lives here.
 - **Save-or-suck stays disciplined.** Hard lockdown is rare: Sleep, Hold Person, Dominate Mind, Polymorph, Banish — spread across schools and tiers, each on a different defense, most with a recurring escape roll.
+- **All four defenses see fire.** Damage and elementals hit **Armor**; sleep/illusion/paralysis/domination hit **Mind**; charm and fear (Charm Person, Fear, Terror) hit **Charisma**; banishment and death-magic hit **Spirit**. No defense is dead weight.
 - **Healing still costs mana** — no free healing cantrip, preserving the resource economy.
-- **Pools, not lists.** A Spirit-Paladin and a Mind-Sorcerer both cast Fireball; it's the same Destruction spell from different pools. Class school-access is the only gate.
+- **Pools, not lists.** A Spirit-Paladin and a Charisma-Sorcerer both cast Fireball; it's the same Destruction spell from different pools. Class school-access is the only gate.
 
 > The list should never grow so large a new player can't read it in one sitting. **The total spell list fits in a player's head, not in an index.**

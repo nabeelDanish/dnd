@@ -22,13 +22,14 @@ PRONOUNS ___________   AGE ___   PLAYER ____________________________
 
 ## II. Abilities
 
-Range `−1` to `+5`. Distribute `+3 / +2 / +1 / +0` at creation, plus class `+1`, plus ancestry `+1`.
+Range `−1` to `+5`. Distribute `+3 / +2 / +1 / +1 / +0` at creation, plus class `+1`, plus ancestry `+1`.
 
 ```
 MIGHT     [ ___ ]    physical force, toughness, heavy weapons
 AGILITY   [ ___ ]    speed, finesse, light/ranged weapons
-MIND      [ ___ ]    reasoning, perception, arcane magic
-SPIRIT    [ ___ ]    will, presence, divine magic
+MIND      [ ___ ]    reasoning, study, perception — studied (arcane) magic
+SPIRIT    [ ___ ]    will, faith, the soul — divine / primal magic
+CHARISMA  [ ___ ]    presence, persuasion, performance — innate magic
 ```
 
 ---
@@ -40,11 +41,12 @@ HP        [ ____ / ____ ]   current / max
 
 MANA      [ ____ / ____ ]   (casters only)
 
-ARMOR defense    [ ____ ]   10 + Agility (or Might if heavy) + armor bonus
-MIND defense     [ ____ ]   10 + Mind
-SPIRIT defense   [ ____ ]   10 + Spirit
+ARMOR defense     [ ____ ]   10 + Agility (or Might if heavy) + armor bonus
+MIND defense      [ ____ ]   10 + Mind
+SPIRIT defense    [ ____ ]   10 + Spirit
+CHARISMA defense  [ ____ ]   10 + Charisma
 
-SPEED            [ ____ ]   squares per turn (usually 6)
+SPEED             [ ____ ]   squares per turn (usually 6)
 
 TRAINING BONUS   [ +2 ]     +2 at lvl 1–3, +3 at 4–7, +4 at 8–10
 ```

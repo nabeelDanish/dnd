@@ -10,19 +10,19 @@ That's it. Every attack in the game is the same shape.
 
 ## What goes into "attack ability"
 
-**Every attack you make — weapon *or* spell — uses your class's one primary ability.** That single stat (Might, Agility, Mind, or Spirit) is what *powers* your character: you add it to every attack roll **and** to your damage.
+**Every attack you make — weapon *or* spell — uses your class's one primary ability.** That single stat (Might, Agility, Mind, Spirit, or Charisma) is what *powers* your character: you add it to every attack roll **and** to your damage.
 
 - A **Might** class swings, throws, and shoots with Might.
 - An **Agility** class does all of it with Agility.
-- A **Mind** or **Spirit** caster makes spell attacks *and* weapon attacks with that pool — magic and blade run off the same stat.
+- A **Mind**, **Spirit**, or **Charisma** caster makes spell attacks *and* weapon attacks with that pool — magic and blade run off the same stat.
 
 There's no per-weapon ability and no separate "weapon proficiency": the weapon's *class* sets its damage die, hands, and range ([17-weapons.md](17-weapons.md)); your *primary* sets the attack and damage bonus; and if your class is **trained** in that weapon (or in casting), add your training bonus to the hit.
 
-> Defenses are unchanged — the single-primary rule is about *offense*, not protection. Armor is still 10 + Agility (or Might in heavy armor) + material; Mind = 10 + Mind; Spirit = 10 + Spirit.
+> Defenses are unchanged — the single-primary rule is about *offense*, not protection. Armor is still 10 + Agility (or Might in heavy armor) + material; Mind = 10 + Mind; Spirit = 10 + Spirit; Charisma = 10 + Charisma.
 
 ## Defenses
 
-Every creature has three defenses. They are static numbers.
+Every creature has four defenses. They are static numbers.
 
 ### Armor
 The number an attacker rolls against for physical hits — sword swings, arrows, claws.
@@ -41,24 +41,32 @@ Typical level 1 Armor values:
 - Steel-armored (heavy) Warrior with `+3` Might: **17**.
 
 ### Mind
-The number an attacker rolls against for spells and effects that attack the target's reasoning, memory, or perception — charm, sleep, illusion, mental domination.
+The number an attacker rolls against for effects that attack the target's **senses and intellect** — illusion, sleep, psychic assault, mind-reading, paralysis, outright domination.
 
 `Mind defense = 10 + Mind`
 
 ### Spirit
-The number an attacker rolls against for spells and effects that attack the target's will, soul, or vital essence — fear, possession, banishment, death magic, divine wrath.
+The number an attacker rolls against for effects that attack the target's **soul and life-force** — possession, banishment, death magic, soul-burn, divine/unholy wrath.
 
 `Spirit defense = 10 + Spirit`
+
+### Charisma
+The number an attacker rolls against for effects that attack the target's **composure and will to act** — charm, fear, magical command, taunts, crushing despair. Resisting these is force of personality, not intellect or soul.
+
+`Charisma defense = 10 + Charisma`
 
 ## Which defense gets attacked?
 
 The weapon, spell, or attack tells you. As a rule:
 
 - **Sword, claw, arrow, fist, fall damage:** Armor.
-- **Charm, sleep, illusion, mental control:** Mind.
-- **Fear, banishment, soul-burn, holy/unholy wrath:** Spirit.
+- **Sleep, illusion, psychic, paralysis, mind-control:** Mind.
+- **Charm, fear, command, taunt:** Charisma.
+- **Banishment, soul-burn, death-magic, holy/unholy wrath:** Spirit.
 - **Fire, cold, lightning, poison from an area effect** that the target should be able to dodge or shrug off: **Armor** (because the target's reflexes and toughness are protecting them). Most "elemental" attacks target Armor.
 - **Fire, cold, lightning, poison that ignores the body** (e.g., a curse that boils blood without a chance to dodge): **Spirit**.
+
+> **The line between Mind and Charisma:** Mind effects *hijack cognition* — they fool the senses or seize the brain (you can't tell the illusion is fake; your body locks up). Charisma effects *bend the heart* — they make you feel friendship, terror, or obedience you'd never choose. If the magic overrides what you *perceive or think*, it's Mind; if it overrides what you *feel or will*, it's Charisma.
 
 The spell description tells you. If it doesn't, default to Armor.
 

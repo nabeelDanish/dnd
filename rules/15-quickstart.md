@@ -16,14 +16,15 @@ Roll 2d20, take the **higher** (advantage) or **lower** (disadvantage). One of e
 
 This is the *only* situational modifier in the game. Any rule that wants to give a "+1" gives advantage instead.
 
-## Four abilities
+## Five abilities
 
 - **Might** — physical force, toughness. Drives HP.
 - **Agility** — speed, finesse, reflexes. Drives Armor for light-armored characters.
-- **Mind** — reasoning, perception, arcane magic.
-- **Spirit** — will, presence, divine magic.
+- **Mind** — reasoning, study, perception. Drives **studied** (arcane) magic.
+- **Spirit** — will, faith, the soul. Drives **divine / primal** magic.
+- **Charisma** — presence, persuasion, performance. Drives **innate** (sorcery/pact/song) magic.
 
-Range: `−1` to `+5`.
+Range: `−1` to `+5`. Assign `+3 / +2 / +1 / +1 / +0` at creation.
 
 ## Classes
 
@@ -42,9 +43,10 @@ Pick three at character creation (two from class list, one from background). Tra
 
 ## Defenses
 
-- **Armor** = `10 + Agility (or Might if heavy) + armor bonus`
-- **Mind** = `10 + Mind`
-- **Spirit** = `10 + Spirit`
+- **Armor** = `10 + Agility (or Might if heavy) + armor bonus` — physical, elementals
+- **Mind** = `10 + Mind` — illusion, sleep, psychic, domination
+- **Spirit** = `10 + Spirit` — banishment, death-magic, possession
+- **Charisma** = `10 + Charisma` — charm, fear, command
 
 ## Combat turn
 
@@ -63,9 +65,9 @@ Flanking grants advantage. Half cover = disadvantage. Full cover = can't target.
 
 ## Magic
 
-Casters have a mana pool: `level + pool` per rest, where **pool** is Mind or Spirit (set by class). Spells are tagged by **school**; you cast from the schools your class grants, paying from your pool. Spells cost 1 / 3 / 5 mana (Lesser / Greater / Master). Cantrips are free.
+Casters have a mana pool: `level + pool` per rest, where **pool** is Mind, Spirit, or Charisma (set by class). Spells are tagged by **school**; you cast from the schools your class grants, paying from your pool. Spells cost 1 / 3 / 5 mana (Lesser / Greater / Master). Cantrips are free.
 
-Cast = pay mana, roll `d20 + pool + training` if needed vs. target's defense (Armor / Mind / Spirit).
+Cast = pay mana, roll `d20 + pool + training` if needed vs. target's defense (Armor / Mind / Spirit / Charisma).
 
 One ongoing spell at a time. No concentration checks.
 

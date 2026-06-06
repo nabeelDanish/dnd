@@ -1,15 +1,16 @@
 # 09 — Magic
 
-Magic is the biggest source of rule-bloat in D&D. We do not let it bloat here. Many classes cast ([19-classes.md](19-classes.md)); all of them share one resource (**mana**), one of two **pools** (Mind or Spirit), and one casting mechanic that is the same as every other action in the game.
+Magic is the biggest source of rule-bloat in D&D. We do not let it bloat here. Many classes cast ([19-classes.md](19-classes.md)); all of them share one resource (**mana**), one of three **pools** (Mind, Spirit, or Charisma), and one casting mechanic that is the same as every other action in the game.
 
 ## The mana pool
 
 Every casting class has a **mana pool**, fueled by one ability — its **pool**, set by the class:
 
-- **Mind pool:** `level + Mind` mana per rest.
-- **Spirit pool:** `level + Spirit` mana per rest.
+- **Mind pool:** `level + Mind` mana per rest. *(Studied, arcane magic.)*
+- **Spirit pool:** `level + Spirit` mana per rest. *(Devoted, divine/primal magic.)*
+- **Charisma pool:** `level + Charisma` mana per rest. *(Innate magic — sorcery, pact, song.)*
 
-The pool is just *fuel and aim* — **spells themselves are tagged by school, not by ability** ([10-spell-list.md](10-spell-list.md)). A Mind-caster and a Spirit-caster can cast the very same spell, each from their own pool. That's the only spell resource in the game. There are no 1st-level slots, 2nd-level slots, 3rd-level slots. There is no upcasting. There are no ritual slots. A spell costs N mana; you pay N mana; you cast the spell.
+The three pools are mechanically identical; they differ only in *which ability* fuels and aims the magic, and so in which **defense** the caster naturally has high. The pool is just *fuel and aim* — **spells themselves are tagged by school, not by ability** ([10-spell-list.md](10-spell-list.md)). A Mind-caster, a Spirit-caster, and a Charisma-caster can all cast the very same spell, each from their own pool. That's the only spell resource in the game. There are no 1st-level slots, 2nd-level slots, 3rd-level slots. There is no upcasting. There are no ritual slots. A spell costs N mana; you pay N mana; you cast the spell.
 
 A typical level 1 Mage with Mind `+3` has `4` mana. A level 5 Priest with Spirit `+4` has `9`. By level 10, top-tier casters have ~`14` mana — enough for two or three big spells per rest, or a flurry of smaller ones.
 
@@ -72,7 +73,7 @@ That is the entire procedure. The "roll if the spell needs a roll" piece is the 
 > **Armor & casting.** You cast freely in **light or no armor**. **Heavy armor blocks all spellcasting** (see [18-armor.md](18-armor.md)).
 
 ### Spell attack rolls
-Some spells require an attack roll. The caster rolls `d20 + pool + training` — every casting class is **trained in casting**, so the training bonus always applies — vs. the target's relevant defense (Armor, Mind, or Spirit). On a hit, the spell does what it says.
+Some spells require an attack roll. The caster rolls `d20 + pool + training` — every casting class is **trained in casting**, so the training bonus always applies — vs. the target's relevant defense (Armor, Mind, Spirit, or Charisma). On a hit, the spell does what it says.
 
 Spell attack rolls follow the same rules as weapon attacks (see [06-attack-and-defense.md](06-attack-and-defense.md)): natural 20 is a critical (doubled dice on damage spells), natural 1 is a fumble (the spell sputters — the mana is spent and a complication occurs).
 
@@ -85,7 +86,7 @@ A few spells target an area (Fireball's blast, Burning Hands' cone). For each cr
 > **Why the caster rolls instead of the targets:** see [01-core-mechanic.md](01-core-mechanic.md), the active-player-rolls principle. It keeps the active turn moving fast and avoids stopping to ask seven creatures to roll dice.
 
 ### Save-or-suck spells
-Spells like *Hold Person* or *Sleep* — in 5e these have a "save" mechanic. Here, the caster rolls `d20 + pool + training` vs. the target's Mind or Spirit defense. On a hit, the effect applies as written. On a miss, it doesn't, and the mana is still spent (you paid for the attempt, not the result).
+Spells like *Hold Person* or *Sleep* — in 5e these have a "save" mechanic. Here, the caster rolls `d20 + pool + training` vs. the target's Mind, Spirit, or Charisma defense (whichever the spell names). On a hit, the effect applies as written. On a miss, it doesn't, and the mana is still spent (you paid for the attempt, not the result).
 
 ## Range, targets, components
 
@@ -129,7 +130,7 @@ A character can wear/wield as many magic items as physically fit. There is no sl
 
 ## Caster vs. caster
 
-When two casters clash, it's the same procedure — they take turns, cast spells, roll attacks vs. defenses. A Mind-pool caster usually has a high Mind defense; a Spirit-pool caster, a high Spirit defense. They target each other's weaker defense accordingly. Counterspell is the conversation.
+When two casters clash, it's the same procedure — they take turns, cast spells, roll attacks vs. defenses. A caster usually has a high defense in their own pool — Mind, Spirit, or Charisma — and softer numbers in the other two. They target each other's weaker defense accordingly (a Charisma-caster's Mind is often the soft spot). Counterspell is the conversation.
 
 ## What magic deliberately doesn't have
 
@@ -138,7 +139,7 @@ When two casters clash, it's the same procedure — they take turns, cast spells
 - Concentration as a tracked status with saves.
 - Spell components tracked as resources.
 - Schools of magic as a *resource* sub-system. Schools organize the catalog and gate class access ([19-classes.md](19-classes.md)), but they add **no extra economy** — no per-school slots, no school levels, no specialization meters.
-- A divine-vs-arcane split. There is **one catalog**; classes differ by which **schools** they access and which **pool** (Mind/Spirit) fuels them — not by separate arcane/divine lists.
+- A divine-vs-arcane split. There is **one catalog**; classes differ by which **schools** they access and which **pool** (Mind/Spirit/Charisma) fuels them — not by separate arcane/divine lists.
 - Subclass-specific spell lists.
 - Domain spells.
 - Bard "spells known" as a separate, smaller list.

@@ -62,11 +62,3 @@ Copy-paste prompts for an image model (ChatGPT/DALL·E, Midjourney, etc.) — sc
 
 ### 13 · The lights come home
 > A moor village green at dawn, suddenly **full of blinking, weeping people** holding each other, lighting the sixty candles at the foot of a tall iron lamp-post one by one until it blazes **warm orange and ordinary**. The grey fog burning off, the first real color returning to the world. Relief, warmth, hard-won. *[style]* `--ar 16:9 --v 6`
-
----
-
-## If you want top-down battle maps (for the VTT)
-
-This adventure already ships a map ([map.json](map.json)) — but if you want illustrated maps, reframe locations 1, 4, 7, 8:
-
-> Top-down tactical RPG battle map, bird's-eye view, square grid overlay, clear readable layout for tabletop play, [the village green with the central lamp-post / the Ashen Threshold of burnt houses / the Bone Road causeway of soul-lanterns / the lantern-filled Tallow Hall with the Great Lantern at the far end]. *[style, lighter on fog for readability]* `--ar 1:1 --v 6`

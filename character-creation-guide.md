@@ -5,10 +5,13 @@ A walkthrough for making your character. Designed to be run **at the table** as 
 You will need:
 - A copy of [character-sheet.md](character-sheet.md) (one per player).
 - A pen.
+- The three catalogs open or nearby: **Classes** ([rules/19-classes.md](rules/19-classes.md)), **Ancestries** ([rules/20-ancestries.md](rules/20-ancestries.md)), **Spells** ([rules/10-spell-list.md](rules/10-spell-list.md)).
 
 This guide fills out **every section** of the character sheet, in order. The Roman numerals below match the section numbers on the sheet.
 
 > **If you've never played a tabletop RPG before:** don't worry. Every decision in this guide has a "if you're not sure, pick this" answer. The fastest way to learn is to play.
+
+> **How this works.** There are **48 classes** and **~60 ancestries** — far too many to print here. So this guide teaches you the *process* of building a character and sends you to the catalogs for the actual options. Pick by *feel*; the catalog has the details.
 
 ---
 
@@ -29,210 +32,119 @@ Don't overthink it. **This sentence is your North Star** — when a decision in 
 
 ---
 
-## Step 1 — Pick a class *(fills Section I + V, 2 min)*
+## Step 1 — Pick a class *(fills Section I + V, 4 min)*
 
-There are four. Pick one. **Re-flavor freely** — a "barbarian" is a Warrior, a "warlock" is a Mage, a "paladin" can be a Priest or a Warrior, etc.
+A class is a **combination of three components** — weapon types, an armor tier, and (for casters) schools of magic. There are **48** in [rules/19-classes.md](rules/19-classes.md). Don't read all 48 — start from the *feel* you want, then browse that family:
 
-| Class | The vibe | Best ability | Starting HP |
-|---|---|---|---|
-| **Warrior** | Front line. Hits things. Takes hits. | Might | 10 + Might |
-| **Scout** | Skirmisher. Bow, daggers, stealth. | Agility | 8 + Might |
-| **Mage** | Arcane caster. Glass cannon. | Mind | 6 + Might |
-| **Priest** | Divine caster. Healer. Solid frame. | Spirit | 8 + Might |
+| You want to… | Look at | Examples |
+|---|---|---|
+| Hit hard, soak hits, wear armor | **Armored fighters** (#1–9) | Knight, Sentinel, Ranger |
+| Be fast, light, deadly — bow or blades | **Naked weapon-masters** (#10–13) | Gladiator, Blademaster |
+| Fight *and* cast a little | **Half-casters** (#14–18) / **Spellswords** (#19–28) | Spellblade, Paladin, Battlemage |
+| Be a spellcaster | **Casters** (#29–38) / **Full casters** (#39–48) | Mage, Priest, Sorcerer, Archmage |
 
-### Warrior — *"I get in their face."*
-- **Trained in:** all weapons; light and heavy armor.
-- **Signature features:**
-  - **Cleave** — when you drop an enemy, immediately swing at another.
-  - **Bulwark** — allies adjacent to you get `+1` Armor when you're in medium/heavy armor.
+**Re-flavor freely** — a "barbarian" is a Berserker, a "warlock" can be a Warlock *or* a Hexblade, a "paladin" is the Paladin or a Cleric-Knight. The name is yours; the components are the mechanics.
 
-### Scout — *"They didn't see me until it was too late."*
-- **Trained in:** light weapons, ranged weapons, light armor.
-- **Signature features:**
-  - **Sneak Strike** — once per turn, deal `+1d6` damage when you attack with advantage or with an ally adjacent.
-  - **Slip Away** — when an enemy near you does something other than attacking you, you can move half-speed without consequences.
+Open [rules/19-classes.md](rules/19-classes.md), pick one class, and note these from its entry:
+- **Components** (its weapon types / armor tier / schools) and **suggested primary ability**.
+- **HP tier** — Heavy armor `10 + Might`, Light `8 + Might`, None `6 + Might`.
+- **Class Signature** — the one unique thing only your class does (you get it at level 1).
+- Its **six-skill list** (for Step 4) and **starting kit** (for Step 6).
 
-### Mage — *"Watch the room change."*
-- **Trained in:** light weapons. **No armor.** (Armor blocks spellcasting.)
-- **Signature features:**
-  - **Spellcasting** — 3 spells known + 2 cantrips, mana pool of `level + Mind`.
-  - **Arcane Recovery** — once per fight, reroll a `1` on a spell attack die.
-
-### Priest — *"Hold the line. I'll fix it."*
-- **Trained in:** medium weapons; light armor only (casts divine spells in it).
-- **Signature features:**
-  - **Spellcasting** — 3 spells known + 2 cantrips, mana pool of `level + Spirit`.
-  - **Divine Touch** — touch heal for `1d6 + Spirit` HP, usable `1 + Spirit` times per rest.
-
-> **Not sure?** Pick **Warrior**. Most forgiving for a first character.
+> **Not sure?** Pick **Knight** (forgiving frontline fighter) or **Mage** (classic caster).
 
 **Fill in on the sheet:**
-- **Section I:** Write your **Class** and `LEVEL 1`.
-- **Section V:** Write your two signature features (name and effect) in slots 1 and 2. Leave slots 3 and 4 blank — they unlock at levels 3 and 5.
+- **Section I:** write your **Class** and `LEVEL 1`.
+- **Section V:** write your **Class Signature** (name + effect). Leave the six **perk** slots blank — those unlock as you level (3 / 6 / 9 / 12 / 15 / 18). The capstone comes at level 20.
 
 ---
 
-## Step 2 — Pick an ancestry *(fills Section I + VI, 2 min)*
+## Step 2 — Pick an ancestry *(fills Section I + VI, 3 min)*
 
-Pick one. Each grants an ability bump and one trait.
+Pick one from [rules/20-ancestries.md](rules/20-ancestries.md). Each gives **`+1` to one ability** and **one Racial Signature** (a trait). The catalog groups ~60 ancestries into families (Elves, Dwarves, Dragonborn, Tieflings, beastfolk, and more). The six starter ancestries, if you want a fast pick:
 
-| Ancestry | Ability | Trait |
+| Ancestry | `+1` | Racial Signature |
 |---|---|---|
-| **Human** | `+1` to any ability you choose | **Adaptable** — pick a *fourth* training in step 4. |
-| **Elf** | `+1` Agility | **Keen Senses** — advantage on Perception. See in dim light. |
-| **Dwarf** | `+1` Might | **Stone-Hearted** — advantage on Spirit defense vs. fear and charm. Darkvision 30 ft. |
-| **Halfling** | `+1` Agility | **Lucky** — once per rest, reroll one of your d20s. |
-| **Orc** | `+1` Might | **Savage Reserves** — once per rest, when you'd drop to 0 HP, drop to 1 HP instead. |
-| **Goblin** | `+1` Agility | **Scurry** — speed `8` instead of `6`. Can move through bigger creatures' squares. |
+| **Human** | any | **Adaptable** — one extra training at creation. |
+| **Wood Elf** | Agility | **Keen Senses** — advantage on Perception; dim-light sight. |
+| **Mountain Dwarf** | Might | **Stone-Hearted** — darkvision; advantage on Charisma defense vs. fear & charm. |
+| **Lightfoot Halfling** | Agility | **Lucky** — 1/rest, reroll one of your d20s. |
+| **Orc** | Might | **Savage Reserves** — 1/rest, drop to 1 HP instead of 0. |
+| **Goblin** | Agility | **Scurry** — Speed 8; move through bigger creatures' spaces. |
 
-> **Not sure?** Pick **Human** — the extra training is genuinely powerful and you don't have to commit to a specific fantasy aesthetic.
+The full catalog has caster-leaning lineages too (Tiefling, Dragonborn, Aasimar, Genasi…) that bump Mind, Spirit, or Charisma.
+
+> **Not sure?** Pick **Human** — the extra training is genuinely powerful and fits any concept.
 
 **Fill in on the sheet:**
-- **Section I:** Write your **Ancestry**.
-- **Section VI:** Write the trait name and its effect.
+- **Section I:** write your **Ancestry**.
+- **Section VI:** write your **Racial Signature** (trait name + effect).
 
 ---
 
 ## Step 3 — Assign your abilities *(fills Section II, 3 min)*
 
-You have **four abilities**, each scored from `−1` to `+5`. Assign in three passes: base, then class, then ancestry.
+You have **five abilities**, each from `−1` to `+5`. Build them in three passes: base, class, ancestry.
 
-### 3a. Distribute `+3`, `+2`, `+1`, `+0`
+### 3a. Distribute `+3 / +2 / +1 / +1 / +0`
 
-Put one of these numbers in each ability box. **Your highest goes in the ability that matches your class** — see Step 1's "best ability."
+Put one of these in each ability. **Your `+3` goes in your class's primary ability** (Step 1).
 
 ```
-MIGHT     [ ___ ]      Warrior class? Put +3 here.
-AGILITY   [ ___ ]      Scout class? Put +3 here.
-MIND      [ ___ ]      Mage class? Put +3 here.
-SPIRIT    [ ___ ]      Priest class? Put +3 here.
+MIGHT      [ ___ ]   force, toughness, heavy weapons — drives HP
+AGILITY    [ ___ ]   finesse, reflexes, light/ranged weapons — drives Armor
+MIND       [ ___ ]   reason, study, perception — studied (arcane) magic
+SPIRIT     [ ___ ]   will, faith, the soul — divine / primal magic
+CHARISMA   [ ___ ]   presence, persuasion, performance — innate magic
 ```
 
-The `+2` goes in something useful as a backup. Common pairings:
-
-- **Warrior:** `+3 Might`, `+2 Spirit` (presence) or `+2 Agility` (reflexes).
-- **Scout:** `+3 Agility`, `+2 Mind` (perception, planning).
-- **Mage:** `+3 Mind`, `+2 Agility` (you're squishy; dodge well).
-- **Priest:** `+3 Spirit`, `+2 Might` (tank up; mace damage).
-
-`+1` and `+0` go in the remaining two. Your call which is which.
+Your **primary** is whichever ability powers your class — Might or Agility for fighters; **Mind, Spirit, or Charisma** (your *pool*) for casters. **One primary powers everything you do** — every weapon *and* spell attack uses it.
 
 ### 3b. Apply your class `+1`
-
-Add `+1` to your class's primary ability. Warriors get `+1 Might`; Scouts `+1 Agility`; Mages `+1 Mind`; Priests `+1 Spirit`.
+Add `+1` to your primary.
 
 ### 3c. Apply your ancestry `+1`
-
-Add the `+1` from your ancestry's trait. (Humans choose any ability.)
+Add the `+1` from your ancestry. (Humans choose any ability.)
 
 ### Result
+Final abilities range about `+0` to `+5`. **Cap is `+5`** — if you'd exceed it, put the extra elsewhere.
 
-Your final abilities should now range from `+0` to `+5`. If you ended up over `+5` in any ability, cap it there and put the extra `+1` somewhere else.
+**Worked example:** a Lightfoot Halfling Ranger starts `+3 Agility / +2 Mind / +1 Might / +1 Charisma / +0 Spirit`. Add Ranger's `+1 Agility` (= `+4`), then Halfling's `+1 Agility` (= `+5`). Final: **`+5 Agi / +2 Mind / +1 Might / +1 Cha / +0 Spirit`**.
 
-**Worked example:**
-A halfling Scout starts with `+3 Agility / +2 Mind / +1 Might / +0 Spirit`. Adds Scout's `+1 Agility` (= `+4`), then halfling's `+1 Agility` (= `+5`). Final: `+5 / +2 / +1 / +0`.
-
-**Fill in on the sheet:** Section II — write all four final ability scores.
+**Fill in on the sheet:** Section II — all five final abilities.
 
 ---
 
-## Step 4 — Pick three trainings *(fills Section IV, 3 min)*
+## Step 4 — Pick your trainings *(fills Section IV, 3 min)*
 
-Trainings are skill tags. When a roll touches one, add your training bonus (`+2` at levels 1–3). You pick **three** at level 1 — or **four** if you're a Human.
+Trainings are skill tags; when a roll touches one, add your training bonus (`+2` at levels 1–7). You pick **three** at creation — **or four if Human**:
 
-**Pick two from your class's list:**
+- **Two from your class's six-skill list** (printed in your class's entry, [rules/19-classes.md](rules/19-classes.md)).
+- **One from your background** (Step 7) — any skill on the full list that fits your past.
+- **Humans:** one more, from anywhere.
 
-| Class | Pick 2 from |
-|---|---|
-| **Warrior** | Athletics, Intimidation, Endurance, Wilderness, Tactics, Crafting |
-| **Scout** | Stealth, Perception, Acrobatics, Wilderness, Sleight of Hand, Lore |
-| **Mage** | Arcana, Lore, Investigation, Perception, Insight, Crafting |
-| **Priest** | Religion, Medicine, Insight, Persuasion, Lore, Intimidation |
+> **Trainings grow.** Non-casters gain a new training on every *breadth* level (4, 7, 10, 13, 16, 19) — up to ~9–10 by level 20. You don't pick those now; just the starting three (or four).
 
-**Pick one more from the full list** (this should fit your background — your character's past life):
+The full list of 17: *Acrobatics · Arcana · Athletics · Crafting · Endurance · Insight · Intimidation · Investigation · Lore · Medicine · Perception · Persuasion · Religion · Sleight of Hand · Stealth · Tactics · Wilderness.*
 
-> Acrobatics · Arcana · Athletics · Crafting · Endurance · Insight · Intimidation · Investigation · Lore · Medicine · Perception · Persuasion · Religion · Sleight of Hand · Stealth · Tactics · Wilderness
-
-> **Humans pick one more from anywhere on the list. That's four total.**
-
-### What each training covers
-*(One line each.)*
-
-- **Acrobatics** — tumbling, balance, jumping.
-- **Arcana** — magic, magical creatures, spells.
-- **Athletics** — climbing, swimming, raw physical feats.
-- **Crafting** — making, repairing, identifying mundane objects.
-- **Endurance** — long marches, holding breath, surviving environments.
-- **Insight** — reading intent, spotting lies.
-- **Intimidation** — threatening, breaking will.
-- **Investigation** — searching, deducing.
-- **Lore** — history, geography, languages.
-- **Medicine** — healing, stabilizing, identifying poisons.
-- **Perception** — spotting, hearing, sensing.
-- **Persuasion** — convincing, bargaining, charming.
-- **Religion** — gods, rites, undead, holy places.
-- **Sleight of Hand** — picking pockets, locks, palming.
-- **Stealth** — hiding, moving quietly.
-- **Tactics** — battlefield reading, command.
-- **Wilderness** — tracking, weather, beasts, navigation.
-
-**Fill in on the sheet:** Section IV — your 3 (or 4) trainings.
-
-> The **training bonus** on the sheet (Section III) starts at `+2`. Just confirm it's `+2`. You'll change it to `+3` at level 4 and `+4` at level 8.
+**Fill in on the sheet:** Section IV — your 3 (or 4) trainings. Confirm **Training Bonus** in Section III is `+2`.
 
 ---
 
 ## Step 5 — Choose your spells *(fills Section VIII, casters only, 3 min)*
 
-Skip this step if you're a Warrior or Scout.
+Skip this if your class doesn't cast.
 
-You know **2 cantrips** (free, at-will) and **3 spells** (cost 1 mana each — all Lesser tier). All from your class's list:
+You know **2 cantrips** (free, at-will) and **3 spells** (1 mana each — all Lesser tier) at level 1, drawn from **your class's schools** (its entry says which). All spells live in [rules/10-spell-list.md](rules/10-spell-list.md), tagged by school; you cast them from your **pool** (Mind, Spirit, or Charisma — whichever your class uses).
 
-### Mage — Arcane spells
+- A **Mage** (Conjuration + Illusion) picks cantrips and Lesser spells from those two schools, plus any **Universal** spell.
+- A **Priest** (Alteration + Restoration) picks from those, leaning on *Cure Wounds*, *Healing Word*, *Bless*.
 
-**Cantrips (pick 2):**
-- **Spark** — ranged fire damage, `1d6`.
-- **Frost Touch** — close cold damage, `1d4`, slows the target.
-- **Mage Hand** — telekinetic hand for fine work.
-- **Daze** — short-range stun.
-- **Mend** — repair small objects.
-- **Light** — illuminate an object.
-- **Sleight Hex** — debuff one enemy for one round.
+> **Not sure?** A blaster wants *Spark* + *Magic Missile* + *Burning Hands*. A healer wants *Cure Wounds* + *Healing Word* + *Bless*.
 
-**Spells (pick 3, all 1 mana):**
-- **Magic Missile** — auto-hit, 3 darts of `1d4+1`.
-- **Shield** — reaction, `+5` Armor against an incoming hit.
-- **Sleep** — knock 2 weak enemies unconscious.
-- **Burning Hands** — cone of fire, `2d6` damage.
-- **Charm Person** — make a target your friend for an hour.
-- **Thunderwave** — close blast, `2d8` and a shove.
-- **Detect Magic** — sense nearby magic.
-- **Comprehend Languages** — read/understand any language.
+> **Spells grow.** You learn a new spell on every breadth level (up to 9 known); you can't pre-learn a tier you can't yet afford to cast.
 
-> **Not sure?** Pick **Magic Missile**, **Shield**, **Burning Hands**.
-
-### Priest — Divine spells
-
-**Cantrips (pick 2):**
-- **Sacred Flame** — ranged radiant damage, `1d8`, lights up the target.
-- **Guidance** — give an ally advantage on one upcoming check.
-- **Resistance** — ongoing, advantage on an ally's Spirit defense.
-- **Mend** — repair small objects.
-- **Light** — illuminate an object.
-- **Daze** — short-range stun.
-
-**Spells (pick 3, all 1 mana):**
-- **Cure Wounds** — touch heal, `2d8 + Spirit`.
-- **Healing Word** — far heal, `1d6 + Spirit` (can wake a downed ally).
-- **Bless** — three allies get advantage on their next attack.
-- **Sanctuary** — protect an ally with an attack-deflecting ward.
-- **Detect Magic** — sense nearby magic.
-
-> **Not sure?** Pick **Cure Wounds**, **Healing Word**, **Bless**.
-
-**Fill in on the sheet:** Section VIII — your 2 cantrips and 3 spells (tier = "Lesser", cost = "1", name, effect).
-
-For full spell descriptions, see [rules/10-spell-list.md](rules/10-spell-list.md).
+**Fill in on the sheet:** Section VIII — your 2 cantrips and 3 spells (tier "Lesser", cost 1).
 
 ---
 
@@ -241,297 +153,177 @@ For full spell descriptions, see [rules/10-spell-list.md](rules/10-spell-list.md
 Choose one:
 
 ### A. Your class's starting kit (free)
-
-- **Warrior:** Steel heavy armor (or Iron heavy armor + shield), Steel longsword, Iron dagger, shortbow + 20 arrows, adventuring kit, 10g.
-- **Scout:** Leather armor (light), two Iron daggers, Iron longbow + 20 arrows, thieves' tools, adventuring kit, 10g.
-- **Mage:** robes (no armor), Iron dagger, spellbook (your spells), adventuring kit, 15g.
-- **Priest:** Leather armor (light), Steel mace, light crossbow + 20 bolts, holy symbol, adventuring kit, 10g.
-
-> Starting gear is **apprentice-tier material** (Iron/Steel, Hide/Leather). Material grades and prices: [rules/17-weapons.md](rules/17-weapons.md), [rules/18-armor.md](rules/18-armor.md).
+Each class's exact kit is listed in [rules/19-classes.md](rules/19-classes.md) (and the formula in [rules/11-equipment.md](rules/11-equipment.md)). In short: a weapon for **each weapon type you train in** (apprentice **Iron/Steel** material), your **armor tier**, a **focus** if you cast (Mind → spellbook · Spirit → holy symbol · Charisma → arcane focus/instrument), the **adventuring kit**, and ~10–15g.
 
 ### B. 50 gold to spend yourself
+Buy à la carte from [rules/11-equipment.md](rules/11-equipment.md), [rules/17-weapons.md](rules/17-weapons.md), [rules/18-armor.md](rules/18-armor.md). For a first character, the kit is faster.
 
-Buy from [rules/11-equipment.md](rules/11-equipment.md). For a first character, the starting kit is faster.
+> **The adventuring kit** = backpack, bedroll, tinderbox, 5 torches, waterskin, 5 days' rations, 50 ft rope, whetstone, mirror, whistle, chalk. **Don't itemize it** — you have it.
 
-> **The "adventuring kit"** = backpack, bedroll, tinderbox, 5 torches, waterskin, 5 days' rations, 50 ft of rope, whetstone, mirror, whistle, chalk. **Don't itemize this stuff** — you have it.
-
-**Fill in on the sheet:** Section IX:
-- **Armor / Shield** lines — what you wear and its material bonus (light = leather/hide, Agility-based; heavy = metal/stone, Might-based; shield `+1`/`+2`/`+3`). See [rules/18-armor.md](rules/18-armor.md).
-- **Primary / Secondary weapon** — your main weapon and your backup.
-- **Carried** checklist — write `Adventuring kit` on one line, and any extras (potions, special items) on others.
-- **Coin** — gold from your kit (and any from background).
+**Fill in on the sheet:** Section IX — armor (+ material bonus), shield if any, primary/secondary weapon, the carried checklist (write "Adventuring kit"), and coin.
 
 ---
 
 ## Step 7 — Write a background phrase *(fills Section I, 1 min)*
 
-A short phrase that says **who your character was before they became an adventurer**. Examples:
+A short phrase for **who your character was before adventuring** — it sets your one background training (Step 4) and gives the GM hooks. Examples:
 
-- *Disgraced knight · Tavern brawler · Forest hermit · Temple acolyte · Reformed thief · Tribal hunter · Failed apprentice · Mercenary lieutenant · Caravan guard · Cult escapee · Court bard, exiled · Bastard noble.*
+*Disgraced knight · Tavern brawler · Forest hermit · Temple acolyte · Reformed thief · Tribal hunter · Failed apprentice · Mercenary lieutenant · Caravan guard · Cult escapee · Court bard, exiled.*
 
-This phrase has no mechanical effect (your background-training in Step 4 is the only mechanical bit). It exists to give the GM hooks: NPCs from your past, places you've been, debts you owe.
-
-**Fill in on the sheet:** Section I — **Background** field. Also fill in **Pronouns**, **Age**, and **Player name** while you're there.
+**Fill in on the sheet:** Section I — **Background**, plus **Pronouns**, **Age**, **Player name**.
 
 ---
 
 ## Step 8 — Calculate vitals *(fills Section III, 3 min)*
 
-The math. Take it slow.
-
 ### HP
+> `HP = your armor tier's base + Might` — Heavy **10**, Light **8**, None **6**.
 
-> `HP = class base + Might`
->
-> *Warrior 10, Scout 8, Mage 6, Priest 8.*
+Example: a light-armor Ranger with `+1` Might → `8 + 1 = 9`.
 
-Example: Priest with `+3` Might → HP `8 + 3 = 11`.
+### Defenses *(four of them)*
+> **Armor** = `10 + Agility + armor bonus` *(or `10 + Might` in heavy armor)*
+> **Mind** = `10 + Mind` · **Spirit** = `10 + Spirit` · **Charisma** = `10 + Charisma`
 
-### Defenses
-
-> **Armor** = `10 + Agility + armor material bonus`
-> *(Heavy armor uses Might instead of Agility. The armor's material sets the bonus — see [rules/18-armor.md](rules/18-armor.md).)*
->
-> **Mind defense** = `10 + Mind`
->
-> **Spirit defense** = `10 + Spirit`
-
-Armor bonus comes from the armor's **material** (full ladders in [rules/18-armor.md](rules/18-armor.md)). Apprentice-tier starting values:
-- No armor: `+0`
-- Light — Hide `+1` / Leather `+2` (Agility-based; casters can wear)
-- Heavy — Iron `+3` / Steel `+4` (Might-based; blocks spellcasting)
-- Shield: add `+1` / `+2` / `+3` (flat, any armor)
+Apprentice-tier armor bonuses: none `+0` · Hide `+1` / Leather `+2` (light) · Iron `+3` / Steel `+4` (heavy) · shield `+1/+2/+3`. Full ladders in [rules/18-armor.md](rules/18-armor.md).
 
 ### Mana *(casters only)*
-
-> **Mana** = `level + casting ability`
->
-> *Casting ability = Mind for Mage, Spirit for Priest.*
-
-Example: Level 1 Mage with `+4` Mind → `1 + 4 = 5` mana.
+> `Mana = level + pool` *(pool = your Mind, Spirit, or Charisma)*. A level-1 Mage with `+4` Mind → `5` mana.
 
 ### Speed
-
-Default `6` squares. Goblins are `8`. That's it.
+`6` squares (Goblins and a few others, `8`).
 
 ### Training Bonus
-
 `+2` at level 1.
 
-**Fill in on the sheet:** Section III — HP current/max, Mana current/max (if caster), the three defenses, Speed, Training Bonus.
-
-> **Conditions** (the checkboxes in Section III): leave all unchecked. You'll mark them during play.
+**Fill in on the sheet:** Section III — HP, Mana (if caster), the **four** defenses, Speed, Training Bonus. Leave Conditions unchecked.
 
 ---
 
 ## Step 9 — Write your attacks *(fills Section VII, 3 min)*
 
-For each weapon (or attack spell) you have, fill in one line.
+**One ability powers every attack you make** — your **primary**. There's no per-weapon ability anymore.
 
-### The formulas
+> **Attack** = `d20 + primary + training` *(training only if your class trains that weapon type or casting)* vs. the target's defense.
+> **Damage** = `weapon die + material bonus + primary`. *(Spells: `spell die + primary`, no material.)*
 
-> **Attack bonus** = `your ability mod` + `your training bonus` (only if trained in this weapon type)
->
-> **Damage** = `weapon die` + `your ability mod`
-
-### Which ability for which weapon
-
-| Weapon type | Ability used | Damage die |
-|---|---|---|
-| Heavy melee (greatsword, maul, polearm) | **Might** | `1d10` |
-| Medium melee (longsword, mace, spear) | **Might** | `1d8` |
-| Light melee (dagger, shortsword) | **Might or Agility** (your pick) | `1d6` (dagger `1d4`) |
-| Ranged (longbow, crossbow) | **Agility** | `1d6`–`1d10` |
-
-### Which weapons are you trained in?
-*Add the training bonus only if your class trains you in this weapon type.*
-
-- **Warrior:** trained in **all weapons**. Always add `+2`.
-- **Scout:** trained in **light + ranged**. Add `+2` to daggers/shortswords/bows. **No bonus** to medium/heavy.
-- **Mage:** trained in **light only**. Add `+2` to daggers/shortswords. **No bonus** to bows.
-- **Priest:** trained in **medium only**. Add `+2` to mace/longsword/spear. **No bonus** to bows.
-
-### Spells
-
-If you're a caster, also write your spell attacks. Most spell rolls use your **casting ability + Arcana/Religion training**:
-
-- Mage spell attack: `Mind + 2 (if trained in Arcana)`.
-- Priest spell attack: `Spirit + 2 (if trained in Religion)`.
-
-Spells that auto-hit (like *Magic Missile*) need no attack roll — just write the damage.
-
-### Range notes
-
-- **Close** — adjacent square. Melee.
-- **Polearm reach** — 2 squares.
-- **Near** — about 6 squares. Thrown weapons, hand crossbows, most cantrips.
-- **Far** — anywhere in line of sight. Longbows, most attack spells.
+Damage dice: dagger/sling `1d4` · shortsword/mace/shortbow `1d6` · longsword/longbow `1d8` · greatsword/greataxe `1d10`. Materials add flat damage (`+0` Iron → `+5` Daedric — [rules/17-weapons.md](rules/17-weapons.md)). Wielding **two light weapons** steps your die up one (`1d6 → 1d8`).
 
 ### Worked examples
+- **Knight, Might `+4`, Steel greatsword (heavy, trained):** attack `+4 + 2 = +6` → damage `1d10 + 1 + 4`. Range Close.
+- **Ranger, Agility `+5`, Steel longbow (trained):** attack `+5 + 2 = +7` → damage `1d8 + 1 + 5`. Range Far.
+- **Mage, Mind `+4`, *Spark* (trained in casting):** attack `+4 + 2 = +6` vs. Armor → `1d6` fire. Range Near.
 
-**Warrior, Might `+4`, longsword (medium, Might, trained):**
-- Attack: `+4 (Might) + 2 (training) = +6`
-- Damage: `1d8 + 4`
-- Range: Close
+Spells that auto-hit (like *Magic Missile*) need no roll — just write the damage.
 
-**Scout, Agility `+5`, longbow (ranged, Agility, trained):**
-- Attack: `+5 + 2 = +7`
-- Damage: `1d8 + 5`
-- Range: Far
+**Range notes:** Close = adjacent · polearm reach 2 · Near ≈ 6 squares · Far = line of sight.
 
-**Mage, Mind `+4`, Spark cantrip (Arcana trained):**
-- Attack: `+4 + 2 = +6` vs. Armor
-- Damage: `1d6` fire
-- Range: Near
-
-**Priest, Spirit `+4`, mace (medium, Might `+3`, trained):**
-- Attack: `+3 (Might) + 2 (training) = +5`
-- Damage: `1d8 + 3`
-- Range: Close
-
-**Priest, light crossbow (ranged, Agility `+0`, NOT trained):**
-- Attack: `+0 + 0 = +0`. Bad. Use your mace.
-
-**Fill in on the sheet:** Section VII — one line per weapon/attack spell. Format: `WEAPON · ATTACK · DAMAGE · NOTES (range)`.
+**Fill in on the sheet:** Section VII — one line per weapon/attack spell: `WEAPON · ATTACK · DAMAGE · NOTES (range)`.
 
 ---
 
 ## Step 10 — Make them a person *(fills Section X, 5 min)*
 
-This is the part most new players skip. **Don't skip it.** The dice will tell you what your character does — these notes tell you *who* is doing it.
-
-Section X has eleven sub-sections. Fill in as many as you can right now; the rest will fill themselves as you play.
+This is the part most new players skip. **Don't skip it.** The dice tell you what your character does — these notes tell you *who* is doing it.
 
 ### 1. At a glance (one sentence)
-What does someone see when your character walks into a tavern? Be specific. *"Tall and tired"* is fine. *"A man whose hands are always working — folding a napkin, polishing a coin, weaving a strap of leather"* is better.
+What does someone see when your character walks into a tavern? Be specific. *"A man whose hands are always working — folding a napkin, polishing a coin"* beats *"tall and tired."*
 
-### 2. Voice and manner (one or two sentences)
-How do they sound? Do they make eye contact? Do they speak fast or slow? Loud or quiet? Do they laugh easily, or never?
+### 2. Voice and manner
+How do they sound? Eye contact? Fast or slow, loud or quiet? Do they laugh easily, or never?
 
 ### 3. One weird thing — a tic
-Just one. *Polishes the same coin. Counts under their breath. Smiles when nervous. Never sits with their back to the door.* This is the thing the other players will start to notice. It makes you a person.
+Just one. *Polishes the same coin. Counts under their breath. Never sits with their back to the door.* This is what the other players will start to notice.
 
 ### 4. Loves · Fears · Hides
-- **Loves**: one specific thing your character would protect or seek out.
-- **Fears**: one specific thing they avoid or hide from.
-- **Hides**: something the rest of the party doesn't know about them yet.
+- **Loves**: one specific thing they'd protect or seek out.
+- **Fears**: one specific thing they avoid.
+- **Hides**: something the party doesn't know yet.
 
-> **Take Hides seriously.** This is the thing that pays off in 3 sessions when it comes out.
+> **Take Hides seriously.** It pays off in three sessions when it surfaces.
 
 ### 5. Faith, code, or loyalty
-What do they swear by? A god, a person, an oath, a creed, a memory. Even atheists believe in *something*. (*"I trust my brother. That's it."*)
+What do they swear by? A god, a person, an oath, a creed, a memory. (*"I trust my brother. That's it."*)
 
 ### 6. Three lines of backstory
-Three sentences. No more. Where they're from, what they did, why they're here.
+Three sentences. Where they're from, what they did, why they're here.
 
 ### 7. A scar or mark with a story
-Physical or metaphorical. The one thing they won't talk about, except sometimes, when drunk, very late, to the right person. **Write the mark + one line about how they got it.**
+Physical or metaphorical — the thing they won't talk about, except sometimes, very late, to the right person. **Mark + one line.**
 
 ### 8. A keepsake
-Mechanically: nothing. Sentimentally: everything. A letter. A ring. A child's toy. A pressed flower. **Write what + why.**
+Mechanically nothing; sentimentally everything. A letter, a ring, a child's toy, a pressed flower. **What + why.**
 
 ### 9. Tastes
-Favorite food, favorite drink, favorite song or saying. These are tiny — and they show up at every meal. **Three short answers, that's it.**
+Favorite food, drink, song or saying. Tiny things that show up at every meal. **Three short answers.**
 
 ### 10. A line they will not cross
-What would your character refuse to do, even at the cost of failure or death? **This is the moral spine.** The GM will eventually test it. *"I won't hurt children." "I won't kneel to a tyrant." "I won't betray a comrade, ever, for anything."*
+What would they refuse to do, even at the cost of failure or death? **The moral spine** — the GM will eventually test it.
 
 ### 11. A wish
-If the world owed them one thing — and could grant it — what would they ask for? Be honest. **One sentence.**
+If the world owed them one thing and could grant it, what would they ask for? **One sentence.**
 
-> **If you stall on any of these:** skip it. Come back to it after session 1. Some answers only arrive after you've played the character for an hour.
+> **If you stall on any of these:** skip it. Some answers only arrive after you've played the character for an hour.
 
 ---
 
 ## Step 11 — Connections *(fills Section XI, 5 min, as a group)*
 
-Section XI has three connection slots. Fill in all three.
-
 ### A. A connection from before
-> *Someone who knew your character before this adventure. A mentor, a sibling, a rival, an old flame, the priest who raised you, the captain who exiled you.*
+> *Someone who knew your character before this adventure — a mentor, sibling, rival, old flame, the captain who exiled you.*
 
-Fill in:
-- **Name** — give them one.
-- **What they are** — relation in one phrase.
-- **Where** — a place. ("Bridghaven", "the eastern keep", "dead, last I heard.")
-- **Status** — check one: alive / missing / dead / complicated.
-
-This person can show up in play. Tell your GM you've created them.
+Fill in: **Name**, **what they are**, **where**, and **status** (alive / missing / dead / complicated). Tell your GM — this person can show up in play.
 
 ### B. A debt
-> *Money, blood, favor, or memory. Owed by you, or to you.*
+> *Money, blood, favor, or memory — owed by you, or to you.*
 
-Fill in:
-- **To/From** — who.
-- **What** — the debt.
-- **Open?** — yes / paid / one day.
+Fill in: **to/from**, **what**, and whether it's **open**.
 
-### C. A party connection — *do this part together*
-Pick **another player at the table** and answer, together, one of these:
-
+### C. A party connection — *do this together*
+Pick **another player** and answer one of these together:
 - *How did our characters meet?*
-- *What does each of us owe the other?*
-- *What is the one thing we've never told the other?*
+- *What do we owe each other?*
+- *What have we never told each other?*
 - *Why would I trust this person at my back?*
 
-Pick whichever question sparks something. **One connection per player is plenty.** The party becomes a web of relationships, not a group of strangers.
-
-Fill in:
-- **Who** (the other PC's name)
-- **How** (the brief answer to the question you picked)
-- **What you owe each other** (one line — favor, secret, debt, vow)
+Fill in **who**, **how**, and **what you owe each other**. The party becomes a web of relationships, not a group of strangers.
 
 ---
 
 ## Step 12 — Write the Brief & leave the rest for play *(fills Section XIV, 2 min)*
 
 ### The Brief (Section XIV)
+The answer to *"so, who are you again?"* Fill in the mad-libs without overthinking — the pattern pulls the truth out:
 
-This is the answer to *"so, who are you again?"* when someone asks at the table. Fill in the mad-libs:
-
-> *I am __________________________________ , a __________________________________, who __________________________________, because __________________________________, and what I want, more than anything, is __________________________________, but what would stop me is __________________________________ .*
-
-Write it without thinking too hard. The pattern will pull the truth out of you.
-
-**Example (Brenna):**
-> *I am **Brenna Quickfoot**, a **halfling thief with one eye on every exit**, who **runs harder than I should from things that aren't chasing me yet**, because **last time I stopped running, my brother paid the price**, and what I want, more than anything, is **a place I don't have to leave**, but what would stop me is **the day I realize I've never known how to stay**.*
+> *I am __________, a __________, who __________, because __________, and what I want, more than anything, is __________, but what would stop me is __________ .*
 
 ### The Journal (Section XII)
-
-**Leave blank.** Fill in during and after each session:
-- **Quests** — one line for each goal the party has taken on.
-- **People met** — name + one-line impression.
-- **Places been** — the towns, dungeons, landmarks you've visited.
-- **Things learned** — secrets, lore, plot information.
-- **A line from this session** — something your character said, or something said to them, that you want to remember.
-
-Encourage the player at the table to take 60 seconds at the end of each session to fill these in. **Three sessions in, the journal is the best record of the campaign you have.**
+**Leave blank.** Fill in during/after each session: Quests, People met, Places been, Things learned, and one line from the session. Sixty seconds at the end of each session; three sessions in, it's the best record of the campaign you have.
 
 ### The Level-Up Tracker (Section XIII)
-
-**Leave blank.** Fill in one line each time you level up — HP gain rolled, and whatever new thing happened (feature, ability bump, new spell). One line per level keeps leveling feeling like a moment.
+**Leave blank.** Fill one line each level. The cadence is a three-beat cycle — **Ability → Perk → Breadth** (a spell for casters, a training for everyone else) — with the training bonus rising at levels 8 and 15, and a **capstone at 20** ([rules/03-progression.md](rules/03-progression.md)). One line per level keeps leveling a moment, not paperwork.
 
 ---
 
 ## You're done
 
-Your sheet is full (or full enough). Look it over:
+Look it over:
 
-- **Section I** — name, class, level, ancestry, background, pronouns/age.
-- **Section II** — four ability scores.
-- **Section III** — HP, mana (if caster), three defenses, speed, training bonus.
-- **Section IV** — three (or four) trainings.
-- **Section V** — two signature class features.
-- **Section VI** — ancestry trait.
-- **Section VII** — attacks: weapons (+ spells if caster).
-- **Section VIII** — spells (casters only).
-- **Section IX** — armor, weapons, gear, coin.
-- **Section X** — eleven personality sub-sections.
-- **Section XI** — three connections.
-- **Section XII–XIII** — blank until play.
-- **Section XIV** — your one-paragraph Brief.
+- **I** — name, class, level, ancestry, background, pronouns/age.
+- **II** — five ability scores.
+- **III** — HP, mana (if caster), four defenses, speed, training bonus.
+- **IV** — three (or four) trainings.
+- **V** — your Class Signature (perks fill in as you level).
+- **VI** — your Racial Signature.
+- **VII** — attacks (weapons + spells if caster).
+- **VIII** — spells (casters only).
+- **IX** — armor, weapons, gear, coin.
+- **X** — the eleven personality prompts.
+- **XI** — three connections.
+- **XII–XIII** — blank until play.
+- **XIV** — your one-paragraph Brief.
 
-**If a section is empty:** that's fine. Some things arrive in play. Just don't leave Section I, II, III, IV, V, VI, VII, and IX empty — those are what the dice need.
+**If a section is empty, that's fine** — some things arrive in play. Just don't leave I, II, III, IV, V, VI, VII, and IX empty; those are what the dice need.
 
 ---
 
@@ -539,56 +331,54 @@ Your sheet is full (or full enough). Look it over:
 
 > **Step 0:** *"A **halfling poacher** who **fled her village after stealing from the lord's hunting lodge.**"*
 
-> **Step 1 (Class):** Scout. Section V: **Sneak Strike**, **Slip Away**.
+> **Step 1 (Class):** **Ranger** (#3) — components Light + Ranged weapons · Light armor · primary **Agility**. HP tier Light (`8 + Might`). **Class Signature: Hunter's Mark.** Six-skill list: Acrobatics · Stealth · Perception · Wilderness · Sleight of Hand · Endurance. *(Section V: Hunter's Mark; perk slots left blank.)*
 
-> **Step 2 (Ancestry):** Halfling. `+1 Agility`. Section VI: **Lucky** — one reroll per rest.
+> **Step 2 (Ancestry):** **Lightfoot Halfling** — `+1 Agility`. **Racial Signature: Lucky** (1/rest reroll).
 
 > **Step 3 (Abilities):**
-> - Base: `+3 Agility / +2 Mind / +1 Might / +0 Spirit`.
-> - Scout `+1 Agility` → `+4`. Halfling `+1 Agility` → `+5`.
-> - Final Section II: **`+5 Agility / +2 Mind / +1 Might / +0 Spirit`**.
+> - Base: `+3 Agility / +2 Mind / +1 Might / +1 Charisma / +0 Spirit`.
+> - Ranger `+1 Agility` → `+4`. Halfling `+1 Agility` → `+5`.
+> - Final: **`+5 Agi / +2 Mind / +1 Might / +1 Cha / +0 Spirit`**.
 
-> **Step 4 (Trainings):** From Scout list: **Stealth**, **Perception**. From background: **Sleight of Hand**. *(She pinched the lord's silver as well as his deer.)*
+> **Step 4 (Trainings):** from the Ranger six → **Stealth**, **Wilderness**; from background (poacher) → **Sleight of Hand**.
 
-> **Step 5 (Spells):** N/A — Scouts don't cast.
+> **Step 5 (Spells):** N/A — Rangers don't cast.
 
-> **Step 6 (Equipment):** Starting kit. Leather armor, two daggers, longbow + 20 arrows, thieves' tools, adventuring kit, 10g.
+> **Step 6 (Equipment):** Ranger kit — **Leather** armor, **Steel longbow** + 20 arrows, **Iron shortsword**, adventuring kit, 10g.
 
-> **Step 7 (Background):** *Poacher who fled the lord's forests.* Section I: Pronouns she/her. Age 31.
+> **Step 7 (Background):** *Poacher who fled the lord's forests.* Pronouns she/her. Age 31.
 
 > **Step 8 (Vitals):**
-> - HP: `8 + 1 = 9`.
-> - Armor: `10 + 5 (Agility) + 1 (leather) = 16`.
-> - Mind defense: `12`. Spirit defense: `10`.
-> - Speed: `6`. Training Bonus: `+2`.
+> - HP `8 + 1 = 9`.
+> - Armor `10 + 5 (Agi) + 2 (Leather) = 17`. Mind `12` · Spirit `10` · Charisma `11`.
+> - Speed `6`. Training Bonus `+2`.
 
-> **Step 9 (Attacks):**
-> - **Longbow** (ranged, Agility, trained): `+5 + 2 = +7` vs. Armor → `1d8 + 5`. Range Far.
-> - **Dagger** (light, Agility, trained): `+5 + 2 = +7` vs. Armor → `1d4 + 5`. Range Close.
-> - **Thrown dagger:** same, Range Near.
+> **Step 9 (Attacks):** *(Agility powers both.)*
+> - **Longbow** (ranged, trained): `+5 + 2 = +7` vs. Armor → `1d8 + 1 + 5`. Range Far.
+> - **Shortsword** (light, trained): `+7` → `1d6 + 5`. Range Close.
 
 > **Step 10 (Section X):**
-> - **At a glance:** small, sharp-eyed, dust-brown leathers, smile arrives before trust does.
+> - **At a glance:** small, sharp-eyed, dust-brown leathers; a smile that arrives before trust does.
 > - **Voice:** quick, lower than you'd expect, laughs at her own jokes.
-> - **Weird thing:** counts every door's exits before sitting down.
-> - **Loves:** the open road. **Fears:** cages. **Hides:** the signet ring in her boot.
+> - **Weird thing:** counts a room's exits before she sits.
+> - **Loves:** the open road. **Fears:** cages. **Hides:** the lord's signet ring in her boot.
 > - **Code:** *"I look out for the small ones. Always."*
-> - **Backstory:** Grew up in a halfling fishing village. Poached the lord's deer for two years. Caught after stealing his signet to bargain for her brother's debts; has been running ever since.
-> - **Scar:** a broken nose, set crooked. *"Walked into a door,"* she says, every time.
-> - **Keepsake:** the signet ring. Hopes one day to bargain with it.
-> - **Tastes:** baked apples, watered beer, an old halfling rowing-song.
+> - **Backstory:** halfling fishing village; poached the lord's deer two years; caught after stealing his signet; running ever since.
+> - **Scar:** a crooked-set broken nose. *"Walked into a door,"* she says, every time.
+> - **Keepsake:** the signet ring — she hopes to bargain with it one day.
+> - **Tastes:** baked apples, watered beer, an old rowing-song.
 > - **Line:** harming a child.
 > - **Wish:** one safe winter, just one.
 
 > **Step 11 (Connections):**
-> - **From before:** *Tem Quickfoot*, her younger brother, in their home village. **Status: alive — last she heard.**
-> - **Debt:** *Owes Ren Halloway* a favor from her smuggling year. **Open.**
-> - **Party connection:** chose the Mage. *"We met in a tavern in Bridghaven. The Mage was buying drinks with money she clearly didn't know was counterfeit. Brenna noticed. They've been an unlikely pair ever since."* They owe each other silence about it.
+> - **From before:** *Tem Quickfoot*, her younger brother, home village. **Alive — last she heard.**
+> - **Debt:** *owes Ren Halloway* a favor from her smuggling year. **Open.**
+> - **Party connection:** the Mage — *"Met in a Bridghaven tavern; the Mage was paying with coin she didn't know was counterfeit. Brenna noticed."* They owe each other silence.
 
-> **Step 12 (The Brief):**
+> **Step 12 (Brief):**
 > *I am **Brenna Quickfoot**, a **halfling thief with one eye on every exit**, who **runs harder than I should from things that aren't chasing me yet**, because **last time I stopped, my brother paid for it**, and what I want, more than anything, is **a place I don't have to leave**, but what would stop me is **the day I realize I've never known how to stay**.*
 
-Total time: about 20 minutes.
+Total time: about 20 minutes. Brenna is ready to play.
 
 ---
 
@@ -597,11 +387,11 @@ Total time: about 20 minutes.
 | Step | Fills | Time |
 |---|---|---|
 | 0. Concept *(optional)* | — | 1 min |
-| 1. Pick a class | I, V | 2 min |
-| 2. Pick an ancestry | I, VI | 2 min |
+| 1. Pick a class *(→ catalog 19)* | I, V | 4 min |
+| 2. Pick an ancestry *(→ catalog 20)* | I, VI | 3 min |
 | 3. Assign abilities | II | 3 min |
 | 4. Pick trainings | III (TB), IV | 3 min |
-| 5. Choose spells *(casters)* | VIII | 3 min |
+| 5. Choose spells *(casters → catalog 10)* | VIII | 3 min |
 | 6. Take equipment | IX | 2 min |
 | 7. Background phrase | I | 1 min |
 | 8. Calculate vitals | III | 3 min |

@@ -311,6 +311,102 @@ Each class's one-line identity and its unique **Class Signature**, granted at le
 
 ---
 
+## Class skill lists (the six)
+
+Each class offers **six trainings**; you **pick 2 at creation** (plus 1 from your background, +1 if Human), and gain more on your **breadth levels** ([03-progression.md](03-progression.md)). The six aren't bespoke — they're **generated from your components**, using this affinity map (no new skills; everything is drawn from the 17 in [02-character-creation.md](02-character-creation.md)):
+
+| Component | Skills it contributes |
+|---|---|
+| **Light weapon** | Acrobatics, Stealth |
+| **Medium weapon** | Athletics, Tactics |
+| **Heavy weapon** | Athletics, Intimidation |
+| **Ranged weapon** | Perception, Wilderness |
+| **Light armor** | Acrobatics, Sleight of Hand |
+| **Heavy armor** | Endurance, Intimidation |
+| **Destruction** | Arcana, Intimidation |
+| **Conjuration** | Arcana, Lore |
+| **Alteration** | Investigation, Crafting |
+| **Illusion** | Stealth, Persuasion |
+| **Restoration** | Medicine, Religion |
+
+> **Rule:** take the skills of your 3 components, drop duplicates, and fill to six from your **pool/primary affinity** — *martial:* Endurance, Perception, Insight · *Mind:* Investigation, Lore, Insight · *Spirit:* Insight, Religion, Wilderness · *Charisma:* Persuasion, Intimidation, Insight. The 48 lists below are the result; reflavor or swap one with the GM's nod if your concept calls for it.
+
+### ⚔️ Fighting — armored
+| # | Class | Six trainings (pick 2) |
+|---|---|---|
+| 1 | Duelist | Acrobatics · Stealth · Athletics · Tactics · Sleight of Hand · Perception |
+| 2 | Reaver | Acrobatics · Stealth · Athletics · Intimidation · Sleight of Hand · Endurance |
+| 3 | Ranger | Acrobatics · Stealth · Perception · Wilderness · Sleight of Hand · Endurance |
+| 4 | Berserker | Athletics · Tactics · Intimidation · Acrobatics · Sleight of Hand · Endurance |
+| 5 | Skirmisher | Athletics · Tactics · Perception · Wilderness · Acrobatics · Sleight of Hand |
+| 6 | Outrider | Athletics · Intimidation · Perception · Wilderness · Acrobatics · Sleight of Hand |
+| 7 | Sentinel | Acrobatics · Stealth · Athletics · Tactics · Endurance · Intimidation |
+| 8 | Vanguard | Acrobatics · Stealth · Athletics · Intimidation · Endurance · Tactics |
+| 9 | Knight | Athletics · Tactics · Intimidation · Endurance · Perception · Insight |
+
+### 🗡️ Fighting — naked weapon-master
+| # | Class | Six trainings (pick 2) |
+|---|---|---|
+| 10 | Gladiator | Acrobatics · Stealth · Athletics · Tactics · Intimidation · Endurance |
+| 11 | Blademaster | Acrobatics · Stealth · Athletics · Tactics · Perception · Wilderness |
+| 12 | Marauder | Acrobatics · Stealth · Athletics · Intimidation · Perception · Wilderness |
+| 13 | Weaponmaster | Athletics · Tactics · Intimidation · Perception · Wilderness · Endurance |
+
+### 🪄 Half-caster
+| # | Class | Six trainings (pick 2) |
+|---|---|---|
+| 14 | Spellblade | Arcana · Intimidation · Acrobatics · Stealth · Sleight of Hand · Investigation |
+| 15 | Adept | Arcana · Lore · Acrobatics · Stealth · Sleight of Hand · Investigation |
+| 16 | Warden | Investigation · Crafting · Acrobatics · Stealth · Sleight of Hand · Insight |
+| 17 | Trickster | Stealth · Persuasion · Acrobatics · Sleight of Hand · Intimidation · Insight |
+| 18 | Acolyte | Medicine · Religion · Acrobatics · Stealth · Sleight of Hand · Insight |
+
+### 🔮 Spellsword
+| # | Class | Six trainings (pick 2) |
+|---|---|---|
+| 19 | Death Knight | Arcana · Lore · Intimidation · Athletics · Tactics · Insight |
+| 20 | Battlemage | Investigation · Crafting · Arcana · Intimidation · Athletics · Tactics |
+| 21 | Hexblade | Arcana · Intimidation · Stealth · Persuasion · Athletics · Tactics |
+| 22 | Paladin | Arcana · Intimidation · Medicine · Religion · Athletics · Tactics |
+| 23 | Spellforged | Investigation · Crafting · Arcana · Lore · Athletics · Tactics |
+| 24 | Witch-blade | Arcana · Lore · Stealth · Persuasion · Athletics · Tactics |
+| 25 | Wraith Knight | Arcana · Lore · Medicine · Religion · Athletics · Tactics |
+| 26 | Mindblade | Investigation · Crafting · Stealth · Persuasion · Athletics · Tactics |
+| 27 | Cleric-Knight | Investigation · Crafting · Medicine · Religion · Athletics · Tactics |
+| 28 | Sword-Bard | Stealth · Persuasion · Medicine · Religion · Athletics · Tactics |
+
+### ✨ Caster
+| # | Class | Six trainings (pick 2) |
+|---|---|---|
+| 29 | Warlock | Arcana · Lore · Intimidation · Acrobatics · Sleight of Hand · Persuasion |
+| 30 | Sorcerer | Investigation · Crafting · Arcana · Intimidation · Acrobatics · Sleight of Hand |
+| 31 | Mentalist | Arcana · Intimidation · Stealth · Persuasion · Acrobatics · Sleight of Hand |
+| 32 | Templar | Arcana · Intimidation · Medicine · Religion · Acrobatics · Sleight of Hand |
+| 33 | Artificer | Investigation · Crafting · Arcana · Lore · Acrobatics · Sleight of Hand |
+| 34 | Mage | Arcana · Lore · Stealth · Persuasion · Acrobatics · Sleight of Hand |
+| 35 | Shaman | Arcana · Lore · Medicine · Religion · Acrobatics · Sleight of Hand |
+| 36 | Enchanter | Investigation · Crafting · Stealth · Persuasion · Acrobatics · Sleight of Hand |
+| 37 | Priest | Investigation · Crafting · Medicine · Religion · Acrobatics · Sleight of Hand |
+| 38 | Bard | Stealth · Persuasion · Medicine · Religion · Acrobatics · Sleight of Hand |
+
+### 🌌 Full caster
+| # | Class | Six trainings (pick 2) |
+|---|---|---|
+| 39 | Elementalist | Investigation · Crafting · Arcana · Lore · Intimidation · Insight |
+| 40 | Archmage | Arcana · Lore · Intimidation · Stealth · Persuasion · Investigation |
+| 41 | Necromancer | Arcana · Lore · Intimidation · Medicine · Religion · Insight |
+| 42 | Spellmystic | Investigation · Crafting · Arcana · Intimidation · Stealth · Persuasion |
+| 43 | Oracle | Investigation · Crafting · Arcana · Intimidation · Medicine · Religion |
+| 44 | Witch | Arcana · Intimidation · Stealth · Persuasion · Medicine · Religion |
+| 45 | Mystic | Investigation · Crafting · Arcana · Lore · Stealth · Persuasion |
+| 46 | Druid | Investigation · Crafting · Arcana · Lore · Medicine · Religion |
+| 47 | Spiritualist | Arcana · Lore · Stealth · Persuasion · Medicine · Religion |
+| 48 | Seer | Investigation · Crafting · Stealth · Persuasion · Medicine · Religion |
+
+## Starting kits
+
+Your kit follows from your components too — see the **per-archetype kits** and the build formula in [11-equipment.md](11-equipment.md): a weapon for each weapon type you train in (apprentice material), your armor tier, a caster focus matched to your pool, the adventuring kit, and a little gold.
+
 ## What this system doesn't have
 
 - Subclasses or multiclassing (the combinations replace both).

@@ -96,7 +96,7 @@ The full training list:
 | **Tactics** | Reading a battlefield, anticipating enemy moves, command. |
 | **Wilderness** | Tracking, foraging, weather, beasts, navigation. |
 
-You pick **three trainings total** at character creation: two from your class list, one from your background. (A Human ancestry adds a fourth.)
+You pick **three trainings total** at character creation: **two from your class's six-skill list** ([19-classes.md](19-classes.md)), one from your background. (A Human ancestry adds a fourth.) Non-casters gain more trainings as they level, on their breadth levels ([03-progression.md](03-progression.md)).
 
 ## Defenses
 

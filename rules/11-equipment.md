@@ -70,13 +70,20 @@ A new character starts with:
 
 Starting gear is **apprentice-tier material** (Iron/Steel weapons and heavy armor; Hide/Leather light armor). See [17-weapons.md](17-weapons.md) and [18-armor.md](18-armor.md) for the ladders.
 
-**Build your kit from your class** ([19-classes.md](19-classes.md)): a weapon for each weapon *type* you're trained in (apprentice material), your **armor tier** (Steel heavy / Leather light / none), a shield if you want one and a hand free, a spellbook or holy symbol if you cast, plus the adventuring kit and ~`10g`.
+**The build formula** ([19-classes.md](19-classes.md)): a weapon for **each weapon type you train in** (apprentice material), your **armor tier**, a **shield** if you carry a one-handed weapon and have a hand free, a **caster focus** if you cast, plus the **adventuring kit** and a little gold. Your components decide the rest — these six archetype kits cover all 48 classes.
 
-Example kits by archetype:
-- **Heavy fighter** *(e.g., Knight)*: Steel heavy armor, a Steel + an Iron weapon of your types, adventuring kit, 10g.
-- **Light fighter** *(e.g., Ranger)*: Leather armor, Iron weapons of your types (e.g., longbow + daggers), thieves'/utility tools, adventuring kit, 10g.
-- **Caster** *(e.g., Mage, Priest)*: Leather armor (or robes), an Iron dagger, spellbook or holy symbol, adventuring kit, 15g.
-- **Gish** *(half-caster / spellsword)*: Leather or no armor, one martial or light weapon, a focus/holy symbol, adventuring kit, 10g.
+### Kits by archetype
+
+*"Your weapons" = one apprentice-tier weapon for each weapon type your class trains in.*
+
+- **Armored fighter** *(#1–9 — Knight, Ranger, Sentinel…)*: your armor tier (**Steel** heavy / **Leather** light); your two weapons (one **Steel**, one **Iron**); a **shield** if you wield a one-handed weapon with a hand free; adventuring kit; **10g**.
+- **Naked weapon-master** *(#10–13 — Gladiator…)*: no armor; your three weapons (**Iron**); adventuring kit; **15g**.
+- **Half-caster** *(#14–18 — Spellblade, Acolyte…)*: **Leather** armor; your light weapon (**Iron**); your **focus**; adventuring kit; **10g**.
+- **Spellsword** *(#19–28 — Battlemage, Paladin…)*: no armor; your martial weapon (**Iron/Steel**); your **focus**; adventuring kit; **10g**.
+- **Caster** *(#29–38 — Mage, Priest…)*: **Leather** armor or robes; an **Iron** dagger; your **focus**; adventuring kit; **15g**.
+- **Full caster** *(#39–48 — Archmage, Druid…)*: robes, no armor; an **Iron** dagger; your **focus**; adventuring kit; **15g**.
+
+**Your focus** is set by your **pool**: **Mind** → a spellbook · **Spirit** → a holy symbol · **Charisma** → an arcane focus (orb, rod, or an instrument). It's the implement you cast through; losing it doesn't stop you casting, but the GM may make it harder.
 
 ## Magic items
 

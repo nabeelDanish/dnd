@@ -21,6 +21,7 @@ A standalone tabletop RPG in the D&D tradition — **about one-third the rules o
 rules/                 The rulebook, in chapters 00–20 (+ balance-notes)
 adventures/            Ready-to-run adventures
   the-bell-of-ashvane/   a 4-hour one-shot + pre-made characters + battlemap
+  the-pale-gate/         a brutal level-2 one-shot (5 PCs, BYO party) + battlemap
   the-falling-spire/     a level-20 one-shot + 3 fully-built pregens
 map-tool/              Browser-based virtual tabletop (open index.html)
 quick-ref/             A4 reference cards (PDF): weapons, armor, shop, classes, spells, ancestries

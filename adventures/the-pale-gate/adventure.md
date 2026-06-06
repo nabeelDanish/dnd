@@ -1,8 +1,8 @@
 # One-Shot: The Pale Gate
 
-A single-session adventure for **four level-3 characters**. Play time: **~4–5 hours**. Pre-made characters are in [characters.md](characters.md).
+A single-session adventure for **five level-2 characters**. Play time: **~4–5 hours**. Bring your own party — no pre-mades.
 
-This is a harder, longer one-shot than [The Bell of Ashvane](../the-bell-of-ashvane/adventure.md) — five fights of escalating difficulty, no full rest until the end, and a dimension-crossing structure. It's built for players who already know the system. The combat arc is deliberately punishing; read the **Survival & pacing** section before you run it.
+This is a harder, longer one-shot than [The Bell of Ashvane](../the-bell-of-ashvane/adventure.md) — five fights of escalating difficulty, no full rest until the end, and a dimension-crossing structure. It's built for players who already know the system. It was originally tuned for level 3; run at **level 2** it is genuinely brutal, so read the **Survival & pacing** section — and its **level-2 scaling dials** — before you run it.
 
 ## The pitch
 
@@ -28,17 +28,17 @@ The adventure runs as a fixed sequence of beats. The combat escalates at every s
 
 | Beat | Type | Threat | Where |
 |---|---|---|---|
-| 1 | **Combat** — ambush | 8 (~66%) | Hollowmere village |
+| 1 | **Combat** — ambush | 8 (~80%) | Hollowmere village |
 | 2 | **Investigation** | — | Hollowmere village |
 | — | *Portal* | — | The Pale Gate |
-| 3 | **Combat** — wave 1 | 10 (~83%) | The Ashen Threshold |
-| 4 | **Combat** — wave 2 | 14 (~117%) | The Ashen Threshold |
+| 3 | **Combat** — wave 1 | 10 (~100%) | The Ashen Threshold |
+| 4 | **Combat** — wave 2 | 14 (~140%) | The Ashen Threshold |
 | 5 | **Movement & investigation** | — | The Bone Road |
 | 6 | **Puzzle** | — | The Lantern Vault |
-| 7 | **Combat** — guardians | 15 (~125%) | The Tallow Hall doors |
-| 8 | **Boss** | ~24 (200%) | The Tallow Hall |
+| 7 | **Combat** — guardians | 15 (~150%) | The Tallow Hall doors |
+| 8 | **Boss** | ~20 (200%) | The Tallow Hall |
 
-Budget reference: a four-player level-3 party has an encounter budget of **12 threat points** (party level × players). 100% is a standard fight. See [../../rules/13-encounters-and-rewards.md](../../rules/13-encounters-and-rewards.md).
+Budget reference: a five-player level-2 party has an encounter budget of **10 threat points** (party level × players). 100% is a standard fight. See [../../rules/13-encounters-and-rewards.md](../../rules/13-encounters-and-rewards.md). *(These fights run hot for level 2 — the **level-2 scaling dials** in Survival & pacing tell you what to trim.)*
 
 ## The clock — "The Guttering"
 
@@ -54,9 +54,16 @@ This is the resource-drama lever from [../../rules/14-gm-guide.md](../../rules/1
 
 ## Survival & pacing (read this)
 
-Five escalating fights with one optional rest is a brutal adventuring day, even at level 3. Keep the party alive without trivializing the threat:
+Five escalating fights with one optional rest is a brutal adventuring day — and at **level 2** it's a meat-grinder unless you use the dials below. Keep the party alive without trivializing the threat:
 
-- **They start fresh** — full HP, full mana, all once-per-fight abilities. The pre-made characters are built tough for exactly this (the Orc's Savage Reserves, the Priest's Spirit Guardians, the Mage's fire vs. wax).
+- **They start fresh** — full HP, full mana, all once-per-rest abilities. The Hollow rewards a party that brought light and toughness: a Spirit caster's **Spirit Guardians**, any **Restoration** healing, **radiant/fire** damage (Destruction, a *Light* cantrip), and durability traits like an Orc's **Savage Reserves** or a Dwarf's **Stone-Hearted** all earn their keep here.
+
+> ### ⚖️ Level-2 scaling dials *(use these — the fights above were tuned for level 3)*
+> Five level-2 PCs have more bodies but thinner HP and fewer tools than a level-3 four. To keep this hard-but-survivable rather than a TPK, reach for these as needed:
+> - **Trim the swarms.** Drop **one Hollow Husk** from each of the two big husk waves (Scenes 1 and 4-wave-1) if the party's five are getting overwhelmed.
+> - **Soften the elites.** Run each **Hollow Knight** at **HP 32, attack +5** (instead of 40/+6) and the **Pale Shepherd** at **HP 80, attacks +5** (instead of 95/+6). The mechanics stay; only the raw numbers ease.
+> - **The rest valve is more tempting now.** A level-2 party will likely *need* the Stillwater Pool's full rest before the boss — let them feel the soul-cost, but don't punish them for taking it.
+> - **One PC's healing must survive to the boss.** If the party is gutted before the Tallow Hall doors, let the last Knight back into the hall and the doors begin to close (a beat to heal) — as the text already advises.
 - **Healing is seeded along the route**, not handed out at the end. Listed in each scene: potions in the village, a mana draught and the Stillwater respite in the Hollow, freed souls that heal in the boss fight. Don't withhold them.
 - **Wounded enemies break.** The Hollow's lesser things (husks, hounds, wisps) are cowardly or mindless; when a fight is clearly lost for them, melt them away. New monsters arriving is fair; buffing the ones on the table is not. See [../../rules/13-encounters-and-rewards.md](../../rules/13-encounters-and-rewards.md).
 - **Radiant and fire are the answers.** Telegraph it constantly: the Hollow's creatures *flinch* from light. Sacred Flame, Spirit Guardians, the Priest's Light cantrip, the Mage's Burning Hands all do extra work here. Reward players who notice.
@@ -152,7 +159,7 @@ If they're missing a piece, have Maren or the chapel record volunteer it. **Don'
 
 ### Reward in the village
 
-- **2 × Healing Potion** (`1d8 + 2` each) in the chapel's mercy-chest, and **Captain's-courage**, a small flask of strong moor-spirits Maren offers — *one use, drink as an action to clear the Frightened condition and gain advantage on your next Spirit defense for one round* (a common magic item; it's liquid courage, half real).
+- **2 × Healing Potion** (`1d8 + 2` each) in the chapel's mercy-chest, and **Captain's-courage**, a small flask of strong moor-spirits Maren offers — *one use, drink as an action to clear the Frightened condition and gain advantage on your next **Charisma** defense for one round* (a common magic item; it's liquid courage, half real). *(Fear and charm are resisted by Charisma defense in this system — see [../../rules/06-attack-and-defense.md](../../rules/06-attack-and-defense.md).)*
 - Maren can also hand over the lamplighter's old **tinderbox and a single long taper** — *the flame to open the gate.* (If the players think to light the dead lamp themselves, this is how. If they don't, the gate also opens on its own at full dark — see Scene 3.)
 
 ---
@@ -296,7 +303,7 @@ The door opens, but the Shepherd doesn't leave his hall unguarded. On the thresh
 - **1 × Wax-bound** (Threat 3) — plus **any Wax-bound the party spawned by failing the puzzle**, if those weren't killed in the Vault.
 - **1 × Lantern Wisp** (Threat 2).
 
-This fight is a wall of disciplined, durable enemies in a doorway — a deliberate contrast to the swarms before it. The Knights are too tough to ignore and too well-armored to brute-force; the party must **put out their lamps** (radiant, Light cantrip, an adjacent snuff action) to fight them on even terms. A good place for the Priest's **Channel Light** and the Mage's saved spells.
+This fight is a wall of disciplined, durable enemies in a doorway — a deliberate contrast to the swarms before it. The Knights are too tough to ignore and too well-armored to brute-force; the party must **put out their lamps** (radiant, *Light* cantrip, an adjacent snuff action) to fight them on even terms. A good place to spend saved spells and any radiant magic the party has been hoarding.
 
 This is also the **last fight before the boss with no rest in between.** If the party hasn't used the Stillwater Pool, they'll be hurting. That's intended — but make sure at least one PC's healing is still online before you open the boss doors, or the boss becomes a TPK. If they're truly gutted, this is the moment a Knight can be narrated as "the last of them backs into the hall, and the doors begin to close" — giving the party a beat to heal before they push through. **Push, but don't execute them in the doorway.**
 
@@ -343,19 +350,20 @@ Now the Shepherd can be killed normally. He stops regenerating, drops to whateve
 ### Tactics
 
 - **The Shepherd opens with Snuff** on the most dangerous-looking caster (it halts healing — nasty), then keeps to his crook's 2-square reach, never leaving the Great Lantern undefended.
-- He uses **Lantern-Gaze**: advantage against Frightened targets. The hall is full of frightening things; expect Frightened PCs. (This is why the pre-made party leans hard on anti-fear — the Dwarf Priest's Stone-Hearted, the Captain's-courage flask, Bless. Telegraph that staying un-Frightened is how you stay effective.)
+- His **Unbearable Kindness** Frightens those near him (a **Charisma** attack), and **Lantern-Gaze** then gives him advantage against the Frightened — a one-two that snowballs. Anti-fear tools are gold here: a high **Charisma** defense, a Dwarf's **Stone-Hearted**, the Captain's-courage flask, *Bless*, a *Cleanse*. Telegraph that staying un-Frightened is how you stay effective.
 - **Call the Flock:** once per round as a free action, the Shepherd reaches into the lantern-drifts and pulls up **1 Hollow Husk** (Threat 1) to defend the Lantern. This is his replenishing wave — it punishes a party that ignores the adds, and it's the dial you turn if the fight is too easy (more flock) or too hard (he's "too grieved to call them" this round).
 - **When the Great Lantern goes out and he's brought low** (≤ 15 HP), he stops fighting and *begs* — not for his life, but to keep his purpose. He offers the party anything: their own dead returned, gold, the secret of the gate, *"just let me keep a few — just the old ones, the ones who'll only suffer out there —"*. Let the players choose how this ends. Killing him frees everyone. Sparing him is possible but he must be *unmade* (the gate sealed behind him, the Great Lantern destroyed) or he'll simply begin again with the next village.
 
 ### The Pale Shepherd — boss stat block
 
-> **The Pale Shepherd** *(Hesper Loom, the Lamplighter)* — Tier 2 · Threat 14
-> **HP** 95 · **Armor** 15 · **Mind** 15 · **Spirit** 16 · **Speed** 7
+> **The Pale Shepherd** *(Hesper Loom, the Lamplighter)* — Tier 1 · boss · Threat 14  *(level-2 scaling: HP 80, attacks +5)*
+> **HP** 95 · **Armor** 15 · **Mind** 15 · **Spirit** 16 · **Charisma** 16 · **Speed** 7
 > *Attack:* **Shepherd's Crook** `+6 vs. Armor → 1d10 + 4`, reach 2 squares.
 > *Attack:* **Snuff** `+6 vs. Spirit → 2d8` cold/necrotic, Range Near. On hit, the target's speed is halved and **they cannot be healed** until the end of their next turn ("the light goes thin").
 > *Special — Sentinel.* Opportunity strikes are on for him; he uses them to guard the Great Lantern.
 > *Special — Anchored to the Flame.* While the Great Lantern burns, at the start of each round he regains **10 HP**, and he **cannot be reduced below 1 HP**. Snuffing the Great Lantern ends both. (See "The Great Lantern.")
-> *Special — Lantern-Gaze.* He has **advantage** on attacks against Frightened creatures.
+> *Special — Unbearable Kindness.* At the start of his turn, each enemy within Near rolls **Charisma vs. his `+6`** or is **Frightened** of him until the end of its next turn — his sorrow presses on the soul like a gentle, smothering hand.
+> *Special — Lantern-Gaze.* He has **advantage** on attacks against Frightened creatures (so Unbearable Kindness feeds straight into it — break the fear or he snowballs).
 > *Special — Call the Flock.* Once per round, as a free action, he raises **1 Hollow Husk** from the lantern-drifts (within Near range).
 > *Immunities:* Charmed, Frightened, Poisoned. *Weakness:* takes **double damage from radiant**, and **+1d6** from fire.
 > *Notes:* Sorrowful, gentle, utterly certain he is being kind. Will not flee — there is nowhere for him to go and nothing he wants but to keep his flock. When the Lantern is out and he is brought low, he begs to keep his purpose, not his life.
@@ -381,7 +389,7 @@ If the party puts out the Great Lantern and ends the Shepherd:
 ### Rewards
 
 - **300 gold** total from the reeve of Bridghaven (150 advance + 150 on return), plus a bonus if most of Hollowmere lives.
-- Each PC gains **1 level** (milestone leveling to level 4 — and at level 4 they each get an ability bump and a step to training bonus `+3`).
+- Each PC gains **1 level** (milestone leveling to **level 3**) — at level 3 each unlocks their first **component Perk** (the basic rung, [../../rules/03-progression.md](../../rules/03-progression.md)). Training bonus stays `+2` (the apprentice tier now runs levels 1–7).
 - **One magic item**, GM's choice — recommended: the **Lamplighter's Crook**, reforged from the Shepherd's: *a quarterstaff that sheds Light (as the cantrip) at will, and once per fight can be used to clear the Frightened condition from yourself and all allies in Near range.* A keeper for any party that walks into dark places.
 - **The soul-lanterns the party saved and carried** are returned warm to their people — and the village of Hollowmere will keep a light burning for the party's names now, the way they once did for Hesper.
 - **Information / hooks for a continuing campaign:**
@@ -402,31 +410,31 @@ If the party puts out the Great Lantern and ends the Shepherd:
 Custom stat blocks for this adventure. All built to the apprentice-to-veteran targets in [../../rules/12-monsters.md](../../rules/12-monsters.md). **Radiant and fire are the universal weaknesses of the Hollow** — telegraph it.
 
 > **Hollow Husk** — Tier 1 · Threat 1
-> **HP** 12 · **Armor** 11 · **Mind** 7 · **Spirit** 8 · **Speed** 4
+> **HP** 12 · **Armor** 11 · **Mind** 7 · **Spirit** 8 · **Charisma** 5 · **Speed** 4
 > *Attack:* **Grasping hands** `+3 vs. Armor → 1d6 + 1`.
 > *Special:* Immune to Charmed / Frightened / Poisoned. Takes **+1d6 from radiant or fire.** When it drops to 0, its ember gutters out with a thin cold sigh.
 > *Notes:* An emptied villager — eyes like cold wicks, moving like a sleepwalker. Slow, mindless, comes in swarms. Mercy to put down.
 
 > **Pale Hound** — Tier 1 · Threat 2
-> **HP** 13 · **Armor** 13 · **Mind** 10 · **Spirit** 9 · **Speed** 10
+> **HP** 13 · **Armor** 13 · **Mind** 10 · **Spirit** 9 · **Charisma** 7 · **Speed** 10
 > *Attack:* **Bite** `+4 vs. Armor → 1d8 + 2`. On hit, a Tier-1-or-smaller target is knocked **Prone.**
 > *Special:* **Pack Tactics** — advantage on attacks when an ally is adjacent to the same target. **Fog-step** — ignores difficult terrain while in fog. Shies from bright light (a creature shedding Light has half cover against it).
 > *Notes:* Gaunt hounds of grey light, ribs like lantern-frames. Hit, retreat, circle. Flee when the pack is broken.
 
 > **Lantern Wisp** — Tier 1 · Threat 2
-> **HP** 10 · **Armor** 14 · **Mind** 12 · **Spirit** 12 · **Speed** fly 8
+> **HP** 10 · **Armor** 14 · **Mind** 12 · **Spirit** 12 · **Charisma** 11 · **Speed** fly 8
 > *Attack:* **Cold Light** `+4 vs. Armor → 1d6` cold, Range Near.
 > *Special:* **Flicker** — once per round as a free action, it dims; attacks against it have **disadvantage** until it next attacks. **Feed** — if it ends its turn adjacent to a Downed creature, that creature takes `1d6` and the wisp heals `1d6`. A creature shedding bright **Light** negates Flicker within Near.
 > *Notes:* Bobbing pale lights that lure and sting. Cowardly; flees a losing fight. The Mage's Light cantrip ruins its day.
 
 > **Wax-bound** — Tier 1 · Threat 3
-> **HP** 22 · **Armor** 13 · **Mind** 9 · **Spirit** 10 · **Speed** 5
+> **HP** 22 · **Armor** 13 · **Mind** 9 · **Spirit** 10 · **Charisma** 6 · **Speed** 5
 > *Attack:* **Molten grasp** `+5 vs. Armor → 1d8 + 2`. On hit, the target rolls **Agility vs. `+5`** or is **Restrained** by cooling wax (break free: Might, Hard).
 > *Special:* Takes **+1d4 from fire** — but fire also *softens* it: a Wax-bound that took fire damage this round has its Restrain DC drop (break free becomes Easy). Immune to Charmed / Frightened / Poisoned. When killed, it hardens into a wax husk that makes its square **difficult terrain.**
 > *Notes:* A villager half-dipped in tallow, candle-stubs for eyes, slow and dripping and terribly strong. Grabs and holds you for the wisps.
 
-> **Hollow Knight** — Tier 2 · Threat 5
-> **HP** 40 · **Armor** 16 · **Mind** 11 · **Spirit** 12 · **Speed** 6
+> **Hollow Knight** — Tier 1 · elite · Threat 5  *(level-2 scaling: HP 32, attack +5)*
+> **HP** 40 · **Armor** 16 · **Mind** 11 · **Spirit** 12 · **Charisma** 10 · **Speed** 6
 > *Attack:* **Pale glaive** `+6 vs. Armor → 1d10 + 3`, reach 2 squares.
 > *Special:* **Sentinel.** **Lantern-Helm** — a cold lantern burns where its head should be; while it burns, the Knight has **advantage** on attacks. An adjacent PC can **snuff the helm** with an action (Athletics or Arcana, Hard 15), or a hit of **radiant** snuffs it automatically — removing the advantage. Immune to Charmed / Frightened. Takes **+1d6 from radiant.**
 > *Notes:* The armored remains of past would-be rescuers who came through the gate and lost. Disciplined, silent, holds the line. They guard; they do not pursue.
@@ -439,9 +447,9 @@ Custom stat blocks for this adventure. All built to the apprentice-to-veteran ta
 
 Print or pin this.
 
-**The arc (escalating):** Combat 8 → *investigate* → Combat 10 → Combat 14 → *Bone Road* → *puzzle* → Combat 15 → Boss 24.
+**The arc (escalating):** Combat 8 → *investigate* → Combat 10 → Combat 14 → *Bone Road* → *puzzle* → Combat 15 → Boss ~20.
 
-**Budget:** 12 (level 3 × 4 players). **Targets:** 10 / 15 / 20 (default 15).
+**Budget:** 10 (level 2 × 5 players). **Targets:** 10 / 15 / 20 (default 15). **Level-2 dials:** trim a husk per swarm; Knights HP 32/+5; Shepherd HP 80/+5.
 
 **The Guttering (clock):** souls die when the party stalls. Full rest at the Stillwater Pool = **1d6+4 villagers lost.** Tell them before they choose.
 
@@ -453,7 +461,7 @@ Print or pin this.
 - Lantern Wisp — HP 10, Armor 14, `+4 → 1d6` cold. Flicker. Feeds on Downed.
 - Wax-bound — HP 22, Armor 13, `+5 → 1d8+2` + Restrain. +1d4 fire (and fire frees the grab).
 - Hollow Knight — HP 40, Armor 16, `+6 → 1d10+3` reach 2. Sentinel. Lantern-Helm advantage (snuff it).
-- **Pale Shepherd** — HP 95, Armor 15, Spirit 16. Crook `+6 → 1d10+4` reach 2; Snuff `+6 vs. Spirit → 2d8`, no-heal. Sentinel. **Anchored: while Great Lantern burns, +10 HP/round and can't drop below 1.** Lantern-Gaze (adv vs Frightened). Call the Flock (1 husk/round). Double radiant, +1d6 fire.
+- **Pale Shepherd** — HP 95, Armor 15, Mind 15, Spirit 16, **Cha 16**. Crook `+6 → 1d10+4` reach 2; Snuff `+6 vs. Spirit → 2d8`, no-heal. Sentinel. **Anchored: while Great Lantern burns, +10 HP/round and can't drop below 1.** **Unbearable Kindness** (start of turn: enemies in Near, **Cha vs +6** or Frightened) → **Lantern-Gaze** (adv vs Frightened). Call the Flock (1 husk/round). Double radiant, +1d6 fire.
 
 **Great Lantern:** put it out (Athletics/Arcana/Religion Hard 15 adjacent, OR Stillwater flask, OR throw a freed soul-lantern in) → Shepherd becomes mortal.
 

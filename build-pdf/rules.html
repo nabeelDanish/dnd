@@ -194,7 +194,7 @@ a { color: #1a1a1a; text-decoration: none; }
 <div class="title-page">
   <div class="title">The Rules</div>
   <div class="rule"></div>
-  <div class="subtitle">A lean D&amp;D-style tabletop RPG, in sixteen chapters</div>
+  <div class="subtitle">A lean D&amp;D-style tabletop RPG</div>
   <div class="meta">v1 · for personal use</div>
 </div>
 
@@ -221,6 +221,7 @@ a { color: #1a1a1a; text-decoration: none; }
       <li>17 — Weapons</li>
       <li>18 — Armor</li>
       <li>19 — Classes (the component system)</li>
+      <li>20 — Ancestries (the catalog)</li>
       <li>Balance Notes — Martials vs. Casters (Level 1)</li>
   </ol>
 </div>
@@ -570,7 +571,7 @@ If they had rolled a natural <strong>20</strong>: they memorize the map <em>and<
 <p><strong>Every build is exactly 3 components.</strong> You start with <strong>2 Signatures</strong> (Racial + Class) and unlock <strong>6 component perks</strong> over the campaign. That&#39;s the balance spine — every character of a given level has the same number of abilities, so balance stays checkable by counting (<a href="balance-notes.md">balance-notes.md</a>).</p>
 </blockquote>
 <h2>Ancestry</h2>
-<p>Pick one. Each grants an ability bump and one mechanical trait — <strong>your Racial Signature</strong>, one of your two level-1 signatures. No subraces, no half-versions.</p>
+<p>Pick one. Each grants an ability bump and one mechanical trait — <strong>your Racial Signature</strong>, one of your two level-1 signatures. The six below are a quick <strong>starter set</strong>; the <strong>full catalog of ~50 ancestries</strong> — across all five abilities, including caster-favoring lineages — lives in <a href="20-ancestries.md">20-ancestries.md</a>.</p>
 <table>
 <thead>
 <tr>
@@ -610,7 +611,7 @@ If they had rolled a natural <strong>20</strong>: they memorize the map <em>and<
 <td><strong>Scurry</strong> — your speed is <code>8</code> squares (40 ft) instead of <code>6</code>. You can move through spaces of creatures larger than you.</td>
 </tr>
 </tbody></table>
-<p>This is the whole list. The GM is free to invent new ancestries that follow the same template: one ability <code>+1</code>, one trait of comparable power.</p>
+<p>These six are the starter set. The full roster — Dragonborn, Tiefling, Aasimar, Genasi, beastfolk, winged folk, and more — is in <a href="20-ancestries.md">20-ancestries.md</a>, along with a <strong>trait toolbox</strong> the GM can use to build new ancestries on the same template: one ability <code>+1</code>, one trait of comparable power.</p>
 <h2>Background</h2>
 <p>Pick a short phrase that describes who your character was before they started adventuring. It grants <strong>one additional training</strong> of your choice. The phrase has no mechanical effect beyond that — but the GM will use it to seed hooks, NPCs, and roleplay opportunities for you.</p>
 <p>Examples: <em>Disgraced knight. Tavern brawler. Forest hermit. Temple acolyte. Reformed thief. Tribal hunter. Failed apprentice. Mercenary lieutenant.</em></p>
@@ -3877,6 +3878,529 @@ Notes: tactics, motivation, appearance
 <li>Per-class bespoke rules beyond your component tracks + 2 signatures.</li>
 <li>More than <strong>3 components</strong> on any build (the balance invariant — the 6 perks unlock from those 3 components over levels).</li>
 </ul>
+<h1>20 — Ancestries (the catalog)</h1>
+<blockquote>
+<p>The full roster of playable ancestries. Character creation (<a href="02-character-creation.md">02-character-creation.md</a>) keeps a six-race starter set and points here for the rest — the same way it points to <a href="19-classes.md">19-classes.md</a> for the class roster.</p>
+</blockquote>
+<h2>How an ancestry works</h2>
+<p>Pick <strong>one ancestry</strong>. It gives you exactly two things, at level 1:</p>
+<ul>
+<li><strong><code>+1</code> to one ability</strong> (fixed per ancestry — a nudge toward a role, never a lock). The lone exception is the <strong>Human</strong>, whose <code>+1</code> goes anywhere.</li>
+<li><strong>One Racial Signature</strong> — a single trait. It is <strong>one of your two level-1 signatures</strong> (the other is your Class Signature, <a href="19-classes.md">19-classes.md</a>). You get exactly <strong>one</strong>, always.</li>
+</ul>
+<p>A &quot;trait&quot; here is a small <strong>bundle</strong>, not a single clause — look at the classics: the Dwarf&#39;s is <em>&quot;darkvision <strong>and</strong> advantage vs. fear/charm,&quot;</em> the Elf&#39;s is <em>&quot;dim-light sight <strong>and</strong> advantage on Perception.&quot;</em> Every trait below is tuned to that same power level. No ancestry stacks two traits; the catalog is large because <strong>families have many members</strong>, not because anyone gets more.</p>
+<blockquote>
+<p><strong>Families are flavor, not a mechanical layer.</strong> &quot;Elf&quot; or &quot;Dragonborn&quot; is a grouping for browsing. You choose <strong>one member</strong> (e.g., <em>Wood Elf</em>) and get its one ability and one trait. There is no &quot;base trait + subrace trait.&quot;</p>
+</blockquote>
+<h2>The trait toolbox (for the GM building new ancestries)</h2>
+<p>Every trait is built from effects already in the game. The legal palette:</p>
+<ul>
+<li><strong>Advantage</strong> on a named skill, or on a defense vs. a condition (fear, charm, Poisoned…).</li>
+<li>A <strong>sense</strong> — dim-light sight, or darkvision (see in the dark ~30 ft).</li>
+<li><strong>1/rest:</strong> reroll a d20; or drop to 1 HP instead of 0.</li>
+<li><strong>Movement:</strong> Speed 8; a swim or climb speed; breathe water; move through larger creatures&#39; spaces; ignore a kind of difficult terrain; glide (no fall damage).</li>
+<li><strong>Resistance</strong> to one damage type (take half).</li>
+<li><strong>Pack Tactics</strong> — advantage on attacks while an ally is adjacent to your target.</li>
+<li><strong>Innate magic</strong> — know one <strong>cantrip</strong> (cast with your primary, 0 mana), or a specific <strong>1/rest</strong> Lesser spell (e.g., <em>Misty Step</em>), no mana.</li>
+<li><strong>Breath weapon</strong> — 1/rest, a Close 2-square cone; roll <code>d20 + primary</code> vs. each creature&#39;s Armor for <code>2d6</code> of an element.</li>
+<li><strong>Natural weapon</strong> — claws / horns / bite, a <code>1d6</code> weapon you always carry (uses your primary).</li>
+<li><strong>Flat <code>+1</code> to a static defense</strong> (e.g., natural <code>+1</code> Armor — bounded, like Bulwark).</li>
+<li>A <strong>narrow immunity</strong> (can&#39;t be magically slept; immune to disease) or <strong>cosmetic shapeshift</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>The fundamentals stay off-limits.</strong> No racial bonus to <strong>attack rolls</strong>, to the <strong>training bonus</strong>, or to <strong>mana-pool size</strong>; no <strong>extra action</strong>; no <strong>stacking <code>+1</code>s on a d20</strong>. Flat bonuses to <em>static defenses</em> are fine. If a homebrew trait would touch one of those, it&#39;s out.</p>
+</blockquote>
+<hr>
+<h2>Humans &amp; half-folk</h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Human</strong></td>
+<td>any</td>
+<td><strong>Adaptable</strong> — gain one extra training at creation.</td>
+</tr>
+<tr>
+<td><strong>Half-Elf</strong></td>
+<td>Charisma</td>
+<td><strong>Beguiling Grace</strong> — advantage on Persuasion; see in dim light.</td>
+</tr>
+<tr>
+<td><strong>Half-Orc</strong></td>
+<td>Might</td>
+<td><strong>Savage Blows</strong> — your critical hits roll one <strong>extra</strong> damage die; advantage on Intimidation.</td>
+</tr>
+</tbody></table>
+<h2>Elves <em>— tall, long-lived, born to an older world. Elves trance rather than sleep (flavor).</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Wood Elf</strong></td>
+<td>Agility</td>
+<td><strong>Keen Senses</strong> — advantage on Perception; see in dim light. <em>(the classic Elf)</em></td>
+</tr>
+<tr>
+<td><strong>High Elf</strong></td>
+<td>Mind</td>
+<td><strong>Fey Schooling</strong> — see in dim light; know one Illusion or Destruction <strong>cantrip</strong>.</td>
+</tr>
+<tr>
+<td><strong>Drow</strong></td>
+<td>Charisma</td>
+<td><strong>Underdark Born</strong> — <strong>darkvision</strong>; know one Illusion cantrip.</td>
+</tr>
+<tr>
+<td><strong>Sea Elf</strong></td>
+<td>Spirit</td>
+<td><strong>Tidecaller</strong> — <strong>swim</strong> speed = your Speed; breathe water.</td>
+</tr>
+<tr>
+<td><strong>Eladrin</strong></td>
+<td>Charisma</td>
+<td><strong>Fey Step</strong> — cast <em>Misty Step</em> <strong>1/rest</strong>, no mana.</td>
+</tr>
+</tbody></table>
+<h2>Dwarves <em>— stone-steady, clan-proud, deep-delving.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Mountain Dwarf</strong></td>
+<td>Might</td>
+<td><strong>Stone-Hearted</strong> — <strong>darkvision</strong>; advantage on Charisma defense vs. fear &amp; charm. <em>(the classic Dwarf)</em></td>
+</tr>
+<tr>
+<td><strong>Hill Dwarf</strong></td>
+<td>Spirit</td>
+<td><strong>Dwarven Resilience</strong> — <strong>darkvision</strong>; advantage on defense vs. Poisoned.</td>
+</tr>
+<tr>
+<td><strong>Duergar</strong></td>
+<td>Mind</td>
+<td><strong>Gray Dwarf</strong> — <strong>darkvision</strong>; advantage on your Mind defense vs. spells.</td>
+</tr>
+</tbody></table>
+<h2>Halflings <em>— small, warm, harder to kill than they look.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Lightfoot Halfling</strong></td>
+<td>Agility</td>
+<td><strong>Lucky</strong> — 1/rest, reroll any one of your d20s and take the new result. <em>(the classic Halfling)</em></td>
+</tr>
+<tr>
+<td><strong>Stout Halfling</strong></td>
+<td>Spirit</td>
+<td><strong>Stout Gut</strong> — resistance to poison; advantage on defense vs. Poisoned.</td>
+</tr>
+</tbody></table>
+<h2>Gnomes <em>— small, clever, endlessly curious.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Forest Gnome</strong></td>
+<td>Mind</td>
+<td><strong>Forest Cunning</strong> — know <em>Minor Illusion</em>; advantage on Stealth.</td>
+</tr>
+<tr>
+<td><strong>Rock Gnome</strong></td>
+<td>Mind</td>
+<td><strong>Tinker&#39;s Mind</strong> — advantage on Crafting and on your Mind defense vs. spells.</td>
+</tr>
+<tr>
+<td><strong>Deep Gnome</strong></td>
+<td>Agility</td>
+<td><strong>Stone Camouflage</strong> — <strong>darkvision</strong>; advantage on Stealth in stone or underground.</td>
+</tr>
+</tbody></table>
+<h2>Goblinoids <em>— scrappy, canny, built for the fight.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Goblin</strong></td>
+<td>Agility</td>
+<td><strong>Scurry</strong> — Speed <strong>8</strong>; move through the space of any larger creature. <em>(the classic Goblin)</em></td>
+</tr>
+<tr>
+<td><strong>Hobgoblin</strong></td>
+<td>Mind</td>
+<td><strong>Saving Face</strong> — 1/rest, reroll a failed attack or check if an ally is within Near.</td>
+</tr>
+<tr>
+<td><strong>Bugbear</strong></td>
+<td>Might</td>
+<td><strong>Long-Limbed</strong> — your melee reach is <strong>+1 square</strong>; advantage on Stealth.</td>
+</tr>
+<tr>
+<td><strong>Kobold</strong></td>
+<td>Agility</td>
+<td><strong>Pack Cunning</strong> — advantage on attacks while an ally is adjacent to your target.</td>
+</tr>
+</tbody></table>
+<h2>Orcs <em>— fierce, enduring, hard to put down.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Orc</strong></td>
+<td>Might</td>
+<td><strong>Savage Reserves</strong> — 1/rest, when you&#39;d drop to 0 HP, drop to <strong>1</strong> instead. <em>(the classic Orc)</em></td>
+</tr>
+<tr>
+<td><strong>Half-Orc</strong></td>
+<td><em>(see Humans &amp; half-folk)</em></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2>Dragonborn <em>— drake-blooded, proud, marked by an element.</em></h2>
+<p>Each carries a <strong>Breath</strong> (1/rest Close cone, <code>2d6</code> of its element) and <strong>resistance</strong> to that element. <em>(Chromatic and metallic dragonborn are flavor reskins of these five elements.)</em></p>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Element</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Flame Dragonborn</strong></td>
+<td>Charisma</td>
+<td>fire</td>
+</tr>
+<tr>
+<td><strong>Frost Dragonborn</strong></td>
+<td>Might</td>
+<td>cold</td>
+</tr>
+<tr>
+<td><strong>Storm Dragonborn</strong></td>
+<td>Charisma</td>
+<td>lightning</td>
+</tr>
+<tr>
+<td><strong>Acid Dragonborn</strong></td>
+<td>Might</td>
+<td>acid</td>
+</tr>
+<tr>
+<td><strong>Venom Dragonborn</strong></td>
+<td>Might</td>
+<td>poison</td>
+</tr>
+</tbody></table>
+<h2>Tieflings <em>— fiend-touched, charismatic, walking a hard road.</em></h2>
+<p>All Tieflings see in <strong>dim light</strong>. <em>(Other infernal lineages reskin these five.)</em></p>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Infernal Tiefling</strong></td>
+<td>Charisma</td>
+<td><strong>Hellfire Blood</strong> — resistance to fire; know <em>Spark</em>.</td>
+</tr>
+<tr>
+<td><strong>Abyssal Tiefling</strong></td>
+<td>Charisma</td>
+<td><strong>Demon-Marked</strong> — resistance to necrotic; know <em>Daze</em>.</td>
+</tr>
+<tr>
+<td><strong>Glasya Tiefling</strong></td>
+<td>Charisma</td>
+<td><strong>Silver Tongue</strong> — advantage on Deception (Persuasion); know <em>Minor Illusion</em>.</td>
+</tr>
+<tr>
+<td><strong>Levistus Tiefling</strong></td>
+<td>Charisma</td>
+<td><strong>Frostblood</strong> — resistance to cold; advantage on defense vs. Frightened.</td>
+</tr>
+<tr>
+<td><strong>Zariel Tiefling</strong></td>
+<td>Might</td>
+<td><strong>Warbrand</strong> — resistance to fire; advantage on Intimidation.</td>
+</tr>
+</tbody></table>
+<h2>Aasimar <em>— light-touched, burdened with a calling.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Protector Aasimar</strong></td>
+<td>Spirit</td>
+<td><strong>Celestial Ward</strong> — resistance to radiant and necrotic.</td>
+</tr>
+<tr>
+<td><strong>Scourge Aasimar</strong></td>
+<td>Spirit</td>
+<td><strong>Searing Soul</strong> — 1/rest, deal <code>2d6</code> radiant to one creature you touch or hit.</td>
+</tr>
+<tr>
+<td><strong>Fallen Aasimar</strong></td>
+<td>Charisma</td>
+<td><strong>Shadowed Halo</strong> — resistance to necrotic; advantage on defense vs. Frightened.</td>
+</tr>
+</tbody></table>
+<h2>Genasi <em>— elemental-blooded, each a different temper.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Fire Genasi</strong></td>
+<td>Charisma</td>
+<td><strong>Ember Soul</strong> — resistance to fire; know <em>Spark</em>.</td>
+</tr>
+<tr>
+<td><strong>Water Genasi</strong></td>
+<td>Spirit</td>
+<td><strong>Tideborn</strong> — <strong>swim</strong> speed = your Speed; breathe water.</td>
+</tr>
+<tr>
+<td><strong>Air Genasi</strong></td>
+<td>Agility</td>
+<td><strong>Windborn</strong> — resistance to lightning; you take no falling damage.</td>
+</tr>
+<tr>
+<td><strong>Earth Genasi</strong></td>
+<td>Might</td>
+<td><strong>Stoneborn</strong> — ignore rocky difficult terrain; you can&#39;t be knocked Prone against your will.</td>
+</tr>
+</tbody></table>
+<h2>Beastfolk <em>— kin to the wild things.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Tabaxi</strong> <em>(catfolk)</em></td>
+<td>Agility</td>
+<td><strong>Cat&#39;s Grace</strong> — <strong>climb</strong> speed = your Speed; claws (<code>1d6</code>).</td>
+</tr>
+<tr>
+<td><strong>Leonin</strong> <em>(lionfolk)</em></td>
+<td>Might</td>
+<td><strong>Mane &amp; Claw</strong> — claws (<code>1d6</code>); advantage on Intimidation.</td>
+</tr>
+<tr>
+<td><strong>Lizardfolk</strong></td>
+<td>Spirit</td>
+<td><strong>Hardened Hide</strong> — natural <strong>+1 Armor</strong>; hold your breath up to 15 minutes.</td>
+</tr>
+<tr>
+<td><strong>Minotaur</strong></td>
+<td>Might</td>
+<td><strong>Goring Charge</strong> — horns (<code>1d6</code>); if you move 2+ squares straight at a foe, the hit deals <strong>+1d6</strong>.</td>
+</tr>
+<tr>
+<td><strong>Tortle</strong></td>
+<td>Spirit</td>
+<td><strong>Shell</strong> — natural <strong>+1 Armor</strong>; hold your breath up to 1 hour.</td>
+</tr>
+<tr>
+<td><strong>Shifter</strong></td>
+<td>Agility</td>
+<td><strong>Beastshift</strong> — 1/rest for 1 minute, gain claws (<code>1d6</code>) and Speed <strong>8</strong>.</td>
+</tr>
+<tr>
+<td><strong>Grung</strong> <em>(frogfolk)</em></td>
+<td>Agility</td>
+<td><strong>Clammy Climb</strong> — <strong>climb</strong> speed = your Speed; advantage on defense vs. Poisoned.</td>
+</tr>
+</tbody></table>
+<h2>Winged folk <em>— at home in the air.</em></h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Aarakocra</strong> <em>(birdfolk)</em></td>
+<td>Agility</td>
+<td><strong>Gliding Flight</strong> — glide (no fall damage); 1/rest, fly your Speed once on your turn.</td>
+</tr>
+<tr>
+<td><strong>Kenku</strong></td>
+<td>Agility</td>
+<td><strong>Mimicry</strong> — glide (no fall damage); advantage on Deception of voices and sounds.</td>
+</tr>
+<tr>
+<td><strong>Fairy</strong></td>
+<td>Charisma</td>
+<td><strong>Pixie Step</strong> — glide (no fall damage); know <em>Minor Illusion</em>.</td>
+</tr>
+<tr>
+<td><strong>Owlin</strong></td>
+<td>Mind</td>
+<td><strong>Silent Wings</strong> — see in dim light; advantage on Stealth while airborne or in shadow.</td>
+</tr>
+</tbody></table>
+<h2>Sea &amp; deep folk</h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Triton</strong></td>
+<td>Spirit</td>
+<td><strong>Child of the Deep</strong> — <strong>swim</strong> speed = your Speed, breathe water; resistance to cold.</td>
+</tr>
+<tr>
+<td><strong>Locathah</strong> <em>(fishfolk)</em></td>
+<td>Agility</td>
+<td><strong>Finned</strong> — <strong>swim</strong> speed = your Speed; natural <strong>+1 Armor</strong> (scaled hide).</td>
+</tr>
+<tr>
+<td><strong>Plasmoid</strong> <em>(ooze)</em></td>
+<td>Agility</td>
+<td><strong>Amorphous</strong> — squeeze through any gap a fist can pass; resistance to acid.</td>
+</tr>
+</tbody></table>
+<h2>Fey &amp; uncanny folk</h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Satyr</strong></td>
+<td>Charisma</td>
+<td><strong>Fey Revel</strong> — advantage on Charisma defense vs. charm &amp; fear; advantage on Persuasion through performance.</td>
+</tr>
+<tr>
+<td><strong>Changeling</strong></td>
+<td>Charisma</td>
+<td><strong>Many Faces</strong> — at will, alter your appearance to any humanoid of your size (cosmetic only); advantage on Deception.</td>
+</tr>
+<tr>
+<td><strong>Firbolg</strong></td>
+<td>Spirit</td>
+<td><strong>Wild Step</strong> — advantage on Wilderness; move through natural difficult terrain freely.</td>
+</tr>
+<tr>
+<td><strong>Centaur</strong></td>
+<td>Might</td>
+<td><strong>Charger</strong> — Speed <strong>8</strong>; if you move 2+ squares straight at a foe, the hit deals <strong>+1d6</strong>.</td>
+</tr>
+<tr>
+<td><strong>Goliath</strong></td>
+<td>Might</td>
+<td><strong>Mountain-Born</strong> — advantage on Endurance; ignore rocky difficult terrain.</td>
+</tr>
+<tr>
+<td><strong>Harengon</strong> <em>(rabbitfolk)</em></td>
+<td>Agility</td>
+<td><strong>Hare-Trigger</strong> — 1/rest reroll a d20; you take no falling damage.</td>
+</tr>
+<tr>
+<td><strong>Yuan-ti</strong> <em>(serpentfolk)</em></td>
+<td>Charisma</td>
+<td><strong>Serpent&#39;s Guile</strong> — resistance to poison; advantage on your Mind defense vs. spells.</td>
+</tr>
+</tbody></table>
+<h2>Made &amp; ageless folk</h2>
+<table>
+<thead>
+<tr>
+<th>Ancestry</th>
+<th>+1</th>
+<th>Racial Signature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Warforged</strong></td>
+<td>Might</td>
+<td><strong>Integrated Plating</strong> — natural <strong>+1 Armor</strong>; immune to disease; you needn&#39;t eat, breathe, or sleep.</td>
+</tr>
+<tr>
+<td><strong>Autognome</strong> <em>(clockwork)</em></td>
+<td>Mind</td>
+<td><strong>Built to Last</strong> — immune to disease and poison; advantage on defense vs. Poisoned.</td>
+</tr>
+<tr>
+<td><strong>Vedalken</strong></td>
+<td>Mind</td>
+<td><strong>Dispassionate</strong> — 1/rest, reroll a failed Mind-based check; advantage on defense vs. Charmed.</td>
+</tr>
+<tr>
+<td><strong>Reborn</strong> <em>(revenant)</em></td>
+<td>Spirit</td>
+<td><strong>Deathless</strong> — advantage on defense vs. Frightened; immune to disease, and you needn&#39;t breathe.</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>What ancestry doesn&#39;t decide</h2>
+<ul>
+<li><strong>Your class.</strong> The <code>+1</code> nudges, it doesn&#39;t gate — a Might-favoring Orc can be a caster; a Charisma Tiefling can swing a greataxe.</li>
+<li><strong>Your pool, perks, or signatures-beyond-the-racial.</strong> Those come from class and level (<a href="19-classes.md">19-classes.md</a>, <a href="03-progression.md">03-progression.md</a>).</li>
+<li><strong>Language, age, height as stats.</strong> Flavor only (<a href="02-character-creation.md">02-character-creation.md</a>).</li>
+</ul>
+<p>If a player wants an ancestry not listed, the GM builds one from the toolbox above: <strong><code>+1</code> to one ability + one trait of comparable power.</strong> That&#39;s the whole recipe.</p>
 <h1>Balance Notes — Martials vs. Casters (Level 1)</h1>
 <p>A living design doc. Captures a balance analysis of the four base classes and the <strong>guardrails to protect when expanding the catalog</strong> (new classes, bigger spell roster, material tiers). Not a rule — a reference for whoever designs new content.</p>
 <blockquote>

@@ -18,7 +18,7 @@ A standalone tabletop RPG in the D&D tradition — **about one-third the rules o
 ## Repository layout
 
 ```
-rules/                 The rulebook, in chapters 00–19 (+ balance-notes)
+rules/                 The rulebook, in chapters 00–20 (+ balance-notes)
 adventures/            Ready-to-run adventures
   the-bell-of-ashvane/   a 4-hour one-shot + pre-made characters + battlemap
 map-tool/              Browser-based virtual tabletop (open index.html)
@@ -38,7 +38,8 @@ build_pdf.py           Builds the 4-page character sheet PDF
 | 03 Progression | 10 Spell Catalog | 17 Weapons |
 | 04 Skills & Checks | 11 Equipment | 18 Armor |
 | 05 Combat | 12 Monsters | 19 Classes |
-| 06 Attack & Defense | 13 Encounters & Rewards | balance-notes |
+| 06 Attack & Defense | 13 Encounters & Rewards | 20 Ancestries |
+| | | balance-notes |
 
 ## What makes it different
 

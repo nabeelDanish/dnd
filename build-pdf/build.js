@@ -256,7 +256,7 @@ const html = `<!DOCTYPE html>
 <div class="title-page">
   <div class="title">The Rules</div>
   <div class="rule"></div>
-  <div class="subtitle">A lean D&amp;D-style tabletop RPG, in sixteen chapters</div>
+  <div class="subtitle">A lean D&amp;D-style tabletop RPG</div>
   <div class="meta">v1 · for personal use</div>
 </div>
 

@@ -49,7 +49,7 @@ Your class gives you:
 
 ## Ancestry
 
-Pick one. Each grants an ability bump and one mechanical trait — **your Racial Signature**, one of your two level-1 signatures. No subraces, no half-versions.
+Pick one. Each grants an ability bump and one mechanical trait — **your Racial Signature**, one of your two level-1 signatures. The six below are a quick **starter set**; the **full catalog of ~50 ancestries** — across all five abilities, including caster-favoring lineages — lives in [20-ancestries.md](20-ancestries.md).
 
 | Ancestry | Ability | Trait |
 |---|---|---|
@@ -60,7 +60,7 @@ Pick one. Each grants an ability bump and one mechanical trait — **your Racial
 | **Orc** | `+1` Might | **Savage Reserves** — once per rest, when you drop to 0 HP, you instead drop to `1` HP. |
 | **Goblin** | `+1` Agility | **Scurry** — your speed is `8` squares (40 ft) instead of `6`. You can move through spaces of creatures larger than you. |
 
-This is the whole list. The GM is free to invent new ancestries that follow the same template: one ability `+1`, one trait of comparable power.
+These six are the starter set. The full roster — Dragonborn, Tiefling, Aasimar, Genasi, beastfolk, winged folk, and more — is in [20-ancestries.md](20-ancestries.md), along with a **trait toolbox** the GM can use to build new ancestries on the same template: one ability `+1`, one trait of comparable power.
 
 ## Background
 

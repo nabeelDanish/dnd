@@ -140,7 +140,7 @@ At the **level-20 capstone**, your Class Signature **ascends** to a master versi
 | # | Class | Weapons | Primary |
 |---|---|---|---|
 | 10 | Gladiator | Light + Medium + Heavy | Might |
-| 11 | Blademaster | Light + Medium + Ranged | Might |
+| 11 | Blademaster | Light + Medium + Ranged | Agility |
 | 12 | Marauder | Light + Heavy + Ranged | Might |
 | 13 | Weaponmaster | Medium + Heavy + Ranged | Might |
 

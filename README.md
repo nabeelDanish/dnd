@@ -22,7 +22,7 @@ rules/                 The rulebook, in chapters 00–20 (+ balance-notes)
 adventures/            Ready-to-run adventures
   the-bell-of-ashvane/   a 4-hour one-shot + pre-made characters + battlemap
 map-tool/              Browser-based virtual tabletop (open index.html)
-quick-ref/             Single-page A4 weapon & armor reference cards (PDF)
+quick-ref/             A4 reference cards (PDF): weapons, armor, shop, classes, spells, ancestries
 character-sheet.md     Fillable character sheet (→ character-sheet.pdf)
 build-pdf/             Build scripts for the rulebook + quick-ref PDFs
 build_pdf.py           Builds the 4-page character sheet PDF

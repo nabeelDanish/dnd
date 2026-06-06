@@ -405,7 +405,79 @@ Each class offers **six trainings**; you **pick 2 at creation** (plus 1 from you
 
 ## Starting kits
 
-Your kit follows from your components too — see the **per-archetype kits** and the build formula in [11-equipment.md](11-equipment.md): a weapon for each weapon type you train in (apprentice material), your armor tier, a caster focus matched to your pool, the adventuring kit, and a little gold.
+Each kit is built by the formula in [11-equipment.md](11-equipment.md) — a weapon for each weapon type you train in (apprentice material), your armor tier, a **focus** matched to your pool (Mind → spellbook · Spirit → holy symbol · Charisma → arcane focus/instrument), the **adventuring kit**, and a little gold. All 48 spelled out below; reflavor weapons freely (a "longsword" can be a mace, a "shortsword" a pair of daggers).
+
+### ⚔️ Fighting — armored
+| # | Class | Starting kit *(+ adventuring kit)* |
+|---|---|---|
+| 1 | Duelist | Leather armor · Steel longsword + Iron shortsword · shield · 10g |
+| 2 | Reaver | Leather armor · Steel greatsword + Iron shortsword · 10g |
+| 3 | Ranger | Leather armor · Steel longbow + 20 arrows + Iron shortsword · 10g |
+| 4 | Berserker | Leather armor · Steel greatsword + Iron longsword · 10g |
+| 5 | Skirmisher | Leather armor · Steel longsword + Iron longbow + 20 arrows · 10g |
+| 6 | Outrider | Leather armor · Steel greatsword + Iron longbow + 20 arrows · 10g |
+| 7 | Sentinel | Steel heavy armor · Steel longsword + Iron shortsword · shield · 10g |
+| 8 | Vanguard | Steel heavy armor · Steel greatsword + Iron shortsword · 10g |
+| 9 | Knight | Steel heavy armor · Steel greatsword + Iron longsword · 10g |
+
+### 🗡️ Fighting — naked weapon-master
+| # | Class | Starting kit *(+ adventuring kit)* |
+|---|---|---|
+| 10 | Gladiator | No armor · Iron shortsword + longsword + greatsword · 15g |
+| 11 | Blademaster | No armor · Iron shortsword + longsword + longbow + 20 arrows · 15g |
+| 12 | Marauder | No armor · Iron shortsword + greatsword + longbow + 20 arrows · 15g |
+| 13 | Weaponmaster | No armor · Iron longsword + greatsword + longbow + 20 arrows · 15g |
+
+### 🪄 Half-caster
+| # | Class | Starting kit *(+ adventuring kit)* |
+|---|---|---|
+| 14 | Spellblade | Leather armor · Iron shortsword · spellbook · 10g |
+| 15 | Adept | Leather armor · Iron shortsword · spellbook · 10g |
+| 16 | Warden | Leather armor · Iron shortsword · holy symbol · 10g |
+| 17 | Trickster | Leather armor · Iron shortsword · arcane focus · 10g |
+| 18 | Acolyte | Leather armor · Iron mace · holy symbol · 10g |
+
+### 🔮 Spellsword
+| # | Class | Starting kit *(+ adventuring kit)* |
+|---|---|---|
+| 19 | Death Knight | No armor · Steel longsword · holy symbol · 10g |
+| 20 | Battlemage | No armor · Steel longsword · spellbook · 10g |
+| 21 | Hexblade | No armor · Steel longsword · arcane focus · 10g |
+| 22 | Paladin | No armor · Steel mace · holy symbol · 10g |
+| 23 | Spellforged | No armor · Steel longsword · spellbook · 10g |
+| 24 | Witch-blade | No armor · Steel longsword · arcane focus · 10g |
+| 25 | Wraith Knight | No armor · Steel longsword · holy symbol · 10g |
+| 26 | Mindblade | No armor · Steel longsword · spellbook · 10g |
+| 27 | Cleric-Knight | No armor · Steel mace · holy symbol · 10g |
+| 28 | Sword-Bard | No armor · Steel longsword · instrument (focus) · 10g |
+
+### ✨ Caster
+| # | Class | Starting kit *(+ adventuring kit)* |
+|---|---|---|
+| 29 | Warlock | Leather armor · Iron dagger · arcane focus · 15g |
+| 30 | Sorcerer | Leather armor · Iron dagger · arcane focus · 15g |
+| 31 | Mentalist | Leather armor · Iron dagger · spellbook · 15g |
+| 32 | Templar | Leather armor · Iron mace · holy symbol · 15g |
+| 33 | Artificer | Leather armor · Iron dagger · spellbook · 15g |
+| 34 | Mage | Leather armor · Iron dagger · spellbook · 15g |
+| 35 | Shaman | Leather armor · Iron dagger · holy symbol · 15g |
+| 36 | Enchanter | Leather armor · Iron dagger · arcane focus · 15g |
+| 37 | Priest | Leather armor · Iron mace · holy symbol · 15g |
+| 38 | Bard | Leather armor · Iron dagger · instrument (focus) · 15g |
+
+### 🌌 Full caster
+| # | Class | Starting kit *(+ adventuring kit)* |
+|---|---|---|
+| 39 | Elementalist | Robes (no armor) · Iron dagger · spellbook · 15g |
+| 40 | Archmage | Robes (no armor) · Iron dagger · spellbook · 15g |
+| 41 | Necromancer | Robes (no armor) · Iron dagger · holy symbol · 15g |
+| 42 | Spellmystic | Robes (no armor) · Iron dagger · spellbook · 15g |
+| 43 | Oracle | Robes (no armor) · Iron dagger · holy symbol · 15g |
+| 44 | Witch | Robes (no armor) · Iron dagger · arcane focus · 15g |
+| 45 | Mystic | Robes (no armor) · Iron dagger · arcane focus · 15g |
+| 46 | Druid | Robes (no armor) · Iron dagger · holy symbol (druidic focus) · 15g |
+| 47 | Spiritualist | Robes (no armor) · Iron dagger · holy symbol · 15g |
+| 48 | Seer | Robes (no armor) · Iron dagger · holy symbol · 15g |
 
 ## What this system doesn't have
 

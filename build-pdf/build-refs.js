@@ -371,6 +371,7 @@ const jobs = [
   { name: 'shop-quickref',    html: cardPage('Shop',    'Spending gold · A4 landscape · v1', shopBody) },
   { name: 'classes-quickref', html: docPage('19-classes.md') },
   { name: 'spells-quickref',  html: docPage('10-spell-list.md') },
+  { name: 'ancestries-quickref', html: docPage('20-ancestries.md') },
 ];
 
 if (!fs.existsSync(chrome)) {

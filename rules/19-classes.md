@@ -31,13 +31,14 @@ A class is a **legal combination of components**. Pick a template, fill its slot
 
 ### The build economy (the balance spine)
 
-> **Every class is exactly 3 perks.** A pick is *1 weapon type* or *1 school*; an armor tier carries a perk too.
+> **Every class is built from exactly 3 components.** A component is *1 weapon type*, *1 school*, or *1 armor tier*.
 
-- Baseline = **2 picks + an armor tier** = 3 perks.
+- Baseline = **2 picks (weapons/schools) + an armor tier** = 3 components.
 - **Going naked (no armor) buys a 3rd pick** but drops you to the lowest HP *and* Armor — the glass-cannon bargain.
-- Each component grants one **perk** (the 11 below); your class also has **1 unique override** you may swap in for any one of them (it *replaces*, never adds — so the total is always 3).
-- A class is legal **iff it lands on 3 perks** under this economy. That makes balance checkable by counting.
-- **No class ever exceeds 3 perks.** So you can't have 2 schools *and* a weapon *and* armor (that's 4): a 2-school gish goes **naked** (the **Spellsword** — its weapon and spells share one stat, so being lightly built is fine), and an *armored* gish takes only **1 school** (the **Half-caster**). The armored 2-school war-mage simply doesn't exist — by design.
+- **Each component is a 2-perk track** — a *basic* perk and an *advanced* perk (the tracks below). You **unlock these as you level**, not at creation: a class's full kit is **6 perks**, gained one at a time across the campaign ([03-progression.md](03-progression.md)).
+- On top of the components, every character gets **2 Signatures at level 1**: a **Racial Signature** (your ancestry trait, [02-character-creation.md](02-character-creation.md)) and a unique **Class Signature** (below). These are your identity from turn one.
+- A build is legal **iff it lands on 3 components** — still checkable by counting. And because the unlock schedule is fixed, **every character of a given level has the same number of abilities** (2 signatures + the perks unlocked so far).
+- **No build exceeds 3 components.** So you can't have 2 schools *and* a weapon *and* armor (that's 4): a 2-school gish goes **naked** (the **Spellsword** — its weapon and spells share one stat, so being lightly built is fine), and an *armored* gish takes only **1 school** (the **Half-caster**). The armored 2-school war-mage simply doesn't exist — by design.
 
 ### HP & primary ability
 - **HP rides the armor tier:** Heavy `10 + Might` · Light `8 + Might` · None `6 + Might`. Per-level gain `1d6 + Might` (1s/2s count as 3).
@@ -61,53 +62,60 @@ A magic class casts from one **pool** (`level + Mind`, `level + Spirit`, *or* `l
 
 ---
 
-## The 11 component perks
+## Component perk tracks
 
-Each component grants one signature perk, shared by anyone who takes it.
+Each component is a **2-perk track**: a **basic** perk and an **advanced** one. You unlock perks on your perk levels (3 / 6 / 9 then 12 / 15 / 18 — [03-progression.md](03-progression.md)), basics first; a component's **advanced** perk requires you already hold its **basic** perk. By level 18 you hold all 6 perks of your 3 components.
 
-### Weapon perks
-| Component | Perk | Effect |
+### Weapon tracks
+| Component | Basic | Advanced |
 |---|---|---|
-| **Light** | **Sneak Strike** | Once per turn, when you attack with advantage or an ally is adjacent to your target, deal **+1d6** on a hit. |
-| **Medium** | **Riposte** | Once per round, when a creature **misses you** in melee, immediately make one weapon attack against it. |
-| **Heavy** | **Cleave** | When your attack drops a creature to 0 HP, make another attack against a different target in reach, same action. |
-| **Ranged** | **Deadeye** | Your ranged attacks ignore half-cover. Once per turn, if your target is at **Far** range, deal **+1d6** on a hit. |
+| **Light** | **Sneak Strike** — once per turn, when you attack with advantage or an ally is adjacent to your target, deal **+1d6** on a hit. | **Shadowstrike** — your Sneak Strike die becomes **+2d6**; the first time each combat you hit a creature that hasn't acted yet, it's **+3d6**. |
+| **Medium** | **Riposte** — once per round, when a creature **misses you** in melee, immediately make one weapon attack against it. | **Riposte Mastery** — Riposte triggers when an enemy **hits *or* misses** you in melee (still 1/round), and the riposte attack has **advantage**. |
+| **Heavy** | **Cleave** — when your attack drops a creature to 0 HP, make another attack against a different target in reach, same action. | **Reaving Sweep** — once per turn deal **+1d10** on a hit; and Cleave now also chains off a hit that drops a target **below half HP**, not only to 0. |
+| **Ranged** | **Deadeye** — your ranged attacks ignore half-cover. Once per turn, if your target is at **Far** range, deal **+1d6** on a hit. | **Piercing Volley** — once per turn your ranged attack strikes **every creature in a line** to your target (roll each separately) and ignores all cover. |
 
-### Armor perks
-| Component | Perk | Effect |
+### Armor tracks
+| Component | Basic | Advanced |
 |---|---|---|
-| **Light armor** | **Slip Away** | When an adjacent enemy takes an action that isn't attacking you, move up to **half your Speed** without provoking. |
-| **Heavy armor** | **Bulwark** | Allies adjacent to you have **+1 Armor**. *(A flat bonus to a static defense — permitted; the "no stacking +1" rule governs d20 rolls.)* |
+| **Light armor** | **Slip Away** — when an adjacent enemy takes an action that isn't attacking you, move up to **half your Speed** without provoking. | **Evasion** — when an **area effect** rolls against your Armor, a hit deals **half**, a miss deals **none**; and Slip Away no longer needs the enemy to skip attacking you. |
+| **Heavy armor** | **Bulwark** — allies adjacent to you have **+1 Armor**. *(A flat bonus to a static defense — permitted; the "no stacking +1" rule governs d20 rolls.)* | **Immovable** — you can't be moved, knocked **Prone**, or **Grappled** against your will, and your Bulwark bonus rises to **+2 Armor**. |
 
-### School perks
-| Component | Perk | Effect |
+### School tracks
+| Component | Basic | Advanced |
 |---|---|---|
-| **Destruction** | **Devastation** | Once per turn, reroll 1s and 2s on a Destruction spell's damage dice. |
-| **Conjuration** | **Master Summoner** | Your summons get **+1 to attack** and last **2 extra rounds** (see Summoning, [10-spell-list.md](10-spell-list.md)). |
-| **Alteration** | **Arcane Ward** | While you have **1+ mana**, you gain **+2 Armor**. |
-| **Illusion** | **Beguiling** | Creatures roll at **disadvantage** to resist or break free of your Illusion effects. |
-| **Restoration** | **Divine Touch** | As your action, touch a creature to heal **`1d6 + pool`**. Usable **`1 + pool`** times per rest. |
+| **Destruction** | **Devastation** — once per turn, reroll 1s and 2s on a Destruction spell's damage dice. | **Overload** — once per rest, **maximize** all the damage dice of one Destruction spell you cast. |
+| **Conjuration** | **Master Summoner** — your summons get **+1 to attack** and last **2 extra rounds** (see Summoning, [10-spell-list.md](10-spell-list.md)). | **Greater Binding** — your summons gain **+1d6 to attacks and +10 HP**; your bound weapons step up one die (`1d8 → 1d10`). |
+| **Alteration** | **Arcane Ward** — while you have **1+ mana**, you gain **+2 Armor**. | **Greater Ward** — your Arcane Ward rises to **+3 Armor**, and once per rest you may extend a `+3` ward to a touched ally for 1 minute. |
+| **Illusion** | **Beguiling** — creatures roll at **disadvantage** to resist or break free of your Illusion effects. | **Shatter Will** — once per rest, a creature in Near rolls its **lowest** mental defense (Mind/Spirit/Charisma) vs. your spell attack or is **Stunned** until the end of its next turn. |
+| **Restoration** | **Divine Touch** — as your action, touch a creature to heal **`1d6 + pool`**. Usable **`1 + pool`** times per rest. | **Greater Mending** — your Divine Touch heals **`2d6 + pool`** and may be used at **Near** range (no touch needed). |
 
-## The override perk
+## Signatures (your identity)
 
-> Each class ships with **one unique signature perk**, which you may **swap in for any one of your 3 component perks.** It replaces, never adds — total stays 3. It's tuned to ≈ a component perk in power (unique, not stronger), and it's the one thing only your class does. Optional: keep all 3 component perks if you prefer.
+Two unique abilities define who you are. Both are granted at **level 1** and never have to be earned:
+
+- **Class Signature** — the one thing only your class does, tuned to ≈ a perk in power (unique, not stronger). The 48 are listed under *Class signatures* below. *(These were the old "override" perks — they now stand on their own at level 1 instead of swapping for a component perk.)*
+- **Racial Signature** — your ancestry's trait ([02-character-creation.md](02-character-creation.md)).
+
+At the **level-20 capstone**, your Class Signature **ascends** to a master version — as a rule of thumb: double its dice, drop a "once per rest" limit, or widen its range or targets — but **never a second action**. The GM signs off on the upgrade in the spirit of the original. *(Per-class ascensions are a content pass; until then, use this rule.)*
 
 ---
 
 ## How the original four map
 
-| Old class | New class (#) | Components | Component perks |
+| Old class | New class (#) | Components | Basic-rung perks |
 |---|---|---|---|
 | **Warrior** | **Knight** (#9) | Medium + Heavy · Heavy armor · Might | Riposte · Cleave · Bulwark |
 | **Scout** | **Ranger** (#3) | Light + Ranged · Light armor · Agility | Sneak Strike · Deadeye · Slip Away |
 | **Mage** | **Mage** (#34) | Conjuration + Illusion · Light armor · Mind | Master Summoner · Beguiling · Slip Away |
 | **Priest** | **Priest** (#37) | Alteration + Restoration · Light armor · Spirit | Arcane Ward · Divine Touch · Slip Away |
 
+*(The perks shown are each component's **basic** rung — unlocked over levels 3/6/9, with the matching **advanced** rung following at 12/15/18. Each class also has its **Class Signature** plus a **Racial Signature** from level 1.)*
+
 ## Building a character (revised step 2 of [02-character-creation.md](02-character-creation.md))
 
 1. Assign abilities `+3 / +2 / +1 / +1 / +0`.
-2. **Pick a class** → `+1` to its primary, weapon/armor/school training, HP tier, mana (if any), 3 component perks + 1 override.
-3. Ancestry (`+1` + trait). 4. Background (+1 training). 5. Three trainings (4 if Human). 6. Defenses, equipment, spells.
+2. **Pick a class** → `+1` to its primary, weapon/armor/school training, HP tier, mana (if any), your **Class Signature**, and the **component perk tracks** you'll unlock as you level.
+3. Ancestry (`+1` + **Racial Signature**). 4. Background (+1 training). 5. Three trainings (4 if Human). 6. Defenses, equipment, spells.
 
 ---
 
@@ -189,9 +197,9 @@ Each component grants one signature perk, shared by anyone who takes it.
 
 ---
 
-## Class signatures — descriptions & overrides
+## Class signatures — descriptions & abilities
 
-Each class's one-line identity and its unique **override perk** (swaps in for one component perk). 🌶️ = flagged for playtest.
+Each class's one-line identity and its unique **Class Signature**, granted at level 1 (the ability marked ↳). 🌶️ = flagged for playtest.
 
 ### Fighting — armored
 - **1 · Duelist** — *A nimble blade-dancer who turns a foe's commitment into an opening.*
@@ -308,5 +316,5 @@ Each class's one-line identity and its unique **override perk** (swaps in for on
 - Subclasses or multiclassing (the combinations replace both).
 - A separate martial resource pool (at-will weapons are the martial engine).
 - A speed stat for armor (weight rule ③ handles it via tempo, not Speed).
-- Per-class bespoke rules beyond 3 perks + 1 override.
-- More than 3 perks on any character, ever (the balance invariant).
+- Per-class bespoke rules beyond your component tracks + 2 signatures.
+- More than **3 components** on any build (the balance invariant — the 6 perks unlock from those 3 components over levels).

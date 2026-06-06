@@ -25,11 +25,11 @@ Agility-based. The material sets the bonus.
 
 | Grade | Material | Power tier | **Armor bonus** | Price |
 |---|---|---|---|---|
-| 1 | **Hide** | Apprentice (1–3) | `+1` | 5g |
-| 2 | **Leather** | Apprentice (1–3) | `+2` | 20g |
-| 3 | **Studded leather** | Veteran (4–7) | `+3` | 120g |
-| 4 | **Scaled** | Veteran (4–7) | `+4` | 500g |
-| 5 | **Dragonscale** | Master (8–10) | `+5` | 4,000g |
+| 1 | **Hide** | Apprentice (1–7) | `+1` | 5g |
+| 2 | **Leather** | Apprentice (1–7) | `+2` | 20g |
+| 3 | **Studded leather** | Veteran (8–14) | `+3` | 120g |
+| 4 | **Scaled** | Veteran (8–14) | `+4` | 500g |
+| 5 | **Dragonscale** | Master (15–20) | `+5` | 4,000g |
 
 > **Light, by Agility:** a Scout (Agility +5) in Scaled = `10 + 5 + 4 = 19`. A Priest (Agility +1) in Scaled = `10 + 1 + 4 = 15` — the flat material still helps a low-Agility caster, even though Agility doesn't.
 
@@ -39,12 +39,12 @@ Might-based. Same six materials as weapons (see [17-weapons.md](17-weapons.md));
 
 | Grade | Material | Power tier | **Armor bonus** | Price |
 |---|---|---|---|---|
-| 1 | **Iron** | Apprentice (1–3) | `+3` | 75g |
-| 2 | **Steel** | Apprentice (1–3) | `+4` | 200g |
-| 3 | **Dwarven** | Veteran (4–7) | `+5` | 800g |
-| 4 | **Orcish** | Veteran (4–7) | `+6` | 2,000g |
-| 5 | **Ebony** | Master (8–10) | `+7` | 5,000g |
-| 6 | **Daedric** | Master (8–10) | `+8` | 12,000g |
+| 1 | **Iron** | Apprentice (1–7) | `+3` | 75g |
+| 2 | **Steel** | Apprentice (1–7) | `+4` | 200g |
+| 3 | **Dwarven** | Veteran (8–14) | `+5` | 800g |
+| 4 | **Orcish** | Veteran (8–14) | `+6` | 2,000g |
+| 5 | **Ebony** | Master (15–20) | `+7` | 5,000g |
+| 6 | **Daedric** | Master (15–20) | `+8` | 12,000g |
 
 > **Heavy, by Might:** a Warrior (Might +4) in Iron = `10 + 4 + 3 = 17` at level 1. The same Warrior (Might +5) in Daedric = `10 + 5 + 8 = 23` at level 10.
 
@@ -66,9 +66,9 @@ This is the spine of the bounded math. Materials are pinned to the power tiers s
 
 | Power tier | Light wearer (Agi primary) | Heavy wearer (Might primary) | Unarmored caster |
 |---|---|---|---|
-| **Apprentice (1–3)** | 15–17 | 16–18 | 11–13 |
-| **Veteran (4–7)** | 17–19 | 19–21 | 12–14 |
-| **Master (8–10)** | 19–20 | 21–23 | 13–15 |
+| **Apprentice (1–7)** | 15–17 | 16–18 | 11–13 |
+| **Veteran (8–14)** | 17–19 | 19–21 | 12–14 |
+| **Master (15–20)** | 19–20 | 21–23 | 13–15 |
 
 A Tier-1 monster should be able to land on a 16–18 Armor on a meaningful fraction of swings; a Tier-3 monster, on a 21–23. If you hand a party gear *above* their tier (treasure), expect them to be harder to hit until the monsters catch up — that's the intended reward, used sparingly.
 

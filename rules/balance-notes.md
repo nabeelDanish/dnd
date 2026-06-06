@@ -104,14 +104,15 @@ When adding classes, spells, weapons, and armor (the "bigger roster" plan), the 
 
 The "bigger roster" plan above shipped as the **48-class component system** ([19-classes.md](19-classes.md)) + the school-tagged spell catalog ([10-spell-list.md](10-spell-list.md)). This section records how it stays balanced and where it brushed against the guardrails.
 
-## The balance spine: 3 perks, always
+## The balance spine: 3 components, fixed unlock schedule
 
-Every class — fighter, caster, or hybrid — is **exactly 3 perks**, no more, no less:
+Every class — fighter, caster, or hybrid — is built from **exactly 3 components**, and grows on a **fixed schedule** ([03-progression.md](03-progression.md)):
 
-- **Build economy:** 2 component picks (weapon types / schools) + an armor tier = the baseline. **Going naked (no armor) buys a 3rd pick** but drops you to the lowest HP *and* lowest Armor. So the budget is always **3 component perks**, and the class **override swaps in for one of them** (replaces, never adds).
-- This makes balance *checkable by counting*. A new class is legal iff it lands on 3 perks under the economy. No bespoke tuning per class.
+- **Build economy:** 2 component picks (weapon types / schools) + an armor tier = the baseline. **Going naked (no armor) buys a 3rd pick** but drops you to the lowest HP *and* lowest Armor. The budget is always **3 components**.
+- **Each component is a 2-perk track** (basic + advanced), so the full kit is **6 perks**, unlocked one per perk-level (3/6/9/12/15/18). On top, every character has **2 Signatures** from level 1 (Racial + Class) and a level-20 **capstone**.
+- This stays *checkable by counting*: a build is legal iff it lands on 3 components, and because the schedule is fixed, **every character of level N has the same number of abilities** (2 signatures + perks unlocked). No bespoke tuning per class.
 
-**Override rule:** an override must be **≈ a component perk in power** — unique, not stronger. It's the one thing only that class does; the cost is giving up a component perk you paid for. Net power unchanged.
+**Signature rule:** the Class Signature (formerly the "override") must be **≈ a perk in power** — unique, not stronger. The change from the old system: it's now a **standalone level-1 grant**, not a swap. Everyone gets it, uniformly, so relative balance is unchanged; the absolute floor rose slightly (you no longer pay a perk for it), which is the intended new baseline. **Advanced-rung perks and the Class-Signature ascensions are playtest items** — tuned to a strong veteran/master perk, watch they don't out-scale.
 
 ## HP & survivability by armor tier
 
@@ -128,14 +129,14 @@ HP now rides the armor tier instead of a per-class number:
 
 ## Where it tested the guardrails (and the fixes)
 
-- **Guardrail #1 (one action — never "cast AND attack").** The first draft of **Battlemage** had *Spell Burst* (weapon attack **plus** a cantrip same turn) — a direct violation. **Fixed** to *Runic Weapon* (an at-will +1d6 rider on weapon hits — widens the hit, not the turn). All other gish overrides (Spellstrike, Divine Smite, Hex, Lifedrain, Psychic Lash) are **riders on an attack you're already making**, not second actions — legal.
+- **Guardrail #1 (one action — never "cast AND attack").** The first draft of **Battlemage** had *Spell Burst* (weapon attack **plus** a cantrip same turn) — a direct violation. **Fixed** to *Runic Weapon* (an at-will +1d6 rider on weapon hits — widens the hit, not the turn). All other gish signatures (Spellstrike, Divine Smite, Hex, Lifedrain, Psychic Lash) are **riders on an attack you're already making**, not second actions — legal.
 - **Guardrail #2 (mana stays scarce).** **Archmage**'s *Spell Mastery* was "a Lesser spell for 0 mana **once per round**" — effectively +mana every turn. **Fixed** to **once per rest**. A per-round free spell is the kind of resource-widening to refuse.
-- **Guardrail #1, summons.** Conjuration adds bodies that attack — the classic action-economy bloat. Contained by the **summon leash**: a summon is *tethered* (acts right after your turn, no initiative slot) and **counts as your one ongoing spell** ([09-magic.md](09-magic.md)), so you can field **only one**, and not alongside another ongoing spell. Summon class-overrides (Adept, Spellforged, Artificer, Shaman, Necromancer) obey the same leash.
+- **Guardrail #1, summons.** Conjuration adds bodies that attack — the classic action-economy bloat. Contained by the **summon leash**: a summon is *tethered* (acts right after your turn, no initiative slot) and **counts as your one ongoing spell** ([09-magic.md](09-magic.md)), so you can field **only one**, and not alongside another ongoing spell. Summon class signatures (Adept, Spellforged, Artificer, Shaman, Necromancer) obey the same leash.
 - **Guardrail #3 (martials get an infinite identity).** Component perks deliver it: every weapon carries a reliable rider (Cleave, Sneak Strike, Deadeye, Riposte) and armor carries Bulwark/Slip Away. Fighters keep at-will weapons as their engine; no martial resource pool was added.
 
 ## Remaining watch-items (playtest)
 
-- 🌶️ **Druid — Wild Shape** and **Spiritualist — Possession** (grants a full extra ally turn) are the two spiciest overrides. Once-per-rest contains them; re-check they don't dominate.
+- 🌶️ **Druid — Wild Shape** and **Spiritualist — Possession** (grants a full extra ally turn) are the two spiciest Class Signatures. Once-per-rest contains them; re-check they don't dominate.
 - 🩹 **Healing spread.** Restoration is now reachable by many classes (Priest, Templar, Shaman, Bard, Cleric-Knight, Acolyte, Paladin, Oracle, Necromancer, Druid, Seer, Spiritualist…). This *eases* the old "Priest mandatory" problem (good) — verify no class becomes a strictly-better healer than another at equal investment.
 - ⛽ **Uniform mana.** Every caster tier uses `level + pool`, regardless of 1, 2, or 3 schools. Breadth and survivability differentiate them, not fuel. If a 1-school half-caster's reliability + weapon makes it outshine the squishy 3-school full caster, the knob is school-count-scaled spells-known or a small mana bump for the committed casters.
 
@@ -147,7 +148,7 @@ Two structural holes were found and fixed after the first roster draft:
 - **Gish were MAD** — weapon stat (Might/Agility) ≠ spell stat (pool), so every hybrid was half-weak. Fixed by the **single-primary rule**: one ability powers *all* attacks, weapon and spell. A Mind-Battlemage's blade and fire both scale off Mind. This makes the naked 2-school **Spellsword** coherent (lightly built is fine — it's a caster that strikes with magic), which is what lets the **3-perk invariant** stand: *weapon + 2 schools + armor = 4 perks is illegal*, so a 2-school gish stays naked and an armored gish takes only 1 school.
   - ⚠️ Watch: single-primary removes the old MAD tax, so gish got *better*. Their remaining cost is fewer schools and/or no armor — re-check in play that they don't eclipse pure martials or pure casters.
 
-> The spine: **every class is 3 perks; one primary powers everything; heavy gear trades mobility for protection; nothing ever widens the turn.**
+> The spine: **every build is 3 components (2 signatures + 6 perks over levels); one primary powers everything; heavy gear trades mobility for protection; nothing ever widens the turn.**
 
 ---
 
@@ -157,7 +158,7 @@ A later pass added **Charisma** as a fifth ability and a third caster pool, alon
 
 ## What changed, and why it's balance-neutral
 
-- **Five abilities, array `+3/+2/+1/+1/+0`** (was `+3/+2/+1/+0` over four). One extra `+1` compensates for the extra stat to cover — characters still have a `+0` dump. The **math ceiling is unchanged**: max `+3` at creation → `+5` after bumps, so `d20 + 9` at level 10 stands.
+- **Five abilities, array `+3/+2/+1/+1/+0`** (was `+3/+2/+1/+0` over four). One extra `+1` compensates for the extra stat to cover — characters still have a `+0` dump. The **math ceiling is unchanged**: max `+3` at creation → `+5` after bumps, so `d20 + 9` stands for the whole game.
 - **A fourth defense, `10 + Charisma`.** The three caster abilities are now fully symmetric: each is both a *pool* and a *defense*. This is the one place the change adds complexity (a fourth number on every sheet and stat block) — an accepted trade for symmetry.
 - **The three pools are mechanically identical** (`level + pool`). Charisma is not stronger or weaker than Mind/Spirit; it differs only in *which defense the caster naturally has high* and in flavor (studied / devoted / innate). So re-tagging 10 classes to Charisma changed **no class's power** — only its high defense and its dump-stat exposure.
 
@@ -176,3 +177,17 @@ This keeps each of the four defenses live (see the *All four defenses see fire* 
 - ⚖️ **Charm/fear concentration on one defense.** Only three spells target Charisma today. That's thin but fine — it makes a high-Charisma caster's *own* Charisma defense quietly valuable, and the future signature/spell expansion (Points 5/magic) can add command/taunt/beguile effects there. Keep new charm/fear/command effects pointed at Charisma so the defense stays meaningful.
 - 🎭 **Social rolls now key off Charisma** by default ([04-skills-and-checks.md](04-skills-and-checks.md)). This gives Charisma-pool casters (Bard, Sorcerer, Warlock…) a natural out-of-combat pillar — the same versatility lever other casters already enjoy, not a new power.
 - 📇 **Stat-block churn.** Every monster now carries a Charisma defense (≈ Spirit, nudged: leaders/fiends/fey up, mindless down). Mindless undead/constructs are still *immune* to charm/fear, so their low number rarely bites.
+
+---
+
+# Level 20 & the progression ladder
+
+The cap moved **10 → 20**, with a three-beat ladder (*Ability → Perk → Breadth*) and the perk/signature split ([03-progression.md](03-progression.md)). What protects balance across the longer track:
+
+- 🧊 **The accuracy ceiling is frozen.** Training bonus caps at `+4` and any ability at `+5`, so the top attack/check total stays `d20 + 9` — and is reached around the veteran tier, never rising after. **Levels 8–20 add tools and HP, not bigger to-hit numbers.** This is the single rule that keeps a doubled level range from breaking monster math. Bounded accuracy is non-negotiable; if a future feature would raise the ceiling, it's the feature that's wrong.
+- ⚖️ **Tiers rescaled, not renumbered:** Apprentice 1–7 · Veteran 8–14 · Master 15–20. Materials, training bonus, monster tiers, and spell-tier access all still key off these three bands; only the level spans widened.
+- 🩹 **Martial ↔ caster parity on the breadth beat.** Each breadth level gives a caster `+1` spell *or* a non-caster `+1` training — parallel currencies, so neither half pulls ahead in growth count. Martials end up broadly skilled (≈9 trainings), casters spell-deep (9 known); that's the intended divergence, not an imbalance.
+- ⛽ **Mana runs deep at high level** (`level + pool` → ~25 at L20). Watch-item, but bounded by three things: **spells known cap at 9**, the **adventuring day is long** (3–5 fights/rest), and **one ongoing spell at a time**. If a caster's day-long mana lets them trivialize single fights, the lever is a soft mana cap or a per-fight throttle — not touched for now.
+- 💪 **HP roughly doubles by L20** (~175 heavy / ~110 naked). Monster *damage* scales within tier to match (see the scaling note in [12-monsters.md](12-monsters.md)); monster *to-hit* does not (frozen ceiling). Re-check that master-tier fights don't drag against bloated HP — the fix is always more monster damage, never more monster accuracy.
+
+> The extended spine: **3 components → 2 signatures + 6 perks + a capstone, on a fixed schedule; numbers freeze at the veteran tier; the back half of the game is breadth, not bigger dice.**

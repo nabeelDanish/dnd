@@ -13,7 +13,7 @@ A character's hit points represent everything between *standing and fighting* an
 
 **Per-level HP gain** is `1d6 + Might`, rolled at the table when you level. A roll of `1` or `2` becomes a `3`. No one feels punished by leveling.
 
-By level 10, a heavy-armor fighter has roughly `10 + 3 + 9 × (4 + 3) ≈ 75` HP. A naked caster has roughly `6 + 1 + 9 × (4 + 1) ≈ 50`. Monsters are scaled accordingly.
+By level 10 a heavy-armor fighter has roughly `80` HP and a naked caster roughly `50`; by level 20 those climb to roughly `175` and `110`. HP grows every level for the whole campaign, so monsters scale their damage (not their to-hit) to keep pace — see the within-tier scaling note in [12-monsters.md](12-monsters.md).
 
 ## Taking damage
 

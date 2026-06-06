@@ -168,7 +168,7 @@ We don't track resistances on every monster. Most fights, every weapon does its 
 
 A Knight (Might primary) swings a greatsword at the Orc Captain.
 
-- Knight: Might `+3`, trained in heavy weapons (`+2` at level 1–3), **Steel** greatsword (`1d10`, material `+1`).
+- Knight: Might `+3`, trained in heavy weapons (`+2` at the Apprentice tier), **Steel** greatsword (`1d10`, material `+1`).
 - Orc Captain Armor: `15`.
 - Roll: `d20 + 3 (Might) + 2 (training) = d20 + 5` vs. `15`. *(Material never touches this roll.)*
 - Result on d20: `12`. Total `17`. Hit.

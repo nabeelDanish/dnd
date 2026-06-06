@@ -28,7 +28,7 @@ Range: `−1` to `+5`. Assign `+3 / +2 / +1 / +1 / +0` at creation.
 
 ## Classes
 
-A class is a **combination of components** — weapon types, an armor tier, and (casters) schools of magic — giving **3 perks** + 1 unique override. **48 classes**; full roster in [19-classes.md](19-classes.md). The old four survive as:
+A class is a **combination of 3 components** — weapon types, an armor tier, and (casters) schools of magic. At level 1 you get **2 Signatures** (a Racial and a Class Signature); each component is a **2-perk track** you unlock over levels (6 perks by the master tier). **48 classes**; full roster in [19-classes.md](19-classes.md). The old four survive as:
 
 - **Knight** — medium+heavy weapons · heavy armor *(the old Warrior)*
 - **Ranger** — light+ranged · light armor *(the old Scout)*
@@ -101,6 +101,6 @@ When in doubt: **say yes**, pick **15**, and **move on**.
 - No feats.
 - No skill list of 18 (we have 17 trainings, you pick 3).
 - No alignment, encumbrance, attunement, hit dice.
-- No level 11+ (we cap at 10).
+- No level 21+ (we cap at 20).
 
 If a 5e rule you're used to isn't here, **the answer is: just describe what you're doing.** The d20 will sort it.

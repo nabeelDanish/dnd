@@ -50,12 +50,12 @@ Every weapon is forged from a material on the **metal/stone ladder**. The materi
 
 | Grade | Material | Power tier | **Damage bonus** | Typical price |
 |---|---|---|---|---|
-| 1 | **Iron** | Apprentice (lvl 1–3) | `+0` | 10g |
-| 2 | **Steel** | Apprentice (lvl 1–3) | `+1` | 30g |
-| 3 | **Dwarven** | Veteran (lvl 4–7) | `+2` | 150g |
-| 4 | **Orcish** | Veteran (lvl 4–7) | `+3` | 400g |
-| 5 | **Ebony** | Master (lvl 8–10) | `+4` | 1,200g |
-| 6 | **Daedric** | Master (lvl 8–10) | `+5` | 3,500g |
+| 1 | **Iron** | Apprentice (lvl 1–7) | `+0` | 10g |
+| 2 | **Steel** | Apprentice (lvl 1–7) | `+1` | 30g |
+| 3 | **Dwarven** | Veteran (lvl 8–14) | `+2` | 150g |
+| 4 | **Orcish** | Veteran (lvl 8–14) | `+3` | 400g |
+| 5 | **Ebony** | Master (lvl 15–20) | `+4` | 1,200g |
+| 6 | **Daedric** | Master (lvl 15–20) | `+5` | 3,500g |
 
 *Two-handed weapons (heavy melee, heavy crossbow) cost roughly 1.5× the listed price; daggers and slings about half.*
 

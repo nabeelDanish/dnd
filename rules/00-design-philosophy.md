@@ -50,7 +50,7 @@ Cuts are easy; what's harder is being clear about what we will *not* compromise.
 - **Class identity.** A fighter, a wizard, a rogue, and a cleric have to *feel* mechanically different on turn one of level one. Not just reflavored.
 - **Tactical combat.** Position, choice of target, choice of action — these still matter. We are not narrating combat into oblivion.
 - **Spells you recognize.** Fireball, Cure Wounds, Shield, Magic Missile, Charm Person — the iconic spells survive, possibly renamed, mechanically simpler.
-- **Character growth across a campaign.** Level 1 and level 10 characters are clearly different. Leveling is a moment, not a paperwork session.
+- **Character growth across a campaign.** Level 1 and level 20 characters are clearly different. Leveling is a moment, not a paperwork session.
 - **GM authority.** The GM rules edge cases on the spot. The book doesn't try to anticipate everything.
 
 ## Design principles every other doc must follow

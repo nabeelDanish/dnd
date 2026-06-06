@@ -40,16 +40,16 @@ Your class gives you:
 | **Light** | `8 + Might` | 2 picks |
 | **None** (naked) | `6 + Might` | 3 picks |
 
-- **3 perks** — one from each component — plus **1 unique class override** you may swap in for any one of them. The eleven component perks (Cleave, Sneak Strike, Bulwark, Slip Away, Divine Touch, and the rest) and all 51 override perks live in [19-classes.md](19-classes.md).
+- **A unique Class Signature** at level 1, plus **component perk tracks** you unlock as you level. Each of your 3 components is a 2-perk track (a basic perk and an advanced one), so your full kit is **6 perks** by the master tier — gained one at a time ([03-progression.md](03-progression.md)). All perks and the 48 Class Signatures live in [19-classes.md](19-classes.md).
 - **Casters:** a mana pool of `level + pool` (Mind, Spirit, *or* Charisma), `2` cantrips + the spells-known table ([09-magic.md](09-magic.md)), drawn from your class's accessible **schools** ([10-spell-list.md](10-spell-list.md)). Cast freely in light or no armor; heavy armor blocks casting.
 
 > **The old four** — Warrior, Scout, Mage, Priest — survive exactly, as the **Knight**, **Ranger**, **Mage**, and **Priest** entries of the roster. Nothing is lost; everything is generalized.
 
-> **Every class has exactly 3 perks**, and one is its unique signature. That's the balance spine — a character is never more or less than 3 perks ([balance-notes.md](balance-notes.md)).
+> **Every build is exactly 3 components.** You start with **2 Signatures** (Racial + Class) and unlock **6 component perks** over the campaign. That's the balance spine — every character of a given level has the same number of abilities, so balance stays checkable by counting ([balance-notes.md](balance-notes.md)).
 
 ## Ancestry
 
-Pick one. Each grants an ability bump and one mechanical trait. No subraces, no half-versions.
+Pick one. Each grants an ability bump and one mechanical trait — **your Racial Signature**, one of your two level-1 signatures. No subraces, no half-versions.
 
 | Ancestry | Ability | Trait |
 |---|---|---|
@@ -70,7 +70,7 @@ Examples: *Disgraced knight. Tavern brawler. Forest hermit. Temple acolyte. Refo
 
 ## Trainings
 
-Trainings are the only "skill" mechanic in the game. Each training is a tag. When you roll for something your training covers, you add your **training bonus** (`+2` at levels 1–3, `+3` at levels 4–7, `+4` at levels 8–10). When you roll for something your training doesn't cover, you don't. There are no half-trainings.
+Trainings are the only "skill" mechanic in the game. Each training is a tag. When you roll for something your training covers, you add your **training bonus** (`+2` at levels 1–7, `+3` at levels 8–14, `+4` at levels 15–20). When you roll for something your training doesn't cover, you don't. There are no half-trainings.
 
 The GM decides whether a training applies. If it's a stretch, the GM may rule "yes, but with disadvantage" or "no, but with advantage to convince me."
 
@@ -112,8 +112,8 @@ Armor bonuses come from your armor's **material** (light = leather/hide, Agility
 ## Step-by-step
 
 1. **Assign abilities.** Distribute `+3`, `+2`, `+1`, `+1`, `+0` across Might, Agility, Mind, Spirit, Charisma.
-2. **Pick a class** ([19-classes.md](19-classes.md)). Apply its `+1` to your **primary ability**; note your HP tier, your 3 perks + override, and (casters) your pool and schools.
-3. **Pick an ancestry.** Apply its `+1` bonus and note its trait.
+2. **Pick a class** ([19-classes.md](19-classes.md)). Apply its `+1` to your **primary ability**; note your HP tier, your **Class Signature**, the component perk tracks you'll unlock, and (casters) your pool and schools.
+3. **Pick an ancestry.** Apply its `+1` bonus and note its trait — your **Racial Signature**.
 4. **Pick a background.** A phrase (grants one training).
 5. **Pick three trainings** from the full list below (a fourth if Human) — two themed to your class, one from your background.
 6. **Calculate defenses.** Armor, Mind, Spirit, Charisma per the formulas above.
@@ -126,8 +126,8 @@ Armor bonuses come from your armor's **material** (light = leather/hide, Agility
 > A halfling poacher who fled her village after stealing from the lord's hunting lodge.
 
 1. **Abilities.** `+3 Agility`, `+2 Mind`, `+1 Might`, `+1 Charisma`, `+0 Spirit`.
-2. **Class: Ranger** (Light + Ranged weapons · Light armor · primary Agility). `+1 Agility` → `+4`. HP tier (light) `8 + Might 1 = 9`. Perks: **Sneak Strike · Deadeye · Slip Away** — she may swap one for the Ranger override **Hunter's Mark**.
-3. **Ancestry: Halfling.** `+1 Agility` → final Agility `+5`. Trait: **Lucky** — one reroll per rest.
+2. **Class: Ranger** (Light + Ranged weapons · Light armor · primary Agility). `+1 Agility` → `+4`. HP tier (light) `8 + Might 1 = 9`. **Class Signature: Hunter's Mark** (level 1). Her component tracks — Light (Sneak Strike → Shadowstrike), Ranged (Deadeye → Piercing Volley), Light armor (Slip Away → Evasion) — unlock one perk at a time as she levels.
+3. **Ancestry: Halfling.** `+1 Agility` → final Agility `+5`. **Racial Signature: Lucky** — one reroll per rest.
 4. **Background: Poacher.**
 5. **Trainings.** **Stealth**, **Wilderness** (class), **Sleight of Hand** (background).
 6. **Defenses.** Armor `10 + 5 + 2 (Leather, light) = 17`. Mind `10 + 2 = 12`. Spirit `10 + 0 = 10`. Charisma `10 + 1 = 11`.

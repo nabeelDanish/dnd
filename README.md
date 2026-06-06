@@ -42,11 +42,11 @@ build_pdf.py           Builds the 4-page character sheet PDF
 
 ## What makes it different
 
-- **Classes are generated, not bespoke.** A class = a legal combination of weapon types, an armor tier, and schools of magic — **3 perks** + 1 unique signature. 48 classes from one vocabulary; no subclasses, no multiclassing.
+- **Classes are generated, not bespoke.** A class = a legal combination of **3 components** (weapon types, an armor tier, schools of magic). You start with **2 signatures** (Racial + Class) and unlock **6 perks** from those components as you level. 48 classes from one vocabulary; no subclasses, no multiclassing.
 - **One primary ability powers everything** — every weapon and spell attack uses your single main stat.
 - **Materials, not "+1s."** Weapons and armor scale through a Skyrim-style material ladder (Iron → Steel → … → Daedric).
 - **Heavy gear has a real cost** (no speed stat): heavy = the planted melee anchor (*Set to Strike*), light = mobile.
-- **Magic is school-tagged** (Destruction · Conjuration · Alteration · Illusion · Restoration), cast from a Mind or Spirit pool — no spell slots, no concentration mini-game.
+- **Magic is school-tagged** (Destruction · Conjuration · Alteration · Illusion · Restoration), cast from a Mind, Spirit, or Charisma pool — no spell slots, no concentration mini-game.
 
 ## Building the PDFs
 

@@ -26,7 +26,7 @@ That's it. Eight lines. A new GM can run any monster in this book without prepar
 
 Monsters can have **Sentinel** (opportunity strikes are on for this monster). Add it to Notes.
 
-## Apprentice tier (levels 1–3)
+## Apprentice tier (levels 1–7)
 
 ### Goblin Skirmisher — Tier 1 · Threat 1
 - **HP** 7 · **Armor** 13 · **Mind** 10 · **Spirit** 9 · **Charisma** 9 · **Speed** 7
@@ -100,7 +100,7 @@ Monsters can have **Sentinel** (opportunity strikes are on for this monster). Ad
 - **Special:** Sentinel. *Big Reach* — its melee attacks reach 2 squares.
 - **Notes:** The first boss-tier threat the party should fear. Dumb but hits like a truck. One hit can drop a Mage.
 
-## Veteran tier (levels 4–7)
+## Veteran tier (levels 8–14)
 
 ### Hobgoblin Soldier — Tier 2 · Threat 3
 - **HP** 28 · **Armor** 16 · **Mind** 11 · **Spirit** 12 · **Charisma** 11 · **Speed** 6
@@ -157,7 +157,7 @@ Monsters can have **Sentinel** (opportunity strikes are on for this monster). Ad
 - **Special:** *Blood Frenzy* — has advantage on attacks vs. creatures below half HP.
 - **Notes:** Aquatic. Drags victims underwater. Hates surface dwellers.
 
-## Master tier (levels 8–10)
+## Master tier (levels 15–20)
 
 ### Vampire Spawn — Tier 3 · Threat 8
 - **HP** 80 · **Armor** 16 · **Mind** 13 · **Spirit** 13 · **Charisma** 15 · **Speed** 8, climb 6
@@ -201,6 +201,8 @@ If you need a monster not on this list, use the following targets by tier:
 | 3 (master) | 80–200 | 16–20 | +8 to +12 | 2d8 to 4d10 (+5 to +7) |
 
 **A monster's Mind/Spirit/Charisma defenses are usually close to its Armor minus 1 to 3**, except for elites and casters who have one defense significantly higher. Quick rules of thumb: **mindless** things (constructs, the shambling dead) have a low Charisma defense but are usually *immune* to charm and fear anyway; **leaders, fiends, fey, and casters** have a high Charisma defense (they don't rattle); **beasts** sit low on Mind and Charisma, higher on Spirit.
+
+**Scale within the tier.** Each tier now spans several levels (Apprentice 1–7, Veteran 8–14, Master 15–20), and PC HP roughly **doubles** across the campaign (a level-20 heavy fighter pushes ~175 HP). Use the **low end** of a tier's HP/damage band for the early levels of that tier and the **high end** for the late levels — a Master monster for a level-20 party should sit at the top of the Master damage band (or above it for a boss) so fights don't drag against bloated HP pools. Attack bonuses stay put: the frozen `d20 + 9` ceiling means tier-appropriate attack numbers don't need to climb the way HP and damage do.
 
 **A monster's threat number** is roughly its Tier × 2, plus 1 for elite (named) status, plus 1 for any unusually nasty special, minus 1 for unusually fragile or limited. Six minions, four standard, two elite, one boss is a fine spread for a difficult fight.
 

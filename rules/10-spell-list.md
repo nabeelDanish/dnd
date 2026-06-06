@@ -15,7 +15,7 @@ Every spell in the game lives here, organized by **school**. Spells are tagged b
 
 ## ⚙️ Summoning rules (read once)
 
-Several Conjuration spells (and class overrides) summon a creature or animate a weapon. Summons are **tethered**, not free extra turns:
+Several Conjuration spells (and class signatures) summon a creature or animate a weapon. Summons are **tethered**, not free extra turns:
 
 - A summon appears in an unoccupied space within **Near**, allied to you.
 - It **acts immediately after your turn** each round — no separate initiative slot. Directing it is free (part of your turn).
@@ -23,7 +23,7 @@ Several Conjuration spells (and class overrides) summon a creature or animate a 
 - **A summon counts as your one ongoing spell.** You can have only one active at a time. If you go Downed, it vanishes.
 - A **bound weapon** is *not* a creature — it's a spectral weapon you wield and attack with normally (no tether, doesn't use your ongoing-spell slot).
 
-The Conjuration perk **Master Summoner** (+1 to a summon's attacks, +2 rounds duration) and the summoner class overrides hook into these rules.
+The Conjuration perk **Master Summoner** (+1 to a summon's attacks, +2 rounds duration) and the summoner class signatures hook into these rules.
 
 ---
 

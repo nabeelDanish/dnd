@@ -12,7 +12,7 @@ Every casting class has a **mana pool**, fueled by one ability — its **pool**,
 
 The three pools are mechanically identical; they differ only in *which ability* fuels and aims the magic, and so in which **defense** the caster naturally has high. The pool is just *fuel and aim* — **spells themselves are tagged by school, not by ability** ([10-spell-list.md](10-spell-list.md)). A Mind-caster, a Spirit-caster, and a Charisma-caster can all cast the very same spell, each from their own pool. That's the only spell resource in the game. There are no 1st-level slots, 2nd-level slots, 3rd-level slots. There is no upcasting. There are no ritual slots. A spell costs N mana; you pay N mana; you cast the spell.
 
-A typical level 1 Mage with Mind `+3` has `4` mana. A level 5 Priest with Spirit `+4` has `9`. By level 10, top-tier casters have ~`14` mana — enough for two or three big spells per rest, or a flurry of smaller ones.
+A typical level 1 Mage with Mind `+3` has `4` mana. A level 8 Priest with Spirit `+4` has `12`. By level 20 a top-tier caster has ~`25` mana — a deep well, enough for several big spells per rest or a long flurry of small ones. Mana grows steadily, but **spells known cap at 9** and **the adventuring day is long** (3–5 fights between rests), so that well is spent across many encounters, not dumped into one.
 
 Mana refreshes **only on a full rest**. There is no per-encounter recovery, no draining mana from objects, no scrolls that refund mana.
 
@@ -37,7 +37,7 @@ Spells come in four tiers by cost:
 | Greater | 3 mana | Big effects. *Fireball*, *Hold Person*, *Fly*. |
 | Master | 5 mana | Story-shaping. *Resurrection*, *Disintegrate*, *Wall of Force*. |
 
-A caster at level 1 cannot pay for a Master spell. They can't even pay for a Greater. They have lesser spells and cantrips, and that's plenty.
+A caster at level 1 has only a handful of mana — enough to lean on cantrips and Lesser spells, with maybe a single Greater spell in reserve. Master spells (5 mana) are simply out of reach until the pool deepens over several levels. Tier gates *casting*, not *knowing* (below).
 
 Tier doesn't gate what spells you *know* — only what you can *cast*. A clever level 4 Priest who somehow learned *Resurrection* still can't cast it until they have 5 mana available.
 
@@ -45,20 +45,19 @@ Tier doesn't gate what spells you *know* — only what you can *cast*. A clever 
 
 You **know** a small list of spells; you cast from this list.
 
-| Level | Spells known | New per level |
-|---|---|---|
-| 1 | 3 | (starting) |
-| 2 | 3 | — |
-| 3 | 4 | +1 |
-| 4 | 4 | — |
-| 5 | 5 | +1 |
-| 6 | 5 | — |
-| 7 | 6 | +1 |
-| 8 | 7 | +1 (a bonus year) |
-| 9 | 7 | — |
-| 10 | 8 | +1 |
+Spells known grow on your **breadth levels** (4, 7, 10, 13, 16, 19) — the same beats on which a non-caster gains a new training ([03-progression.md](03-progression.md)).
 
-Plus your 2 cantrips, picked at level 1 and never gained again. (You can swap one cantrip for another at level 5 and again at level 10.)
+| Levels | Spells known |
+|---|---|
+| 1–3 | 3 (starting) |
+| 4–6 | 4 |
+| 7–9 | 5 |
+| 10–12 | 6 |
+| 13–15 | 7 |
+| 16–18 | 8 |
+| 19–20 | 9 |
+
+Plus your 2 cantrips, picked at level 1 and never gained again. (You can swap one cantrip for another at each tier boundary — levels 8 and 15.)
 
 When you pick a new spell at level-up, **it must be a tier you can currently afford**. You cannot pre-learn a Master spell at level 2.
 

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(awk '/^## Scene 8/{p=1} p{print NR\": \"$0} /^## \\(Resolution|Aftermath|Scene 9\\)/{if\\(p\\)exit}' adventure.md)",
+      "Bash(awk '/^## Resolution|^## Aftermath/{p=1} p{print NR\": \"$0}' adventure.md)",
+      "Bash(awk '/cycle|ladder|Level 3|L3|every level|HP each|gain a perk|Perk|Breadth|Ability/{print NR\": \"$0}' 03-progression.md)"
+    ]
+  }
+}

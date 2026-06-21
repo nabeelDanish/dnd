@@ -164,96 +164,38 @@ A terraced garden-quarter of a great warm city, drunk on midsummer. Loud, fragra
 
 ## The cast
 
-*Aurivane is a great cosmopolitan river-port; its people are of every ancestry. Each NPC's race is tagged in* **(bold)** *— flavor only, nothing else about them changes.*
+Full per-NPC detail — secrets, **what is free vs. behind which check**, and **dialogue samples** by scenario — lives in its own file: **[cast-and-dialogue.md](cast-and-dialogue.md)**. Keep that open at the table; this is just the quick roster. *(Aurivane is a cosmopolitan river-port; race is flavor only.)*
 
-### The victims (all real, all radiant)
-- **Lysenne** **(Satyr)** (3 weeks ago, the Tea-Gardens) — the toast of the Verdance theater, an actress and singer everyone half-loved. **Taken: a pearl earring, her late mother's.** Bright, generous, the warmest voice in the district. (A performer — Charisma made flesh. Florian took the sweetest voice in town.)
-- **Old Pateros** **(Stout Halfling)** (8 days ago, the Bloommarket fountain) — the honey-and-candied-flower confectioner, everyone's grandfather. **Taken: a locket of his late wife.** Gentle, beloved, gave sweets to the market children.
-- **Castan** **(Eladrin)** (3 nights ago, the foot of the Vermilion Garden) — the festival's crowned **Garland-Prince**, a charming, popular youth chosen to lead the Bloomfeast. **Taken: the silver garland-pin of his crowning.** Golden, joyful, adored — and his death is what tipped the district into panic.
+### The victims (their facts seed the pattern)
 
-> **The pattern (GM):** every victim was *radiant, beloved, joyful*, each spoke warmly with Florian within days of dying (he selects them, gives them blooms, asks what they love), each drained through one clean fine cut, each drenched in a beautiful unplaceable perfume, each left with a single perfect vermilion rose on the breast where a treasured keepsake was taken.
+- **Lysenne** *(Satyr)* — actress/singer, Tea-Gardens. Taken: a pearl earring (her mother's).
+- **Old Pateros** *(Stout Halfling)* — confectioner, Bloommarket fountain. Taken: a locket (his late wife's).
+- **Castan** *(Eladrin)* — the festival's Garland-Prince, foot of the Vermilion Garden. Taken: the silver garland-pin.
 
-### Florian Sael — the perfumer & garden-keeper *(the killer)* · **Half-Elf**
-*Want:* to make Mira bloom again before Midsummer. To be loved and trusted (he genuinely is, and needs to stay so).
-*Manner:* gentle, funny, self-deprecating, endlessly generous. Presses a free vial of attar on the party, asks after their families, *offers to help investigate* and means it — it's perfect cover and he half-believes he's innocent.
-*Tell (don't flag it):* he asks unusually tender, specific questions about the dead — *what did they love? what did they treasure most?* — and about the party. The conservatory is always locked "for the rare grafts." He goes very still and changes the subject if **Mira** is named. He never has an alibi for the murder nights because he was *out gathering blooms before dawn, alone* — and no one questions that.
-*Under pressure:* warm and reasonable, never rattled — until the party produces the **Daughter-Rose** or boxes him in with the **rose + pattern + Mira** together. Then the gentleness cracks into a terrible, tearful certainty that he's been *kind.* See Scene 6 and his stat block.
+> **The pattern (GM):** all three were the *most radiant, beloved* people in the Verdance; each spoke warmly with **Florian** within days of dying (he gave them blooms, asked what they treasured); each was **drained through one fine curved cut, drenched in his perfume, missing the keepsake they loved most, a vermilion rose laid on the breast.** Radiance + a Florian conversation + the rose is the spine of the case.
 
-### The gentle ones *(Florian's true camouflage — all innocent)*
+### The living — quick roster
 
-This is the tier that fixes the real problem: **you must not be able to find the killer by asking "who's the suspiciously nice, grieving craftsman?"** — because in the Verdance that is a *type*, not a tell. Where the loud decoys (Castellan, Ysolde, Roon) soak up the cynical instinct, these quiet, genuinely lovely people soak up the genre-savvy one. **Run them with exactly the warmth, grief, and helpfulness you give Florian.** None is the killer; each shares one or more of his "tells."
-
-**Edran — the gardens' beekeeper *(Firbolg)*.** A gentle, beloved old man who keeps the hives among the flowering terraces and presses honeycomb on every child in the market. He lost his own boy to the **summer-fever** years ago and still tends a small grave. *Why he reads guilty:* he is **out among the gardens at dawn and dusk** — the very hours and places of the killings — for the wholly innocent reason that bees and blooms keep that schedule, and he carries a **thin curved hive-knife.** He is the *honest* version of the cover Florian abuses: a party hunting "who's in the gardens before dawn?" finds **two** gentle craftsmen there, not one. Innocent, and quietly wounded to be asked.
-
-**Lensa — the memorial dollmaker *(Forest Gnome)*.** A soft-spoken, adored artisan. In the Verdance it's an old, tender custom to commission a doll of a lost loved one, and Lensa is the finest hand for it — so the grieving come to her, and she **asks them gentle, searching questions about the dead** (*"what did she love? how did she laugh?"*) to make each doll *true*, and keeps the work in a **locked studio** until it's done. *Why she reads guilty:* she is, right now, making memorial dolls of **all three victims** — their families commissioned them — so she has likenesses of the dead, intimate notes on what each one treasured, and a locked room full of them, having sought out exactly the details a killer would want. She is a near-perfect mirror of Florian's crime — *recreating the dead through loving craft* — done with nothing but tenderness. A party that breaks in expecting a charnel-house finds a shrine of grief and an innocent woman who'll never feel clean about how they looked at her. **This is the sharpest piece of misdirection in the adventure; spend it well.**
-
-**The fever-bereaved.** Plant early and often that the **summer-fever, eight years ago, killed a whole cohort of the district's children on one terrible Midsummer** — and that *many* beloved Verdance figures lost someone then and grieve every festival. A widow, **Marise**, tends the public memorial rose-bed (planted, as it happens, by Florian himself); others light candles; the temple holds a remembrance the eve of Midsummer. So *"lost a child to the fever, grieves on Midsummer"* fits a dozen sympathetic people — it does **not** finger one perfumer. Florian's motive only damns him once the party *also* has the rose, the cut, the cart, or the commissioned body to cut him out from every other grieving parent in the quarter.
-
-> **GM — the whole point of this tier:** spread Florian's tells across these NPCs so that *kindness, grief, a dead child, odd hours in the gardens, tender questions about the victims, a locked private room* each belong to **several** people. The killer is found by **evidence** — the unique graft, the carried-off blood, the dawn flower-cart, Skein's testimony — and never by vibe. A table that "just knows it's the nice flower guy" is, on what they can actually see, no more justified than knowing it's the nice bee man or the nice doll lady. **Make them prove it.**
-
-### Dama Vesh — the poison-gardener *(scapegoat A — innocent)* · **Abyssal Tiefling**
-*Want:* to be left alone; to not be blamed again (a child she couldn't save once died of her remedy, and the district never forgot). To protect the Witherrows folk who rely on her medicines.
-*Manner:* abrasive, proud, sharp-tongued, **will not explain herself to people who already think she's a witch** — which makes her look guilty as sin. Warms *only* to a party that treats her with genuine respect (Charisma, and the *right approach* — humility, not threats).
-*Why she looks guilty (red herrings, all explainable):*
-- **Blood-stained shears and rags** in her cottage — she grafts roses and doctors animals and people; she bleeds fevers.
-- **A bed of deep-red roses** in her walled garden — common briar-stock, *not* Florian's cultivar (a clue *through* the red herring: a sharp eye or Dama herself can tell the two apart).
-- **Seen near Pateros's body** at dawn — she found him, tried to close his eyes; the market-folk saw her over the corpse and assumed the worst.
-- She **knows the Briar Bride legend** cold and recites it with relish — because she's the only one who remembers the real midsummer drowning-of-a-bride it came from. (And she remembers **Mira Sael.**)
-*What she gives a party that earns her:* the **rose distinction** (the bloom on the bodies is Florian's rare "Sael's Vermilion," not garden-common stock — *"that's his graft, no one else in the south grows it"* → Conclusion 1); the **wound read** (she's seen all three bodies — *"that's a grafting-knife's edge, fine and curved, not a footpad's blade nor any beast"* → Conclusion 2); and — the big one — she **remembers Mira Sael dying on Midsummer, and that Florian "never buried his grief, just kept growing roses where she's planted."**
-
-### Grenn — the groundskeeper *(scapegoat B — innocent)* · **Half-Orc**
-*Want:* to not get caught for the small thing he *did* do — **he lifted a purse and a ring off Castan's body** before raising the alarm. That's why he's shifty, lies about his movements, and sweats when questioned.
-*Why he looks guilty:* surly, huge, dirt and blood under his nails (he prunes the gardens and hauls the corpses out of the beds), always first to the bodies (dawn rounds), was overheard saying something ugly about the Garland-Prince ("prancing little peacock"). *Means and opportunity by the bucket.*
-*The break:* press him (Intimidation cracks him; Persuasion that "we're hunting a murderer, not a purse-snatch" opens him) and he confesses to **robbing Castan's corpse** — not killing — and gives up that, the dawn he found Castan, he saw **Florian's flower-cart already up among the high terraces and smelled his attar on the breeze, when not another soul was about.** He didn't think anything of it. *The flower-man's always up before the birds.* (→ Conclusion 4, opportunity.)
-
-### The charming and the shady *(decoys — innocent of murder, guilty of plenty)*
-
-In the Verdance, *warm and helpful is the default setting.* These three exist so the party can't solve the case by smelling out "the suspiciously nice one" — there are four nice ones, and the nicest-seeming is a decoy. Each is a satisfying suspect, each has a genuine ugly secret, and **none of them is the killer.**
-
-**Castellan Vane — impresario of the Verdance theater *(Drow)* (the decoy villain).**
-*Manner:* magnetic, theatrical, delighted by death; hosts masked midnight revels; wrote the season's hit play, *The Briar Bride's Kiss.* The single most *fun to suspect* person in the city, and he enjoys the role.
-*Why he looks guilty:* obsessed with the macabre; keeps a locked private gallery of funerary curios and "relics"; the victims (the actress, the Garland-Prince) all orbited his theater; out at all hours; openly savors the killings as "exquisite, simply operatic."
-*His secret (real, not murder):* he is a **fence for grave-robbed funerary art**, and — the hook — **he bought some of Mira Sael's grave-goods** years ago from a resurrection-man. So the trail *"who disturbed the dead?"* runs straight through his gallery. He's a ghoul and a criminal. He is not the killer.
-*Role:* the party's prime suspect through the middle of the adventure. Busting him — B&E the gallery, steal his ledger, bribe his stagehands — feels exactly like solving it. It is the moment *before* the loss. When the next body drops with Castellan in a cell, the party learns the shape of their mistake.
-
-**Madame Ysolde — festival patroness *(High Elf)*.**
-*Manner:* warm, witty, endlessly generous; funds the theater and half the Bloomfeast; everyone's favorite hostess.
-*Why she looks guilty:* she and the first victim, **Lysenne**, fell out viciously weeks before the murder; she has money, reach, and a hundred people who owe her; she's slippery about where she was that night.
-*Her secret (real, not murder):* she's drowning in debt and quietly selling a forbidden euphoric **"bliss-attar"** under festival cover — and **Lysenne found out and threatened to expose her.** A real motive, for *one* victim. But she was trying to *buy* Lysenne's silence, not cut her throat, and she has no link to Pateros or Castan. Innocent of murder; guilty of dealing, and of lying about all of it.
-*Role:* a strong, narrow red herring for Victim 1. A tangle of bribery, deception, and Insight — and a dead end that costs a night.
-
-**Deputy Roon — the helpful face of the Watch *(Hobgoblin)*.**
-*Manner:* easy-going, accommodating, *"anything you need, friends"* — the cooperative officer who'll fetch you the file and walk you to the morgue.
-*Why he misleads:* he runs a quiet **protection racket** on festival vendors, and he **buried a witness statement** — a flower-girl who saw the flower-cart on the high terrace before dawn — because chasing it would have exposed where *he* was that night (shaking down a stall two streets over). His "help" is curated to protect himself, so it subtly steers the party toward Dama Vesh.
-*Role:* the bribe-broker (he'll sell the case file, morgue access, a blind eye to move at night) whose information is *tainted.* The buried statement is a clean Conclusion-4 clue he's sitting on — it surfaces only if the party leans on him hard, catches him in the racket, or breaks into the Watch-house evidence locker.
-
-### Skein — the resurrection-man *(Witherrows — the linchpin)* · **Goblin**
-
-A grave-robber who'll talk for coin or under threat, holed up in the Witherrows. He is the knot that ties the trails together: years ago he was paid by **"the flower-man"** to quietly dig a child's body out of the temple ground and deliver it — and he sold the *grave-goods* on to **Castellan.** Find Skein (via the empty grave, via Castellan's ledger, or by working the Witherrows) and the two trails finally separate: **Castellan bought the trinkets; Florian commissioned the body.** This is the cleanest path to the truth that *doesn't* require breaking into the conservatory — and the one most parties only reach *after* the loss.
-
-### Sergeant Halloran — the Watch *(Human)*
-*Want:* the killing to stop and the district to calm down before the festival ends in a riot — ideally by tomorrow. Tired, decent, badly out of his depth and short-staffed.
-*Manner:* relieved the party came; defensive about his lack of progress; **already half-decided Dama Vesh is the one** because the district wants it and he has nothing else.
-*Levers (Charisma):* persuade him to **honor the writ / deputize the party** (access to body, notes, cells), to **hold off on arresting Dama Vesh** ("give me till Midsummer"), and — late — to **back the party's accusation of a beloved man**, which he will *not* do without hard proof (the Daughter-Rose). He likes Florian too. *Everyone* likes Florian.
-
-### Brother Anselm — the temple *(Protector Aasimar)*
-Keeps the records. Kindly, overworked by the Bloomfeast rites, will help freely (no roll needed for basic access — he's glad someone's investigating). Holds the **death-record of Mira Sael**, dead of summer-fever on Midsummer "eight years gone, the poor mite — her father took it so hard the whole district learned not to mention her." Drop the Midsummer date; let the party connect it to *three nights from now.* *(His own secret: he knows Mira's grave is empty and has buried the shame of it — lean on him and the grave-robbery trail opens. See **Sexton Crale.**)*
-
-### The wider web — more faces in the Verdance *(all innocent of murder)*
-
-A bigger cast makes the misdirection thicker and gives the party more threads to pull, bribe, tail, and burgle. **Every one of these has a real secret and a real connection — and none of them is the killer.** Use them to fill nights, cross-light the suspects, and make the district feel lived-in.
-
-**Doral — Florian's apprentice perfumer *(Tabaxi)*.** Eager, likable, devoted to his master. *Shady:* he's been quietly **blending cheap knockoffs of Florian's attar and pocketing the coin**, and he has a key to the shop (not the conservatory). *Connection:* he's *inside* the murder house — he's noticed Florian's pre-dawn absences and the always-locked cellar, but says nothing, half from loyalty and half because his own skimming won't survive scrutiny. *Role:* a near-miss witness gagged by his own guilt; earn him (or catch the skim) and he hands over Florian's nights out and the locked conservatory — pure opportunity (→ Conclusion 4).
-
-**Madame Carow — the festival's "Briar Bride" seer *(Changeling)*.** A magnetic fraud who reads fortunes and sells warding-charms from a tent at the Bloommarket. *Shady:* she is **getting rich off the panic** — and has been *embellishing and inventing* Briar Bride "sightings" to keep fear (and sales) high. *Connection:* she's the rumor-mill's engine, and (like Florian) she *profits from the legend.* *Role:* a misdirection generator — her planted "sightings" pollute the witness pool; sorting her inventions from the real flower-cart sighting is half the investigative work. A vulture, not a killer.
-
-**Ser Aldric Venn — the spurned suitor *(Flame Dragonborn)*.** A handsome, hot-tempered young noble who was infatuated with the actress **Lysenne** and publicly humiliated when she refused him weeks before she died. *Shady:* he **threatened her** in front of witnesses, then paid to bury the gossip — and he has no alibi for that night. *Connection:* Victim 1, and tangled with **Ysolde** (both orbit Lysenne's death). *Role:* the textbook jealous-lover suspect; a hot, narrow red herring that — like Ysolde's — dissolves the moment the party tests it against Pateros and Castan, whom he had no reason to touch.
-
-**Sexton Crale — the temple gravedigger *(Mountain Dwarf)*.** Surly, drinks, keeps the consecrated ground. *Shady:* years ago he **took a cut to let Skein dig in the temple grounds** — including Mira's grave — and has been silent from fear and guilt ever since. *Connection:* the linchpin's inside man — he bridges **Brother Anselm**, the **empty grave**, **Skein**, and ultimately Florian's commission. *Role:* a fast route to motive: bribe or intimidate him and you skip straight to *"the flower-man paid to have a child dug up."* Innocent of the murders.
-
-**Nessa — the unlicensed flower-girl (the buried witness) *(Fairy)*.** Young, sweet, frightened of the Watch. *Shady (barely):* she sells flowers without a license and **Deputy Roon has been shaking her down.** *Connection:* she is the human face of the clue Roon buried — she **saw the flower-cart on the high terrace before dawn** but won't come forward for fear of the Watch. *Role:* reach her through kindness, through the Witherrows, or by breaking Roon's racket, and the cart sighting comes clean (→ Conclusion 4). A victim of the system, not a suspect.
-
-**Magistrate Vell — the party's employer *(Vedalken)*.** Polished, political, hired the party with the writ. *Shady:* he wants the case closed **fast and quietly to protect the Bloomfeast's lucrative name**, and he will lean on the party toward the *convenient* answer (Dama Vesh) and **refuse to let them publicly accuse a beloved citizen like Florian without ironclad proof.** *Connection:* the institutional pressure behind the whole adventure — he's *why* a warrant is hard and an accusation must be airtight. *Role:* a clock and a wall, not a killer; a Charisma obstacle in his own right.
+| NPC | Race | Role | What they really are (only Florian is murder) |
+|---|---|---|---|
+| **Florian Sael** | Half-Elf | perfumer & garden-keeper | **THE KILLER** — feeding the Daughter-Rose grown over his dead daughter Mira |
+| **Edran** | Firbolg | beekeeper | gentle mirror — out at dawn, curved knife; **innocent** |
+| **Lensa** | Forest Gnome | memorial dollmaker | gentle mirror — recreates the dead in a locked studio; **innocent** |
+| **Marise** + fever-bereaved | mixed | grieving parents | the cohort that drowns Florian's Midsummer motive |
+| **Castellan Vane** | Drow | theater impresario | **decoy villain** — grave-goods fence; bought Mira's trinkets |
+| **Madame Ysolde** | High Elf | festival patroness | bliss-attar dealer; motive vs. Lysenne only |
+| **Deputy Roon** | Hobgoblin | Watch officer | protection racket; **buried Nessa's cart clue** |
+| **Dama Vesh** | Abyssal Tiefling | poison-gardener | **scapegoat** — innocent; richest source if respected |
+| **Grenn** | Half-Orc | groundskeeper | **scapegoat** — robbed Castan's corpse; gives the cart clue |
+| **Doral** | Tabaxi | Florian's apprentice | skimming knockoffs; gagged near-witness (nights out, locked cellar) |
+| **Madame Carow** | Changeling | "Briar Bride" seer | fraud inventing sightings; pollutes the witness pool |
+| **Ser Aldric Venn** | Flame Dragonborn | spurned suitor | threatened Lysenne, no alibi; red herring (Victim 1) |
+| **Sexton Crale** | Mountain Dwarf | temple gravedigger | let Skein rob the graves (incl. Mira) for a cut |
+| **Nessa** | Fairy | unlicensed flower-girl | **the buried witness** — saw the dawn flower-cart |
+| **Skein** | Goblin | resurrection-man | **linchpin** — Florian paid him to dig up Mira's body |
+| **Sergeant Halloran** | Human | Watch sergeant | overwhelmed; gives access/warrant/restraint via Charisma |
+| **Brother Anselm** | Protector Aasimar | temple keeper | holds Mira's record; hiding the empty grave |
+| **Magistrate Vell** | Vedalken | the employer | wants it quiet; blocks accusing Florian without proof |
 
 ---
 
@@ -359,7 +301,7 @@ Open and non-linear. The party fans out (splitting is *safe and good* here — [
 
 ## Scene 3 — The suspects (interrogation & misdirection)
 
-The heart of the mystery: **three suspects, two innocent, one beloved.** Run these as real social scenes. Charisma *presses*; Insight (Mind) *reads*; the truth is fixed (Running a Mystery, rule 3).
+The heart of the mystery: **three suspects, two innocent, one beloved.** Run these as real social scenes. Charisma *presses*; Insight (Mind) *reads*; the truth is fixed (Running a Mystery, rule 3). **For each NPC's secret, exactly which check unlocks what, what's free, and dialogue samples per scenario, run from [cast-and-dialogue.md](cast-and-dialogue.md)** — the notes below are just how the suspects *function* in the investigation.
 
 **Dama Vesh** — the obvious answer, and wrong. She's hostile to anyone who comes at her as "the witch." A party that *threatens* her gets stonewalled and **feeds the mob** (she complains loudly, the district hears the law suspects her too). A party that earns her — humility, respect, a Persuasion that treats her as a person — gets the **rose distinction (→ Conclusion 1)**, the **wound read (→ Conclusion 2)**, and **Mira Sael's story (→ Conclusion 4)**. She is the single richest source in the game *and* the one the dice-and-charm system most rewards approaching well. Make the lesson land: **the scary one is the key witness, and only a good heart gets her.**
 

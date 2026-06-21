@@ -172,6 +172,63 @@ function isHiddenForViewer(gx, gy) {
   return true;
 }
 
+// Wrap a label onto lines, breaking ONLY between words. A single word is
+// never split (the font is shrunk instead — see drawCellLabel); only the
+// last-resort fallback passes hardBreak=true to split an over-wide word so
+// it can never spill past the cell. Assumes ctx.font is already set.
+function wrapLabel(ctx, text, maxW, hardBreak) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    if (ctx.measureText(w).width <= maxW || !hardBreak) {
+      // word fits (or we're not allowed to split it): place it whole
+      if (!cur) cur = w;
+      else if (ctx.measureText(cur + ' ' + w).width <= maxW) cur += ' ' + w;
+      else { lines.push(cur); cur = w; }
+    } else {
+      // fallback only: word is wider than the cell — break it by character
+      if (cur) { lines.push(cur); cur = ''; }
+      let chunk = '';
+      for (const ch of w) {
+        if (!chunk || ctx.measureText(chunk + ch).width <= maxW) chunk += ch;
+        else { lines.push(chunk); chunk = ch; }
+      }
+      cur = chunk;
+    }
+  }
+  if (cur) lines.push(cur);
+  return lines.length ? lines : [''];
+}
+
+// Draw a label centered in a cell. Find the LARGEST font at which the text —
+// wrapped on spaces only — has every line fit the width and the whole block
+// fit the height. So multi-word labels wrap, and a single long word simply
+// shrinks to fit on one line. Only if nothing fits down to the floor do we
+// character-break, so text is always contained within the cell.
+function drawCellLabel(ctx, text, cx, cy, maxW, maxH) {
+  const FLOOR = 5;
+  const upper = Math.max(7, Math.min(16, Math.floor(maxH)));
+  let chosen = null;
+  for (let fs = upper; fs >= FLOOR; fs--) {
+    ctx.font = `600 ${fs}px system-ui, sans-serif`;
+    const lines = wrapLabel(ctx, text, maxW, false);
+    const lineH = fs * 1.18;
+    const widest = lines.reduce((m, l) => Math.max(m, ctx.measureText(l).width), 0);
+    if (widest <= maxW && lines.length * lineH <= maxH) { chosen = { fs, lines, lineH }; break; }
+  }
+  if (!chosen) {
+    // A word is wider than the whole cell even at the floor font — split it.
+    ctx.font = `600 ${FLOOR}px system-ui, sans-serif`;
+    chosen = { fs: FLOOR, lines: wrapLabel(ctx, text, maxW, true), lineH: FLOOR * 1.18 };
+  }
+  ctx.font = `600 ${chosen.fs}px system-ui, sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  let y = cy - (chosen.lines.length * chosen.lineH) / 2 + chosen.lineH / 2;
+  for (const line of chosen.lines) { ctx.fillText(line, cx, y); y += chosen.lineH; }
+}
+
 // ========== Canvas ==========
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
@@ -279,7 +336,11 @@ function render() {
     ctx.fill();
   }
 
-  // 4) Label text
+  // 4) Label text — wrapped + auto-shrunk to stay inside the cell
+  const labelPad = Math.max(2, tile * 0.08);
+  const labelMaxW = tile - labelPad * 2;
+  const labelMaxH = tile - labelPad * 2;
+  ctx.fillStyle = '#18181b';
   for (const k in state.labels) {
     const { x: gx, y: gy } = parseKey(k);
     const lbl = state.labels[k];
@@ -287,13 +348,7 @@ function render() {
     if (gx < tl.x - 1 || gx > br.x + 1 || gy < tl.y - 1 || gy > br.y + 1) continue;
     if (isHiddenForViewer(gx, gy)) continue;
     const c = worldToScreen(gx * GRID_SIZE + GRID_SIZE / 2, gy * GRID_SIZE + GRID_SIZE / 2);
-    const fontSize = Math.max(9, Math.min(16, 12 * z));
-    ctx.fillStyle = '#18181b';
-    ctx.font = `600 ${fontSize}px system-ui, sans-serif`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    const text = fontSize < 10 ? lbl.text.slice(0, 6) : lbl.text;
-    ctx.fillText(text, c.x, c.y);
+    drawCellLabel(ctx, lbl.text, c.x, c.y, labelMaxW, labelMaxH);
   }
 
   // 5) Tokens

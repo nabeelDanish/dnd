@@ -5,7 +5,8 @@
       "Bash(awk '/^## Resolution|^## Aftermath/{p=1} p{print NR\": \"$0}' adventure.md)",
       "Bash(awk '/cycle|ladder|Level 3|L3|every level|HP each|gain a perk|Perk|Breadth|Ability/{print NR\": \"$0}' 03-progression.md)",
       "Bash(node -e ' *)",
-      "Bash(rm -f map-dm.json)"
+      "Bash(rm -f map-dm.json)",
+      "Bash(node --check app.js)"
     ]
   }
 }

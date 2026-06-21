@@ -128,6 +128,25 @@ A murder mystery dies two ways: the players get **stuck** (no clue to follow) or
 
 ---
 
+## The battlemap
+
+A pre-built map is included: [map.json](map.json) — a schematic of the Verdance, **built to be safe to show the players.** It is played with **Fog of War ON**: nothing on it spoils the mystery, and the party only ever sees the districts you've revealed.
+
+- **Labels are neutral public geography** — location names a visitor could read off the streets (the Vermilion Garden hill, the Tea-Gardens and theater, the Temple and burial yard, the Bloommarket and the Gilded Finch, Sael's Perfumery, the doll studio, the Witherrows, the Watch-house and Civic Hall). The three crime scenes are marked only as **"body found"** — public knowledge the party is handed in Scene 1.
+- **NPC tokens carry names only**, no roles. A revealed token tells the players nothing they don't learn by meeting that person — *who is the killer, who is innocent, and every clue stays in your head and the text, never on the map.*
+- The locked **Conservatory** (south-east) and the climax combatants — the **Daughter-Rose**, **Florian**, two **Thornlings**, and the **Bloomwake** — sit on the map but **stay under fog until you reveal them at the climax.**
+
+To load it:
+
+1. Open `map-tool/index.html` in a browser (DM view).
+2. In the toolbar, click **Import map…** and pick `adventures/the-vermilion-garden/map.json`.
+3. **Confirm Fog of War is ON** (it loads on). Click **Open Player View →** and mirror it to the table.
+4. **Paint reveals as the party explores** — show each district when they go there; keep the Witherrows, the burial yard, and the Conservatory dark until they reach them. (The DM view always sees everything.)
+5. At the climax, reveal the **Conservatory**. **Delete the Bloomwake token** if the party caught Florian before the ritual completed (it rises only on Midsummer — see Scene 6). His token also sits at the Perfumery as the daytime NPC; move or reuse as you like.
+6. **Player tokens are NOT included** — drop them at **PLAYERS START** on the Bloom Bridge (south).
+
+To regenerate or tweak the map, edit `build-map.js` in this folder and run `node build-map.js`.
+
 ## The Verdance — the district
 
 A terraced garden-quarter of a great warm city, drunk on midsummer. Loud, fragrant, crowded, and — in its quiet corners at night — frightened. Key locations:

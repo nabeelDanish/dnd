@@ -1,0 +1,1679 @@
+{
+  "format": "dnd-map-v1",
+  "name": "The Vermilion Garden",
+  "description": "Pre-built map for the murder-mystery one-shot, played with FOG OF WAR ON. A schematic of the Verdance — the garden-quarter of Aurivane during the Midsummer Bloomfeast. Nothing here spoils the mystery: labels are neutral public geography (the Vermilion Garden hill, the Tea-Gardens and theater, the Temple and burial yard, the Bloommarket and Gilded Finch, Sael's Perfumery, a doll studio, the Witherrows, the Watch-house and Civic Hall), the three crime scenes are marked only as \"body found\" (public knowledge from Scene 1), and NPC tokens carry only names — no roles, no clues. Keep the killer, decoys, motive, and the empty grave in your head / the adventure text. The locked Conservatory (south-east) and the climax combatants — the Daughter-Rose, Florian, two Thornlings, and the conditional Bloomwake — sit on the map but stay UNDER FOG until you reveal them at the climax (delete the Bloomwake if the party catches Florian before the ritual). Player tokens are NOT included — drop them at PLAYERS START on the Bloom Bridge. Turn Fog of War ON and paint reveals as the party explores each district.",
+  "exportedAt": "2026-06-21",
+  "map": {
+    "fogEnabled": true,
+    "showAll": false,
+    "labels": {
+      "-17,-16": {
+        "text": "↑ N",
+        "color": "#78716c"
+      },
+      "0,-17": {
+        "text": "THE VERDANCE",
+        "color": "#f59e0b"
+      },
+      "0,-16": {
+        "text": "(garden-quarter of Aurivane — Midsummer Bloomfeast)",
+        "color": "#78716c"
+      },
+      "-4,-15": {
+        "text": "VERMILION",
+        "color": "#e11d48"
+      },
+      "-4,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-4,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-4,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-15": {
+        "text": "GARDEN",
+        "color": "#e11d48"
+      },
+      "-3,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-13": {
+        "text": "roses",
+        "color": "#e11d48"
+      },
+      "-2,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-14": {
+        "text": "rose terraces",
+        "color": "#e11d48"
+      },
+      "-1,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-13": {
+        "text": "roses",
+        "color": "#e11d48"
+      },
+      "2,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-15": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-14": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-13": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-12": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-11": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-10": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-9": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-8": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-7": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-6": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-5": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-4": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "7,-11": {
+        "text": "TEA-GARDENS",
+        "color": "#10b981"
+      },
+      "7,-10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "7,-9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "7,-8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "7,-7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "7,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "8,-11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "8,-10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "8,-9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "8,-8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "8,-7": {
+        "text": "⚑ body found",
+        "color": "#78716c"
+      },
+      "8,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "9,-11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "9,-10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "9,-9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "9,-8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "9,-7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "9,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "10,-11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "10,-10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "10,-9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "10,-8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "10,-7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "10,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "11,-11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "11,-10": {
+        "text": "Theater",
+        "color": "#8b5cf6"
+      },
+      "11,-9": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "11,-8": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "11,-7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "11,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,-11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,-10": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "12,-9": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "12,-8": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "12,-7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,-11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,-10": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "13,-9": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "13,-8": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "13,-7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-13,-6": {
+        "text": "TEMPLE of the",
+        "color": "#06b6d4"
+      },
+      "-13,-5": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-13,-4": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-13,-3": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-12,-6": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-12,-5": {
+        "text": "Summer Mother",
+        "color": "#06b6d4"
+      },
+      "-12,-4": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-12,-3": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-11,-6": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-11,-5": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-11,-4": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-11,-3": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-10,-6": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-10,-5": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-10,-4": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-10,-3": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-9,-6": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-9,-5": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-9,-4": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-9,-3": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-13,-1": {
+        "text": "burial yard",
+        "color": "#78716c"
+      },
+      "-13,0": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-13,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,-1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,0": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,-1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,0": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,-1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,0": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-3": {
+        "text": "BLOOMMARKET",
+        "color": "#f59e0b"
+      },
+      "-4,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-4,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-4,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-4,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-3,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-3,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-3,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-3,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-3,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-2,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-2,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-2,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-2,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-2,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-1,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-1,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-1,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-1,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-1,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,-1": {
+        "text": "Fountain",
+        "color": "#06b6d4"
+      },
+      "0,0": {
+        "text": "⚑ body found",
+        "color": "#78716c"
+      },
+      "0,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "1,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "1,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "1,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "1,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "1,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "2,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "2,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "2,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "2,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "2,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "3,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "3,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "3,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "3,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "3,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "4,-3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "4,-2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "4,-1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "4,0": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "4,1": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "-7,-2": {
+        "text": "Gilded",
+        "color": "#f97316"
+      },
+      "-7,-1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-6,-2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-6,-1": {
+        "text": "Finch",
+        "color": "#f97316"
+      },
+      "-5,-2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,2": {
+        "text": "Doll studio",
+        "color": "#8b5cf6"
+      },
+      "4,3": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "5,2": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "5,3": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "6,2": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "6,3": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "6,-3": {
+        "text": "Sael's",
+        "color": "#e11d48"
+      },
+      "6,-2": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "6,-1": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "7,-3": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "7,-2": {
+        "text": "Perfumery",
+        "color": "#e11d48"
+      },
+      "7,-1": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "8,-3": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "8,-2": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "8,-1": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "9,-3": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "9,-2": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "9,-1": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-14,3": {
+        "text": "THE WITHERROWS",
+        "color": "#78716c"
+      },
+      "-14,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-14,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-14,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-14,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-14,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-14,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-14,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-13,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-13,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-13,5": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-13,6": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-13,7": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-13,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-13,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-13,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,5": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-12,6": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-12,7": {
+        "text": "walled garden",
+        "color": "#78716c"
+      },
+      "-12,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-12,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,5": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-11,6": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-11,7": {
+        "text": "",
+        "color": "#e11d48"
+      },
+      "-11,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-11,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-10,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-9,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-8,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-7,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,7": {
+        "text": "WATCH-HOUSE",
+        "color": "#3b82f6"
+      },
+      "-2,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,10": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,7": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,10": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,7": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,8": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,9": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,10": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "1,7": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,10": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "4,7": {
+        "text": "Civic Hall",
+        "color": "#78716c"
+      },
+      "4,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "6,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "6,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "6,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "7,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "7,8": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "7,9": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "12,2": {
+        "text": "Conservatory",
+        "color": "#10b981"
+      },
+      "12,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "12,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,4": {
+        "text": "roses on every wall",
+        "color": "#e11d48"
+      },
+      "13,5": {
+        "text": "thick perfume",
+        "color": "#8b5cf6"
+      },
+      "13,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "13,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "14,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,2": {
+        "text": "↑ stair from the shop",
+        "color": "#78716c"
+      },
+      "15,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "15,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "16,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "17,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "18,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,7": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,8": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,9": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,10": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "19,11": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,2": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,3": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,4": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,5": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,6": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,11": {
+        "text": "",
+        "color": "#f59e0b"
+      },
+      "0,12": {
+        "text": "",
+        "color": "#84cc16"
+      },
+      "0,13": {
+        "text": "(over the",
+        "color": "#78716c"
+      },
+      "0,14": {
+        "text": "",
+        "color": "#84cc16"
+      },
+      "1,12": {
+        "text": "",
+        "color": "#84cc16"
+      },
+      "1,13": {
+        "text": "Bloom Bridge)",
+        "color": "#78716c"
+      },
+      "1,14": {
+        "text": "PLAYERS START",
+        "color": "#ec4899"
+      }
+    },
+    "revealed": {},
+    "tokens": [
+      {
+        "id": "t_preset_1",
+        "type": "npc",
+        "name": "Edran",
+        "color": "#06b6d4",
+        "x": -6,
+        "y": -13
+      },
+      {
+        "id": "t_preset_2",
+        "type": "npc",
+        "name": "Marise",
+        "color": "#06b6d4",
+        "x": 5,
+        "y": -13
+      },
+      {
+        "id": "t_preset_3",
+        "type": "npc",
+        "name": "Castellan",
+        "color": "#06b6d4",
+        "x": 12,
+        "y": -9
+      },
+      {
+        "id": "t_preset_4",
+        "type": "npc",
+        "name": "Aldric",
+        "color": "#06b6d4",
+        "x": 9,
+        "y": -9
+      },
+      {
+        "id": "t_preset_5",
+        "type": "npc",
+        "name": "Anselm",
+        "color": "#06b6d4",
+        "x": -11,
+        "y": -4
+      },
+      {
+        "id": "t_preset_6",
+        "type": "npc",
+        "name": "Crale",
+        "color": "#06b6d4",
+        "x": -10,
+        "y": 1
+      },
+      {
+        "id": "t_preset_7",
+        "type": "npc",
+        "name": "Carow",
+        "color": "#06b6d4",
+        "x": -3,
+        "y": -2
+      },
+      {
+        "id": "t_preset_8",
+        "type": "npc",
+        "name": "Nessa",
+        "color": "#06b6d4",
+        "x": 3,
+        "y": -2
+      },
+      {
+        "id": "t_preset_9",
+        "type": "npc",
+        "name": "Lensa",
+        "color": "#06b6d4",
+        "x": 5,
+        "y": 3
+      },
+      {
+        "id": "t_preset_10",
+        "type": "npc",
+        "name": "Florian",
+        "color": "#06b6d4",
+        "x": 7,
+        "y": -1
+      },
+      {
+        "id": "t_preset_11",
+        "type": "npc",
+        "name": "Doral",
+        "color": "#06b6d4",
+        "x": 9,
+        "y": -2
+      },
+      {
+        "id": "t_preset_12",
+        "type": "npc",
+        "name": "Dama Vesh",
+        "color": "#06b6d4",
+        "x": -12,
+        "y": 6
+      },
+      {
+        "id": "t_preset_13",
+        "type": "npc",
+        "name": "Skein",
+        "color": "#06b6d4",
+        "x": -8,
+        "y": 9
+      },
+      {
+        "id": "t_preset_14",
+        "type": "npc",
+        "name": "Halloran",
+        "color": "#06b6d4",
+        "x": -1,
+        "y": 9
+      },
+      {
+        "id": "t_preset_15",
+        "type": "npc",
+        "name": "Roon",
+        "color": "#06b6d4",
+        "x": 1,
+        "y": 8
+      },
+      {
+        "id": "t_preset_16",
+        "type": "npc",
+        "name": "Vell",
+        "color": "#06b6d4",
+        "x": 5,
+        "y": 8
+      },
+      {
+        "id": "t_preset_17",
+        "type": "object",
+        "name": "Daughter-Rose",
+        "color": "#e11d48",
+        "x": 15,
+        "y": 7
+      },
+      {
+        "id": "t_preset_18",
+        "type": "enemy",
+        "name": "Florian",
+        "color": "#ef4444",
+        "x": 15,
+        "y": 9
+      },
+      {
+        "id": "t_preset_19",
+        "type": "enemy",
+        "name": "Thornling",
+        "color": "#ef4444",
+        "x": 13,
+        "y": 7
+      },
+      {
+        "id": "t_preset_20",
+        "type": "enemy",
+        "name": "Thornling",
+        "color": "#ef4444",
+        "x": 17,
+        "y": 7
+      },
+      {
+        "id": "t_preset_21",
+        "type": "enemy",
+        "name": "Bloomwake",
+        "color": "#ef4444",
+        "x": 15,
+        "y": 5
+      }
+    ]
+  }
+}

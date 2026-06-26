@@ -73,6 +73,7 @@ label(-2, -13, 'roses', COL.rose);
 label(0, -11, '⚑ body found', COL.gray);
 token('npc', 'Edran', -6, -13, COL.cyan);
 token('npc', 'Marise', 5, -13, COL.cyan);
+token('npc', 'Grenn', 1, -12, COL.cyan); // groundskeeper — works the rose-beds, finds the bodies
 
 // Main avenue down the hill to the market
 // (start at -10 so we don't clobber the garden-foot "body found" marker at 0,-11)
@@ -112,6 +113,7 @@ token('npc', 'Nessa', 3, -2, COL.cyan);
 fill(-7, -2, -5, -1, COL.gray);
 label(-7, -2, 'Gilded', COL.orange);
 label(-6, -1, 'Finch', COL.orange);
+token('npc', 'Ysolde', -6, -2, COL.cyan); // festival patroness — holds court at the grand tavern
 
 // Lensa's doll studio (south of the market) — a public shop
 fill(4, 2, 6, 3, COL.purple);

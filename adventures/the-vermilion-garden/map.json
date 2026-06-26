@@ -1525,13 +1525,21 @@
       {
         "id": "t_preset_3",
         "type": "npc",
+        "name": "Grenn",
+        "color": "#06b6d4",
+        "x": 1,
+        "y": -12
+      },
+      {
+        "id": "t_preset_4",
+        "type": "npc",
         "name": "Castellan",
         "color": "#06b6d4",
         "x": 12,
         "y": -9
       },
       {
-        "id": "t_preset_4",
+        "id": "t_preset_5",
         "type": "npc",
         "name": "Aldric",
         "color": "#06b6d4",
@@ -1539,7 +1547,7 @@
         "y": -9
       },
       {
-        "id": "t_preset_5",
+        "id": "t_preset_6",
         "type": "npc",
         "name": "Anselm",
         "color": "#06b6d4",
@@ -1547,7 +1555,7 @@
         "y": -4
       },
       {
-        "id": "t_preset_6",
+        "id": "t_preset_7",
         "type": "npc",
         "name": "Crale",
         "color": "#06b6d4",
@@ -1555,7 +1563,7 @@
         "y": 1
       },
       {
-        "id": "t_preset_7",
+        "id": "t_preset_8",
         "type": "npc",
         "name": "Carow",
         "color": "#06b6d4",
@@ -1563,7 +1571,7 @@
         "y": -2
       },
       {
-        "id": "t_preset_8",
+        "id": "t_preset_9",
         "type": "npc",
         "name": "Nessa",
         "color": "#06b6d4",
@@ -1571,7 +1579,15 @@
         "y": -2
       },
       {
-        "id": "t_preset_9",
+        "id": "t_preset_10",
+        "type": "npc",
+        "name": "Ysolde",
+        "color": "#06b6d4",
+        "x": -6,
+        "y": -2
+      },
+      {
+        "id": "t_preset_11",
         "type": "npc",
         "name": "Lensa",
         "color": "#06b6d4",
@@ -1579,7 +1595,7 @@
         "y": 3
       },
       {
-        "id": "t_preset_10",
+        "id": "t_preset_12",
         "type": "npc",
         "name": "Florian",
         "color": "#06b6d4",
@@ -1587,7 +1603,7 @@
         "y": -1
       },
       {
-        "id": "t_preset_11",
+        "id": "t_preset_13",
         "type": "npc",
         "name": "Doral",
         "color": "#06b6d4",
@@ -1595,7 +1611,7 @@
         "y": -2
       },
       {
-        "id": "t_preset_12",
+        "id": "t_preset_14",
         "type": "npc",
         "name": "Dama Vesh",
         "color": "#06b6d4",
@@ -1603,7 +1619,7 @@
         "y": 6
       },
       {
-        "id": "t_preset_13",
+        "id": "t_preset_15",
         "type": "npc",
         "name": "Skein",
         "color": "#06b6d4",
@@ -1611,7 +1627,7 @@
         "y": 9
       },
       {
-        "id": "t_preset_14",
+        "id": "t_preset_16",
         "type": "npc",
         "name": "Halloran",
         "color": "#06b6d4",
@@ -1619,7 +1635,7 @@
         "y": 9
       },
       {
-        "id": "t_preset_15",
+        "id": "t_preset_17",
         "type": "npc",
         "name": "Roon",
         "color": "#06b6d4",
@@ -1627,7 +1643,7 @@
         "y": 8
       },
       {
-        "id": "t_preset_16",
+        "id": "t_preset_18",
         "type": "npc",
         "name": "Vell",
         "color": "#06b6d4",
@@ -1635,7 +1651,7 @@
         "y": 8
       },
       {
-        "id": "t_preset_17",
+        "id": "t_preset_19",
         "type": "object",
         "name": "Daughter-Rose",
         "color": "#e11d48",
@@ -1643,7 +1659,7 @@
         "y": 7
       },
       {
-        "id": "t_preset_18",
+        "id": "t_preset_20",
         "type": "enemy",
         "name": "Florian",
         "color": "#ef4444",
@@ -1651,7 +1667,7 @@
         "y": 9
       },
       {
-        "id": "t_preset_19",
+        "id": "t_preset_21",
         "type": "enemy",
         "name": "Thornling",
         "color": "#ef4444",
@@ -1659,7 +1675,7 @@
         "y": 7
       },
       {
-        "id": "t_preset_20",
+        "id": "t_preset_22",
         "type": "enemy",
         "name": "Thornling",
         "color": "#ef4444",
@@ -1667,7 +1683,7 @@
         "y": 7
       },
       {
-        "id": "t_preset_21",
+        "id": "t_preset_23",
         "type": "enemy",
         "name": "Bloomwake",
         "color": "#ef4444",

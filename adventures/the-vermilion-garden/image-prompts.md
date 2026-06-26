@@ -109,3 +109,19 @@ Copy-paste prompts for an image model (ChatGPT/DALL·E, Midjourney, etc.) — th
 
 ### 28 · The keepsakes returned *(resolution)*
 > Close-up on a Watch-sergeant's plain wooden table in warm daylight: a pearl earring, a worn locket, and a silver garland-pin laid in a row on a cloth, returned to the families of the dead, a single wilting vermilion petal beside them. Quiet, mournful, resolved — three small objects that cost three lives. *[style]* `--ar 3:2 --v 6`
+
+---
+
+## More cast portraits *(appended so the rendered set 1–25 keeps its numbering)*
+
+### 29 · Sergeant Halloran, the Watch *(decent, overwhelmed — innocent)*
+> Portrait of a tired, decent human city-Watch sergeant in his fifties, in a rumpled festival-duty tabard and worn light armor, standing at a roped-off garden crime scene in bright midday sun. Unshaven, deep shadows under kind weary eyes, a sheaf of case-notes under one arm, the relieved exhausted look of a man who hasn't slept in three weeks and has just been handed help. Honest, harried, out of his depth — the good cop drowning. Bright daylight, vivid summer color behind him, the festival roaring on without him. *[style]* `--ar 2:3 --v 6`
+
+### 30 · Brother Anselm, the temple keeper *(kindly, ashamed — innocent)*
+> Portrait of a gentle, weary protector-aasimar priest of a warmth-and-harvest faith in a sunlit temple of pale stone and summer flowers (faint warm radiance about him, calm luminous eyes, simple flower-garlanded robes), a kind anxious face, hands clasped, a flicker of private shame and worry behind the gentleness — a good man hiding a failure, not a crime. Warm sunlight through high windows, candles, wheat-and-rose altar-dressings. *[style]* `--ar 2:3 --v 6`
+
+### 31 · Grenn, the groundskeeper *(looks guilty — innocent of murder)*
+> Portrait of a big, surly half-orc gardens-groundskeeper at grey dawn among the rose-beds (broad, heavy-shouldered, green-grey skin, small tusks), dirt- and blood-flecked work clothes, a pair of coarse straight pruning-hooks at his belt, shifty defensive eyes that won't quite meet yours, a guilty sweat on him. He looks *exactly* like the killer the crowd wants — and he's only a frightened corpse-robbing thief, not a murderer. Cool dawn light, dewy roses, long uneasy shadows. *[style]* `--ar 2:3 --v 6`
+
+### 32 · Marise & the fever-bereaved *(the grieving chorus — innocent)*
+> A small group of ordinary townsfolk of mixed ancestry tending a public memorial rose-bed in soft daylight — a careworn middle-aged woman (Marise) at the front laying a flower, others behind her lighting candles and bowing their heads. Quiet shared grief, work-worn hands, gentle sad faces; an engraved memorial stone among the roses. Many gentle people who each lost a child to the same long-ago summer-fever — proof that grief and a dead child are a *type* here, not a clue. Warm soft daylight, lush roses, mournful and tender. *[style]* `--ar 16:9 --v 6`

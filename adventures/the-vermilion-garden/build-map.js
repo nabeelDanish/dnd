@@ -75,7 +75,8 @@ token('npc', 'Edran', -6, -13, COL.cyan);
 token('npc', 'Marise', 5, -13, COL.cyan);
 
 // Main avenue down the hill to the market
-for (let y = -11; y <= -4; y++) label(0, y, '', COL.gold);
+// (start at -10 so we don't clobber the garden-foot "body found" marker at 0,-11)
+for (let y = -10; y <= -4; y++) label(0, y, '', COL.gold);
 
 // =====================================================================
 // TEA-GARDENS + theater (north-east)

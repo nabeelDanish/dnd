@@ -189,7 +189,7 @@ Full per-NPC detail — secrets, **what is free vs. behind which check**, and **
 | **Grenn** | Half-Orc | groundskeeper | **scapegoat** — robbed Castan's corpse; gives the cart clue |
 | **Doral** | Tabaxi | Florian's apprentice | skimming knockoffs; gagged near-witness (nights out, locked cellar) |
 | **Madame Carow** | Changeling | "Briar Bride" seer | fraud inventing sightings; pollutes the witness pool |
-| **Ser Aldric Venn** | Flame Dragonborn | spurned suitor | threatened Lysenne, no alibi; red herring (Victim 1) |
+| **Ser Aldric Venn** | Flame Dragonborn | Castan's secret love | grieving closeted lover; no alibi, a public quarrel; red herring (Victim 3) |
 | **Sexton Crale** | Mountain Dwarf | temple gravedigger | let Skein rob the graves (incl. Mira) for a cut |
 | **Nessa** | Fairy | unlicensed flower-girl | **the buried witness** — saw the dawn flower-cart |
 | **Skein** | Goblin | resurrection-man | **linchpin** — Florian paid him to dig up Mira's body |
@@ -255,6 +255,30 @@ Investigation isn't just asking questions. **Reward every angle**, and layer mis
 - **The temple ossuary / records vault.** **Mira Sael's grave is empty** — her remains taken years ago. A motive bombshell — *and* it reads as ordinary grave-robbing (→ Castellan), and Brother Anselm has been hiding the theft out of shame.
 - **The Watch-house evidence locker.** Roon's **buried flower-girl statement** ("a flower-cart on the high terrace before dawn") — a clean Conclusion-4 clue, in a drawer because a corrupt cop didn't want it found.
 - **Dama Vesh's cottage.** The bloody shears and red roses that look so damning — and, read properly, *exonerate* her (common stock, not the graft).
+
+### Break-in resolution — the reusable formula (use for EVERY break-in)
+
+Run all break-ins on the same three-beat shape, so the party never clocks any one target as "special." Flavor the finds and the who-catches-you per location; keep the mechanic identical.
+
+1. **Get in** — one check vs. the lock: **Stealth / Sleight of Hand / Athletics.** Most shops/homes are **Moderate–Hard**. The perfumery's inner **conservatory door is brutal (Heroic 20+ / a carried key) and should NOT yield on a casual night** — the Daughter-Rose is the smoking gun and ends the mystery on sight.
+2. **Search** — hand over the finds for looking (no roll), or roll for *how much* they grab before the clock runs out.
+3. **The close call** — the owner (or the Watch) returns mid-search. **A 3-action escape: roll 3 checks, need 2 passes to get clean away.**
+   - **Sense it coming** — Perception / Insight.
+   - **Cover tracks** — Sleight of Hand / Investigation (relock, put it all back).
+   - **Slip out** — Stealth / Athletics (vanish before the door opens).
+   - **2–3 passes:** clean getaway, loot kept, nobody the wiser. **1 pass:** they escape but leave a trace — the owner is rattled/on guard afterward. **0 passes:** *caught* → the owner's confrontation scene.
+
+**Design intent:** most break-ins should turn up something **damning-looking that points at the wrong person** (see *Layer the misdirection*). Don't let a single night's break-in solve the case; make it *complicate* it.
+
+#### Sael's Perfumery — break-in finds (points AWAY from Florian)
+
+The shop and distillery are searchable; the conservatory door does not yield casually (see above). What the shop holds:
+
+- **The supply ledger (the loud one → Ysolde).** Ysolde is Florian's **largest, most secretive customer** — bulk orders of his most potent scent-base, marked "discreet / no receipt." Reads as: *she* buys the raw base and turns it into the mind-softening attar found on the bodies. Florian looks like an innocent wholesaler to half the quarter; **Ysolde looks like the one who weaponized the scent.**
+- **A letter from Lensa (inverted → suspicion on Lensa).** Lensa wrote asking Florian for **"a cut vermilion for each of them — I want the dolls to hold the right rose."** Now *Lensa* reads as the one fixated on the victims and the exact murder-flower. (Innocent: memorial dolls.)
+- **Florian's garden-journal (inverted → suspicion on Edran).** A line: *"Edran out by the tea-garden pools again before light — that little curved knife of his."* Places **Edran** at a murder site, at the murder hour, with a curved blade. (Innocent: bees.)
+- **Doral's skim-stash (optional).** Hidden knockoff-money — makes the apprentice look like he's hiding something.
+- **Caught by Florian (0-pass outcome):** he's *wounded, not guilty* — *"You didn't have to break in… you could have just asked. Do you truly think I —?"* — making the party feel like heels for suspecting the kind man.
 
 **Tailing & stakeout (night) — Stealth + Insight.**
 - **Tail Castellan:** to a black-market relic auction or a decadent party. A dead end for murder — and a vivid scene that *feels* like a lead.
@@ -532,6 +556,6 @@ Print or pin this.
 
 **Conservatory hazard:** thick perfume — start of round, **Spirit/Mind (Easy 10)** or disadvantage on next attack (held breath / Cleanse / back to the stair avoids it).
 
-**NPC quick reference:** Florian (everyone's friend, the killer). Edran (beekeeper — gentle, grieving, in the gardens at dawn; *innocent mirror*). Lensa (dollmaker — recreates the dead in a locked studio, has the victims' likenesses; *innocent mirror*). Marise + the fever-bereaved (many gentle parents who lost kids that Midsummer; *innocent*). Castellan Vane (theatrical death-lover — *decoy villain*, grave-goods fence). Madame Ysolde (patroness — drug-dealer, motive vs. Lysenne only). Deputy Roon (helpful but corrupt — tainted source, buried the cart clue). Skein (resurrection-man — linchpin: Florian commissioned the body). Dama Vesh (poison-gardener — innocent, key witness, needs respect). Grenn (groundskeeper — thief not killer, gives the cart clue). Halloran (Watch-sergeant — overwhelmed, wants Dama Vesh jailed; persuade for access/warrant/restraint). Brother Anselm (temple — free help, holds Mira's record, hiding the empty grave). Doral (Florian's apprentice — skimming knockoffs; gagged near-witness, gives the nights-out/locked-cellar clue). Madame Carow (Briar Bride "seer" — fraud profiting on panic, *invents sightings* that pollute the witness pool). Ser Aldric Venn (Lysenne's spurned suitor — threatened her, no alibi; red herring for Victim 1 only). Sexton Crale (temple gravedigger — Skein's inside man; bribe/intimidate → "the flower-man had a child dug up"). Nessa (unlicensed flower-girl — the *buried witness* who saw the cart; reach her via kindness/Witherrows/breaking Roon). Magistrate Vell (employer — wants it quiet & fast, blocks accusing Florian without ironclad proof; the institutional wall).
+**NPC quick reference:** Florian (everyone's friend, the killer). Edran (beekeeper — gentle, grieving, in the gardens at dawn; *innocent mirror*). Lensa (dollmaker — recreates the dead in a locked studio, has the victims' likenesses; *innocent mirror*). Marise + the fever-bereaved (many gentle parents who lost kids that Midsummer; *innocent*). Castellan Vane (theatrical death-lover — *decoy villain*, grave-goods fence). Madame Ysolde (patroness — drug-dealer, motive vs. Lysenne only). Deputy Roon (helpful but corrupt — tainted source, buried the cart clue). Skein (resurrection-man — linchpin: Florian commissioned the body). Dama Vesh (poison-gardener — innocent, key witness, needs respect). Grenn (groundskeeper — thief not killer, gives the cart clue). Halloran (Watch-sergeant — overwhelmed, wants Dama Vesh jailed; persuade for access/warrant/restraint). Brother Anselm (temple — free help, holds Mira's record, hiding the empty grave). Doral (Florian's apprentice — skimming knockoffs; gagged near-witness, gives the nights-out/locked-cellar clue). Madame Carow (Briar Bride "seer" — fraud profiting on panic, *invents sightings* that pollute the witness pool). Ser Aldric Venn (Castan's secret lover — they couldn't marry, Castan broke it off for a family match, a public quarrel + no alibi make him look guilty; grieving and closeted, *he'd rather be suspected than outed*; red herring for Victim 3). Sexton Crale (temple gravedigger — Skein's inside man; bribe/intimidate → "the flower-man had a child dug up"). Nessa (unlicensed flower-girl — the *buried witness* who saw the cart; reach her via kindness/Witherrows/breaking Roon). Magistrate Vell (employer — wants it quiet & fast, blocks accusing Florian without ironclad proof; the institutional wall).
 
 Go run it. Find the gentle hand behind the beautiful rose — before the district hangs the wrong neighbor.

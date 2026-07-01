@@ -256,24 +256,27 @@ Each entry has the same parts:
 
 **Points to:** nowhere real — but unmasking her *clears the fog* so genuine witnesses (Nessa, Grenn) stand out.
 
-## Ser Aldric Venn — spurned suitor *(Flame Dragonborn)*
+## Ser Aldric Venn — Castan's secret love *(Flame Dragonborn)*
 
-**Read:** the textbook jealous-lover suspect. **Voice:** proud, hot, defensive; a temper on a short fuse. **Wants:** to bury his humiliation.
+**Read:** looks like the textbook jealous-suitor suspect; is really a grieving, closeted lover. **Voice:** proud, hot, defensive — armor bolted over heartbreak. **Wants:** to keep the secret he and Castan died protecting; to grieve where no one can see.
 
-**Hiding:** he was infatuated with **Lysenne**, was publicly refused, **threatened her** before witnesses, then paid to suppress the gossip — and has no alibi for that night. **Innocent of murder.**
+**Hiding:** he and **Castan** (the Garland-Prince) were secretly, deeply in love — and couldn't be. Both were promised elsewhere; Castan, to obey his family, was set to wed a **merchant's daughter**, and **broke it off with Aldric** to do his duty. Their last meeting was a bitter, tearful quarrel — overheard in fragments and misremembered by the quarter as a spurned lordling "making threats." Days later Castan was dead. Aldric has **no alibi** and a **public scene** on record. **Innocent of murder** — a heartbroken man whose story the quarter got backwards.
 
-**Free (no roll):** he and Lysenne "were close, once"; he's prickly and evasive about it.
+**The quarter's misread (what gossip says):** that hot-tempered Ser Aldric was mad for the *singer* **Lysenne**, was refused, threatened her. Wrong victim, wrong story — people assumed the handsome lordling wanted the pretty singer; nobody guessed his heart was with the Garland-Prince. (Use this to explain the loose "Aldric–Lysenne" rumor floating in the market.)
+
+**Free (no roll):** he "knew Castan, a little"; bristles, evasive, grief worn as temper.
 
 **Gated:**
-- *The threat & missing alibi* — **Insight 15** / **Intimidation 15** → the public threat and the paid-off gossip surface; he was drunk and alone that night.
-- *Clear or damn him* — testing against Pateros/Castan (no motive, no link) → dissolves him; he's a wounded fool, not a killer.
+- *The truth of the romance* — **Insight 15** (read the grief under the anger) or **Persuasion 15** (gentle, promise discretion) → the secret love, the forced break-up, the last quarrel, the missing alibi. **Intimidation backfires** — he'd rather be suspected of murder than be outed, so threats get a proud stonewall.
+- *Clear or damn him* — no link to Lysenne or Pateros; his grief is real and specific to **Castan** → dissolves him as the killer.
 
-**Won't give:** murders 2 and 3 — no connection, and he'll furiously say so.
+**Won't give (to threats):** the secret. He'll take the suspicion over the exposure, every time.
 
 **Dialogue —**
-- *Pressed:* "I loved her and she laughed at me in front of the whole quarter. Yes, I said things. Drunk, ugly things. I did not *cut her throat.* Ask me about the old man or the festival boy — I never spoke ten words to either."
+- *Pressed as Lysenne's suitor:* "Lysenne? I barely knew the woman. Is *that* the story they're telling? …Let them tell it."
+- *Gentle, discretion promised — the grief cracks:* "We were going to leave. Together. And then he chose his family, and his merchant's girl, and his *duty* — and I said cruel things, because cruelty was easier than weeping. That was the last time I saw him alive. So: no alibi, a temper, every reason to look guilty. Arrest me if you like. Some days I'd almost welcome it."
 
-**Points to:** a dead end overlapping Ysolde's — both orbit Lysenne, neither is the killer.
+**Points to:** a tragic dead end tied to **Castan** — and proof that the quarter's loudest story about a suspect can be flatly, cruelly wrong.
 
 ## Sexton Crale — temple gravedigger *(Mountain Dwarf)*
 
@@ -398,8 +401,8 @@ Each entry has the same parts:
 
 Players gather these from witnesses, the bodies (Medicine 15), and the families — **freely, not behind a single gate.**
 
-- **Lysenne** *(Satyr)* — actress/singer, Tea-Gardens. Taken: **a pearl earring (her mother's).** Radiant, beloved; close with Florian; feuding with Ysolde (knew the attar secret); a secret sweetheart; refused Aldric.
+- **Lysenne** *(Satyr)* — actress/singer, Tea-Gardens. Taken: **a pearl earring (her mother's).** Radiant, beloved; close with Florian; feuding with Ysolde (knew the attar secret); a secret sweetheart.
 - **Old Pateros** *(Stout Halfling)* — confectioner, Bloommarket fountain. Taken: **a locket (his late wife's).** Everyone's grandfather; gave sweets to the market children.
-- **Castan** *(Eladrin)* — the festival's Garland-Prince, foot of the Vermilion Garden. Taken: **the silver garland-pin of his crowning.** Golden, adored; Grenn robbed his corpse before raising the alarm.
+- **Castan** *(Eladrin)* — the festival's Garland-Prince, foot of the Vermilion Garden. Taken: **the silver garland-pin of his crowning.** Golden, adored; **secretly, deeply in love with Ser Aldric Venn** — but set to wed a merchant's daughter to obey his family, and had just broken it off with Aldric to do so; Grenn robbed his corpse before raising the alarm.
 
 **The shared truth (the pattern):** all three were *the warmest, most-loved people in the Verdance*; each **spoke warmly with Florian within days of dying** (he gave them blooms, asked what they treasured); each **drained through one fine curved cut**, **drenched in his perfume**, **missing the one keepsake they loved most**, **a vermilion rose laid on the breast.** That pattern — radiance + a Florian conversation + the rose — is the spine of the case.

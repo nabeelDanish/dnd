@@ -1,0 +1,1599 @@
+{
+  "format": "dnd-map-v1",
+  "name": "The Forge of Fury",
+  "description": "Pre-built map for the one-shot adventure — a vertical descent into the ruined dwarven hold of Khundrukar. The surface gate is at the TOP (positive Y); the dungeon sinks DOWNWARD (negative Y) to the Black Lake at the bottom. Zones top-to-bottom: the Mountain Door (orc sentries, the chasm and rope bridge); Great Ulfe's Hall (the half-ogre chief and his Durgeddin black axe — win-button #1); the Glitterhame (Yorrin the captive dwarf, the troglodyte den [skirtable via the east crawl], the bolt-hole rest, glowcap healing); the Sinkhole (optional roper hazard on an east spur — bypassable); the Foundry (the duergar salvage crew, Durgeddin's shade, and BOTH win-buttons — the black-blade cache and the sluice-controls, plus a working blade-trap and a Moradin mercy-cache); and the Black Lake (the boss Nightscale on her shelf, the hoard, and the shore gate-wheel that drains the lake to strand her — win-button #2). NPC and enemy tokens are placed. Player tokens are NOT included — drop them at PLAYERS START on the road outside the gate. Turn Fog of War ON before play and reveal as the party descends.",
+  "exportedAt": "2026-07-01",
+  "map": {
+    "fogEnabled": false,
+    "showAll": false,
+    "labels": {
+      "-9,11": {
+        "text": "↓ DEEPER",
+        "color": "#78716c"
+      },
+      "-9,-25": {
+        "text": "↓ THE DEEP",
+        "color": "#78716c"
+      },
+      "-2,12": {
+        "text": "THE MOUNTAIN DOOR",
+        "color": "#f59e0b"
+      },
+      "0,11": {
+        "text": "",
+        "color": "#84cc16"
+      },
+      "0,12": {
+        "text": "",
+        "color": "#84cc16"
+      },
+      "1,11": {
+        "text": "",
+        "color": "#84cc16"
+      },
+      "1,12": {
+        "text": "PLAYERS START",
+        "color": "#ec4899"
+      },
+      "-1,12": {
+        "text": "(dwarf-road)",
+        "color": "#78716c"
+      },
+      "-2,10": {
+        "text": "defaced gate",
+        "color": "#78716c"
+      },
+      "-1,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,10": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,8": {
+        "text": "CHASM ↓40ft",
+        "color": "#3b82f6"
+      },
+      "-2,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,8": {
+        "text": "≈bridge≈",
+        "color": "#f97316"
+      },
+      "1,8": {
+        "text": "(frayed)",
+        "color": "#f97316"
+      },
+      "2,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "3,8": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "4,8": {
+        "text": "stream out",
+        "color": "#06b6d4"
+      },
+      "-2,6": {
+        "text": "GREAT ULFE'S HALL",
+        "color": "#f59e0b"
+      },
+      "-2,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,7": {
+        "text": "guard fire",
+        "color": "#f97316"
+      },
+      "0,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,7": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,7": {
+        "text": "WARHORN",
+        "color": "#ef4444"
+      },
+      "3,6": {
+        "text": "(loot: 48g,",
+        "color": "#06b6d4"
+      },
+      "3,7": {
+        "text": "potion)",
+        "color": "#06b6d4"
+      },
+      "-4,6": {
+        "text": "archer ledge",
+        "color": "#78716c"
+      },
+      "-4,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,5": {
+        "text": "pillared hall",
+        "color": "#78716c"
+      },
+      "-3,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,3": {
+        "text": "firepit",
+        "color": "#f97316"
+      },
+      "-3,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,2": {
+        "text": "broken throne",
+        "color": "#78716c"
+      },
+      "0,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,4": {
+        "text": "BLACK AXE",
+        "color": "#8b5cf6"
+      },
+      "1,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,2": {
+        "text": "(hoard: 140g,",
+        "color": "#06b6d4"
+      },
+      "3,3": {
+        "text": "potion, map)",
+        "color": "#06b6d4"
+      },
+      "3,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,1": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,2": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,3": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,0": {
+        "text": "THE GLITTERHAME",
+        "color": "#f59e0b"
+      },
+      "-6,-6": {
+        "text": "(skirt via",
+        "color": "#78716c"
+      },
+      "-6,-5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-6,-4": {
+        "text": "TROG DEN",
+        "color": "#ef4444"
+      },
+      "-6,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-6,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-6,-1": {
+        "text": "wet caverns",
+        "color": "#10b981"
+      },
+      "-5,-6": {
+        "text": "E crawl)",
+        "color": "#78716c"
+      },
+      "-5,-5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-5,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-5,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-4,-6": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-5": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-4": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-4,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-4,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-3,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-2,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "-1,-1": {
+        "text": "streams ↓",
+        "color": "#06b6d4"
+      },
+      "0,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "0,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "1,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "2,-1": {
+        "text": "Yorrin's cage",
+        "color": "#06b6d4"
+      },
+      "3,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "3,-1": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-4": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "4,-3": {
+        "text": "(heal 1d6)",
+        "color": "#84cc16"
+      },
+      "4,-2": {
+        "text": "glowcaps",
+        "color": "#84cc16"
+      },
+      "4,-1": {
+        "text": "threshold)",
+        "color": "#f97316"
+      },
+      "5,-6": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "5,-5": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "5,-4": {
+        "text": "E crawl ↓",
+        "color": "#84cc16"
+      },
+      "5,-3": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "5,-2": {
+        "text": "",
+        "color": "#10b981"
+      },
+      "5,-1": {
+        "text": "",
+        "color": "#f97316"
+      },
+      "4,0": {
+        "text": "BOLT-HOLE",
+        "color": "#f97316"
+      },
+      "5,0": {
+        "text": "(rest: +1",
+        "color": "#f97316"
+      },
+      "6,-9": {
+        "text": "flooded",
+        "color": "#3b82f6"
+      },
+      "6,-13": {
+        "text": "(optional —",
+        "color": "#78716c"
+      },
+      "6,-12": {
+        "text": "Foundry)",
+        "color": "#84cc16"
+      },
+      "6,-11": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "6,-10": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "7,-13": {
+        "text": "roper lurks)",
+        "color": "#78716c"
+      },
+      "7,-12": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "7,-11": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "7,-10": {
+        "text": "sinkhole",
+        "color": "#3b82f6"
+      },
+      "7,-9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "8,-13": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "8,-12": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "8,-11": {
+        "text": "river ford",
+        "color": "#06b6d4"
+      },
+      "8,-10": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "8,-9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "9,-13": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "9,-12": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "9,-11": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "9,-10": {
+        "text": "(false stone)",
+        "color": "#78716c"
+      },
+      "9,-9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "10,-13": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "10,-12": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "10,-11": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "10,-10": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "10,-9": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "3,-8": {
+        "text": "stair down ↓",
+        "color": "#78716c"
+      },
+      "5,-12": {
+        "text": "(bypass →",
+        "color": "#84cc16"
+      },
+      "-3,-15": {
+        "text": "THE FOUNDRY",
+        "color": "#f59e0b"
+      },
+      "-6,-22": {
+        "text": "river channel →",
+        "color": "#06b6d4"
+      },
+      "-6,-21": {
+        "text": "(drain diagram)",
+        "color": "#06b6d4"
+      },
+      "-6,-20": {
+        "text": "SLUICE",
+        "color": "#06b6d4"
+      },
+      "-6,-19": {
+        "text": "(relit)",
+        "color": "#f97316"
+      },
+      "-6,-18": {
+        "text": "furnaces",
+        "color": "#f97316"
+      },
+      "-6,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-6,-16": {
+        "text": "Durgeddin's forge",
+        "color": "#78716c"
+      },
+      "-5,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-5,-21": {
+        "text": "",
+        "color": "#06b6d4"
+      },
+      "-5,-20": {
+        "text": "CONTROLS",
+        "color": "#06b6d4"
+      },
+      "-5,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-18": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-18": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-18": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,-20": {
+        "text": "great anvil",
+        "color": "#78716c"
+      },
+      "-2,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,-18": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,-20": {
+        "text": "(the shade)",
+        "color": "#8b5cf6"
+      },
+      "-1,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,-18": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-18": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-17": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,-18": {
+        "text": "(3d6)",
+        "color": "#ef4444"
+      },
+      "1,-17": {
+        "text": "⚠trap",
+        "color": "#ef4444"
+      },
+      "1,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,-22": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "2,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,-18": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "2,-17": {
+        "text": "BLACK-BLADE",
+        "color": "#8b5cf6"
+      },
+      "2,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,-22": {
+        "text": "BARGE",
+        "color": "#f97316"
+      },
+      "3,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,-18": {
+        "text": "CACHE",
+        "color": "#8b5cf6"
+      },
+      "3,-17": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "3,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-22": {
+        "text": "(cache flees",
+        "color": "#f97316"
+      },
+      "4,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-18": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "4,-17": {
+        "text": "",
+        "color": "#8b5cf6"
+      },
+      "4,-16": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,-22": {
+        "text": "if roused)",
+        "color": "#f97316"
+      },
+      "5,-21": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,-20": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,-19": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,-18": {
+        "text": "fire-oil)",
+        "color": "#06b6d4"
+      },
+      "5,-17": {
+        "text": "(2 potions,",
+        "color": "#06b6d4"
+      },
+      "5,-16": {
+        "text": "shrine",
+        "color": "#f59e0b"
+      },
+      "0,-23": {
+        "text": "down to the lake ↓",
+        "color": "#78716c"
+      },
+      "-3,-25": {
+        "text": "THE BLACK LAKE",
+        "color": "#f59e0b"
+      },
+      "-6,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-6,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-6,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-6,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-6,-28": {
+        "text": "→ strand her)",
+        "color": "#06b6d4"
+      },
+      "-6,-27": {
+        "text": "GATE-WHEEL",
+        "color": "#06b6d4"
+      },
+      "-6,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-5,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-5,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-5,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-5,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-5,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-5,-27": {
+        "text": "(drain: 3 rds",
+        "color": "#06b6d4"
+      },
+      "-5,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-4,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-4,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-3,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-3,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-2,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-2,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-1,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "-1,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "0,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "0,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "1,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "1,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "2,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "2,-31": {
+        "text": "(young black",
+        "color": "#ef4444"
+      },
+      "2,-30": {
+        "text": "rock shelf",
+        "color": "#78716c"
+      },
+      "2,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "2,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "2,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "2,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "3,-31": {
+        "text": "dragon)",
+        "color": "#ef4444"
+      },
+      "3,-30": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "3,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "3,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "3,-27": {
+        "text": "acid-pitting",
+        "color": "#78716c"
+      },
+      "3,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-32": {
+        "text": "gems, potions)",
+        "color": "#06b6d4"
+      },
+      "4,-31": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-30": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "4,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "4,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "4,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "4,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "5,-32": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "5,-31": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "5,-30": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "5,-29": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "5,-28": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "5,-27": {
+        "text": "",
+        "color": "#3b82f6"
+      },
+      "5,-26": {
+        "text": "",
+        "color": "#78716c"
+      },
+      "-6,-25": {
+        "text": "gravel shore",
+        "color": "#78716c"
+      }
+    },
+    "revealed": {},
+    "tokens": [
+      {
+        "id": "t_preset_1",
+        "type": "enemy",
+        "name": "Orc Raider",
+        "color": "#ef4444",
+        "x": -1,
+        "y": 6
+      },
+      {
+        "id": "t_preset_2",
+        "type": "enemy",
+        "name": "Orc Raider",
+        "color": "#ef4444",
+        "x": 1,
+        "y": 6
+      },
+      {
+        "id": "t_preset_3",
+        "type": "enemy",
+        "name": "Orc Raider",
+        "color": "#ef4444",
+        "x": 0,
+        "y": 7
+      },
+      {
+        "id": "t_preset_4",
+        "type": "enemy",
+        "name": "Orc Archer",
+        "color": "#ef4444",
+        "x": -4,
+        "y": 5
+      },
+      {
+        "id": "t_preset_5",
+        "type": "enemy",
+        "name": "Great Ulfe",
+        "color": "#ef4444",
+        "x": 0,
+        "y": 3
+      },
+      {
+        "id": "t_preset_6",
+        "type": "enemy",
+        "name": "Orc Raider",
+        "color": "#ef4444",
+        "x": -2,
+        "y": 4
+      },
+      {
+        "id": "t_preset_7",
+        "type": "enemy",
+        "name": "Orc Raider",
+        "color": "#ef4444",
+        "x": 2,
+        "y": 4
+      },
+      {
+        "id": "t_preset_8",
+        "type": "enemy",
+        "name": "Orc Raider",
+        "color": "#ef4444",
+        "x": 0,
+        "y": 1
+      },
+      {
+        "id": "t_preset_9",
+        "type": "npc",
+        "name": "Yorrin Ashfell",
+        "color": "#06b6d4",
+        "x": 2,
+        "y": -1
+      },
+      {
+        "id": "t_preset_10",
+        "type": "enemy",
+        "name": "Troglodyte",
+        "color": "#ef4444",
+        "x": -5,
+        "y": -4
+      },
+      {
+        "id": "t_preset_11",
+        "type": "enemy",
+        "name": "Troglodyte",
+        "color": "#ef4444",
+        "x": -6,
+        "y": -5
+      },
+      {
+        "id": "t_preset_12",
+        "type": "enemy",
+        "name": "Troglodyte",
+        "color": "#ef4444",
+        "x": -4,
+        "y": -5
+      },
+      {
+        "id": "t_preset_13",
+        "type": "enemy",
+        "name": "Troglodyte",
+        "color": "#ef4444",
+        "x": -5,
+        "y": -6
+      },
+      {
+        "id": "t_preset_14",
+        "type": "enemy",
+        "name": "Trog Mystic",
+        "color": "#ef4444",
+        "x": -5,
+        "y": -5
+      },
+      {
+        "id": "t_preset_15",
+        "type": "enemy",
+        "name": "Roper",
+        "color": "#ef4444",
+        "x": 8,
+        "y": -10
+      },
+      {
+        "id": "t_preset_16",
+        "type": "npc",
+        "name": "Durgeddin's Shade",
+        "color": "#8b5cf6",
+        "x": -2,
+        "y": -19
+      },
+      {
+        "id": "t_preset_17",
+        "type": "enemy",
+        "name": "Xazandra",
+        "color": "#ef4444",
+        "x": 0,
+        "y": -18
+      },
+      {
+        "id": "t_preset_18",
+        "type": "enemy",
+        "name": "Duergar",
+        "color": "#ef4444",
+        "x": -1,
+        "y": -17
+      },
+      {
+        "id": "t_preset_19",
+        "type": "enemy",
+        "name": "Duergar",
+        "color": "#ef4444",
+        "x": 1,
+        "y": -19
+      },
+      {
+        "id": "t_preset_20",
+        "type": "enemy",
+        "name": "Duergar",
+        "color": "#ef4444",
+        "x": -3,
+        "y": -18
+      },
+      {
+        "id": "t_preset_21",
+        "type": "enemy",
+        "name": "Nightscale",
+        "color": "#ef4444",
+        "x": 3,
+        "y": -30
+      }
+    ]
+  }
+}
